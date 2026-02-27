@@ -1,4 +1,4 @@
-# Vajra Sentinel
+# 🛡️ Vajra Sentinel
 
 ## Advanced Municipal Data Sovereignty & Forensic Defense System
 
@@ -6,17 +6,17 @@ Vajra Sentinel is a high-security ecosystem designed to protect
 municipal data registries against advanced adversarial threats.
 
 The system follows a strict **Defense-in-Depth** philosophy. It assumes
-that perimeter defenses may fail and focuses on containment, deception,
-and data integrity preservation.
+perimeter defenses may fail and focuses on containment, deception, and
+data integrity preservation.
 
 ------------------------------------------------------------------------
 
-## System Philosophy
+## 🧠 System Philosophy
 
 Vajra Sentinel is built on three principles:
 
--   Assume breach
--   Minimize impact
+-   Assume breach\
+-   Minimize impact\
 -   Preserve verifiable truth
 
 Instead of only blocking attackers, the system diverts, fragments,
@@ -24,7 +24,7 @@ audits, and neutralizes malicious activity.
 
 ------------------------------------------------------------------------
 
-# Core Defensive Modules
+# 🔐 Core Defensive Modules
 
 ## 1. Vajra Deception Engine
 
@@ -68,7 +68,7 @@ Reassembly occurs only after authenticated validation.
 
 ------------------------------------------------------------------------
 
-## 4. Botnet Hash Interdiction
+## ⚡ Botnet Hash Interdiction
 
 Designed to counter high-frequency scraping and DDoS behavior.
 
@@ -80,7 +80,7 @@ This converts attack traffic into self-inflicted resource drain.
 
 ------------------------------------------------------------------------
 
-## 5. Secure Administrative Access
+## 🔒 Secure Administrative Access
 
 Administrative sessions require hybrid authorization.
 
@@ -90,7 +90,7 @@ CRYSTALS-Dilithium digital signatures provide post-quantum protection.
 
 ------------------------------------------------------------------------
 
-# System Architecture
+# 🏗️ System Architecture
 
   Stage            Process                   Purpose
   ---------------- ------------------------- --------------------------------
@@ -103,7 +103,7 @@ CRYSTALS-Dilithium digital signatures provide post-quantum protection.
 
 ------------------------------------------------------------------------
 
-# Technical Stack
+# 💻 Technical Stack
 
 **Backend:**\
 C++ (PoW engine), Python (OpenCV-based steganography)
@@ -120,7 +120,7 @@ Distributed fragment-based architecture
 
 ------------------------------------------------------------------------
 
-# Threat Coverage
+## 🎯 Threat Coverage
 
 Vajra Sentinel mitigates:
 
@@ -144,13 +144,6 @@ logs/ → Runtime logs (excluded from production repository)
 
 ------------------------------------------------------------------------
 
-# Design Summary
-
-Vajra Sentinel does not rely solely on blocking threats.
-
-It ensures attackers waste resources.\
-It preserves truth at the pixel level.\
-It fragments sensitive data.\
-It generates verifiable forensic evidence.
-
-The system remains resilient even under full database compromise.
+Vajra Sentinel ensures attackers waste resources, data remains
+verifiable, and breaches remain contained even under extreme threat
+conditions.
