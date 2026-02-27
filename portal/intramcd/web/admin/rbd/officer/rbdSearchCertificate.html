@@ -1,0 +1,2668 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+
+
+<html>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<!--start lodeer in jsp  spinner -->
+			<div class="loader-spinner-overlay"  id="overlay" style="display:none;">
+				<div class="spanner show">
+					<div class="loader">
+						<b></b><b></b><b></b><b></b><b></b>
+					</div>
+					<p style="font-size: 20px;">Processing Your Request Please wait</p>
+				</div>
+			</div>
+			
+			<!-- end loader in jsp spinner -->
+<head>
+<base
+	href="http://mcdonline.nic.in/intramcd/" />
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>MCD | Dashboard</title>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<link rel="stylesheet" href="static/bower_components/bootstrap/dist/css/bootstrap.css">
+<link rel="stylesheet" href="static/bower_components/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="static/bower_components/Ionicons/css/ionicons.min.css">
+<link rel="stylesheet" href="static/dist/css/AdminLTE.css">
+<link rel="stylesheet" href="static/dist/css/skins/_all-skins.css">
+<link rel="stylesheet" href="static/bower_components/datatable/jquery.dataTables.min.css">
+<link rel="stylesheet" href="static/bower_components/bootstrap-daterangepicker/daterangepicker.css">
+<link rel="stylesheet" href="static/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+<link rel="stylesheet" href="static/plugins/iCheck/all.css">
+<link rel="stylesheet" href="static/bower_components/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css">
+<link rel="stylesheet" href="static/plugins/timepicker/bootstrap-timepicker.min.css">
+<link rel="stylesheet" href="static/bower_components/select2/dist/css/select2.min.css">
+<link rel="stylesheet" href="static/dist/css/customstyle.css">
+<link rel="stylesheet" href="static/dist/css/fontStyleDesign.css">
+
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini ">
+	<div class="wrapper">
+		<header id="header">
+			
+
+
+
+
+
+
+
+<header class="main-header ">
+	<!-- Logo -->
+	<a href="https://mcdonline.nic.in/intramcd/web/admin/home" class="logo"> <span class="logo-mini"
+		title="Municipal Corporation of Delhi"><b>M</b>CD</span> <!-- logo for regular state and mobile devices -->
+		<span class="logo-lg" title="Municipal Corporation of Delhi"><b>Municipal Corporation of Delhi</b></span>
+	</a>
+	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-info"  ><!-- style="margin-left:0px;" -->
+		<!-- Sidebar toggle button-->
+		<a href="javascript:void(0);" class="sidebar-toggle" data-toggle="push-menu"
+			role="button"> <span class="sr-only">Toggle navigation</span>
+		</a>
+		<span style="align-items: center; color: white; font-size: 18px; font-weight: bold;">
+	 
+		
+		 <script>
+	        var date=new Date();  
+			var day=date.getDate();  
+			var month=date.getMonth()+1;  
+			var year=date.getFullYear();  
+			document.write("As On: "+day+"-"+month+"-"+year);  
+		</script> 
+		
+		</span>
+		<div class="navbar-custom-menu">
+			<ul class="nav navbar-nav">
+				<li class="dropdown user user-menu"><a href="javascript:void(0);"
+					class="dropdown-toggle" data-toggle="dropdown"> <img
+						src="static/dist/img/personIcon.jpg" class="user-image"
+						alt="User Image"> <span class="hidden-xs"></span>
+				</a>
+					<ul class="dropdown-menu">
+						<!-- User image -->
+						<li class="user-header"><img src="static/dist/img/personIcon.jpg"
+							class="img-circle" alt="User Image">
+
+							<p>
+								<br>
+								[
+								
+								]
+						<!-- Menu Footer-->
+						<li class="user-footer">
+							<div class="pull-left">
+								<a href="javascript:void(0);" class="btn btn-default btn-flat">Profile</a>
+							</div>
+							<div class="pull-right">
+								<a href="javascript:document.getElementById('logoutFrm').submit();" class="btn btn-default btn-flat">Sign out</a>
+							</div>
+						</li>
+					</ul></li>
+			</ul>
+		</div>
+	</nav>
+</header>
+<form id="logoutFrm" action="web/admin/logout" method="post"><div>
+<input type="hidden" name="_csrf" value="89ca3fc0-42fa-4612-a725-f4d01ac791c2" />
+</div></form>
+
+		</header>
+		<section id="sidemenu">
+			  <!-- Left side column. contains the logo and sidebar -->
+    
+  
+  
+
+
+
+
+
+
+
+   <script src="static/bower_components/jquery/dist/jquery.min.js"></script>
+  <aside class="main-sidebar">
+   <div class="slimScrollDiv">
+    <section class="sidebar ">
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="static/dist/img/personIcon.jpg" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p> </p>
+          <a href="javascript:void(0);"><i class="fa fa-circle text-success"></i> Online</a>
+        </div>
+      </div>
+      <form action="javascript:void(0);" method="get" class="sidebar-form">
+        <div class="input-group">
+        </div>
+      </form>
+			
+      <ul class="sidebar-menu" data-widget="tree">
+      	
+    </ul>
+    
+  </section>
+  </div>
+</aside>
+		
+  <script>
+  
+//active side menu link 
+  $(document).ready(function() {
+	  let data = sessionStorage.getItem('idToPopulate');
+	  $("ul.sidebar-menu li:eq("+data+")").addClass('active');
+  });
+  
+  
+  $(function() {
+   //  /* $( 'ul.sidebar-menu li.treeview ul.treeview-menu li' ).on( 'click', function() { */
+	    $( 'ul.sidebar-menu li' ).on( 'click', function() {        
+	    	$( this ).parent().find( 'li.active' ).removeClass( 'active' );
+            sessionStorage.setItem('idToPopulate', $( this ).index());
+            $( this ).addClass( 'active' );
+      });  
+   
+});
+   
+   
+/*   $(function() {
+      $( 'ul.sidebar-menu li.treeview ul.treeview-menu li' ).on( 'click', function() {
+            $( this ).parent().find( 'li.active' ).removeClass( 'active' );
+            $( this ).addClass( 'active' );
+      });  
+      $("#test li").click(function() {
+      });
+      $("#test li").click(function() {
+		  $( this ).addClass( 'active' );
+		  $( this ).find( 'li.active' ).removeClass( 'active' );
+  });
+}); */
+  
+//   function myFunction(id){
+// 	  if(id == 'Masters'){
+// 		  var r = confirm("Do you want to proceed? this is external link.");
+// 		  if (r == true) {
+// 			  document.getElementById("masterID").click();
+// 		  } else {
+// 			    return false;
+// 		  }
+// 	  }else if(id == 'FormEngine'){
+// 		  var r = confirm("Do you want to proceed? this is external link.");
+// 		  if (r == true) {
+// 			  document.getElementById("formEngineID").click();
+// 		  } else {
+// 			    return false;
+// 		  }
+// 	  }else{
+// 		  var r = confirm("Do you want to proceed? this is external link.");
+// 		  if (r == true) {
+// 			  document.getElementById("citizenID").click();
+// 		  } else {
+// 			    return false;
+// 		  }
+// 	  }
+//   }
+  
+  </script>
+ 
+		</section>
+		<section id="site-content">
+			<!-- Content Wrapper. Contains page content -->
+<meta http-equiv="pragma" content="no-cache" />
+
+
+
+
+
+
+
+
+
+<script src="static/bower_components/jquery/dist/jquery.min.js"></script>
+<style>
+	.title_header{
+		font-size: 20px;
+	    margin: 5px 0;
+	    display: block;
+	    text-align: center;
+	    font-weight: bold;
+	}
+	.oldcerti {
+	    /* width: 80%; */
+	    margin: 0 auto;
+	    border: 1px solid;
+	    text-transform: uppercase;
+	}
+	.disable_Section{
+		pointer-events: none; 
+        user-select: none; 
+        opacity: 0.50; 
+	}
+
+</style>
+
+
+
+
+
+
+
+
+
+<!-- add Modal-->
+<div class="modal fade" id="largeModal" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        
+      		<!-- <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	          <h4 class="bootbox-body" >HEALTH</h4>
+	        </div> -->
+			<div id="lgModalBodyID" class="modal-body">
+			
+			</div>
+			<div class="modal-footer">
+	          <button type="button" class="btn btn-danger " data-dismiss="modal">Close</button>
+	        </div>
+    </div>
+  </div>
+</div>
+	
+  <div class="modal-md modal fade model-Pointer-Disable" id="myModal_status" role="dialog" >
+    <div class="modal-dialog">
+      <div class="modal-content">
+      <div>
+        <div class="modal-header compectheader" id="elementToChange">          
+          <h4 class="modal-title compecttitle"><span id="modelheading_success"></span></h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+          <div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		     	<h5 class="modalmsg mb-4 text-center" id="message_header"><i class="fa fa-check-circle" id="status_circle"></i><span id="messagebody_status"> </span></h5>
+             </div>
+			</div>
+          </form>
+        </div>
+        </div>
+        <div class="modal-footer text-center">
+          <button type="button" class="btn btn-default btnCom" title="Close the Modal Popup" id="successbtnnew" style="display: none">Continue</button>
+          <button type="button" class="btn btn-danger " data-dismiss="modal" title="Close the Modal Popup" id="closebtn">Close</button>
+        </div>
+      </div>      
+    </div>
+  </div>  
+
+
+<!-- small modal -->
+<div class="modal fade" id="smallModal" role="dialog">
+	<div class="modal-dialog modal-lg modalsm">
+		<div class="modal-content">
+			<!-- <div id="smModalHeaderID" class="modal-header">
+				
+			</div> -->
+			<div id="smModalBodyID" class="modal-body">
+				
+			</div>
+			<!-- <div  id="smModalFooterID" class="modal-footer">
+				
+			</div> -->
+		</div>
+	</div>
+</div>
+
+
+<!-- small modal -->
+<div class="modal fade" id="mediumModal" role="dialog">
+    <div class="modal-dialog modal-lg modalmd" >
+      <div class="modal-content">
+       <!--  <div id="mdModalHeaderID" class="modal-header">
+				
+		</div> -->
+		<div id="mdModalBodyID" class="modal-body" >
+				
+		</div>
+		<!-- <div  id="mdModalFooterID" class="modal-footer">
+			
+		</div> -->
+      </div>
+    </div>
+  </div>
+  
+<!-- small modal end-->
+			<!-- lode spinner -->
+			<div class="loader-spinner-overlay"  id="overlay" style="display:none;">
+				<div class="spanner show">
+					<div class="loader">
+						<b></b><b></b><b></b><b></b><b></b>
+					</div>
+					<p style="font-size: 20px;">Processing Your Request Please wait</p>
+				</div>
+			</div>
+			<!-- <div id="overlay" >
+				<div class="overlay show "></div>
+				<div class="spanner show">
+					<div class="loader">
+						<b></b><b></b><b></b><b></b><b></b>
+					</div>
+					<h5>Processing Your Request Please wait</h5>
+				</div>
+			</div> -->
+<!--lode spinner end  -->
+<!-- gtl error message model -->
+<div class="modal-md modal fade model-Pointer-Disable" id="rbdErrorModal" role="dialog">
+	<div class="modal-dialog modal-lg modalsm">
+		<div class="modal-content">
+		<div>
+			 <div id="errorModalHeaderID" class="modal-header compectheader">
+				 <h4 class="modal-title compecttitle" id="errorModalHeadID">Error Message</h4>
+			</div> 
+			<div id="errorModalBodyID" class="modal-body">
+			</div>
+		</div>
+			 <div  class="modal-footer">
+			 <button type="button" class="btn btn-default btnCom" title="Close the Modal Popup" id="successErrorbtnnew">OK</button>
+			</div> 
+		</div>
+	</div>
+</div>	
+<!-- gtl error message model end-->
+	
+  <div class=" modal fade model-Pointer-Disable" id="myModal_receipt" role="dialog" >
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+      <div>
+        <div class="modal-header compectheader" id="">          
+          <h4 class="modal-title compecttitle">RECEIPT</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+          <div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<div class="table-responsive" id="bodyReceipt">
+	             
+                  </div>
+
+             </div>
+			</div>
+          </form>
+        </div>
+        </div>
+        <div class="modal-footer text-center">
+         
+          <button type="button" class="btn btn-danger " data-dismiss="modal" title="Close the Modal Popup" id="">Close</button>
+        </div>
+      </div>      
+    </div>
+  </div>  
+
+<div class="content-wrapper">
+	<section class="content">
+	<!-- <div class="row">
+		<div class="col-sm-12">
+		<a href="web/admin/welcome?applicationCode=rbd" class="btn btn-primary btn-md pull-right backbtn"> <span class="fa fa-arrow-circle-left"></span> Back </a>
+		</div>
+	</div> -->
+	<div class="card mb-4">
+		<div class="card-header bg-warning">
+			<h5  style="text-align: center">Birth/Death Registration Verification</h5>
+		</div>
+			<div class="card-body">
+			
+			<div id='upicid'>
+			<ul class="nav nav-tabs nav-pills" id="myTab" role="tablist">
+					
+					<li class="nav-items"  style="width: 50%; text-align:center; background: #dfe1e3;" onclick="birthDeathTab('BIRTH')"><a class="nav-link active"  id="registeredDetail-tab" data-toggle="tab" href="#registeredDetail" role="tab" aria-controls="registeredDetail" aria-selected="true" style="border-radius: 1.25rem;font-weight: 700;">BIRTH</a>
+					</li>										
+					<li class="nav-items"  style="width: 50%; text-align:center;background: #dfe1e3; " onclick="birthDeathTab('DEATH')"><a class="nav-link"  id="registeredDeathDetail-tab" data-toggle="tab" href="#registeredDetail" role="tab" aria-controls="registeredDetail" aria-selected="false" style="border-radius: 1.25rem;font-weight: 700;">DEATH</a>
+					</li>	
+			</ul>
+				
+			<form id="search_formsu" action="/intramcd/web/admin/rbd/officer/rbdSearchCertificate" method="post">
+			 <input type="hidden" name="_csrf" value="89ca3fc0-42fa-4612-a725-f4d01ac791c2"/>
+				<input type="hidden" name="viewUpdateBirthRequestType" id="viewUpdateBirthRequestType" value="CRT">
+					 <!-- Content Wrapper. Contains page content -->
+<meta http-equiv="pragma" content="no-cache" />
+
+
+<!-- <script src="static/bower_components/jquery/dist/jquery.min.js"></script> -->
+
+
+<div class="tab-content" id="myTabContentsearch">															
+<div class="tab-pane active mt-2" id="registeredDetail" role="tabpanel" aria-labelledby="registeredDetail-tab">
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-left">
+				<!-- Tabs -->
+				<input type="hidden" name="requestType" id="rbdRequestType" value="BIRTH"/>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding-zero panel-forms">
+					<ol class="breadcrumb">									
+						<li class="active"><i class="fa fa-list"></i><b class="modalmsz"  id="headingchildDeseased"> ENTER DETAILS OF CHILD</b></li>
+					</ol>
+					<div class="row pb-4 ml-2">      	
+  					<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+		<label>REGISTRATION NUMBER</label>	
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+			 <div  class="input-group " >							
+				<span class="input-group-addon"><i class="fa fa-search"></i></span>
+					<input type="text" class="form-control" placeholder="(ex: MCDOLIR-2118-007011580)" id="registrationNumber" name="registrationNumber" maxlength="45">
+			</div> 													
+		</div>
+	</div>
+	<input type="hidden" name="eventType" id="dataTypes" value="BIRTH">
+	<div class="xBox col-lg-12 col-md-12 col-sm-12 col-xs-12"><div class="item-box"></div></div>										
+	 <div class="row pb-4 ml-2">					 
+  					<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+			  <label>APPLICATION NUMBER</label>  	
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">						
+			<div  class="input-group " >
+				<span class="input-group-addon"><i class="fa fa-search"></i></span>
+				<input type="text" class="form-control" placeholder="(ex: 0120-102856/0120-15145012)"  id="certificateNumber" name="certificateNumber" maxlength="45">
+	</div>
+		</div>
+	</div>
+	<div class="xBox col-lg-12 col-md-12 col-sm-12 col-xs-12"><div class="item-box"></div></div>										
+	 <div class="row pb-4 ml-2">	
+	 
+	 	<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+			  <label class="required" ><span id="reqlabel" >DATE OF BIRTH:</span> </label> 	
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+			<div  class="input-group " >
+				<span class="input-group-addon"><i class="fa fa-search"></i></span>	
+								<input class="form-control" type="text" id="dateOfBirthDeath" placeholder="DD-MM-YYYY" name="dateOfBirthDeath" readonly="readonly"> 
+							</div>
+		</div>
+							<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+			 <label class="required" > SELECT GENDER :</label>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+		<div  class="input-group " >
+			<select id="gender" class="js-states form-control" name="gender">
+				<option value="" selected="selected">Select Gender</option>
+				<option value="M">MALE</option>
+				<option value="F">FEMALE</option>
+				<option value="T">TRANSGENDER</option>
+
+			</select>
+		</div>
+		</div>
+		</div>
+		<div class="row pb-4 ml-2">		
+			
+			<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+				 <label class="" id="fatherNameLbl"> NAME OF FATHER :</label>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+				<div  class="input-group " >
+					<span class="input-group-addon"><i class="fa fa-search"></i></span>
+					<input type="text" class="form-control alphabetWithSpace" name="fatherName" id="fatherName" onkeyup="uppercase(this)" placeholder="Enter Father Name" maxlength="45"/>
+			</div>
+	</div>				
+		<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+		  <label class="required" id="motherNameLbl">NAME OF MOTHER :</label>  	
+	</div>
+	<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+		<div  class="input-group " >
+			<span class="input-group-addon"><i class="fa fa-search"></i></span>
+			 <input id="motherName" type="text" name="motherName" class="form-control alphabetWithSpace" onkeyup="uppercase(this)" placeholder="Enter Mother Name" maxlength="45"/>
+		</div>
+	</div> 
+</div>
+	<div class="xBox col-lg-12 col-md-12 col-sm-12 col-xs-12"><div class="item-box"></div></div>										
+		 <div class="row pb-4 ml-2">					 
+   					<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+				  <label>MOBILE NUMBER</label>  	
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">						
+				<div  class="input-group " >
+					<span class="input-group-addon"><i class="fa fa-search"></i></span>
+					<input type="text" class="form-control" placeholder="Enter Mobile Number" id="mobileno" name="mobileno" maxlength="10">
+				</div>
+			</div>
+		</div>
+	</div>	
+	</div>
+</div>
+        <!--        <div class="row mb-3 ">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-2 text-right">
+				<button type="button" name="reset" id="reset_btn" class="btn btn-primary" onclick="formReset()"><i class="fa fa-refresh" aria-hidden="true"></i> RESET</button>
+			<input id="submitSearch" type="submit" class="btn btn-primary" value="SEARCH">
+	</div>
+</div> -->
+	</div>
+              </div>
+       
+             
+ 
+
+ 
+                <div>
+<input type="hidden" name="_csrf" value="89ca3fc0-42fa-4612-a725-f4d01ac791c2" />
+</div></form>
+                <div class="text-center">
+                	
+				    	<span id="captcha"></span>
+				    	<input type="text" placeholder="Enter Captcha" id="cpatchaTextBox" autocomplete="off"/>
+			    	
+					<button type="button" name="reset" id="reset_btn" class="btn btn-primary" onclick="formReset()"><i class="fa fa-refresh" aria-hidden="true"></i> RESET</button>
+					<input id="submitSearch" type="submit" class="btn btn-primary" value="SEARCH">
+                </div>
+             </div>
+             
+            <!--  citizen table view  -->
+             <div class="row mt-4" id="birthSearchTable1">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+		             <div class="card" style="box-shadow:none;">
+						<div class="card-header bg-warning">
+							<h5 style="text-align: center">Birth/Death Registration Details</h5>
+						</div>
+						<div class="card-body pl-0 pr-0">
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p-0">
+								<div id="citizenrecordtab">
+								<!--  table content here-->
+								</div>
+							</div>
+						</div>
+					</div>
+	             </div>
+             </div>
+	</div>
+	</div>
+	</section>
+</div>
+<!-- ******************* for tracking citizen modal **********************  -->
+  
+
+
+
+
+
+
+
+ 
+ <form id="updateDetailFormId" action="web/admin/rbd/officer/updatFormEngineStatus" method="POST">
+	<input type="hidden" name="_csrf" value="89ca3fc0-42fa-4612-a725-f4d01ac791c2" />
+		<input type="hidden" name="certificateNo" id="certificateNoAbc">
+		<input type="hidden" name="requestType" id="requestTypeAbc">
+		<input type="hidden" name="processCode" id="processCodeTrack">
+<div>
+<input type="hidden" name="_csrf" value="89ca3fc0-42fa-4612-a725-f4d01ac791c2" />
+</div></form>
+
+  <div class="modal" id="trackcitizenmodel">
+  <div class="modal-dialog modal-lg" style="top:0;">
+    <div class="modal-content">
+      <!-- Modal Header -->      
+      <div class="modal-header compectheader">
+         <h1 class="modal-title compecttitle text-center font-weight-bold" id="trackcitizenHeading">Citizen Status</h1>  
+        <button type="button" class="close modalclose" data-dismiss="modal">&times;</button>
+      </div>
+      <!-- Modal body -->
+      <div class="modal-body">
+      <div class="row">   
+        <div class="col-md-12">
+        <form id="formtrackstatus">
+          <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-left">	
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding-zero panel-forms">
+				<ol class="breadcrumb">
+					<li class="active"><i class="fa fa-list"></i><b class="modalmsz">CITIZEN INFORMATION</b></li>
+				</ol>
+                <input type="hidden" name="_csrf" value="89ca3fc0-42fa-4612-a725-f4d01ac791c2"/>
+			    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					<label class="control-label required">Application Number: </label>
+					<div class="input-group">
+					<span class="input-group-addon"><i class="fa fa-th"></i></span> 
+					<input type="text" id="certificateNotrackStatus" class="form-control" placeholder="Enter Certificate Number" name="certificateNo">
+					<input type="hidden" id="processCodetrackStatus" class="form-control" name="processCode" >
+					<input type="hidden" id="requesttypeTrack" class="form-control"  name="requestType" >
+					
+					</div></div>
+					
+			</div>
+			<div class="modal-footer text-center">        
+          <button type="submit" class="btn btn-default btnCom" title="Continue" id="successbtnnew_trackStatus">Continue</button>
+          <button type="button" class="btn btn-danger " data-dismiss="modal" title="Close the Modal Popup" id="closebtn_trackStatus">Close</button>
+        </div>
+        </div></div></div>
+          </form>
+       	  </div>
+      </div>
+</div>
+      <!-- Modal footer -->
+<!--       <div class="modal-footer"> -->
+<!--         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button> -->
+<!--       </div> -->
+
+
+<!--  -->
+ <div class="modal fade model-Pointer-Disable" id="statusTable" role="dialog">
+  <div class="modal-dialog modal-xl" style="width:auto;">
+    <div class="modal-content">
+      	 <div class="modal-header compectheader" id="elementToChange_listpayment">          
+          <h4 class="modal-title compecttitle"><span id="modelheading_success_listpayment">Track Status</span></h4>
+           <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+			<div id="" class="modal-body">
+			<div class="table-responsive">
+				<table id="" class="display table table-bordered table-hover dataTable" style="width: 100%;">
+					<thead>
+						<tr>
+							<th class="col-md-1">Status Stage No</th> 
+							<th class="col-md-2">Status</th>
+							<th class="col-md-2">Action Date</th>
+							<th class="col-md-2">Sender</th>
+							<th class="col-md-2">Receiver</th>
+							<th class="col-md-2">Action</th>
+						</tr>
+					</thead>
+				<tbody style="margin: 0px;" id="statusTableContent">
+				</tbody>
+				</table>
+				</div>
+			</div>
+			<div class="modal-footer">
+	          <button type="button" class="btn btn-danger " data-dismiss="modal">Close</button>
+	        </div>
+    </div>
+  </div>
+</div>
+<!--  -->
+
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+
+
+function checknull(value){
+	if(value!=null && value!="" && typeof value !== "undefined")
+		return true;
+	else
+		return false;
+}
+function updateDetail(certificateNumber,requestType,processCodeTrack){
+	//alert("updateDetail function");
+	//alert("certificateNumber : "+certificateNumber);
+	//alert("requestType : "+requestType);
+	//alert("processCodeTrack : "+processCodeTrack);
+	
+	$("#certificateNoAbc").val(certificateNumber);
+	//$("#certificateGuid").val(certificateGuid);
+	$("#requestTypeAbc").val(requestType);
+	$("#processCodeTrack").val(processCodeTrack);
+	//alert($("#certificateNoAbc").val());
+	$("#updateDetailFormId").submit();	
+}
+$("#formtrackstatus").submit(function(e) {
+	 e.preventDefault(); // avoid to execute the actual submit of the form.
+	$('#overlay').show();
+	 var row1="<div class='btn-group dropleft show'>";
+	    var row2="<button id='actionID' type='button' class='btn action-btn dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>Actions</button>";
+	    var row3="<div class='dropdown-menu dropMenu' x-placement='left-start' style='position: absolute; transform: translate3d(-2px, 0px, 0px); top: 0px; left: 0px; will-change: transform;'>";
+	    var rowmargin="<div class='dropdown-divider'></div>";
+	    var actionRows=row1+row2+row3+rowmargin;
+    var post_url = "/intramcd/web/admin/rbd/officer/viewFormEngineStatus"; //get form action url
+    $.ajax({
+           type: "GET",
+           url: post_url,
+           data: $('#formtrackstatus').serialize(), // serializes the form's elements.
+           success: function(response) {
+           $('#overlay').hide();
+        	   $("#requestbtnfor").val("TRACKSTATUS");
+        	   if(response.length>0){
+					var row="";
+					for(var i = 0;i<response.length;i++){
+						var status=response[i].resStatus;
+						
+						if(status=="FORWARDED" && response[i].haveQueryRaised=="true"){
+					 row= row+"<tr>"+
+							"<td class='col-md-1 sorting_1' data-title="+response[i].statusStageNo+">"+response[i].statusStageNo+"</td>"+
+							"<td class='col-md-1 sorting_1' data-title="+response[i].resStatus+">"+response[i].resStatus+"</td>"+
+							"<td class='col-md-1 sorting_1' data-title="+response[i].actionDate+">"+response[i].actionDate+"</td>"+
+							"<td class='col-md-1 sorting_1' data-title="+response[i].sender+">"+response[i].sender+"</td>"+
+							"<td class='col-md-1 sorting_1' data-title="+response[i].receiver+">"+response[i].receiver+"</td>"+
+							"<td>"+actionRows+"<a class='dropdown-item menuItem' href='javascript:void(0);' onclick=\"updateDetail('"+response[i].certificateNumber+"','"+response[i].requestType+"','"+response[i].prcsDefCode+"')\"><i class='fa fa-eye'></i> Update Details</a>"+ "</td>"+
+							"</tr>";
+					}else if(status=="APPROVED" && response[i].haveTemplateGenerated=="false"){
+						if(response[i].requestType=="SHFReceipt"||response[i].requestType=="RVK" ){
+    			row= row+"<tr>"+
+		        "<td class='col-md-1 sorting_1' data-title="+response[i].statusStageNo+">"+response[i].statusStageNo+"</td>"+
+		        "<td class='col-md-1 sorting_1' data-title="+response[i].resStatus+">"+response[i].resStatus+"</td>"+
+		        "<td class='col-md-1 sorting_1' data-title="+response[i].actionDate+">"+response[i].actionDate+"</td>"+
+		        "<td class='col-md-1 sorting_1' data-title="+response[i].sender+">"+response[i].sender+"</td>"+
+		        "<td class='col-md-1 sorting_1' data-title="+response[i].receiver+">"+response[i].receiver+"</td>"+
+		        "<td>"+actionRows+"<a class='dropdown-item menuItem' href='javascript:void(0);' onclick=\"updateDetail('"+response[i].certificateNumber+"','"+response[i].requestType+"','"+response[i].prcsDefCode+"')\"><i class='fa fa-eye'></i> Update Details</a>"+ "</td>"+
+		         "</tr>";
+		
+		}else{
+			row= row+"<tr>"+
+			"<td class='col-md-1 sorting_1' data-title="+response[i].statusStageNo+">"+response[i].statusStageNo+"</td>"+
+			"<td class='col-md-1 sorting_1' data-title="+response[i].resStatus+">"+response[i].resStatus+"</td>"+
+			"<td class='col-md-1 sorting_1' data-title="+response[i].actionDate+">"+response[i].actionDate+"</td>"+
+			"<td class='col-md-1 sorting_1' data-title="+response[i].sender+">"+response[i].sender+"</td>"+
+			"<td class='col-md-1 sorting_1' data-title="+response[i].receiver+">"+response[i].receiver+"</td>"+
+        	"<td>Pending for Cerificate/License Generation</td>"+
+			"</tr>";
+	}
+						}else if(status=="APPROVED" && response[i].haveTemplateGenerated=="true"){
+						 row= row+"<tr>"+
+							"<td class='col-md-1 sorting_1' data-title="+response[i].statusStageNo+">"+response[i].statusStageNo+"</td>"+
+							"<td class='col-md-1 sorting_1' data-title="+response[i].resStatus+">"+response[i].resStatus+"</td>"+
+							"<td class='col-md-1 sorting_1' data-title="+response[i].actionDate+">"+response[i].actionDate+"</td>"+
+							"<td class='col-md-1 sorting_1' data-title="+response[i].sender+">"+response[i].sender+"</td>"+
+							"<td class='col-md-1 sorting_1' data-title="+response[i].receiver+">"+response[i].receiver+"</td>"+
+							"<td>"+actionRows+"<a class='dropdown-item menuItem' href='javascript:void(0);' onclick=\"updateDetail('"+response[i].certificateNumber+"','"+response[i].requestType+"','"+response[i].prcsDefCode+"')\"><i class='fa fa-eye'></i> Update Details</a>"+ "</td>"+
+							"</tr>";
+					}else if(status=="REJECTED" && response[i].haveTemplateGenerated=="false"){
+						if(response[i].requestType=="HospitalPaymentReceipt"){
+							row= row+"<tr>"+
+							"<td class='col-md-1 sorting_1' data-title="+response[i].statusStageNo+">"+response[i].statusStageNo+"</td>"+
+							"<td class='col-md-1 sorting_1' data-title="+response[i].resStatus+">"+response[i].resStatus+"</td>"+
+							"<td class='col-md-1 sorting_1' data-title="+response[i].actionDate+">"+response[i].actionDate+"</td>"+
+							"<td class='col-md-1 sorting_1' data-title="+response[i].sender+">"+response[i].sender+"</td>"+
+							"<td class='col-md-1 sorting_1' data-title="+response[i].receiver+">"+response[i].receiver+"</td>"+
+							"<td>"+actionRows+"<a class='dropdown-item menuItem' href='javascript:void(0);' onclick=\"updateDetail('"+response[i].certificateNumber+"','"+response[i].requestType+"','"+response[i].prcsDefCode+"')\"><i class='fa fa-eye'></i> Update Details</a>"+ "</td>"+
+							"</tr>";
+							
+						}
+						else if(response[i].requestType=="RVK"){
+							row= row+"<tr>"+
+							"<td class='col-md-1 sorting_1' data-title="+response[i].statusStageNo+">"+response[i].statusStageNo+"</td>"+
+							"<td class='col-md-1 sorting_1' data-title="+response[i].resStatus+">"+response[i].resStatus+"</td>"+
+							"<td class='col-md-1 sorting_1' data-title="+response[i].actionDate+">"+response[i].actionDate+"</td>"+
+							"<td class='col-md-1 sorting_1' data-title="+response[i].sender+">"+response[i].sender+"</td>"+
+							"<td class='col-md-1 sorting_1' data-title="+response[i].receiver+">"+response[i].receiver+"</td>"+
+							"<td>"+actionRows+"<a class='dropdown-item menuItem' href='javascript:void(0);' onclick=\"updateDetail('"+response[i].certificateNumber+"','"+response[i].requestType+"','"+response[i].prcsDefCode+"')\"><i class='fa fa-eye'></i> Update Details</a>"+ "</td>"+
+							"</tr>";
+						}
+						else{
+							row= row+"<tr>"+
+							"<td class='col-md-1 sorting_1' data-title="+response[i].statusStageNo+">"+response[i].statusStageNo+"</td>"+
+							"<td class='col-md-1 sorting_1' data-title="+response[i].resStatus+">"+response[i].resStatus+"</td>"+
+							"<td class='col-md-1 sorting_1' data-title="+response[i].actionDate+">"+response[i].actionDate+"</td>"+
+							"<td class='col-md-1 sorting_1' data-title="+response[i].sender+">"+response[i].sender+"</td>"+
+							"<td class='col-md-1 sorting_1' data-title="+response[i].receiver+">"+response[i].receiver+"</td>"+
+                            "<td>Pending for Cerificate/License Generation</td>"+
+							"</tr>";
+						}
+					}
+					else if(status=="REJECTED" && response[i].haveTemplateGenerated=="true"){
+						row= row+"<tr>"+
+							"<td class='col-md-1 sorting_1' data-title="+response[i].statusStageNo+">"+response[i].statusStageNo+"</td>"+
+							"<td class='col-md-1 sorting_1' data-title="+response[i].resStatus+">"+response[i].resStatus+"</td>"+
+							"<td class='col-md-1 sorting_1' data-title="+response[i].actionDate+">"+response[i].actionDate+"</td>"+
+							"<td class='col-md-1 sorting_1' data-title="+response[i].sender+">"+response[i].sender+"</td>"+
+							"<td class='col-md-1 sorting_1' data-title="+response[i].receiver+">"+response[i].receiver+"</td>"+
+							"<td>"+actionRows+"<a class='dropdown-item menuItem' href='javascript:void(0);' onclick=\"updateDetail('"+response[i].certificateNumber+"','"+response[i].requestType+"','"+response[i].prcsDefCode+"')\"><i class='fa fa-eye'></i> Update Details</a>"+ "</td>"+
+							"</tr>";
+					}
+						else{
+						row= row+"<tr>"+
+						"<td class='col-md-1 sorting_1' data-title="+response[i].statusStageNo+">"+response[i].statusStageNo+"</td>"+
+						"<td class='col-md-1 sorting_1' data-title="+response[i].resStatus+">"+response[i].resStatus+"</td>"+
+						"<td class='col-md-1 sorting_1' data-title="+response[i].actionDate+">"+response[i].actionDate+"</td>"+
+						"<td class='col-md-1 sorting_1' data-title="+response[i].sender+">"+response[i].sender+"</td>"+
+						"<td class='col-md-1 sorting_1' data-title="+response[i].receiver+">"+response[i].receiver+"</td>"+
+						"<td>"+ "</td>"+
+						"</tr>";
+					}
+					} 
+				$("#statusTableContent").html(row);
+        	   $('#overlay').hide();
+        	 	$("#statusTable").modal("show");
+        	   }else{
+					  $("#statusTableContent").html("<tr class='text-center'><td colspan='5'><span class='spanmsz  red'> <i class='fa fa-info-circle red' aria-hidden='true'></i> <b>PLEASE TRY AFTER SOMETIME. <b></span></td></tr>");
+					   
+					  $('#overlay').hide();
+		        	 	$("#statusTable").modal("show");
+     	  }
+        	 
+           }
+         });		    
+});
+
+
+</script>
+</body>
+</html>
+
+
+<!-- ******************* for birth /death details modal **********************  -->
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html> -->
+<!-- <style>
+#receiptBodyDeath #receiptBodyBirth .table th, .table td,.table tr th {
+    font-size:12px!important;
+}
+</style> -->
+<div class="modal fade " id="citizenDetailsModel">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content" >
+			<!-- Modal Header -->
+			<div class="modal-header compectheader" >
+				<a href="javascript:void" onclick='printDiv()' style="color: white;margin-left: 90%;" title="Click to download"><i class="fa fa-download" aria-hidden="true"></i> </a>
+				<button type="button" class="close modalclose" style="color: white;" data-dismiss="modal">×</button>
+			</div>
+			<!-- Modal body -->
+			<div class="modal-body pt-0">
+				<div  id="printReport">
+					<div class='col-lg-12 col-md-12 col-sm-12 text-center'>
+						<span id='logo'> 
+							<img src='static/images/mcd.png'  
+							class="img-responsive" height="100" width="100"  
+							alt='Municipal Corporation of Delhi' 
+							title='Municipal Corporation of Delhi'>
+ 						</span>
+						<h2 id="titleID" class="title_header">MUNICIPAL CORPORATION OF DELHI</h2>
+						
+				</div>
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+							<div id="receiptBody" style="padding: 10px;">
+								
+								<div class="table-responsive">
+									<table class='table table-bordered table-hover fixed oldcerti'>
+									<thead>
+									<tr>
+									<th colspan="2" class="text-center"><span id="headingLbl"></span></th>
+									</tr>
+									</thead>
+										<tbody>
+										<tr>
+												<th id="nameLbl">Name:	</th><td id="nameDl"></td>
+											</tr>
+											<tr>
+												<th>Gender:	</th><td id="genderDl"></td>											
+											</tr>
+											
+											<tr>
+												<th class="birthTr">Date of Birth:</th><th class="deathTr">Date of Death:</th>		<td id="birthDeathDateDl"></td>											
+											</tr>
+											
+											<!-- <tr>
+												<th> Event Type:	</th><td id="placeOfBirthDeathDl"></td>											
+											</tr> -->
+											<!-- <tr>
+												<th>Hospital Name:	</th><td id="hospitalNameDl"></td>
+											</tr> -->
+											<tr>
+												<th>Event Place Address:	</th><td id="addressBirthdeathDl"></td>											
+											</tr>
+											<!-- <tr>
+												<th>Colony:	</th><td id="colonyDl"></td>
+											</tr>
+											<tr>
+												<th>Ward:	</th><td id="wardDl"></td>											
+											</tr>
+											<tr>
+												<th>Zone:	</th><td id="zoneDl"></td>
+											</tr> -->
+											<tr>
+												<th> Date of Registration:	</th><td id="registrationDateDl"></td>
+										    </tr>
+											<tr>
+												<th>Registration Number:	</th><td id="registrationNumberDl"></td>
+											</tr>
+											<tr>
+												<th>Mother's Name:	</th><td id="motherNameDl"></td>											
+											</tr>
+											<tr>
+												<th>Father's Name:	</th><td id="fatherNameDl"></td>
+											</tr>
+											<tr>
+												<th>Present Address:	</th><td id="corressAddressDl"></td>											
+											</tr>
+											<tr>
+												<th>Permanent Address:	</th><td id="permaAddressDl"></td>
+											</tr>
+											
+											<!-- <tr>
+												<th>Application Number:	</th><td id="applicationNumberDl"></td>											
+											</tr> -->
+											
+											<tr class="deathTr">
+												<th id="spouseNameLbl">Spouse's Name:	</th><td id="spouseNameDl"></td>
+											</tr>
+											<!-- <tr>
+												<th>Parent's Mobile Number:	</th><td id="parentMobileNoDl"></td>											
+											</tr>
+											<tr>
+												<th>Applicant Mobile Number:	</th><td id="citizenMobileNoDl"></td>
+											</tr> -->
+										<!-- 	<tr>
+												<th>Applicant Type:</th><td id="applicantTypeDl"></td>											
+											</tr> -->
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Modal footer -->
+			<div class="modal-footer">
+				<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- </html> -->
+
+
+<!-- ******************* for tracking citizen modal end **********************  -->
+<!-- Content Wrapper. Contains page content -->
+<meta http-equiv="pragma" content="no-cache" />
+
+
+<script src="static/bower_components/jquery/dist/jquery.min.js"></script>
+<script>
+
+/*******************************************************************************function new****************************/
+ function birthDeathTab(tabVal){
+	$("#dataTypes").val(tabVal);
+	if(tabVal=="BIRTH"){
+		$("#reqlabel").html("DATE OF BIRTH:");
+		$("#motherNameLbl").html("NAME OF MOTHER");
+		$("#fatherNameLbl").html("NAME OF FATHER");
+		$("#headingchildDeseased").html(" ENTER DETAILS OF CHILD");
+		//$("#fatherNameLbl").attr("required",true);
+		//$("#fatherName").prop("required",true);
+		$("#fatherName").attr("placeholder","Enter Father Name");
+		$("#motherName").attr("placeholder","Enter Mother Name");
+		$("#deceasedName").attr('id', 'motherName').attr('name', 'motherName');
+		$("#rbdRequestType").val("BIRTH");
+		//$("#fatherNameLbl").addClass('required');
+		$("#submitSearch").prop("disabled",false);
+	}else if(tabVal="DEATH"){
+		$("#reqlabel").html("DATE OF DEATH:");
+		$("#fatherNameLbl").html("NAME OF FATHER");
+		$("#motherNameLbl").html("NAME OF DECEASED");
+		$("#headingchildDeseased").html(" ENTER DETAILS OF DECEASED");
+		$("#motherName").attr("placeholder","Enter Deceased Name");
+		$("#motherName").attr('id', 'deceasedName').attr('name', 'deceasedName').prop("required",true);
+		$("#fatherName").attr("placeholder","Enter Father Name");
+		$("#rbdRequestType").val("DEATH");
+		$("#fatherNameLbl").removeClass('required');
+		$("#submitSearch").prop("disabled",false);
+		//$("#fatherName").prop("required",false);
+	}
+	$("#registrationNumber,#dateOfBirthDeath,#gender,#motherName,#fatherName,#certificateNumber,#mobileno").val("");
+	$("#registrationNumber,#dateOfBirthDeath,#gender,#motherName,#fatherName,#certificateNumber,#deceasedName").css('border','1px solid #ccc');
+	$("#birthSearchTable1").hide();
+	$("#deathSearchTable1").hide();
+	$("#birthdata,#deathdata").html("");
+} 
+
+
+
+
+function makeFieldRequired(){
+	if(checknull($("#dateOfBirthDeath").val()) || checknull($("#gender").val()) || checknull($("#motherName").val()) || checknull($("#fatherName").val())){
+		$("#dateOfBirthDeath").prop("required",true);
+		$("#gender").prop("required",true);
+		$("#motherName").prop("required",true);
+		if($("#dataTypes").val()=='DEATH'){
+			//$("#fatherName").prop("required",false);
+			$("#deceasedName").prop("required",true);
+		}else{
+			//$("#fatherName").prop("required",true);
+		}
+		
+	}else{
+		$("#dateOfBirthDeath").prop("required",false);
+		$("#gender").prop("required",false);
+		$("#motherName").prop("required",false);
+		$("#fatherName").prop("required",false);
+		$("#deceasedName").prop("required",false);
+	}
+}
+function checknull(value){
+	if(value!=null && value!="" && typeof value !== "undefined")
+		return true;
+	else
+		return false;
+}
+function errorMessageModel(errorMessage){
+	var messagebody=errorMessage.toUpperCase();
+	$("#successErrorbtnnew").html("OK"); 
+	$("#cancelBtn").hide(); 
+ 	$("#errorModalHeadID").html("Message");
+ 	$("#errorModalBodyID").html(messagebody).css('color','#001080b8');
+	$("#rbdErrorModal").modal();
+	$("#successErrorbtnnew").click(function(event) {	
+		$("#rbdErrorModal").modal('toggle');
+	});
+		
+}
+function formReset(){
+	$("#successErrorbtnnew").html("OK"); 
+ 	$("#cancelBtn").html("Cancel");
+ 	$("#cancelBtn").show();
+ 	$("#errorModalHeadID").html("Message");
+ 	$("#errorModalBodyID").html("<b>Are you sure you want reset page. Your data for current form will be lost.<b/>").css('color','#001080b8');
+	$("#rbdErrorModal").modal();
+}
+$("#successErrorbtnnew").click(function(event) {	
+	location.reload(true);
+});
+$("#cancelBtn").click(function(event) {	
+	$("#rbdErrorModal").modal('toggle');
+			 
+});
+$("#submitSearch").click(function (event) {
+	event.preventDefault();
+	var session="";
+	//console.log(session);
+	//alert(session);
+	 if (session!="" || (session=="" && document.getElementById("cpatchaTextBox").value == code)) {
+		makeFieldRequired();
+		if(!checknull($("#registrationNumber").val()) && !checknull($("#certificateNumber").val()) && !checknull($("#dateOfBirthDeath").val()) && 
+				!checknull($("#gender").val()) && !checknull($("#motherName").val()) && !checknull($("#fatherName").val()) && !checknull($("#mobileno").val())){
+			//errorMessageModel("Fill Registration Number/Application Number  to continue.");
+			errorMessageModel("Fill proper details to continue.");
+		} else {
+			 var fail = false;
+			    var fail_log = '';
+			    var id_log = '';
+			    var id;
+			    var idreq;
+			    var id_array=[];
+			    var id_arrayreq=[];
+			    var errmsg_array=[];
+			    
+			    $( '#search_formsu' ).find( 'select, textarea, input' ).each(function(){
+					 if($( this ).prop( 'required' )){
+				    		if ( $( this ).val() ) {
+				    			idreq = $( this ).attr( 'id' );
+				       		    id_arrayreq.push(idreq);
+				    		}
+				        } 
+					 
+				        if( ! $( this ).prop( 'required' )){
+				        } else {
+				            if ( ! $( this ).val() ) {
+				                fail = true;
+				                name = $( this ).attr( 'data-empityfieldmessage' );
+				                id = $( this ).attr( 'id' );
+				                 fail_log += name + " \n";
+				                 id_array.push(id);
+				            }
+				        }
+				    });
+			    if ( ! fail ) {	
+			    	$('#overlay').show();
+			    	var form = $('#search_formsu')[0];
+				    var data = new FormData(form);
+				    var rowdata="";
+				    var row7="</div></div></td></tr>";
+				    var rowsum="",rowoption1="",rowoption2="",rowoption3="",rowoption4="";
+				    var rowoptionnodata="";
+				    //var rowinsuffrecrd="<td>You are not allowed to proceed further <br> because of insufficient record.<br> Please contact MCD.</td>";
+				    var i=0;
+				    var rowcount=0;//for s.no
+				    $("#citizenrecordtab").html("");
+				    $.ajax({
+				        type: "POST",
+				        url: "/intramcd/web/admin/rbd/officer/advancesearchrecord",
+				        data: data,
+				        processData: false,
+				        contentType: false,
+				        cache: false,
+				        success: function (response) {
+				            $("#submitSearch").prop("disabled", true);
+				            $('#overlay').hide();
+				            $("#birthSearchTable1").show();
+				            $("#citizenrecordtab").html(response); 
+
+				            var eventType = $("#rbdRequestType").val();
+				            if (eventType === "BIRTH") {
+				                $("#searchCitizenTable thead th:nth-child(2)").text("Child Name");
+				            } else if (eventType === "DEATH") {
+				                $("#searchCitizenTable thead th:nth-child(2)").text("Deceased Name");
+				            }
+
+				            $('#searchCitizenTable').DataTable({
+				                "destroy": true 
+				            });
+				        }
+				    });
+
+			    } else {
+			       for (var j = 0; j < id_arrayreq.length; ++j) {
+		                 $("#"+id_arrayreq[j]).removeAttr("style");
+		        	}
+			       
+			       for (var i = 0; i < id_array.length; ++i) {
+			    		 var item1=id_array[0];
+			    		 var message1=errmsg_array[0];
+			             $("#"+item1).focus();
+			             $("#"+id_array[i]).css('border-color','red');
+			    	}
+			     }
+			}
+		 }else{
+			  // alert("Invalid Captcha. try Again");
+			    	$("#successErrorbtnnew").html("OK"); 
+			     	$("#cancelBtn").html("Cancel");
+			     	$("#cancelBtn").show();
+			     	$("#errorModalHeadID").html("Message");
+			     	$("#errorModalBodyID").html("<b>Invalid Captcha. Try Again.<b/>").css('color','#001080b8');
+			    	$("#rbdErrorModal").modal();
+			    //createCaptcha();
+		 }
+					    
+			});
+			
+function confirmRevokeForm(userRegistrationGuid, requesttype,wrapperGuid,certInfoGuid,certNo, regNo){
+	$("#registrationGuidIDRevokeCancel").val(userRegistrationGuid);
+	$("#requesttypeRevokeCancel").val(requesttype);
+	$("#wrapperGuidRevokeCancel").val(wrapperGuid);	
+	$("#oldInfoGuidRevokeCancel").val(certInfoGuid);
+	$("#certNumberRevokeCancel").val(certNo);
+	$("#regNumberRevokeCancel").val(regNo);
+	$("#message_header_revokeCancel").removeClass("modalwarningmsg").addClass("modalmsg");
+	$("#status_circle_revokeCancel").removeClass("fa-times-circle").addClass("fa-check-circle");
+ 	$("#successbtnnew_revokeCancel").html("Continue"); 
+ 	$("#closebtn_revokeCancel").html("Cancel"); 
+ 	//$("#successbtnnew,#rejectCommentDiv").show(); 
+ 	$("#remarkValLbl").addClass("required");
+ 	$("#remarkVal").attr("required","required");
+ 	$("#status_circle_revokeCancel").hide(); 
+ 	 
+ 	$("#modelheading_success_revokeCancel").html("Message"); 
+		$("#requestremarktype").val("REJECTREQ");
+ 	    $("#messagebody_status_revokeCancel").html("Click on Continue for Revoke/Cancel of Application for Certificate Request Number "+certNo).css('color','#001080b8');
+ 	$("#revokeCancelModel").modal();
+}
+function uppercase(obj){
+    obj.value = obj.value.toUpperCase();
+}
+
+function createsuccessModal(message,reqtype){ 
+	$('#overlay').hide();
+	$("#message_header").removeClass("modalwarningmsg").addClass("modalmsg");
+	$("#status_circle").removeClass("fa-times-circle").addClass("fa-check-circle");
+ 	$("#successbtnnew").html("Continue"); 
+ 	$("#closebtn").html("OK"); 
+ 	$("#successbtnnew").hide(); 
+ 	$("#status_circle").hide(); 
+ 	$("#enrollment_user").hide();
+ 	$("#modelheading_success").html("Message"); 
+ 	$("#messagebody_status").html(message);
+	$("#myModal_status").modal();
+	}
+	
+	function createerrorModal(message,reqtype){
+		 $("#message_header").removeClass("modalmsg").addClass("modalwarningmsg");
+			$("#status_circle").removeClass("fa-check-circle").addClass("fa-times-circle");
+			$("#status_circle").show(); 
+			$("#successbtnnew").hide();
+			$("#closebtn").html("Close"); 
+			$("#modelheading_success").html("Message");
+			//$("#messagebody_status,#message_header").hide();
+			$("#messagebody_status").html(message).css('color','red');
+			$("#myModal_status").modal();
+		}
+	function checkUserRemark(obj,fieldError){
+		var fieldId = $("#"+obj.id);
+		var	val=obj.value;
+		var error=$("#"+fieldError);
+		var reg= /^[a-zA-Z0-9-.,/\s]{0,}$/; 
+			if(reg.test(val)){
+				error.text("").css({'color' : 'green'});
+				return true;
+			}else{
+				error.text("Please Enter Only Alphabet, Number And This Special Char(-.,).").css({'color' : 'red'});
+				//isFormValidate=false;
+				// validationFailFieldId.push(fieldId);
+				fieldId.val("");
+				fieldId.focus();
+	              return false;
+			}
+	}
+	$("#revokeSubmitForm").on("submit", function(){
+	    $("#overlay").fadeIn();
+	  });
+	
+</script>
+
+ 
+
+ <script src="static/bower_components/jspdf/jspdf.min.js"></script>
+<script src="static/bower_components/jspdf/jspdf.plugin.autotable.min.js"></script>
+<script src="static/bower_components/jspdf/tableHTMLExport.js"></script>
+ <script src="static/bower_components/jspdf/pdfmake.min.js"></script> 
+<script>
+
+$( document ).ready(function() {
+	 $("#birthSearchTable1").hide();
+	createCaptcha();
+	var session="";
+	 if (session=="") {
+		 $('body').addClass('sidebar-collapse');
+		 $('header').addClass('disable_Section');
+	 }
+		
+	
+});
+function opentrackcitizenmodal(userRegistrationGuid, requesttype,certreqinfoguid,certNo){
+	$("#certificateNotrackStatus").val(certNo);
+	$("#trackcitizenmodel").modal();
+}
+
+var certguid='';
+ function opencitizendetailsmodal(submitedType, eventType ,certreqinfoguid,mobileNumber){
+	 certguid =certreqinfoguid;
+	 $("#citizenDetailsModel").modal();
+	$.ajax({
+		type : "GET",
+		url : "/intramcd/web/admin/rbd/officer/getCitizenRequestDetails",
+		dataType : "json",
+		contentType : "application/json; charset=utf-8",
+		cache: false,
+		data : {submitedType:submitedType,
+			certreqinfoguid:certreqinfoguid,
+			eventType:eventType,
+			mobileNumber:mobileNumber
+			},
+		success : function(res) {
+			//alert("RRRR-> "+res);
+			 if(res!=null){
+				 if(eventType=='Birth'){
+					 $("#headingLbl").text("BIRTH REGISTRATION DETAIL "); 
+					 $("#nameLbl").text("Child Name");
+					 $('.birthTr').show();
+					 $('.deathTr').hide();
+					 
+				 }else if(eventType=='Death'){
+					 $("#headingLbl").text("DEATH REGISTRATION DETAIL "); 
+					 $("#nameLbl").text("Deseased Name");
+					 $('.birthTr').hide();
+					 $('.deathTr').show();
+				 }
+				 $("#registrationNumberDl").text(checknull(res.registrationNumber));
+				 $("#applicationNumberDl").text(checknull(res.applicationNumber));
+				 $("#genderDl").text(checknull(res.gender));
+				 $("#nameDl").text(checknull(res.name));
+				 $("#birthDeathDateDl").text(checknull(res.birthDeathDate));
+				 $("#registrationDateDl").text(checknull(res.registrationDate));
+				 $("#fatherNameDl").text(checknull(res.fatherName));
+				 $("#motherNameDl").text(checknull(res.motherName));
+				 $("#hospitalNameDl").text(checknull(res.hospitalName));
+				 $("#placeOfBirthDeathDl").text(checknull(res.placeOfBirthDeath));
+				 $("#addressBirthdeathDl").text(checknull(res.addressBirthdeath));
+				 $("#colonyDl").text(checknull(res.colony));
+				 $("#wardDl").text(checknull(res.ward));
+				 $("#zoneDl").text(checknull(res.zone));
+				 $("#corressAddressDl").text(checknull(res.corressAddress));
+				 $("#permaAddressDl").text(checknull(res.permaAddress));
+				 $("#parentMobileNoDl").text(checknull(res.parentMobileNo));
+				 $("#citizenMobileNoDl").text(checknull(res.citizenMobileNo));
+				 $("#eventTypeDl").text(checknull(res.eventType));
+				 $("#applicantTypeDl").text(checknull(res.applicantType));
+				 
+				 
+				
+			}else{
+				$('#receiptBody').html("<h3 style='text-align: center;display: block;width: 100%;'>SOMTHING WENT WRONG...PLEASE TRY AFTER SOMETIME... </h3>")
+				
+			}
+			 
+		},
+		error: function(jqXHR, textStatus, errorThrown) {
+		    alert(jqXHR.status);
+		    alert(textStatus); 
+		    alert(errorThrown);
+		}
+	}); 
+	
+} 
+function checknull(name){
+	if(name!=null && name!="")
+		return name;
+	else
+		return "";
+}
+
+
+function createsuccessModal(message,reqtype){ 
+	$('#overlay').hide();
+	$("#message_header").removeClass("modalwarningmsg").addClass("modalmsg");
+	$("#status_circle").removeClass("fa-times-circle").addClass("fa-check-circle").css('color','green');
+ 	$("#successbtnnew").html("Continue"); 
+ 	$("#closebtn").html("OK"); 
+ 	$("#successbtnnew").hide(); 
+ 	//$("#status_circle").hide(); 
+ 	$("#enrollment_user").hide();
+ 	$("#modelheading_success").html("Message"); 
+ 	$("#messagebody_status").html(message).css('color','green');
+	$("#myModal_status").modal();
+	}
+	
+function createCaptcha() {
+	  //clear the contents of captcha div first 
+	  $("#captcha").val("");
+	  var charsArray = "0123456789";
+	  var lengthOtp = 5;
+	  var captcha = [];
+	  for (var i = 0; i < lengthOtp; i++) {
+	    //below code will not allow Repetition of Characters
+	    var index = Math.floor(Math.random() * charsArray.length + 1); //get the next character from the array
+	    if (captcha.indexOf(charsArray[index]) == -1)
+	      captcha.push(charsArray[index]);
+	    else i--;
+	  }
+	  var canv = document.createElement("canvas");
+	  canv.id = "captcha";
+	  canv.width = 100;
+	  canv.height = 35;
+	  var ctx = canv.getContext("2d");
+	  ctx.font = "25px Georgia";
+	  ctx.strokeText(captcha.join(""), 0, 30);
+	  //storing captcha so that can validate you can save it somewhere else according to your specific requirements
+	  code = captcha.join("");
+	  $("#captcha").append(canv); // adds the canvas to the body element
+	}
+	
+function printDiv(){
+	
+	html2canvas($("#printReport")[0],{
+	onrendered:function(canvas){
+		var data=canvas.toDataURL();
+		var docDefinition={
+			content:[{
+				image:data,
+				width:500,
+				//height:100,
+			}]
+		};
+		pdfMake.createPdf(docDefinition).download("CITIZEN_DEATILS_"+certguid+".pdf");
+	}
+});
+}
+</script>
+
+
+ 
+
+ 
+		</section>
+		<footer id="footer">
+			<footer class="main-footer" ><!-- style="margin-left:0px;" -->
+	<div class="pull-right hidden-xs">
+      <b>Version</b> V1
+    </div>
+    <strong>Copyright &copy; 2019 <a href=""></a></strong> All rights
+    reserved.
+</footer>
+		</footer>
+	</div>
+</body>
+<script src="static/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="static/bower_components/popper/popper.min.js"></script>
+<script src="static/bower_components/jquery-ui/jquery-ui.min.js"></script>
+<script src="static/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="static/bower_components/datatable/pdfmake.min.js"></script>
+<script type="text/javascript" src="static/bower_components/datatable/vfs_fonts.js"></script>
+<script type="text/javascript" src="static/bower_components/datatable/datatables.min.js"></script>
+<script src="static/bower_components/select2/dist/js/select2.full.min.js"></script>
+<script src="static/plugins/input-mask/jquery.inputmask.js"></script>
+<script src="static/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+<script src="static/plugins/input-mask/jquery.inputmask.extensions.js"></script>
+<script src="static/bower_components/moment/min/moment.min.js"></script>
+<script src="static/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="static/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script src="static/plugins/timepicker/bootstrap-timepicker.min.js"></script>
+<script src="static/dist/js/apexcharts.js"></script>
+<script src="static/dist/js/adminlte.min.js"></script>
+<script src="static/dist/js/jquery.slimscroll.js"></script>
+<script src="static/dist/js/demo.js"></script>
+<input type="hidden" value="MCD" id="headerName">
+<script type="text/javascript">
+ $(function(){
+	$('.slimScrollDiv').slimScroll({
+		
+	});
+});
+ 
+ /// start date range picker function -htl
+ $(function() {
+
+	  $('input[name="daterange"]').daterangepicker({
+	      autoUpdateInput: false,
+	      //minDate: moment().subtract(3, "month"),
+	     maxDate: new Date(),
+	     dateLimit: {
+	    	    'months': 3,
+	    	    'days': -1
+	    	},
+	      locale: {
+	          cancelLabel: 'Clear'
+	      }
+	  });
+
+	  $('input[name="daterange"]').on('apply.daterangepicker', function(ev, picker) {
+	      $(this).val(picker.startDate.format('DD/MM/YYYY') + ' To ' + picker.endDate.format('DD/MM/YYYY'));
+	  });
+
+	  $('input[name="daterange"]').on('cancel.daterangepicker', function(ev, picker) {
+	      $(this).val('');
+	  });
+
+	});
+ /// end date range picker function -htl
+</script>
+ <script type="text/javascript">
+	function select2Refresh(){
+				$(".selectserch").select2({
+	       	placeholder: "All",
+	       	allowClear: true
+		});
+	}
+	
+	select2Refresh();
+	function select2booking(){
+		$(".select").select2({
+   	placeholder: "All",
+   	allowClear: true
+});
+}
+	
+	select2Refresh();
+	function select2booking(){
+		$(".selectSearch").select2({
+   	placeholder: "Select",
+   	allowClear: true
+	});
+ }
+	
+	select2booking();
+</script> 
+
+
+<!-- <script type="text/javascript">
+	function select2Refresh(){
+				$(".selectserch").select2({
+	       	placeholder: "All",
+	       	allowClear: true
+	});
+	}
+	select2Refresh();
+	function select2booking(){
+		$(".select").select2({
+   	placeholder: "All",
+   	allowClear: true
+	});
+	}
+	
+	function select2Refresh(){
+		$(".selectSearch").select2({
+   	placeholder: "Select",
+   	allowClear: true
+	});
+	}
+	select2Refresh();
+	
+	function select2booking(){
+		$(".select").select2({
+   	placeholder: "All",
+   	allowClear: true
+	});
+	}
+	select2booking();
+</script> -->
+
+
+<script>
+	$.widget.bridge('uibutton', $.ui.button);
+</script>
+<script>
+	var date = new Date();
+	var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+
+	$('#datepicker').datepicker({
+		autoclose : true,
+		format : 'dd-mm-yyyy',
+		todayHighlight : true,
+	}).datepicker('update', new Date());
+
+/* attendence datepicker */
+	$('#datepickerto11,#datepickerfrom11,#datepickerfrom2,#datepickerto2').datepicker({
+		format : 'dd-mm-yyyy',
+		todayHighlight : true,
+		endDate : new Date(),
+		autoclose : true
+	});
+
+	$('#datepickerto11,#datepickerto2').datepicker('setDate', today);
+	$('#datepickerfrom11,#datepickerfrom2').datepicker('setDate', '-7d');
+
+	$('#datepickerfrom11,#datepickerfrom2').change(function() {
+		var sdate1 = $('#datepickerfrom11,#datepickerfrom2').datepicker('getDate');
+		var edate1 = $('#datepickerto11,#datepickerto2').datepicker('getDate');
+		fetchTable(sdate1,edate1);
+ 	});
+	$("#datepickerto11,#datepickerto2").change(function() {
+		var sdate1 = $('#datepickerfrom11,#datepickerfrom2').datepicker('getDate');
+		var edate1 = $('#datepickerto11,#datepickerto2').datepicker('getDate');
+		fetchTable(sdate1,edate1);
+ 	});
+
+/* property date picker */
+	$('#datepickerfrompropty,#datepickertopropty').datepicker({
+		format : 'dd-mm-yyyy',
+		todayHighlight : true,
+		autoclose : true,
+		endDate : new Date(),
+		startDate : '08-05-2020',
+	});
+	$('#datepickerfrompropty,#datepickertopropty').datepicker('setDate', today);
+	//$('#datepickerfrompropty').datepicker('setDate', '-7d');
+	$('#datepickerfrompropty').datepicker('setDate', today);
+
+	/* $("#datepickerfrompropty").change(function() {
+		myFunction();		
+		var sdate1 = $('#datepickerfrompropty').datepicker('getDate');
+		var edate1 = $('#datepickertopropty').datepicker('getDate');
+		functionDateWise(sdate1, edate1);
+	});
+	$("#datepickertopropty").change(function() {
+		myFunction();		
+		var sdate1 = $('#datepickerfrompropty').datepicker('getDate');
+		var edate1 = $('#datepickertopropty').datepicker('getDate');
+		functionDateWise(sdate1, edate1);
+	}); */
+	
+	
+	/* property date picker 1 month by defult select  */
+	
+	$('#datepickerfrom1m,#datepickerto1m').datepicker({
+		format : 'dd-mm-yyyy',
+		todayHighlight : true,
+		autoclose : true,
+		endDate : new Date(),
+		startDate : '08-05-2020',
+	});
+	$('#datepickerfrom1m,#datepickerto1m').datepicker('setDate', today);
+	$('#datepickerfrom1m').datepicker('setDate', '-1m');
+	//$('#datepickerfrompropty').datepicker('setDate', today);
+
+	/* $("#datepickerfrompropty").change(function() {
+		myFunction();		
+		var sdate1 = $('#datepickerfrompropty').datepicker('getDate');
+		var edate1 = $('#datepickertopropty').datepicker('getDate');
+		functionDateWise(sdate1, edate1);
+	});
+	$("#datepickertopropty").change(function() {
+		myFunction();		
+		var sdate1 = $('#datepickerfrompropty').datepicker('getDate');
+		var edate1 = $('#datepickertopropty').datepicker('getDate');
+		functionDateWise(sdate1, edate1);
+	}); */
+	
+	
+
+    /* gtl date picker */
+	$('#datepickerfromgtl,#datepickertogtl').datepicker({
+		format : 'dd-mm-yyyy',
+		todayHighlight : true,
+		autoclose : true,
+		endDate : new Date(),
+		startDate : '08-05-2020',
+	});
+	$('#datepickerfromgtl,#datepickertogtl').datepicker('setDate', today);
+	//$('#datepickerfromgtl').datepicker('setDate', '-7d');
+	$('#datepickerfromgtl').datepicker('setDate', today);
+
+	$("#datepickerfromgtl").change(function() {
+		myFunction();		
+		var sdate1 = $('#datepickerfromgtl').datepicker('getDate');
+		var edate1 = $('#datepickertogtl').datepicker('getDate');
+		functionDateWiseGtl(sdate1, edate1);
+	});
+	$("#datepickertogtl").change(function() {
+		myFunction();		
+		var sdate1 = $('#datepickerfromgtl').datepicker('getDate');
+		var edate1 = $('#datepickertogtl').datepicker('getDate');
+		functionDateWiseGtl(sdate1, edate1);
+	});
+	
+/* ftl date picker */
+	$('#datepickerfromftl,#datepickertoftl').datepicker({
+		format : 'dd-mm-yyyy',
+		todayHighlight : true,
+		autoclose : true,
+		endDate : new Date(),
+		startDate : '08-05-2020',
+	});
+	$('#datepickerfromftl,#datepickertoftl').datepicker('setDate', today);
+	//$('#datepickerfromftl').datepicker('setDate', '-7d');
+	$('#datepickerfromftl').datepicker('setDate', today);
+
+	$("#datepickerfromftl").change(function() {
+		myFunction();		
+		var sdate1 = $('#datepickerfromftl').datepicker('getDate');
+		var edate1 = $('#datepickertoftl').datepicker('getDate');
+		functionDateWiseFtl(sdate1, edate1);
+	});
+	$("#datepickertoftl").change(function() {
+		myFunction();		
+		var sdate1 = $('#datepickerfromftl').datepicker('getDate');
+		var edate1 = $('#datepickertoftl').datepicker('getDate');
+		functionDateWiseFtl(sdate1, edate1);
+	});
+	
+/* vtl date picker */
+	$('#datepickerfromvtl,#datepickertovtl').datepicker({
+		format : 'dd-mm-yyyy',
+		todayHighlight : true,
+		autoclose : true,
+		endDate : new Date(),
+		startDate : '08-05-2020',
+	});
+	$('#datepickerfromvtl,#datepickertovtl').datepicker('setDate', today);
+	//$('#datepickerfromftl').datepicker('setDate', '-7d');
+	$('#datepickerfromftl').datepicker('setDate', today);
+
+	$("#datepickerfromvtl").change(function() {
+		myFunction();		
+		var sdate1 = $('#datepickerfromvtl').datepicker('getDate');
+		var edate1 = $('#datepickertovtl').datepicker('getDate');
+		functionDateWiseVtl(sdate1, edate1);
+	});
+	$("#datepickertovtl").change(function() {
+		myFunction();		
+		var sdate1 = $('#datepickerfromvtl').datepicker('getDate');
+		var edate1 = $('#datepickertovtl').datepicker('getDate');
+		functionDateWiseVtl(sdate1, edate1);
+	});
+	
+  /* htl date picker */
+	$('#datepickerfromhtl,#datepickertohtl').datepicker({
+		format : 'dd-mm-yyyy',
+		todayHighlight : true,
+		autoclose : true,
+		endDate : new Date(),
+		startDate : '08-05-2020',
+	});
+	$('#datepickerfromhtl,#datepickertohtl').datepicker('setDate', today);
+	//$('#datepickerfromftl').datepicker('setDate', '-7d');
+	$('#datepickerfromftl').datepicker('setDate', today);
+
+	$("#datepickerfromhtl").change(function() {
+		myFunction();		
+		var sdate1 = $('#datepickerfromhtl').datepicker('getDate');
+		var edate1 = $('#datepickertohtl').datepicker('getDate');
+		functionDateWiseHtl(sdate1, edate1);
+	});
+	$("#datepickertohtl").change(function() {
+		myFunction();		
+		var sdate1 = $('#datepickerfromhtl').datepicker('getDate');
+		var edate1 = $('#datepickertohtl').datepicker('getDate');
+		functionDateWiseHtl(sdate1, edate1);
+	});
+	
+	
+	
+	
+	
+	
+/* 	
+	/* Birth and Death */	
+	$('#datepickerfromrbd,#datepickertorbd').datepicker({
+		format : 'dd-mm-yyyy',
+		todayHighlight : true,
+		autoclose : true,
+		endDate : new Date(),
+		startDate : '08-05-2020',
+	});
+	$('#datepickerfromrbd,#datepickertorbd').datepicker('setDate', today);
+	$('#datepickerfromrbd').datepicker('setDate', '-7d');
+// 	$('#datepickerfromrbd').datepicker('setDate', today);
+
+	$("#datepickerfromrbd").change(function() {
+		//$("#overlay").show();
+		var sdate1 = $('#datepickerfromrbd').datepicker('getDate');
+		var edate1 = $('#datepickertorbd').datepicker('getDate');
+	//	functionDateWise(sdate1, edate1);
+	});
+	$("#datepickertorbd").change(function() {
+		//$("#overlay").show();
+		var sdate1 = $('#datepickerfromrbd').datepicker('getDate');
+		var edate1 = $('#datepickertorbd').datepicker('getDate');
+//		functionDateWise(sdate1, edate1);
+	});
+	
+	
+	
+
+	/* tehbazari date picker */
+	$('#datepickerfromtehbazari,#datepickertotehbazari').datepicker({
+		format : 'dd-mm-yyyy',
+		todayHighlight : true,
+		autoclose : true,
+// 		endDate : new Date(),
+// 		startDate : '08-05-2020',
+	});
+	$('#datepickerfromtehbazari,#datepickertotehbazari').datepicker('setDate', today);
+	$('#datepickerfromtehbazari').datepicker('setDate', '-7d');
+
+	$("#datepickerfromtehbazari").change(function() {
+		var sdate1 = $('#datepickerfromtehbazari').datepicker('getDate');
+		var edate1 = $('#datepickertotehbazari').datepicker('getDate');
+		functionDateWise(sdate1, edate1);
+	});
+	$("#datepickertotehbazari").change(function() {
+		var sdate1 = $('#datepickerfromtehbazari').datepicker('getDate');
+		var edate1 = $('#datepickertotehbazari').datepicker('getDate');
+		functionDateWise(sdate1, edate1);
+	});
+	
+	
+	/*  hall date picker CSD*/
+	
+	$('#datepickerfromtehbazarihall,#datepickertotehbazarihall').datepicker({
+		format : 'dd-mm-yyyy',
+		todayHighlight : true,
+		autoclose : true,
+// 		endDate : new Date(),
+// 		startDate : '08-05-2020',
+	});
+	$('#datepickerfromtehbazarihall,#datepickertotehbazarihall').datepicker('setDate', today);
+	$('#datepickerfromtehbazarihall').datepicker('setDate', '-7d');
+
+	$("#datepickerfromtehbazarihall").change(function() {
+		var sdate1 = $('#datepickerfromtehbazarihall').datepicker('getDate');
+		var edate1 = $('#datepickertotehbazarihall').datepicker('getDate');
+		functionDateWisehall(sdate1, edate1);
+	});
+	$("#datepickertotehbazarihall").change(function() {
+		var sdate1 = $('#datepickerfromtehbazarihall').datepicker('getDate');
+		var edate1 = $('#datepickertotehbazarihall').datepicker('getDate');
+		functionDateWisehall(sdate1, edate1);
+	});
+	
+/* Event hall date picker CSD*/
+	
+	$('#datepickerfromcsdhall,#datepickertocsdhall').datepicker({
+		format : 'dd-mm-yyyy',
+		todayHighlight : true,
+		autoclose : true,
+	});
+	$('#datepickerfromcsdhall,#datepickertocsdhall').datepicker('setDate', today);
+	$('#datepickerfromcsdhall').datepicker('setDate', '-7d');
+
+	$("#datepickerfromcsdhall").change(function() {
+		var sdate1 = $('#datepickerfromcsdhall').datepicker('getDate');
+		var edate1 = $('#datepickertocsdhall').datepicker('getDate');
+		functionDateWiseEventhall(sdate1, edate1);
+	});
+	$("#datepickertocsdhall").change(function() {
+		var sdate1 = $('#datepickerfromcsdhall').datepicker('getDate');
+		var edate1 = $('#datepickertocsdhall').datepicker('getDate');
+		functionDateWiseEventhall(sdate1, edate1);
+	});
+	/* Event hall date picker CSD*/
+	
+	
+	/* Attendance date picker */
+	$('#datepickerfromAttendance,#datepickertoAttendance').datepicker({
+		format : 'dd-mm-yyyy',
+		todayHighlight : true,
+		autoclose : true,
+// 		endDate : new Date(),
+		
+	});
+	$('#datepickerfromAttendance,#datepickertoAttendance').datepicker('setDate', today);
+	$('#datepickerfromAttendance').datepicker('setDate', '-7d');
+	//alert(document.getElementById('datepickerfromAttendance').value);
+	//alert(document.getElementById('datepickertoAttendance').value);
+	
+	/* $(document).ready(function() {
+		var tempLoad='tempLoad';
+		functionDateWiseAttendance(document.getElementById('datepickerfromAttendance').value, document.getElementById('datepickertoAttendance').value, tempLoad);
+	}); */
+	
+	$("#datepickerfromAttendance").change(function() {
+		var tempChange='tempChange';
+		var sdate1 = $('#datepickerfromAttendance').datepicker('getDate');
+		var edate1 = $('#datepickertoAttendance').datepicker('getDate');
+		functionDateWiseAttendance(sdate1, edate1, tempChange);
+	});
+	
+	$("#datepickertoAttendance").change(function() {
+		/* var sdate1 = $('#datepickerfromAttendance').datepicker('getDate');
+		var edate1 = $('#datepickertoAttendance').datepicker('getDate');
+		functionDateWiseAttendance(sdate1, edate1); */
+		var edate1 = $('#datepickertoAttendance').datepicker('getDate');
+		functionDateWiseAttendance(edate1);
+	});
+	
+	/* Hospital date picker */
+	$('#HosStartDate, #HosEndDate').datepicker({
+		format : 'dd-mm-yyyy',
+		todayHighlight : true,
+		autoclose : true,
+		endDate : new Date(),
+		startDate : '08-05-2020',
+	});
+
+ 	$(document).ready(function() {
+				$('.dataTableAllId').DataTable(
+						{
+							//"order": [[ 10, "desc" ]],
+							pageLength : 10,
+							responsive : true,
+							dom : '<"html5buttons"B>lTfgitp',
+
+							buttons : [
+									{
+										extend : 'copy' ,title : document.getElementById('headerName').value,
+										exportOptions: {
+								            columns: 'th:not(:last-child)'
+								         }
+									},
+									{
+										extend : 'csv', title : document.getElementById('headerName').value,
+										exportOptions: {
+								            columns: 'th:not(:last-child)'
+								         }
+									},
+									{
+										extend : 'excel',
+										title : document.getElementById('headerName').value,
+										exportOptions: {
+								            columns: 'th:not(:last-child)'
+								         }
+									},
+									{
+										extend : 'pdf',
+										title : document.getElementById('headerName').value,
+										//orientation: 'landscape',
+										orientation : 'landscape',//landscape give you more space
+										pageSize : 'A3',//A0 is the largest A5 smallest(A0,A1,A2,A3,legal,A4,A5,letter))
+										 header: true,
+											exportOptions: {
+									            columns: 'th:not(:last-child)'
+									         }
+									},
+									{
+										extend : 'print',
+										customize : function(win) {
+											$(win.document.body).addClass(
+													'white-bg');
+											$(win.document.body).css(
+													'font-size', '10px');
+											$(win.document.body).css(
+													'padding-right', '20px');
+
+											$(win.document.body).find('table')
+													.addClass('compact').css(
+															'font-size',
+															'inherit');
+
+										},
+										exportOptions: {
+								            columns: 'th:not(:last-child)'
+								         }
+									} ]
+						});
+			}); 
+			
+			
+			</script>
+<script>
+        $(document).ready(function(){
+            $('.dataTables-example').DataTable({
+            	//"order": [[ 10, "desc" ]],
+                pageLength: 10,
+                responsive: true,
+                dom: '<"html5buttons"B>lTfgitp',           
+                buttons: [
+                    {extend: 'copy'},
+                    {extend: 'csv',  title: 'RBD Dashboard Report'},
+                    {extend: 'excel', title: 'RBD Dashboard Report'},
+                    {extend: 'pdf',   title: 'RBD Dashboard Report',
+                    	
+                    	// @@ ##   {extend: 'excel', title: 'Property Data'},
+                       // @@ ##  {extend: 'pdf', title: '',
+                    	//orientation: 'landscape',
+                    	  orientation: 'landscape',//landscape give you more space
+                          pageSize: 'A4',//A0 is the largest A5 smallest(A0,A1,A2,A3,legal,A4,A5,letter))                    	
+                    },
+                    {extend: 'print',
+                      customize: function (win){
+                            $(win.document.body).addClass('white-bg');
+                            $(win.document.body).css('font-size', '10px');
+                            $(win.document.body).css('padding-right', '20px');
+                            $(win.document.body).find('table')
+                                    .addClass('compact')
+                                    .css('font-size', 'inherit');                            
+                    } 
+                    }
+                ]
+            });                     
+        });
+        
+        
+/* datepicker multiple advance birth or death */
+        var date = new Date();
+        var today = new Date(date.getFullYear(), date.getMonth(), date.getDate()); 
+
+        $('#datepicker').datepicker({
+        	autoclose : true,
+        	format : 'dd/mm/yyyy',
+        	todayHighlight : true,
+        }).datepicker('update', new Date());
+
+        
+        $('#dateOfEvent').datepicker({
+        	format : 'dd/mm/yyyy',
+        	todayHighlight : true,
+        	endDate : new Date(),
+        	autoclose : true
+        });
+        
+        $('#fromDate').datepicker({
+        	format : 'yyyy-mm-dd',
+        	todayHighlight : true,
+        	endDate : new Date(),
+        	autoclose : true
+        });
+        
+        $('#toDate').datepicker({
+        	format : 'yyyy-mm-dd',
+        	todayHighlight : true,
+        	endDate : new Date(),
+        	autoclose : true
+        });
+        
+/* -------------------------mobile App report datepicker------------------------ */        
+        var date = new Date();
+        var today = new Date(date.getFullYear(), date.getMonth(), date.getDate()); 
+
+        $('#datepicker').datepicker({
+        	autoclose : true,
+        	format : 'dd-mm-yyyy',
+        	todayHighlight : true,
+        }).datepicker('update', new Date());
+
+        $('#startDate').datepicker({
+        	format : 'dd-mm-yyyy',
+        	todayHighlight : true,
+        	endDate : new Date(),
+        	autoclose : true
+        });
+        
+        var date = new Date();
+        var today = new Date(date.getFullYear(), date.getMonth(), date.getDate()); 
+
+        $('#datepicker').datepicker({
+        	autoclose : true,
+        	format : 'dd-mm-yyyy',
+        	todayHighlight : true,
+        }).datepicker('update', new Date());
+
+        $('#endDate').datepicker({
+        	format : 'dd-mm-yyyy',
+        	todayHighlight : true,
+        	endDate : new Date(),
+        	autoclose : true
+        });
+
+        
+/* -------------------------CSC App report datepicker------------------------ */        
+        var date = new Date();
+        var today = new Date(date.getFullYear(), date.getMonth(), date.getDate()); 
+
+        $('#datepicker').datepicker({
+        	autoclose : true,
+        	format : 'dd-mm-yyyy',
+        	todayHighlight : true,
+        }).datepicker('update', new Date());
+
+        $('#startDateCSC').datepicker({
+        	format : 'dd-mm-yyyy',
+        	todayHighlight : true,
+        	endDate : new Date(),
+        	autoclose : true
+        });
+        
+        var date = new Date();
+        var today = new Date(date.getFullYear(), date.getMonth(), date.getDate()); 
+
+        $('#datepicker').datepicker({
+        	autoclose : true,
+        	format : 'dd-mm-yyyy',
+        	todayHighlight : true,
+        }).datepicker('update', new Date());
+
+        $('#endDateCSC').datepicker({
+        	format : 'dd-mm-yyyy',
+        	todayHighlight : true,
+        	endDate : new Date(),
+        	autoclose : true
+        });
+
+/* -------------------------new rbd date datepicker for Report------------------------ */        
+        var date = new Date();
+        var today = new Date(date.getFullYear(), date.getMonth(), date.getDate()); 
+
+        $('#datepicker').datepicker({
+        	autoclose : true,
+        	format : 'dd-mm-yyyy',
+        	todayHighlight : true,
+        }).datepicker('update', new Date());
+
+       /*  $('#sDate').datepicker({
+        	format : 'dd-mm-yyyy',
+        	todayHighlight : true,
+        	endDate : new Date(),
+        	autoclose : true
+        }); */
+        
+        var date = new Date();
+        var today = new Date(date.getFullYear(), date.getMonth(), date.getDate()); 
+
+        $('#datepicker').datepicker({
+        	autoclose : true,
+        	format : 'dd-mm-yyyy',
+        	todayHighlight : true,
+        }).datepicker('update', new Date());
+
+       /*  $('#eDate').datepicker({
+        	format : 'dd-mm-yyyy',
+        	todayHighlight : true,
+        	endDate : new Date(),
+        	autoclose : true
+        }); */
+        //rbd officer by monika
+        $('#dateOfBirthDeath').datepicker({
+        	format : 'dd/mm/yyyy',
+        	todayHighlight : true,
+        	endDate : new Date(),
+        	autoclose : true
+        });
+        
+        
+/* --------------------------------------------dateicker 31 days for attendance----------------------------------------- */
+                
+                $('#attendanceStartDate, #attendanceEndDate').datepicker({
+                	format : 'dd-mm-yyyy',
+            		todayHighlight : true,
+            		autoclose : true,
+             		endDate : new Date(),
+             		startDate : '19-10-2020',      // 2020-10-19
+                	
+                	/* 	format : 'dd-mm-yyyy', 
+            		//format : 'yyyy-mm-dd',    		
+            		todayHighlight : true,
+            		autoclose : true,
+            		endDate : new Date(), */
+            		
+            	});
+                
+            	$('#attendanceStartDate, #attendanceEndDate').datepicker('setDate', today);
+            	$('#attendanceStartDate').datepicker('setDate', '-31d');
+            	
+            	$("#attendanceStartDate").change(function() {
+            		var sdate1 = $('#attendanceStartDate').datepicker('getDate');
+            		var edate1 = $('#attendanceEndDate').datepicker('getDate');
+            	//	dataTableFunc(sdate1, edate1);
+            	});
+            	$("#attendanceEndDate").change(function() {
+            		var sdate1 = $('#attendanceStartDate').datepicker('getDate');
+            		var edate1 = $('#attendanceEndDate').datepicker('getDate');
+            	//	dataTableFunc(sdate1, edate1);
+            	});
+            	
+            	/*  bkubk*/
+            	
+                $('#datepickerfromBKUBK').datepicker({
+            	format : 'dd-mm-yyyy',
+            	todayHighlight : true,
+            	endDate : new Date(),
+            	autoclose : true
+            });               
+
+            $('#datepickertoBKUBK').datepicker({
+            	format : 'dd-mm-yyyy',
+            	todayHighlight : true,
+            	endDate : new Date(),
+            	autoclose : true
+            });
+                	
+                	
+        	/* bkubk */
+    	
+ /* -------------------------property Report------------------------ */        
+        
+        $('#propertyStartDate').datepicker({
+        	format : 'dd-mm-yyyy',
+        	todayHighlight : true,
+        	endDate : new Date(),
+        	autoclose : true
+        });               
+
+        $('#propertyEndDate').datepicker({
+        	format : 'dd-mm-yyyy',
+        	todayHighlight : true,
+        	endDate : new Date(),
+        	autoclose : true
+        });
+        
+        $('#propertyStartDate1').datepicker({
+        	format : 'dd-mm-yyyy',
+        	todayHighlight : true,
+        	endDate : new Date(),
+        	autoclose : true
+        });               
+
+        $('#propertyEndDate1').datepicker({
+        	format : 'dd-mm-yyyy',
+        	todayHighlight : true,
+        	endDate : new Date(),
+        	autoclose : true
+        });
+        
+        $('#propertyStartDate2').datepicker({
+        	format : 'dd-mm-yyyy',
+        	todayHighlight : true,
+        	endDate : new Date(),
+        	autoclose : true
+        });               
+
+        $('#propertyEndDate2').datepicker({
+        	format : 'dd-mm-yyyy',
+        	todayHighlight : true,
+        	endDate : new Date(),
+        	autoclose : true
+        });
+        
+        
+        
+ /* --------------calendarYear52----------------------------------- */        
+        
+        $('#calendarYear52').datepicker({
+        	format : 'dd-mm-yyyy',
+        	todayHighlight : true,
+        	endDate : new Date(),
+        	autoclose : true
+        });  
+        
+        $('#gtlsDate').datepicker({
+        	format : 'dd-mm-yyyy',
+        	todayHighlight : true,
+        	endDate : new Date(),
+        	autoclose : true
+        });               
+
+        $('#gtleDate').datepicker({
+        	format : 'dd-mm-yyyy',
+        	todayHighlight : true,
+        	endDate : new Date(),
+        	autoclose : true
+        });
+
+/* gtlLicenseDatePicker */
+                
+                $('#gtlFromDate').datepicker({
+                	format : 'yyyy-mm-dd',
+                	todayHighlight : true,
+                	endDate : new Date(),
+                	autoclose : true
+                });               
+
+                $('#gtlToDate').datepicker({
+                	format : 'yyyy-mm-dd',
+                	todayHighlight : true,
+                	endDate : new Date(),
+                	autoclose : true
+                });
+                
+                
+/* user charge date picker  */
+            	$('#datepickerfromusercharge,#datepickertousercharge').datepicker({
+            		format : 'dd-mm-yyyy',
+            		todayHighlight : true,
+            		autoclose : true,
+                	endDate : new Date(),
+             		startDate : '08-05-2020',
+            	});
+            	$('#datepickerfromusercharge,#datepickertousercharge').datepicker('setDate', today);
+            	$('#datepickerfromusercharge').datepicker('setDate', today);
+
+            	
+/* eMutation date picker  */
+            	$('#datepickerfromemutation,#datepickertoemutation').datepicker({
+            		format : 'dd-mm-yyyy',
+            		todayHighlight : true,
+            		autoclose : true,
+                	endDate : new Date(),
+             		startDate : '08-05-2020',
+            	});
+            	$('#datepickerfromemutation,#datepickertoemutation').datepicker('setDate', today);
+            	$('#datepickerfromemutation').datepicker('setDate', today);
+
+            	
+                /* user charge Report date picker  */
+            	$('#datepickerfromucreport,#datepickertoucreport').datepicker({
+            		format : 'dd-mm-yyyy',
+            		todayHighlight : true,
+            		autoclose : true,
+                	endDate : new Date(),
+             		startDate : '01-01-2022', //'08-05-2020',
+            	});
+            	$('#datepickerfromucreport,#datepickertoucreport').datepicker('setDate', today);
+                $('#datepickerfromucreport').datepicker('setDate', new Date('01-01-2022'));     
+                
+               /*--------------------Cremation Report-------------------------------------*/
+                
+                $('#dod').datepicker({
+                	format : 'dd/mm/yyyy',
+                	todayHighlight : true,
+                	endDate : new Date(),
+                	autoclose : true
+                });
+                
+                $('#doc').datepicker({
+                	format : 'dd/mm/yyyy',
+                	todayHighlight : true,
+                	endDate : new Date(),
+                	autoclose : true
+                });
+                	$('#dob3DatePicker').datepicker({
+            		format : 'dd/mm/yyyy',
+            		todayHighlight : true,
+            		autoclose : true,
+                	endDate : new Date(),
+             		startDate : $("#dateOfBooking").val(),
+            	});
+                	
+                	$('#issuedDatePicker').datepicker({
+                		format : 'dd/mm/yyyy',
+                		todayHighlight : true,
+                		autoclose : true,
+                    	endDate : new Date(),
+                 		startDate : $("#issuedDate").val(),
+                	});
+
+            	
+            	$('#dob4DatePicker').datepicker({
+            		format : 'dd/mm/yyyy',
+            		todayHighlight : true,
+            		autoclose : true,
+                	endDate : new Date(),
+             		startDate : $("#dateOfBooking").val(),
+			        
+				});  
+            	
+/*----------------------Town Planning date picker---------------------------------  */
+
+            	$('#datepickerfromeTP,#datepickertoTP').datepicker({
+            		format : 'dd-mm-yyyy',
+            		todayHighlight : true,
+            		autoclose : true,
+                	endDate : new Date(),
+             		startDate : '08-05-2020',
+            	});
+            	$('#datepickerfromeTP,#datepickertoTP').datepicker('setDate', today);
+            	$('#datepickerfromeTP').datepicker('setDate', '-7d');  //today
+            	
+            	
+            	
+/* -------------------rbd datePicker download Report------------------------------------- */
+                
+                $('#sDateDownload').datepicker({
+                	format : 'dd/mm/yyyy',
+                	todayHighlight : true,
+                	endDate : new Date(),
+                	autoclose : true
+                });
+                
+                $('#eDateDownload').datepicker({
+                	format : 'dd/mm/yyyy',
+                	todayHighlight : true,
+                	endDate : new Date(),
+                	autoclose : true
+                });
+				
+
+/*--------------------Hospital datePicker Report-------------------------------------*/
+                
+                $('#hospitalStartDate').datepicker({
+                	format : 'dd/mm/yyyy',
+                	todayHighlight : true,
+                	endDate : new Date(),
+                	autoclose : true
+                });
+                
+                $('#hospitalEndDate').datepicker({
+                	format : 'dd/mm/yyyy',
+                	todayHighlight : true,
+                	endDate : new Date(),
+                	autoclose : true
+                });
+				
+				
+/*----------create by Tahseen----------------rbd Mis report date picker----------------------*/
+  
+       $('#sDate').datepicker({
+        	format : 'dd-mm-yyyy',
+        	todayHighlight : true,
+        	endDate : new Date(),
+        	autoclose : true
+        });
+
+        $('#eDate').datepicker({
+        	format : 'dd-mm-yyyy',
+        	todayHighlight : true,
+        	endDate : new Date(),
+        	autoclose : true
+        });
+        
+        $('#ftlsDate').datepicker({
+        	format : 'dd-mm-yyyy',
+        	todayHighlight : true,
+        	endDate : new Date(),
+        	autoclose : true
+        });               
+
+        $('#ftleDate').datepicker({//
+        	format : 'dd-mm-yyyy',
+        	todayHighlight : true,
+        	endDate : new Date(),
+        	autoclose : true
+        });
+        
+        $('#ftlConfirmHouseHoldsDate').datepicker({
+        	format : 'dd-mm-yyyy',
+        	todayHighlight : true,
+        	endDate : new Date(),
+        	autoclose : true
+        }); 
+        
+        $('#ftlConfirmHouseHoldeDate').datepicker({
+        	format : 'dd-mm-yyyy',
+        	todayHighlight : true,
+        	endDate : new Date(),
+        	autoclose : true
+        });
+ 
+/* 123D date picker */
+    	$('#datepickerfrom123D,#datepickerto123D').datepicker({
+    		format : 'dd-mm-yyyy',
+    		todayHighlight : true,
+    		autoclose : true,
+    	});
+    	$('#datepickerfrom123D,#datepickerto123D').datepicker('setDate', today);
+    	$('#datepickerfrom123D').datepicker('setDate', '-7d');
+    	
+    	$('#datepickerStartDate,#datepickerEndDate').datepicker('setDate', today);
+    	$('#datepickerStartDate').datepicker('setDate', '-7d');
+
+    	$("#datepickerfrom123D").change(function() {
+    		var sdate1 = $('#datepickerfrom123D').datepicker('getDate');
+    		var edate1 = $('#datepickerto123D').datepicker('getDate');
+    		functionDateWise123D(sdate1, edate1);
+    	});
+    	$("#datepickerto123D").change(function() {
+    		var sdate1 = $('#datepickerfrom123D').datepicker('getDate');
+    		var edate1 = $('#datepickerto123D').datepicker('getDate');
+    		functionDateWise123D(sdate1, edate1);
+    	}); 
+    	/* 123D report */
+    	
+    	 $('#datepickerfrom123D1').datepicker({
+         	format : 'dd-mm-yyyy',
+         	todayHighlight : true,
+         	endDate : new Date(),
+         	autoclose : true
+         });               
+
+         $('#datepickerto123D1').datepicker({
+         	format : 'dd-mm-yyyy',
+         	todayHighlight : true,
+         	endDate : new Date(),
+         	autoclose : true
+         });
+    	
+    	
+    	
+    	
+    	/* Parking date picker */
+    	
+    	$('#datepickerfromPar,#datepickertoPar').datepicker({
+    		format : 'dd-mm-yyyy',
+    		todayHighlight : true,
+    		//endDate : new Date(),
+    		autoclose : true,
+
+    	});
+    	$('#datepickerfromPar,#datepickertoPar').datepicker('setDate', today);
+    	$('#datepickerfromPar').datepicker('setDate', '-7d');
+
+    	$('#datepickerStartDate,#datepickerEndDate').datepicker('setDate', today);
+    	//$('#datepickerStartDate').datepicker('setDate', '-7d');
+    	
+    	$("#datepickerfromPar").change(function() {
+    		var sdate1 = $('#datepickerfromPar').datepicker('getDate');
+    		var edate1 = $('#datepickertoPar').datepicker('getDate');
+    		functionDateWisePar(sdate1, edate1);
+    	});
+    	$("#datepickertoPar").change(function() {
+    		var sdate1 = $('#datepickerfromPar').datepicker('getDate');
+    		var edate1 = $('#datepickertoPar').datepicker('getDate');
+    		functionDateWisePar(sdate1, edate1);
+    	});
+    	
+    	
+    	
+    	/* Parking surrendar report */
+    	
+   	 $('#datepickerfromPar1').datepicker({
+        	format : 'dd-mm-yyyy',
+        	todayHighlight : true,
+        	endDate : new Date(),
+        	autoclose : true
+        });               
+
+        $('#datepickertoPar1').datepicker({
+        	format : 'dd-mm-yyyy',
+        	todayHighlight : true,
+        	endDate : new Date(),
+        	autoclose : true
+        });
+    	
+    	/*----------create by Tahseen----------------rbd Legacy Mis report date picker----------------------*/
+    	  
+         $('#sDateLegacy').datepicker({
+         	format : 'dd/mm/yyyy',
+         	todayHighlight : true,
+         	endDate : new Date(),
+         	autoclose : true
+         });
+         
+         $('#eDateLegacy').datepicker({
+         	format : 'dd/mm/yyyy',
+         	todayHighlight : true,
+         	endDate : new Date(),
+         	autoclose : true
+         });
+         
+         
+         /*----------create by Tahseen----------------CSD Mis report date picker----------------------*/
+   	  
+         $('#csdsDate').datepicker({
+         	format : 'dd-mm-yyyy',
+         	todayHighlight : true,
+         	endDate : new Date(),
+         	autoclose : true
+         });
+         
+         $('#csdeDate').datepicker({
+         	format : 'dd-mm-yyyy',
+         	todayHighlight : true,
+         	endDate : new Date(),
+         	autoclose : true
+         });
+         
+         
+         
+  /*-------------------- htl-2 dashboard date picker---------------------------------- */
+     	$('#datepickerfromhtl2, #datepickertohtl2').datepicker({
+     		format : 'dd-mm-yyyy',
+     		todayHighlight : true,
+     		autoclose : true,
+     		endDate : new Date(),
+     		startDate : '08-05-2020',
+     	});
+     	$('#datepickerfromhtl2,#datepickertohtl2').datepicker('setDate', today);
+     //	$('#datepickerfromftl').datepicker('setDate', '-7d');
+     	$('#datepickerfromftl2').datepicker('setDate', today);
+
+     	$("#datepickerfromhtl2").change(function() {
+     		myFunction();		
+     		var sdate1 = $('#datepickerfromhtl2').datepicker('getDate');
+     		var edate1 = $('#datepickertohtl2').datepicker('getDate');
+     		functionDateWiseHtl2(sdate1, edate1);
+     	});
+     	$("#datepickertohtl2").change(function() {
+     		myFunction();		
+     		var sdate1 = $('#datepickerfromhtl2').datepicker('getDate');
+     		var edate1 = $('#datepickertohtl2').datepicker('getDate');
+     		functionDateWiseHtl2(sdate1, edate1);
+     	});
+     	
+     	
+    /*------------------------------date picker Hotel Motel Dashboard--------------------*/
+	$('#datepickerfromHMF,#datepickertoHMF').datepicker({
+		format : 'dd-mm-yyyy',
+		todayHighlight : true,
+		autoclose : true,
+		endDate : new Date(),
+		startDate : '08-05-2020',
+	});
+	$('#datepickerfromHMF, #datepickertoHMF').datepicker();  //'setDate', today
+	//$('#datepickerfromgtl').datepicker('setDate', '-7d');
+
+     	
+
+	/*  $("#datepickerfromHMF").change(function() {
+		myFunction();		
+		var sdate1 = $('#datepickerfromHMF').datepicker('getDate');
+		var edate1 = $('#datepickertoHMF').datepicker('getDate');
+		functionDateWiseHMF(sdate1, edate1);
+	});
+	$("#datepickertoHMF").change(function() {
+		myFunction();		
+		var sdate1 = $('#datepickerfromHMF').datepicker('getDate');
+		var edate1 = $('#datepickertoHMF').datepicker('getDate');
+		functionDateWiseHMF(sdate1, edate1);
+	});  */
+	
+	/*  */
+	
+	
+      
+	
+	
+	 /*----------create by Tahseen----------------Hackney Mis report date picker----------------------*/
+ 	  
+    $('#tehStartDate').datepicker({
+    	format : 'dd-mm-yyyy',
+    	todayHighlight : true,
+    	endDate : new Date(),
+    	autoclose : true
+    });
+    
+    $('#tehEndDate').datepicker({
+    	format : 'dd-mm-yyyy',
+    	todayHighlight : true,
+    	endDate : new Date(),
+    	autoclose : true
+    });
+    
+    
+    /*------------average median---------------------------*/
+    $('#gtlsDateAverageMedian').datepicker({
+    	format : 'dd-mm-yyyy',
+    	todayHighlight : true,
+    	endDate : new Date(),
+    	autoclose : true
+    });
+    
+    $('#gtleDateAverageMedian').datepicker({
+    	format : 'dd-mm-yyyy',
+    	todayHighlight : true,
+    	endDate : new Date(),
+    	autoclose : true
+    });
+    
+    
+    /*------------average median---------------------------*/
+    $('#htlStartDate').datepicker({
+    	format : 'dd-mm-yyyy',
+    	todayHighlight : true,
+    	endDate : new Date(),
+    	autoclose : true
+    });
+    
+    $('#htlEndDate').datepicker({
+    	format : 'dd-mm-yyyy',
+    	todayHighlight : true,
+    	endDate : new Date(),
+    	autoclose : true
+    });
+    
+    
+    
+    $('#htlStartDate').datepicker({
+    	format : 'dd-mm-yyyy',
+    	todayHighlight : true,
+    	endDate : new Date(),
+    	autoclose : true
+    });               
+
+    $('#htlEndDate').datepicker({
+    	format : 'dd-mm-yyyy',
+    	todayHighlight : true,
+    	endDate : new Date(),
+    	autoclose : true
+    });
+    
+    
+	
+    </script>  
+
+            <!-- amit code  -->
+
+			
+
+
+</html>

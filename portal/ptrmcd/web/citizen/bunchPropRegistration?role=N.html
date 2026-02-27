@@ -1,0 +1,4066 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+
+
+
+
+		
+		
+	
+	
+
+<html>
+<head>
+<base href="https://mcdonline.nic.in/ptrmcd/" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Citizen - Portal</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="all,follow">
+<!-- Bootstrap CSS-->
+ <link rel="stylesheet" href="static/css/bootstrap.min.css"> 
+<!--  start css  for Text EDITOR -->  
+<!--  <link href="static/css/summernote-bs4.min.css" rel="stylesheet">   -->
+<!--  start css for Text EDITOR -->
+<!-- Font Awesome CSS-->
+<link rel="stylesheet" href="static/css/font-awesome.min.css">
+<!-- Bootstrap Select-->
+<link rel="stylesheet" href="static/css/style.default.css">
+<!-- Custom stylesheet - for your changes-->
+<link rel="stylesheet" href="static/css/Masterstyle.css">
+<link rel="stylesheet" href="static/css/custom.css">
+<link href="static/css/jquery.dataTables.min.css" rel="stylesheet"
+	id="bootstrap-css">
+<link href="static/css/select2.min.css" rel="stylesheet" />
+<link href="static/css/bootstrap-datetimepicker.css" rel="stylesheet" />
+<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+<style>
+.iffyTip {
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+.hideText2{
+  max-width:200px;
+}
+
+.red-tooltip + .tooltip > .tooltip-inner {background-color: #f00;}
+.red-tooltip + .tooltip > .tooltip-arrow { border-bottom-color:#f00; }
+
+/* text editor css */
+.mce-notification.mce-in ,.mce-flow-layout-item.mce-last,.mce-path-item mce-last{
+display:none;
+}
+
+
+.loader-rotating {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 100px;
+  height: 100px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+.center-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
+
+<script type="text/javascript">
+var defaultTabIndex = -1;
+</script>
+</head>
+<body oncopy="return false" oncut="return false" onpaste="return false" ondragstart="return false;" ondrop="return false;">
+
+  <header>
+        <div class="header-top">
+            <div class="container-fluid  pad-30">
+                <div class="row">
+                       <div class="col-lg-6 hidden-sm hidden-xs">
+                       
+                        <div class="btn-group font-sizing " role="group" aria-label="...">
+                            <button class="btn btn-default" id="fontdecrease"
+                                title="Decrease Website's font size">A-</button>
+                            <button class="btn btn-default selected" id="fontdefault"
+                                title="Normal  Website's font size">A</button>
+                            <button class="btn btn-default" id="fontincrease"
+                                title="Increase Website's font size">A+</button>
+                        </div>
+                        <div class="btn-group font-contrast " role="group" aria-label="...">
+                            <button class="btn btn-default standard" id="stdView" title="Standard View">A</button>
+                            <button class="btn btn-default high-contrast-view" id="highContrastView"
+                                title="High Contrast View">A</button>
+                          
+                        </div>
+                         
+                          
+
+                    </div>
+                    
+                  
+             <div class="col-lg-1 hidden-sm hidden-xs ">
+
+              </div> 
+            
+                  <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 ">
+            	
+            </div>
+                  <div class="col-lg-1 hidden-sm hidden-xs ">
+                  <!-- <div class="input-group languageinputdiv">
+						 <select id="" class="js-states form-control languagediv" name="" placeholder="Language">							  													
+									<option value=""  selected="selected">English</option>
+										<option value="" > Hindi </option>
+							
+							</select>
+						</div> -->
+                   <!--    <span class="languagediv pull-right">
+                                <div class="gt__select">
+                                    <div id="google_translate_element"></div>
+                                </div>
+                            </span> -->
+            </div>
+                   
+                </div>
+            </div>
+        </div>
+
+
+        <div class="header-middle">
+           <!--  <nav class="navbar yamm navbar-default main-menu"> -->
+                <div class="container-fluid ">
+                   <div class="row">
+                    <div class="col-lg-3 col-md-5 col-sm-12 col-xs-12 ">
+                        <div class="">
+                      <a href="#" >
+                               <img src='static/images/mcd_logo.png'  class="img-responsive"  alt='Municipal Corporation of Delhi' title='Municipal Corporation of Delhi'>
+								</a>
+                            
+                 
+                        </div>
+                    </div>
+             <div class="col-lg-8 col-md-6 col-sm-12 col-xs-12">
+                   <!--  <marquee class="mar" onmouseover="this.stop();" onmouseout="this.start();" direction="left">
+							
+						<a onclick="showTextFlashDetail('077b1388-a2b2-4e19-8209-994239669011')" data-bs-toggle="modal" data-bs-target="#showTextFlash">We are committed to serve you better by improving the website on day-to-day basis  from the experiences and feedback we receive  from you. For that,  maintenance time has been fixed up from 11 PM to 12 AM daily.  Inconvenience regretted. </a>
+								
+								<img src="static/images/new-star.gif">  							
+								
+							
+							</marquee> -->
+                  
+                    </div> 
+                    
+                    
+               <div class="col-lg-1 col-md-1 col-sm-12 col-xs-12">
+               	<h1 class="right-content pull-right">
+						<a class="sw-logo" target="_blank"
+							href="http://www.digitalindia.gov.in/"
+							title="Digital India, External link"> <img
+							src="static/images/digital-india.png" alt="Digital India">
+						</a>
+					</h1>
+               </div>
+
+                 
+                </div>
+            </div>
+           <!--  </nav> -->
+        </div>
+
+
+
+    </header>
+
+    <div class="hidden-header"></div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="maindivhight">
+  <!--   <section class="bar background-white "> -->
+
+	<div>	
+		<!-- Navbar Start-->
+		
+
+
+
+
+
+
+
+
+<!-- add Modal-->
+<div class="modal fade" id="largeModal" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        
+      		<!-- <div class="modal-header">
+	          <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+	          <h4 class="bootbox-body" >HEALTH</h4>
+	        </div> -->
+			<div id="lgModalBodyID" class="modal-body">
+			
+			</div>
+			<div class="modal-footer">
+	          <button type="button" id="largeModalClose" class="btn btn-danger " data-bs-dismiss="modal">Close</button>
+	        </div>
+    </div>
+  </div>
+</div>
+
+<!-- add Modal for DeRegister-->
+<div class="modal fade" id="largeModalDeRegister" role="dialog" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header compectheader">
+     <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+			<div id="lgModalDeRegisterBodyID" class="modal-body">
+			
+			</div>
+			<div class="modal-footer">
+			<!-- <button id="deRegisterSubmit" type="button" class=" btn btn-primary" onclick="deRegisterSubmit()">Submit</button>
+	        <button type="button" id="deRegisterSubmitClose" class="btn btn-danger " data-dismiss="modal">Close</button> -->
+	        </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="deRegisterDashboardModal" role="dialog" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header compectheader">
+     <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+			<div id="deRegisterDashboardBodyID" class="modal-body">
+			</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="reRegisterDashboardModal" role="dialog" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header compectheader">
+     <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+			<div id="reRegisterDashboardBodyID" class="modal-body">
+			</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="largeModalAppRejDeRegister" role="dialog" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header compectheader">
+     <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+			<div id="lgModalAppRejDeRegisterBodyID" class="modal-body">
+			
+			</div>
+			<div class="modal-footer">
+			<button id="appRejdeRegisterSubmit" type="button" class=" btn btn-primary" onclick="appRejdeRegisterSubmit()">Submit</button>
+	        <button type="button" id="appRejdeRegisterSubmitClose" class="btn btn-danger " data-dismiss="modal">Close</button>
+	        </div>
+    </div>
+  </div>
+</div>
+<!-- De-Register END -->
+
+
+<!-- add Modal for Re-Register-->
+<div class="modal fade" id="largeModalReRegister" role="dialog" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header compectheader">
+     <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+			<div id="lgModalReRegisterBodyID" class="modal-body">
+			
+			</div>
+			<!-- <div class="modal-footer">
+			<button id="reRegisterSubmit" type="button" class=" btn btn-primary" onclick="reRegisterSubmit()">Submit</button>
+	        <button type="button" id="reRegisterSubmitClose" class="btn btn-danger " data-dismiss="modal">Close</button>
+	        </div> -->
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="largeModalAppRejReRegister" role="dialog" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header compectheader">
+     <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+			<div id="lgModalAppRejReRegisterBodyID" class="modal-body">
+			
+			</div>
+			<div class="modal-footer">
+			<button id="appRejreRegisterSubmit" type="button" class=" btn btn-primary" onclick="appRejreRegisterSubmitad()">Submit</button>
+	        <button type="button" id="appRejreRegisterSubmitClose" class="btn btn-danger " data-dismiss="modal">Close</button>
+	        </div>
+    </div>
+  </div>
+</div>
+<!-- Re-Register END -->
+<!-- Modal -->
+<div class="modal fade" id="consentModal" tabindex="-1" role="dialog" aria-labelledby="consentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header compectheader">
+                <h5 class="modal-title" id="consentModalLabel">Consent Form</h5>
+                <button type="button" class="close text-white" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" >
+              <!--   <h1 id="title"></h1>
+                <p id="description"></p> -->
+                <div id="content1">
+                <div class="row">				
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+				<p id="consentDescription">
+				By accepting, you agree to the terms outlined above regarding the collection, processing, and sharing of your personal data. You may contact us anytime for assistance or to revoke your consent.
+				</p>
+				<div class="" id="textconsentform" style="display: none;">
+				more text 
+				<ul>
+				<li>First line </li>
+				<li>Second Line</li>
+				<li>Third line</li>
+				</ul>
+                </div>
+                <div class="btn-container">
+				<button id="readmoretoggle" class="btn btn-primary" title="Read More About Consent details">Read More</button>
+				</div>
+                </div>
+				</div>
+                </div>
+              <!--   <p class="summary" id="summary"></p>
+                <p id="additionalDetails"></p> -->
+            </div>
+            <div class="modal-footer">
+                <button  type="button" class="btn btn-success " data-dismiss="modal" onclick="submitConsent('ACCEPTED')" id="consentApprove">Approve</button>
+                <button type="button" class="btn btn-warning" data-dismiss="modal" onclick="submitConsent('REVOKED')" id="consentRevoke">Revoke</button>
+                <button type="button" class="btn btn-danger" onclick="$('#consentModal').modal('hide')" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- all detail model-->
+<div class="modal fade" id="largeModalAllDetail" role="dialog">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+			<div id="lgModalAllDetailBodyID" class="modal-body">
+			</div>
+			<div class="modal-footer">
+	          <button type="button" id="largeModalClose" class="btn btn-danger " data-bs-dismiss="modal">Close</button>
+	        </div>
+    </div>
+  </div>
+</div>
+
+<!-- AddressDetailsByApplyNewUpic MODEL -->
+
+<!-- AddressDetailsByApplyNewUpic MODEL -->
+
+<div class="modal fade" id="propertyAddressDetail" role="dialog">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+        
+			<div id="propertyAddressDetailUpicApply" class="modal-body">
+			
+			</div>
+			
+    </div>
+  </div>
+</div>
+
+
+
+	
+  <div class="modal-md modal fade model-Pointer-Disable" id="myModal_status" role="dialog" >
+    <div class="modal-dialog">
+      <div class="modal-content">
+      <div>
+        <div class="modal-header compectheader" id="elementToChange">          
+          <h4 class="modal-title compecttitle"><span id="modelheading_success"></span></h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+          <div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		     	<h5 class="modalmsg mb-4 text-center" id="message_header"><i class="fa fa-check-circle" id="status_circle"></i><span id="messagebody_status"> </span></h5>
+             </div>
+			</div>
+          </form>
+        </div>
+        </div>
+        <div class="modal-footer text-center">
+          <button type="button" class="btn btn-default btnCom" title="Close the Modal Popup" id="successbtnnew" style="display: none">Continue</button>
+          <button type="button" class="btn btn-danger " data-bs-dismiss="modal" title="Close the Modal Popup" id="closebtn">Close</button>
+        </div>
+      </div>      
+    </div>
+  </div>  
+
+
+<!-- small modal -->
+<div class="modal fade" id="smallModal" role="dialog">
+	<div class="modal-dialog modal-lg modalsm">
+		<div class="modal-content">
+			<!-- <div id="smModalHeaderID" class="modal-header">
+				
+			</div> -->
+			<div id="smModalBodyID" class="modal-body">
+				
+			</div>
+			<!-- <div  id="smModalFooterID" class="modal-footer">
+				
+			</div> -->
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="smallAssignPropModal" role="dialog">
+	<div class="modal-dialog modal-lg modalsm">
+		<div class="modal-content">
+		
+		            <div class="modal-header compectheader">
+		                <h4 class="modal-title compecttitle text-center font-weight-bold" >Common heading </h4>
+		                <button type="button" class="close modalclose" data-bs-dismiss="modal" title="Close the Modal Popup">&times;</button>
+		            </div>
+		            <div class="modal-body">
+		            
+		            <!-- Start section 1  -->
+		            <section class="mb-4 ">
+		            <div class="row">
+		            <div class="Col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		             <h5 class="text-bold bg-gray py-2 px-2 text-black" >Current Authorized Officer </h5>
+		            <div id="currentAuthorizedOfficerModel" >
+		            </div>
+		            </div>
+		            </div>
+		            
+		            </section>
+		            <!-- end section 1 -->
+		            <!-- Start section 2 -->
+		             <section class="mt-4 py-4" style="border-top: 1px dotted #0380d1;">
+		            <div class="row">
+		            <div class="Col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		             <h5  class="text-bold bg-gray py-2 px-2 text-black">Authorized Officer List </h5>
+		             <div id="smallAssignPropModalID">
+		             
+		             </div>
+		            </div>
+		            </div>
+		            
+		            </section>
+		            <!-- end section 2 -->
+		        	</div>
+		        
+		      <!--   <div class="modal-footer align-left">
+		           
+		        </div> -->
+		        
+		     <!--    <div>
+		            <div class="modal-header compectheader">
+		                <h4 class="modal-title compecttitle text-center font-weight-bold" >Authorized Officer List</h4>
+		                <button type="button" class="close modalclose" data-bs-dismiss="modal" title="Close the Modal Popup">&times;</button>
+		            </div>
+		            <div id="smallAssignPropModalID" class="modal-body">
+		        	</div>
+		        </div>
+		        <div class="modal-footer align-left">
+		           
+		        </div> -->
+			
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="smallAssignPropModalforAuth" role="dialog">
+	<div class="modal-dialog modal-lg modalsm">
+		<div class="modal-content">
+		
+		            <div class="modal-header compectheader">
+		                <h4 class="modal-title compecttitle text-center font-weight-bold" id="ModalTitle"></h4>
+		                <button type="button" class="close modalclose" data-bs-dismiss="modal" title="Close the Modal Popup">&times;</button>
+		            </div>
+		            <div class="modal-body">
+		            <div class="row">
+		            <div class="Col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		             <h5  class="text-bold bg-gray py-2 px-2 text-black" id="ModalIDAuthHeading"> </h5>
+		             <div id="smallAssignPropModalIDAuth">
+		             
+		             </div>
+		            </div>
+		            </div>
+		            
+		            <!-- end section 2 Property Assignment To Authorize Officer       Authorized Officer List-->
+		        	</div>
+		        
+		      
+			
+		</div>
+	</div>
+</div>
+
+
+<!-- small modal -->
+<div class="modal fade" id="mediumModal" role="dialog">
+    <div class="modal-dialog modal-lg modalmd" >
+      <div class="modal-content">
+       <!--  <div id="mdModalHeaderID" class="modal-header">
+				
+		</div> -->
+		<div id="mdModalBodyID" class="modal-body" >
+				
+		</div>
+		<!-- <div  id="mdModalFooterID" class="modal-footer">
+			
+		</div> -->
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="comparePtrModal" role="dialog">
+    <div class="modal-dialog modal-lg modalmd" >
+      <div class="modal-content">
+       <!--  <div id="mdModalHeaderID" class="modal-header">
+				
+		</div> -->
+		<div id="compareBodyID" class="modal-body" >
+				
+		</div>
+		<!-- <div  id="mdModalFooterID" class="modal-footer">
+			
+		</div> -->
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="viewTotalProp" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        
+      		<!-- <div class="modal-header">
+	          <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+	          <h4 class="bootbox-body" >HEALTH</h4>
+	        </div> -->
+			<div id="viewTotalBodyID" class="modal-body">
+			
+			</div>
+			<div class="modal-footer">
+	          <button type="button" id="largeModalClose" class="btn btn-danger " data-bs-dismiss="modal">Close</button>
+	        </div>
+    </div>
+  </div>
+</div>
+  
+<!-- small modal end-->
+			<!-- lode spinner -->
+			<div class="loader-spinner-overlay"  id="overlay" style="display:none;">
+				<div class="spanner show">
+					<div class="loader">
+						<b></b><b></b><b></b><b></b><b></b>
+					</div>
+					<p style="font-size: 20px;">Processing Your Request Please wait</p>
+				</div>
+			</div>
+			<!-- <div id="overlay" >
+				<div class="overlay show "></div>
+				<div class="spanner show">
+					<div class="loader">
+						<b></b><b></b><b></b><b></b><b></b>
+					</div>
+					<h5>Processing Your Request Please wait</h5>
+				</div>
+			</div> -->
+<!--lode spinner end  -->
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title" id="exampleModalLabel">Payment Detail(Offline Mode)</h1>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="saveManualPaymentDetail" >
+          
+          <input type="hidden" class="form-control"   name="detailGuid" id="detailGuidId">
+          
+          <div id="amountDivId">
+           <div class="form-group"  >
+            <label for="message-text" class="col-form-label">Due Amount  :</label>
+             <input id="amountId" name="amount"
+								type="number" maxlength="13" step=".01"
+								 min="1" max="9999999999999"
+								class="form-control" onkeypress="return num(event);"
+								oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+								 />
+          </div>
+          
+           
+          <div class="form-group"  id="">
+            <label for="message-text" class="col-form-label">Construction Year  :</label>
+            <input type="text" class="form-control"  placeholder="YYYY" value=""  name="constructionYear" id="constructionYearId">
+          </div>
+          
+          
+          </div>
+          
+         
+           
+            <div id="principalAmountId"  style="display: none">
+          <div  class="form-group">
+         
+            <label for="message-text" class="col-form-label">Principal Amount( <i class="fa fa-rupee"></i> ) :
+            	
+            	
+            
+             </label>
+             <input type="checkbox" id="amnestyPaymentId" name="amnestyPayment" value="on">
+            	<label for="amnestyPayment" style="color: red"> Amnesty Payment</label>
+            	
+            	
+            	
+            <input id="paidAmountId" name="paidAmount"
+								type="number" maxlength="13" step=".01" value="0.0"
+								 min="1" max="9999999999999"
+								class="form-control" onkeypress="return num(event);"
+								oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+								 />
+								 
+								 
+								 
+			
+							 
+							 
+           </div>
+           
+            <div class="form-group m-2 " style="display: none;" id="amnestyAssessmentYearId">
+            <label for="message-text" class=" col-form-label ">Amnesty Name :</label>
+           	<select name="amnestyName" id="amnestyNameId" class=" form-control">	
+           		<option value="''">
+           			-- Select Amnesty Availed --
+           		</option>
+           		
+           	</select>
+          </div>
+           
+           <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Receipt No:</label>
+            <input type="text" class="form-control" name="receiptNo" 
+            min="0" maxlength="30" autocomplete="off" pattern="[^0-9a-zA-Z]{1,30}" onkeypress="return alphanum(event);"
+                                oninput="javascript: if (this.value.length > this.maxLength) this.value =this.value.substring(0,30)"
+            onkeyup="this.value = this.value.toUpperCase()" autocomplete="off" id="receiptNoId">
+            
+         
+          
+             <input type="hidden" class="form-control" name="assessmentYearGuid" id="assessmentYearGuidId" 
+          value="">
+          
+            <input type="hidden" class="form-control" name="action" id="actionId" 
+          value="save">
+         
+         
+          
+          </div>
+         
+          
+           <div class="form-group datepickerClass" id="receiptDatePicker">
+            <label for="message-text" class="col-form-label">Receipt Date :</label>
+           <input type="text" class="form-control"  pattern="[a-zA-Z0-9,-/\s]{1,50}" placeholder="DD/MM/YYYY" autocomplete="off" name="paidDate" id="paidById">
+          </div>
+          </div>
+           
+           
+         
+          
+          <!-- -----------------------------------------sdmc---------------------------------------------------------- -->
+          	
+          	<div  class="sdmcShow" style="display: none">
+          	<div class="form-group datepickerClass" id="interestAmountId">
+            <label for="message-text" class="col-form-label">Interest Amount :</label>
+           <input type="text" class="form-control" 
+           	type="number" maxlength="13" step=".01" value="0.0"
+								 min="1" max="9999999999999"
+								class="form-control" onkeypress="return num(event);"
+								oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+           name="interestAmount" id="interestAmountPaid">
+          </div>
+          
+          <div class="form-group datepickerClass" id="penaltyAmountId" >
+            <label for="message-text" class="col-form-label">Penalty Amount :</label>
+           <input type="text" class="form-control"  
+           type="number" maxlength="13" step=".01" value="0.0"
+								 min="1" max="9999999999999" onkeypress="return num(event);"
+								class="form-control"
+								oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            name="penaltyAmount" id="penaltyAmountPaid">
+          </div>
+          
+          <div class="form-group datepickerClass" id="eduCessId">
+            <label for="message-text" class="col-form-label">Education Cess :</label>
+           <input type="text" class="form-control" 
+           	type="number" maxlength="13" step=".01" value="0.0" onkeypress="return num(event);"
+								 min="1" max="9999999999999"
+								class="form-control"
+								oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            name="eduCess" id="eduCessPaid">
+          </div>
+          </div>
+          
+          <!--  ------------------------------------------------For IsLumpSumAvailed Before (Ravinder) -------------------------------------------------------- -->
+          <div class="form-group">
+	          <label for="message-text" class="col-form-label">Availed Lumpsum Incentive :</label>
+	          	
+	            
+	                        
+	            
+	                    
+	                    
+	                     
+	            
+					Yes <span>
+							<input type="radio" value="YES" id="isLumpsumAvailedBeforeCheckBoxYes"
+								name="isLumpsumAvailed"   
+									
+                               >
+								&nbsp; &nbsp;
+							No <input type="radio" value="NO" name="isLumpsumAvailed" id="isLumpsumAvailedBeforeCheckBoxNo"
+								onclick="enableDisableCovidDeclaration()" checked
+								
+                               >
+                        </span>
+          </div>
+          
+         
+         <!--  ------------------------------------------------sdmc end -------------------------------------------------------- -->
+            <div class="form-group">
+            <label for="message-text" class="col-form-label">Financial Year:</label>
+          <input type="text" class="form-control" name="assessmentYearDesc" id="assessmentYearDescId"  readonly="readonly"
+          value="">
+          </div>
+          
+          
+          
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">UPIC</label>
+           <input type="text" class="form-control" name="upic" id="upicId" readonly="readonly" value=""> 
+            </div>
+			
+				<div class="form-group sdmcShow " style="display: none">
+					<label for="message-text" class="col-form-label requiredDoc required">Upload
+						Receipt <span class="text-red">(In Pdf format and file
+							size should be less than 2MB )</span>:
+					</label> <input type="file" required="required" class="form-control"
+						id="receiptImageId"
+						value=""
+						onchange="uploadFilePropertiesFtlimages(this);"
+						name="receiptImage" accept="application/pdf">
+						<input type="hidden" id="uploadedDocUrl" >
+						<a id="manPymntRcpt" target="_blank" href="javascript:void(0);">View</a>
+				</div>
+			
+		
+
+					<input type="hidden" id="paramId">						
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="return saveManualPaymentDetails();">Save Details</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="emutationPreviewModal" role="dialog">
+  <div class="modal-dialog modal-lg"  style="width:1250px; top: 0; height: 90vh;">
+    <div class="modal-content">
+        
+      		<!-- <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	          <h4 class="bootbox-body" >HEALTH</h4>
+	        </div> -->
+			<div id="emutationPreviewModalBodyID" class="modal-body">
+			
+			</div>
+			<div class="modal-footer">
+	          <button type="button" id="emutationPreviewModalClose" class="btn btn-danger " data-bs-dismiss="modal">Close</button>
+	        </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="comparePropertyModal" role="dialog">
+  <div class="modal-dialog modal-lg"  style="width:800px; top: 0; height: 80vh;">
+    <div class="modal-content">
+        
+      		<!-- <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	          <h4 class="bootbox-body" >HEALTH</h4>
+	        </div> -->
+			<div id="comparePropertyModalBodyID" class="modal-body">
+			
+			</div>
+			<div class="modal-footer">
+	          <button type="button" id="comparePropertyModalClose" class="btn btn-danger " data-bs-dismiss="modal">Close</button>
+	        </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- add Modal fro mark as HQ-->
+<div class="modal fade" id="markhqModal" role="dialog" data-backdrop="static">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header compectheader">
+         
+     <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+			<div id="markhqBodyID" class="modal-body">
+			
+			</div>
+			<div class="modal-footer">
+			<button id="markhqSubmit" type="button" class=" btn btn-primary" onclick="submitMarkAs()">Submit</button>
+	        <button type="button" id="markhqClose" class="btn btn-danger " data-dismiss="modal">Close</button>
+	        </div>
+    </div>
+  </div>
+</div>
+
+<!-- add Modal fro addNRemoveUpicMerge-->
+<div class="modal fade" id="addNRemoveUpicMergeModal" role="dialog" data-backdrop="static">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header compectheader">
+         <h4 class="modal-title compecttitle">UPIC Merging Details</h4>
+     <button type="button" class="close" id="addNRemoveUpicMergeClose" data-dismiss="modal">×</button>
+        </div>
+			<div id="addNRemoveUpicMergeID" class="modal-body" style="height: 500px;overflow-y: auto;">
+			
+			</div>
+			<!-- <div class="modal-footer">
+			<button id="addNRemoveUpicMergeSubmit" type="button" class=" btn btn-primary" onclick="addNRemoveUpicMergeSubmit()">Submit</button>
+	        <button type="button" id="addNRemoveUpicMergeClose" class="btn btn-danger " data-bs-dismiss="modal">Close</button>
+	        </div> -->
+    </div>
+  </div>
+</div>
+
+<!-- add Modal fro RemoveUpicMerge-->
+<div class="modal fade" id="removeUpicMergeModal" role="dialog" data-backdrop="static">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header compectheader">
+         <h4 class="modal-title compecttitle">UPIC MERGING DETAILS FOR REMOVE UPIC</h4>
+     <button type="button" class="close" id="removeUpicMergeClose" data-dismiss="modal">×</button>
+        </div>
+			<div id="removeUpicMergeID" class="modal-body" style="height: 500px;overflow-y: auto;">
+			
+			</div>
+			<!-- <div class="modal-footer">
+			<button id="addNRemoveUpicMergeSubmit" type="button" class=" btn btn-primary" onclick="addNRemoveUpicMergeSubmit()">Submit</button>
+	        <button type="button" id="addNRemoveUpicMergeClose" class="btn btn-danger " data-bs-dismiss="modal">Close</button>
+	        </div> -->
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="small2Modal" role="dialog">
+	<div class="modal-dialog modal-lg modalsm">
+		<div class="modal-content">
+			<!-- <div id="smModalHeaderID" class="modal-header">
+				
+			</div> -->
+			<div id="sm2ModalBodyID" class="modal-body">
+				
+			</div>
+			<!-- <div  id="smModalFooterID" class="modal-footer">
+				
+			</div> -->
+		</div>
+	</div>
+</div>
+
+
+<!-- add Modal for Show Tax Calulated Data-->
+<div class="modal fade" id="TaxCalculationModal" role="dialog" data-backdrop="static">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header compectheader">
+         <h4 class="modal-title compecttitle">Tax Calculation</h4>
+     <button type="button" class="close text-white" id="addNRemoveUpicMergeClose" data-dismiss="modal">×</button>
+        </div>
+			<div id="TaxCalculationModalBodyID" class="modal-body" >
+			
+			</div>
+			 <div class="modal-footer">
+			<!-- <button id="addNRemoveUpicMergeSubmit" type="button" class=" btn btn-primary" onclick="addNRemoveUpicMergeSubmit()">Submit</button> -->
+	        <button type="button" id="addNRemoveUpicMergeClose" class="btn btn-danger " data-bs-dismiss="modal">Close</button>
+	        </div> 
+    </div>
+  </div>
+</div>
+
+<!-- add Modal For Download Tax Calculated PDF-->
+<div class="modal fade" id="TaxCalculationPDFModal" role="dialog" data-backdrop="static">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header compectheader">
+         <h4 class="modal-title compecttitle">Download Tax Calculation PDF</h4>
+     <button type="button" class="close" id="addNRemoveUpicMergeClose" data-dismiss="modal">×</button>
+        </div>
+			<div class="modal-body" style="height: 300px; overflow-y: auto;">
+  <form action="#" method="post">
+  
+    <!-- Mobile Number Field -->
+    <div class="form-group row mb-3">
+      <label for="mobile" class="col-sm-3 col-form-label">Mobile Number:</label>
+      <div class="col-sm-9">
+        <input type="tel" id="mobile" name="mobile" class="form-control"
+               pattern="[0-9]{10}" maxlength="10" placeholder="Enter 10-digit mobile number" required>
+      </div>
+    </div>
+
+    <!-- Captcha Section -->
+    <div class="form-group row mb-3 align-items-center">
+      <label class="col-sm-3 col-form-label">Captcha:</label>
+
+      <!-- Captcha Image + Refresh -->
+      <div class="col-sm-3">
+        <img id="captcha_ID_e2" src="Captcha" class="img-fluid" alt="Captcha" border="0">
+        <a id="captcha_ID_refresh2" href="javascript:void(0);" onclick="doRefreshCAPTCHA2('captcha_ID_e2');">
+          <i class="fa fa-refresh" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <!-- Captcha Input -->
+      <div class="col-sm-6">
+        <input type="text" class="form-control" name="captcha" id="crIDEmail2" maxlength="6" placeholder="Enter captcha">
+      </div>
+    </div>
+
+  </form>
+</div>
+
+			 <div class="modal-footer">
+			 <input type="hidden" id="jsonValue" value="">
+			 <button id="addNRemoveUpicMergeSubmit" type="button" class=" btn btn-primary" onclick="saveMobileNumberAndDownloadPDF()">Submit</button>
+	       </form>
+	        <button type="button" id="closeMobileNumberAndDownloadPDF" class="btn btn-danger " onclick="reloadPage();" data-bs-dismiss="modal">Close</button>
+	        </div> 
+    </div>
+  </div>
+</div>
+
+<script>
+function doRefreshCAPTCHA2(id){
+
+    var d = new Date();
+	
+	var captchaObj2 = document.getElementById(id);
+	captchaObj2.src="Captcha\?"+d.getMilliseconds();
+	$("#crIDEmail2").val('');
+	
+	
+}
+</script>
+		
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<div class="custommargn">
+<header class="nav-holder make-sticky">
+
+	<!--<div id="navbar" role="navigation" class="navbar navbar-expand-lg">
+		<div class="container">
+			<!--<a href="index.html" class="navbar-brand home"><images src="static/images/logo.png" alt="MCD logo" class="d-none d-md-inline-block"><images src="" alt="MCD logo" class="d-inline-block d-md-none"><span class="sr-only">MCD - go to homepage</span></a>-->
+			<!-- button type="button" data-bs-toggle="collapse"
+				data-bs-target="#navigation"
+				class="navbar-toggler btn-template-outlined">
+				<span class="sr-only">Toggle navigation</span><i
+					class="fa fa-align-justify"></i>
+			</button-->
+			<div id="navigation" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="nav-item dropdown active">
+						
+						
+						
+						<a href="web/citizen/info"><i class="fa fa-home"></i> Home <b
+							class="caret"></b></a>
+						
+						
+					
+						<!-- <ul class="dropdown-menu">
+							<li class="dropdown-item"><a href="#" class="nav-link">Page
+									1</a></li>
+							<li class="dropdown-item"><a href="#" class="nav-link">Page
+									1</a></li>
+							<li class="dropdown-item"><a href="#" class="nav-link">Page
+									1</a></li>
+							<li class="dropdown-item"><a href="#" class="nav-link">Page
+									1</a></li>
+							<li class="dropdown-item dropdown-submenu"><a
+								id="navbarDropdownMenuLink2" href="#" data-bs-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false"
+								class="nav-link dropdown-toggle">Dropdown link</a>
+								<ul aria-labelledby="navbarDropdownMenuLink2"
+									class="dropdown-menu">
+									<li class="dropdown-item"><a href="#" class="nav-link">Action</a></li>
+									<li class="dropdown-item"><a href="#" class="nav-link">Action</a></li>
+									<li class="dropdown-item"><a href="#" class="nav-link">Action</a></li>
+								</ul></li>
+						</ul> --></li>
+					<li class="nav-item dropdown menu-large"><a href="javascript:void(0);"><i
+							class="fa fa-info-circle" aria-hidden="true"></i> About us</a></li>
+					<li class="nav-item dropdown menu-large"><a href="javascript:void(0);"><i
+							class="fa fa-eye" aria-hidden="true"></i> View Status </a></li>
+					<li class="nav-item dropdown menu-large"><a href="javascript:void(0);"><i
+							class="fa fa-gear" aria-hidden="true"></i> Services </a></li>
+					<li class="nav-item dropdown menu-large"><a href="javascript:void(0);"><i
+							class="fa fa-book" aria-hidden="true"></i> Guidelines </a></li>
+					<li class="nav-item dropdown"><a href="javascript:void(0);"><i
+							class="fa fa-question-circle" aria-hidden="true"></i> FAQ </a></li>
+				</ul>
+			</div>
+		</div>
+	</div-->
+</header>
+</div>
+
+		
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+
+
+<head>
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="bar background-white">
+	<div class="container">
+		<div class="row">
+
+			<div
+				class="col-lg-offset-2 col-lg-9 col-md-12 col-sm-12 col-xs-12 register-div">
+				<h1 class="forgethead">
+					
+						<input type="hidden" name="usrSession" value="false"
+							id="usrSession">
+        				Sign Up For Nodal Officer
+       	 			
+					
+					
+       	 			
+
+				</h1>
+
+				<div class="card my-0 border-none">
+					<div class="card-body py-0">
+
+					<!-- 	<div class="col-lg-3 col-md-2 col-sm-12 col-xs-12 password-left">
+							<img class="text-center" src="static/images/add-user.png" alt=""
+								style="width: 100%;"> <br>
+						</div> -->
+
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pr-0">
+
+							<div class="box">
+
+								<div class="row">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-4">
+										<!-- <h3 class="notes">Note :-</h3> -->
+										<h6 class="mandataryfield fieldss">
+											<strong>Fields marked with <b class="text-danger">*</b>
+												are mandatory
+											</strong>
+										</h6>
+									</div>
+								</div>
+
+
+								<form action="web/citizen/property/bunch/saveBunchRegistration"
+									id="bunchFormId" method="post" modelAttribute="bunchRegForm" autocomplete="off">
+
+
+									<input type="hidden" value="9d4bd0d2-aa7b-4f14-9769-961af1a9ba52" name="regToken">
+									<input type="hidden" value="create" name="action"
+										id="actionID"> <input type="hidden"
+										value="" name="nodalGuid">
+									<div class="row">
+										<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-4 pr-0">
+											<input type="hidden" name="_csrf"
+												value="4fc9697e-9451-467f-adbc-e63fdf7e0543" id="loginCsrfId" />
+
+											
+												<input type="hidden" name="registrationTypeBunch" value="N"
+													id="registrationTypeNodal" />
+											
+											
+
+											<div class="cleafix"></div>
+
+											<div class="cleafix"></div>
+											<div class="form-group row">
+												<label
+													class="control-label col-xs-12 col-sm-12 col-md-3 col-lg-3 required"
+													for="Name" id=""> Name</label>
+												
+													<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+														<div class="input-group">
+															<span class="input-group-addon"><i
+																class="fa fa-user"></i></span> <input type="text"
+																id="bunchName" name="bunchName"
+																value=""
+																class="form-control tooltilcls uppercase"
+																autocomplete="off" maxlength="50"
+																placeholder="Please enter Nodal Officer Name" title=""
+																onkeypress="return alphaWithNumericAndHyphen(event);" />
+														</div>
+													</div>
+												
+												
+											</div>
+											<div class="cleafix"></div>
+											<div class="form-group row">
+												<label
+													class="control-label col-xs-12 col-sm-12 col-md-3 col-lg-3 required"
+													for="Name" id=""> Designation</label>
+												
+													<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+														<div class="input-group">
+															<span class="input-group-addon"><i
+																class="fa fa-user"></i></span> <input type="text"
+																id="designationId" name="designation"
+																value=""
+																class="form-control tooltilcls uppercase"
+																autocomplete="off" maxlength="50"
+																placeholder="Please enter your Designation" title=""
+																onkeypress="return alphaWithNumericAndHyphen(event);" />
+														</div>
+													</div>
+												
+												
+											</div>
+
+
+											<div class="cleafix"></div>
+											
+												<div class="cleafix"></div>
+												<div class="form-group row">
+													<label
+														class="control-label col-xs-12 col-sm-12 col-md-3 col-lg-3 required"
+														for="govCatbunchSelect"> Category Of Government</label>
+													<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+														<div class="input-group">
+															<span class="input-group-addon"><i
+																class="fa fa-th"></i></span> <select id="selectGovCateBunch"
+																class="js-states form-control" name="govCatName"
+																required onchange="handleGovCategoryChange(this)">
+																<option value="0" selected="selected">Select
+																	Government Category</option>
+																
+																	
+																		
+																		
+																			<option value="52j2i75h-94g6-4fe0-d717-492079c3ba17">
+																				AUTONOMOUS GOVERNMENT BODY
+																			</option>
+																		
+																	
+																
+																	
+																		
+																		
+																			<option value="18k2b75c-15h2-4be0-f717-492079g3hi45">
+																				AUTONOMOUS GOVERNMENT BODY/PSU
+																			</option>
+																		
+																	
+																
+																	
+																		
+																		
+																			<option value="52j2i75h-94g6-4fe0-d717-492079c3ba19">
+																				AUTONOMOUS GOVERNMENT BODY/PSU/PSE
+																			</option>
+																		
+																	
+																
+																	
+																		
+																		
+																			<option value="40a2b75c-12k8-4be0-f717-492079g3hi50">
+																				CENTRAL GOVERNMENT
+																			</option>
+																		
+																	
+																
+																	
+																		
+																		
+																			<option value="52j2i75h-94g6-4fe0-d717-492079c3ba15">
+																				STATE GOVERNMENT
+																			</option>
+																		
+																	
+																
+															</select>
+														</div>
+													</div>
+												</div>
+											
+											
+											<input id="governCat" type="hidden" name="governCatGuid"
+												value="" /> <input id="governDepart" type="hidden"
+												name="governDepartGuid" value="" />
+<!-- onchange="govDepartChange(this.value);"  -->
+											
+												<div class="cleafix"></div>
+												<div class="form-group row" id="govDepartBunch">
+													<label
+														class="control-label col-xs-12 col-sm-12 col-md-3 col-lg-3 required"
+														for="selectGovDepartBunch">Government Department</label>
+													<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+														<div class="input-group">
+															<span class="input-group-addon"><i
+																class="fa fa-th"></i></span> <select id="selectGovDepartBunch"
+																class="js-states form-control" name="govDepartName"
+																required>
+																<option value="0" selected="selected">Select
+																	Government Department</option>
+																
+																	
+																		
+																		
+																			<option value="83311c30-cc51-40d7-ba97-c2614a9b6504">
+																				AIR FORCE
+																			</option>
+																		
+																	
+																
+																	
+																		
+																		
+																			<option value="0a45695e-7585-435e-b4c4-613870144541">
+																				APMC
+																			</option>
+																		
+																	
+																
+																	
+																		
+																		
+																			<option value="656f97d7-012f-4c75-985e-bf4ae0fd6e15">
+																				BHARAT PETROLEUM CORPORATION LTD
+																			</option>
+																		
+																	
+																
+																	
+																		
+																		
+																			<option value="45c7bb94-0c4d-4691-9b4e-f8e5026bea6b">
+																				BSES
+																			</option>
+																		
+																	
+																
+																	
+																		
+																		
+																			<option value="1a9fc671-b89b-4068-a67d-1048a716fd61">
+																				BSNL
+																			</option>
+																		
+																	
+																
+																	
+																		
+																		
+																			<option value="098459d2-0498-4b41-862c-19a39c8c6537">
+																				CENTRAL PUBLIC WORKS DEPARTMENT
+																			</option>
+																		
+																	
+																
+																	
+																		
+																		
+																			<option value="f6b0381b-097b-452b-8097-b202e2d262e1">
+																				DELHI DEVELOPMENT AUTHORITY
+																			</option>
+																		
+																	
+																
+																	
+																		
+																		
+																			<option value="6c548fb3-87a5-412c-a297-b5c0c205f1d6">
+																				DELHI FIRE SERVICE
+																			</option>
+																		
+																	
+																
+																	
+																		
+																		
+																			<option value="859d70d0-1128-45e5-a1d3-e05ca9641a24">
+																				DELHI JAL BOARD
+																			</option>
+																		
+																	
+																
+																	
+																		
+																		
+																			<option value="bf82a717-a2fa-4ea2-8da1-1cd34b879f22">
+																				DELHI METRO RAIL CORPORATION
+																			</option>
+																		
+																	
+																
+																	
+																		
+																		
+																			<option value="2dc5def4-bbe0-4524-890d-11a55898d3cd">
+																				DELHI POLICE
+																			</option>
+																		
+																	
+																
+																	
+																		
+																		
+																			<option value="f731c481-3ff0-41c0-b042-8c09df043122">
+																				DELHI TRANSPORT  CORPORATION
+																			</option>
+																		
+																	
+																
+																	
+																		
+																		
+																			<option value="c84033ac-d428-4105-81d1-942ee332ad71">
+																				DEPTT. OF POST
+																			</option>
+																		
+																	
+																
+																	
+																		
+																		
+																			<option value="28e4a16c-f4cb-4123-b945-d6cc56c975ab">
+																				DIL
+																			</option>
+																		
+																	
+																
+																	
+																		
+																		
+																			<option value="5f243f78-eb31-4fdc-9a6e-ee0d5f23f30e">
+																				DISPENSARY
+																			</option>
+																		
+																	
+																
+																	
+																		
+																		
+																			<option value="dbb9912a-39b4-4e2d-af6c-e1c0a9c43592">
+																				GNCTD SCHOOLS
+																			</option>
+																		
+																	
+																
+																	
+																		
+																		
+																			<option value="1edbbb3b-bb80-4bce-850d-3a5989ef7332">
+																				HINDUSTAN PETROLEUM CORPORATION LTD
+																			</option>
+																		
+																	
+																
+																	
+																		
+																		
+																			<option value="c2d13045-d311-418c-878e-2f523ae5d5cb">
+																				HOSPITALS
+																			</option>
+																		
+																	
+																
+																	
+																		
+																		
+																			<option value="63b65f3e-ac7b-4c8e-b372-645724a66679">
+																				INDIAN OIL CORPORATION LTD
+																			</option>
+																		
+																	
+																
+																	
+																		
+																		
+																			<option value="1e70f830-893f-4cf4-9c32-bad3d97fd568">
+																				INDRAPRASTHA GAS LIMITED
+																			</option>
+																		
+																	
+																
+																	
+																		
+																		
+																			<option value="6bfb9322-a44b-4733-8c9e-6729fa401ba2">
+																				KENDRIYA VIDHALYA SANGATHAN
+																			</option>
+																		
+																	
+																
+																	
+																		
+																		
+																			<option value="3794496b-abc0-46f4-b799-9e3d728a7cba">
+																				LIFE INSURANCE CORPORATION
+																			</option>
+																		
+																	
+																
+																	
+																		
+																		
+																			<option value="14e48dba-ba1b-42f6-bb71-c9ca5a03fe1d">
+																				MINISTRY OF UD
+																			</option>
+																		
+																	
+																
+																	
+																		
+																		
+																			<option value="4de780d5-6070-4575-9f96-88aaf8d2c67b">
+																				MOTHER DAIRY
+																			</option>
+																		
+																	
+																
+																	
+																		
+																		
+																			<option value="9832f026-f094-42a0-92ce-1825da7459c5">
+																				MTNL
+																			</option>
+																		
+																	
+																
+																	
+																		
+																		
+																			<option value="3b7eacf7-7c3e-43ab-835e-a64693dadba2">
+																				NORTHERN RAILWAY
+																			</option>
+																		
+																	
+																
+																	
+																		
+																		
+																			<option value="d959a4b6-8879-4d02-9a8d-97df83d4bf29">
+																				PAR. MILITARY
+																			</option>
+																		
+																	
+																
+																	
+																		
+																		
+																			<option value="fd441acb-5f96-4afd-a591-82daf4651366">
+																				PUBLIC WORKS DEPARTMENT
+																			</option>
+																		
+																	
+																
+																	
+																		
+																		
+																			<option value="07356214-1199-41f7-afcc-d43084f46f11">
+																				TPDDL
+																			</option>
+																		
+																	
+																
+															</select>
+														</div>
+													</div>
+												</div>
+											
+
+											<div class="cleafix"></div>
+											<div class="form-group row" id="pvtDeptName"
+												style="display: none">
+												<label
+													class="control-label col-xs-12 col-sm-12 col-md-3 col-lg-3 required"
+													for="pvtDepartment" id="">Company Name</label>
+												<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+													<div class="input-group">
+														<span class="input-group-addon"><i
+															class="fa fa-user"></i></span> <input type="text"
+															id="companyName" name="companyName"
+															value="" class="form-control "
+															autocomplete="off" maxlength="100"
+															placeholder="Please enter your Company Name" title="" />
+													</div>
+												</div>
+											</div>
+
+
+											<div class="cleafix"></div>
+											
+											<div class="cleafix"></div>
+											<div class="form-group row">
+												<label
+													class="control-label col-xs-12 col-sm-12 col-md-3 col-lg-3 required"
+													for="Name" id="">Correspondence Address</label>
+												<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+													<div class="input-group">
+														<span class="input-group-addon"><i class="fa fa-th"></i></span>
+														<textarea class="form-control" rows="3" id="bunchAddress"
+															name="bunchAddress"
+															placeholder="Please enter Registered Address"
+															onkeypress="return alphaWithNumericAndHyphen(event);"></textarea>
+													</div>
+												</div>
+											</div>
+											
+												<div class="cleafix"></div>
+												<div class="form-group row" id="noOfPropUnit">
+													<label
+														class="control-label col-xs-12 col-sm-12 col-md-3 col-lg-3 required"
+														for="Name" id="">No. of Property Units</label>
+													<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+														<div class="input-group">
+															<span class="input-group-addon"><i
+																class="fa fa-th"></i></span> <input type="text" id="noOfUpics"
+																name="noOfUpics" value=""
+																class="form-control tooltilcls uppercase"
+																autocomplete="off" maxlength="4"
+																placeholder="Please enter No of Property Units" title=""
+																onkeypress="return onlyNumber(event);" />
+														</div>
+													</div>
+												</div>
+											
+
+
+
+											<div class="cleafix"></div>
+
+											<div id="mobileContainerDivId">
+												<div class="cleafix"></div>
+
+												<div class="form-group row">
+													<label
+														class="control-label col-xs-12 col-sm-12 col-md-3 col-lg-3 required"
+														for="Name" id="labelMobileId"> Mobile No.</label>
+													<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+														<div class="input-group">
+															<!-- 	<span class="input-group-addon"><i class="fa fa-phone"></i></span> -->
+															<select id="countryCodeID" class="js-states form-control"
+																name="countryCode" required
+																style="width: 25%; padding: 6px 5px;">
+																
+																	
+																		
+																		
+																			
+																				
+																					<option value="91"
+																						selected="selected">
+																						India(
+																						91)
+																					</option>
+																				
+																				
+																			
+																		
+																	
+																
+															</select> 
+															
+															<input id="bunchMobileNo" type="text" autocomplete="off"
+																name="bunchMobileNo" maxlength="10"
+																class="form-control tooltilcls"
+																onblur="return validateMobBunch();" value=""
+																onkeypress="return onlyNumber(event);"
+																
+																placeholder="Please Enter Mobile Number"
+																style="width: 75%;" /> <span class="input-group-addon"><i
+																class="fa fa-mobile"></i></span>
+																
+
+														</div>
+													</div>
+												</div>
+											</div>
+											<input type="hidden" value=""
+												id="existingBunchMobile"> <input type="hidden"
+												value="" id="existingBunchEmail">
+											<div id="smsOtpContainerDivIdBunch" >
+												<div id="smsOtpContainerDivIdBunch">
+													<div class="cleafix"></div>
+													<div class="form-group row">
+														<div
+															class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+															<div
+																class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+																<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 mb-2">
+																	<label>Captcha</label>
+																</div>
+
+																<div class="col-lg-3 col-md-3 col-sm-12 col-xs-10 mb-2">
+																	<input type="text"
+																		class="form-control col-lg-10 col-md-7 textformat"
+																		name="cr" id="cfmID" maxlength="6">
+																</div>
+
+																<div class="col-lg-6 col-md-3 col-sm-12 col-xs-12 mb-2">
+																	<img id="captcha_ID_m" src="Captcha" class="captcha"
+																		border="0"> <a href="javascript:void(0);"
+																		onclick="doRefreshCAPTCHA('captcha_ID_m');"> <i
+																		class="fa fa-refresh" aria-hidden="true"></i>
+																	</a>
+																</div>
+
+															</div>
+
+															<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 mb-2">
+																<label class="control-label" for="colonyIDSelect">
+																</label>
+																<button type="button" name="verify"
+																	class="btn btn-block btn-primary text-white mt-3"
+																	onclick="return getOTPforBunchReg();" id="getCitOtpBtnID">GET
+																	OTP</button>
+
+																<div id="regenerateOtpDivID" style="display: none;">
+
+																	<span style="color: #f70a0a; font-size: 12px;">
+																		Regenerate after ...</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+																		style="color: #f70a0a; font-size: 12px;"> <span
+																		id="timer"> </span></span>
+
+																</div>
+															</div>
+															<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" id="">
+																<label class="control-label" for="colonyIDSelect">ENTER
+																	MOBILE OTP </label>
+																<div class="input-group mb-4">
+																	<span class="input-group-addon"><i
+																		class="fa fa-th"></i></span> <input id="otpCitRegId"
+																		type="text" onkeypress="return onlyNumbers(event);"
+																		name="otpValue" class="form-control tooltilcls"
+																		maxlength="6" title="Valid OTP is 6 digit numeric"
+																		placeholder="Please enter OTP From Mobile" />
+																</div>
+															</div>
+															<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12  mb-2"
+																id="">
+																<label class="control-label" for="colonyIDSelect">
+																</label>
+
+																<button type="button" name="verify"
+																	class="btn btn-block btn-success text-white mt-3"
+																	disabled="disabled" onclick="verifyOTP();"
+																	id="verifyCitRegOtpBtnId">VERIFY OTP</button>
+
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											
+											<div class="cleafix"></div>
+											<div class="form-group row">
+												<label
+													class="control-label col-xs-12 col-sm-12 col-md-3 col-lg-3 required"
+													for="Name"> Email id</label>
+												<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+												
+													<div class="input-group">
+														<span class="input-group-addon"><i
+															class="fa fa-envelope"></i></span> <input type="text"
+															id="emailId" name="bunchEmailId" autocomplete="off"
+															onblur="return validateEmailBunch();"
+															maxlength="50" class="form-control tooltilcls"
+															placeholder="Please enter Email ID" value=""
+															
+															pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+															 required="required" />
+
+													</div>
+													
+													
+												</div>
+											</div>
+											<div id="emailIdOtpContainerDivIdBunch" >
+												<div id="emailIdOtpContainerDivIdBunch">
+													<div class="cleafix"></div>
+													<div class="form-group row">
+
+														<div
+															class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+															<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 mb-2">
+																<label class="control-label" for="colonyIDSelect">
+																</label>
+																<button type="button" name="verify"
+																	class="btn btn-block btn-primary text-white mt-3"
+																	onclick="return getEmailOTPforBunch();"
+																	id="getCitOtpEmailBtnID">GET OTP</button>
+
+																<div id="regenerateEmailOtpDivID" style="display: none;">
+
+																	<span style="color: #f70a0a; font-size: 12px;">
+																		Regenerate after ...</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+																		style="color: #f70a0a; font-size: 12px;"> <span
+																		id="email_timer"> </span></span>
+
+																</div>
+															</div>
+															<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" id="">
+																<label class="control-label" for="colonyIDSelect">ENTER
+																	EMAIL OTP </label>
+																<div class="input-group mb-4">
+																	<span class="input-group-addon"><i
+																		class="fa fa-th"></i></span> <input id="otpBunchRegEmailId"
+																		type="text" onkeypress="return onlyNumbers(event);"
+																		name="otpValueEmail" class="form-control tooltilcls"
+																		maxlength="6" title="Valid OTP is 6 digit numeric"
+																		placeholder="Please enter Email OTP " />
+																</div>
+															</div>
+															<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12  mb-2"
+																id="">
+																<label class="control-label" for="colonyIDSelect">
+																</label>
+																<button type="button" name="verify"
+																	class="btn btn-block btn-success text-white mt-3"
+																	disabled="disabled" onclick="verifyBunchEmailOTP();"
+																	id="verifyCitRegEmailOtpBtnId">VERIFY</button>
+
+															</div>
+
+														</div>
+													</div>
+												</div>
+											</div>
+											
+											
+												<div class="cleafix"></div>
+												<div class="form-group row">
+													<label
+														class="control-label col-xs-12 col-sm-12 col-md-3 col-lg-3 required"
+														for="Name">Password </label>
+													<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+														<div class="input-group">
+															<span class="input-group-addon"><i
+																class="fa fa-key"></i></span> <input type="password"
+																id="passwordId" name="bunchPassword" autocomplete="off"
+																maxlength="16" minlength="6"
+																class="form-control tooltilcls" placeholder="password"
+																value=""
+																required="required" onblur="return validatePassword();"
+																title="Password length is between 6 and 20, should consist of atleast one number, one upper case, one lower case and one special character. " />
+															<div class="input-group-addon input-group-append"
+																id="passwordEyeIconDivId" style="cursor: pointer">
+																<div class="input-group-text">
+																	<i class="glyphicon glyphicon-eye-open"></i>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="cleafix"></div>
+												<div class="form-group row">
+													<label
+														class="control-label col-xs-12 col-sm-12 col-md-3 col-lg-3 required"
+														for="Name">Confirm Password</label>
+													<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+														<div class="input-group">
+															<span class="input-group-addon"><i
+																class="fa fa-key"></i></span> <input type="password"
+																id="confirmPasswordId" name="bunchCnfrmPswd"
+																autocomplete="off" maxlength="16" minlength="6"
+																class="form-control tooltilcls"
+																placeholder="Confirm Password"
+																value=""
+																required="required"
+																title="Confirm Password should be same as Password" />
+															<div class="input-group-addon input-group-append"
+																id="cPasswordEyeIconDivId" style="cursor: pointer">
+																<div class="input-group-text">
+																	<i class="glyphicon glyphicon-eye-open"></i>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											
+
+							<input type="hidden" name="otpValidated" id="otpValidatedId" value="false">
+							<input type="hidden" name="otpEmailValidated" id="otpEmailValidatedId" value="false">
+
+											<div class="clearfix"></div>
+
+											<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btnMargn">
+												<div class="pull-right">
+												
+													<button type="submit"
+														onclick="return validateBunchRegForm();" name="submitForm"
+														class="btn btn-template-outlined"
+														id="bunchRegistrationBtnID">Submit</button>
+												
+												
+
+													
+														<a href="web/citizen/info"
+															class="btn btn-danger btn-template-outlined">Cancel</a>
+													
+													
+													
+													
+       	 											
+
+
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="clearfix"></div>
+								</form>
+
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+	<form id="generateOTPBunchFrmID"
+		action="web/citizen/generateOTPForBunchReg" method="post">
+		<input type="hidden" name="_csrf"
+			value="4fc9697e-9451-467f-adbc-e63fdf7e0543" /> <input type="hidden" id="mobFrmID"
+			name="mob"> <input type="hidden" id="ccID" name="cc">
+		<input type="hidden" id="loginTypeID" name="type"> <input
+			type="hidden" id="cMobFrmID" name="cMobFrmID"> <input
+			type="hidden" id="mpk" name="mpk"> <input type="hidden"
+			id="rnfm" name="rnfm"> <input id="token_r" name="token_r"
+			type="hidden" value="2bffca39-7d13-441f-aa2a-87f9ee4275d5" />
+
+	</form>
+	<form id="generateEmailOTPBunchFrmID"
+		action="web/citizen/genEmailOTPForBunch" method="post">
+		<input type="hidden" name="_csrf"
+			value="4fc9697e-9451-467f-adbc-e63fdf7e0543" /> <input type="hidden" id="emailFrmID"
+			name="email"> <input type="hidden" id="orgtypeID" name="type">
+		<input type="hidden" id="rnfe" name="rnfe"> <input
+			type="hidden" id="epk" name="epk">
+	</form>
+	<form id="validateEmailFrmID" action="web/citizen/validateEmailCitizen"
+		method="post">
+		<input type="hidden" id="emailValidateMobileEmailFrmID" name="email">
+		<input type="hidden" name="_csrf"
+			value="4fc9697e-9451-467f-adbc-e63fdf7e0543" />
+	</form>
+
+	<form id="validateMobileFrmID" action="web/citizen/validateMobCitizen"
+		method="post">
+		<input type="hidden" id="mobValidateMobileEmailFrmID" name="mob">
+		<input type="hidden" name="_csrf"
+			value="4fc9697e-9451-467f-adbc-e63fdf7e0543" />
+	</form>
+
+	<form id="validateLoginIdFrmID"
+		action="web/citizen/validateLoginIdCitizen" method="post">
+		<input type="hidden" id="loginIdValidateLoginIdFrmID" name="loginId">
+		<input type="hidden" name="_csrf"
+			value="4fc9697e-9451-467f-adbc-e63fdf7e0543" />
+	</form>
+</section>
+
+<script src="static/js/jquery.min.js"></script>
+<script src="static/js/popper.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<!-- <script src="static/js/bootbox.min.js"></script> -->
+<script src="static/app-js/aes.js"></script>
+<script src="static/app-js/AesUtil.js"></script>
+<script src="static/app-js/pbkdf2.js"></script>
+<script src="static/app-js/decrypt.js"></script>
+<script src="static/app-js/encr.js"></script>
+
+<script>
+$(document).ready(function() {
+	$('.tooltilcls').tooltip({
+		trigger : "focus",
+		placement : "right"
+	});
+	$('.uppercase').keyup(function() {
+		$(this).val($(this).val().toUpperCase());
+	});
+	var authTypeCodeHidden = $("#authTypeCodeHiddenId").val();
+	if (authTypeCodeHidden == '') {
+		$("#authTypeCodeMobId").prop("checked", true);
+	}
+	
+
+
+});
+window.onload = function() {
+	
+	var isNodal = $("#registrationTypeNodal").val();
+	var action = $("#actionID").val();
+   if(isNodal == "N"){
+	   var selectElement = document.getElementById('selectGovCateBunch');
+	    const selectedValue = selectElement.value;
+
+	    if (selectedValue !== "0" && selectElement.options[selectElement.selectedIndex].text === 'Private Company') {
+	    	//$("#companyName").val(''); 
+	    	$("#pvtDeptName").css('display', '');
+	    	$("#govDepartBunch").css('display', 'none');
+	     //   alert("You selected: " + selectedValue);
+	    }else{
+	    	$("#pvtDeptName").css('display', 'none');
+	    	$("#govDepartBunch").css('display', '');
+	    } 
+	    
+	   if(action == 'update'){
+		   
+		   
+		   $("[id^=selectGovCateBunch]").attr('disabled', true);
+		   $("[id^=selectGovDepartBunch]").attr('disabled', true);
+	   } 
+   }
+  //  handleGovCategoryChange(selectElement);
+};
+
+
+
+function verifyOTP() {
+	var mob = $("#bunchMobileNo").val();
+	var otp = $("#otpCitRegId").val();
+	var cc = $("#countryCodeID").val();
+	var otpType ="BUNCH_REG_OTP";
+	$.ajax({
+		type : "GET",
+		url : "web/citizen/validateRegnOTP?mob=" + mob + "&otp=" + otp + "&otpType="+ otpType +"&cc=" + cc,
+
+		cache : false,
+		async : true,
+		beforeSend : function() {
+
+		},
+		success : function(data, status, xhr) {
+			//alert(data.status);
+			/* if(data.status == true  && validateResponse(data.mobileNumber, data.otp)) */
+			if (data.status == true) {
+				if (decryptVal(data.mobileNumber, $("#bunchMobileNo").val(),
+						128, 1000) == $("#bunchMobileNo").val()
+						&& decryptVal(data.otp, $("#otpCitRegId").val(),
+								128, 1000) == $("#otpCitRegId").val()) {
+					$('#verifyCitRegOtpBtnId').attr("disabled", true);
+					$('#otpCitRegId').prop('readonly', true);
+					$('#bunchRegistrationBtnID').attr("disabled", false);
+					$("#authTypeCodeHiddenId").val(
+							$(".loginTypeRadio:checked").val());
+					$("#citizenTypeGuidHiddenId").val(
+							$("#citizenTypeID").val());
+					$("#citizenTypeID").prop("disabled", true);
+					//$("input[type=radio]").attr('disabled', true);
+					alert(data.message);
+
+				} else {
+					alert('Invalid Parameters');
+				}
+
+
+			}
+			if (data.status == false || data.status == 'false') {
+				$("#otpCitRegId").val('');
+				alert(data.message);
+			}
+		},
+		error : function(e) {
+			alert('error ' + e)
+		},
+		complete : function() {
+			//select2Refresh();
+		}
+	});
+
+}
+function updateHiddenValueInCaseUserOffline() {
+	$("#authTypeCodeHiddenId").val($(".loginTypeRadio:checked").val());
+	$("#citizenTypeGuidHiddenId").val($("#citizenTypeID").val());
+}
+
+
+
+function validateMobBunch() {
+	
+	var mob = $("#bunchMobileNo").val();
+	var isNodal = $("#registrationTypeNodal").val();
+	var isAuth = $("#registrationTypeAuthOf").val();
+	if(isNodal == 'N'){
+		var orgType = "N";
+	}
+	if(isAuth == 'AP'){
+		var orgType = "AP";
+	}
+	
+	/* alert(orgType); */
+	
+	
+	if(mob.length != 10)
+	{
+		createSmallAlert("Please enter a valid mob no.");
+		$("#bunchMobileNo").val('');
+		return false;
+	}
+	else if (mob != '') {
+		$("#mobValidateMobileEmailFrmID").val(mob);
+		var formData = new FormData();
+		var params = $("#validateMobileFrmID").serializeArray();
+		$.each(params, function(i, val) {
+			formData.append(val.name, val.value);
+		});
+		formData.append("orgType", orgType);
+		$.ajax({
+			type : "POST",
+			url : "web/citizen/validateBunchMob",
+			data : formData,
+			cache : false,
+			async : true,
+			contentType : false,
+			processData : false,
+			beforeSend : function() {
+
+			},
+			success : function(data, status, xhr) {
+				/* if(data.status == true  && validateResponse(data.mobileNumber, data.otp)) */
+				if (data.status == false || data.status == 'false') {
+					status = false;
+					createSmallAlert(data.message);
+					$("#bunchMobileNo").val('');
+					return false;
+				}else if (data.status == true || data.status == 'true') {
+					$("#otpValidatedId").val("true");
+					
+				}
+			},
+			error : function(e) {
+				alert('error ' + e)
+			},
+			complete : function() {
+			}
+		});
+	}
+
+}
+
+function validateEmailBunch() {
+	var email = $("#emailId").val();
+	var isNodal = $("#registrationTypeNodal").val();
+	var isAuth = $("#registrationTypeAuthOf").val();
+	if(isNodal == 'N'){
+		var orgType = "N";
+	}
+	if(isAuth == 'AP'){
+		var orgType = "AP";
+	}
+	//var orgType = $(".loginTypeRadio:checked").val();
+	var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+	if (email != '' && !testEmail.test(email)) {
+		createSmallAlert('Please enter a valid email-id');
+		$("#emailId").val('');
+		return false;
+	}
+	if (email != '') {
+		$("#emailValidateMobileEmailFrmID").val(email);
+		var formData = new FormData();
+		var params = $("#validateEmailFrmID").serializeArray();
+		$.each(params, function(i, val) {
+			formData.append(val.name, val.value);
+		});
+		formData.append("orgType", orgType);
+		$.ajax({
+			type : "POST",
+			url : "web/citizen/validateEmailBunch",
+			data : formData,
+			cache : false,
+			async : true,
+			contentType : false,
+			processData : false,
+			beforeSend : function() {
+
+			},
+			success : function(data, status, xhr) {
+				if (data.status == false || data.status == 'false') {
+					status = false;
+					createSmallAlert(data.message);
+					$("#emailId").val('');
+					return false;
+				} else if (data.status == true || data.status == 'true') {
+					$("#loginId").val($("#emailId").val());
+					$("#otpEmailValidatedId").val("true");
+					
+				}
+			},
+			error : function(e) {
+				alert('error ' + e)
+			},
+			complete : function() {
+			}
+		});
+	}
+
+}
+
+function validatePassword()
+{
+	var password = $("#passwordId").val();
+	var testPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%\^&\*])(?=.{6,})/;
+	if (password != '' && !testPassword.test(password)) {
+		createSmallAlert('Please enter a valid Password');
+		$("#passwordId").val('');
+		return false;
+	}
+	if (password.length>20)
+	{
+		createSmallAlert('Password length should not more than 20');
+		$("#passwordId").val('');
+		return false;
+	}
+}
+
+/* function colonyWardZone(colonyGuid){
+	var selectedValue = colonyGuid;
+	if (selectedValue != 0 && selectedValue != '') {
+		$.ajax({
+			type : "GET",
+			url : "web/citizen/property/bunch/master?masterType=MST_WARD_OF_COLONY&filterValue=" + selectedValue,
+			cache : false,
+			async : true,
+			beforeSend : function() {
+
+			},
+			success : function(data, status, xhr) {
+				$('#wardGuidID').val(data.masterGuid);
+				$('#wardNameID').val(data.masterName);
+					$.ajax({
+						type : "GET",
+						url : "web/citizen/property/bunch/master?masterType=MST_ZONE_OF_WARD&filterValue=" + data.masterGuid,
+						cache : false,
+						async : true,
+						beforeSend : function() {
+
+						},
+						success : function(data, status, xhr) {
+							$('#zoneGuidID').val(data.masterGuid);
+							$('#zoneNameID').val(data.masterName);
+						},
+						error : function(e) {
+
+						},
+						complete : function() {
+
+						}
+				 });
+				},
+				error : function(e) {
+
+				},
+				complete : function() {
+
+				}
+		});
+	}
+} */
+
+ function checkMobNoChange(changedMobNo) {
+	
+	 var isSession = $("#usrSession").val();
+		var oldMobNo =  $("#existingBunchMobile").val();
+		if(isSession && true && !(changedMobNo == oldMobNo))
+		{
+			$("#smsOtpContainerDivIdBunch").css('display', 'block');
+		}
+		else if(isSession && true && (changedMobNo == oldMobNo))
+		{
+			$("#smsOtpContainerDivIdBunch").css('display', 'none');
+		}
+	
+} 
+
+function checkEmailIdChange(changedEmailId) {
+	var isSession = $("#usrSession").val();
+	var oldEmailId =  $("#existingBunchEmail").val();
+	if(isSession && !(changedEmailId == oldEmailId))
+	{
+		$("#emailIdOtpContainerDivIdBunch").css('display', 'block');
+	}
+	else if(isSession && true && (changedEmailId == oldEmailId))
+	{
+		$("#emailIdOtpContainerDivIdBunch").css('display', 'none');
+	}
+}
+
+
+/* function bunchLoginType(){
+	var type = $(".loginTypeRadio:checked").val();
+	
+	if(type == 'N'){
+		$("#bunchOrgPrimary").css('display', 'none');
+		$("#selectGovCateBunch").val('0');
+		$("#selectGovDepartBunch").val('0');
+		$("#bunchOrgPrimary").val('');
+		$("#selectGovDepartBunch").attr("disabled", false);
+		$("#selectGovCateBunch").attr("disabled", false);
+		
+	}
+	if(type == 'AP'){
+		$("#bunchOrgPrimary").val('');
+		$("#bunchOrgPrimary").css('display', '');
+		$("#selectGovDepartBunch").attr("disabled", true);
+		$("#selectGovCateBunch").attr("disabled", true);
+		$("#colWarZone").css('display', 'none');
+		$("#noOfPropUnit").css('display', 'none');
+	}
+}
+ */
+
+function validateBunchRegForm() {
+	
+	
+ 	var isSession = $("#usrSession").val();
+//	var type = $(".loginTypeRadio:checked").val();
+	var isNodal = $("#registrationTypeNodal").val();
+	var isAuth = $("#registrationTypeAuthOf").val();
+	
+/* if (type != 'N'  && type != 'AP' ) {
+	createSmallAlert('Registration Type is required');
+	return false;
+} */
+
+if ($("#bunchName").val() == '') {
+	createSmallAlert('Name is required');
+	return false;
+}
+if ($("#designationId").val() == '') {
+	createSmallAlert('Designation is required');
+	return false;
+}
+
+/* if(type == 'Ap'){
+	alert($("#bunchOrgPrimary").val());
+	if($("#bunchOrgPrimary").val() == ''){
+		
+		createSmallAlert('Org Primary Id  is required');
+		return false;
+	}
+} */
+
+if (isNodal == 'N'){
+	if ($("#selectGovCateBunch").val() == '' || $("#selectGovCateBunch").val() == '0') {
+		createSmallAlert('Category Of Government is required');
+		return false;
+	}
+	var selectGovCateBunch = $("#selectGovCateBunch")[0];
+	var selectedValue = selectGovCateBunch.value;
+	var selectedText = selectGovCateBunch.options[selectGovCateBunch.selectedIndex].text;
+
+	if (selectedText === 'Private Company') {
+		if ($("#companyName").val() == '') {
+			createSmallAlert('Company name is required');
+			return false;
+		}
+	} else {
+		if ($("#selectGovDepartBunch").val() == '' || $("#selectGovDepartBunch").val() == '0') {
+			createSmallAlert('Government Department is required');
+			return false;
+		}
+	}
+}
+/* if (type == 'N'){
+	if ($("#selectGovCateBunch").val() == '' || $("#selectGovCateBunch").val() == '0') {
+		createSmallAlert('Category Of Government is required');
+		return false;
+	}
+	var selectGovCateBunch = $("#selectGovCateBunch")[0];
+	var selectedValue = selectGovCateBunch.value;
+	var selectedText = selectGovCateBunch.options[selectGovCateBunch.selectedIndex].text;
+
+	if (selectedText === 'Private Company') {
+		if ($("#companyName").val() == '') {
+			createSmallAlert('Company name is required');
+			return false;
+		}
+	} else {
+		if ($("#selectGovDepartBunch").val() == '' || $("#selectGovDepartBunch").val() == '0') {
+			createSmallAlert('Government Department is required');
+			return false;
+		}
+	}
+} */
+
+
+/* if (type != 'AP'){
+	if ($("#colonyNameOfBunchSelect").val() == '' || $("#colonyNameOfBunchSelect").val() == '0') {
+		createSmallAlert('Colony Name is required');
+		return false;
+	}
+} */
+
+//$("#colonyNameOfBunchSelect option:selected").text();
+/* $("#colonyGuidID").val($("#colonyNameOfBunchSelect option:selected").text().trim());
+var col = $("#colonyGuidID").val().trim(); */
+
+if ($("#bunchAddress").val() == '') {
+	createSmallAlert('Registered Address is required');
+	return false;
+}
+
+if (isNodal == 'N'){
+	if ($("#noOfUpics").val() == '' && $("#noOfUpics").val() <= 0 ) {
+		createSmallAlert('Please enter No. of property unit.');
+		return false;
+	}
+	}
+/* if (type == 'N'){
+if ($("#noOfUpics").val() == '' && $("#noOfUpics").val() <= 0 ) {
+	createSmallAlert('Please enter No. of property unit.');
+	return false;
+}
+} */
+/* if (type != 'AP'){
+if ($("#noOfUpics").val() == ''  && (type == 'N' || type == 'AP') ) {
+	createSmallAlert('No. of Property Units is required');
+	return false;
+}
+} */
+
+
+
+/* this need to be uncomment while deploying on beta  */
+
+ var action = $("#actionID").val();
+if((isSession == 'false') && (true))
+{
+	if ($("#bunchMobileNo").val() == '' && isNodal) {
+		createSmallAlert('Mobile number is required');
+		return false;
+	}
+   	if ($("#otpCitRegId").val() == '' && isNodal) {
+		createSmallAlert('Please Validate Mobile with otp.');
+		return false;
+	}
+	if ($("#emailId").val() == '') {
+		createSmallAlert('Email is required');
+		return false;
+	}
+	if ($("#otpBunchRegEmailId").val() == '') {
+		createSmallAlert('Please Validate Email Id with otp.');
+		return false;
+	}
+}
+
+ /* if (isSession == 'true' && true ) {
+	 alert("2222");
+	if (!$('#otpCitRegId').prop('readonly')) {
+		createSmallAlert('Please Validate Mobile with otp.');
+		return false;
+	}
+	if (!$('#otpBunchRegEmailId').prop('readonly')) {
+		createSmallAlert('Please Validate Email Id with otp.');
+		return false;
+	}
+}   */
+ 
+ if(isSession == 'true' && true && isNodal == 'N')
+	{
+		var oldMobNo =  $("#existingBunchMobile").val();
+		var oldEmailId = $("#existingBunchEmail").val();
+		
+		var newMobNo =  $("#bunchMobileNo").val();
+		var newEmailId = $("#emailId").val();
+		 
+		if ($("#otpCitRegId").val() == '' && !(newMobNo == oldMobNo) && oldMobNo != '' && isNodal)  {
+			createSmallAlert('Please Validate Mobile with otp.');
+			return false;
+		}
+		if ($("#otpBunchRegEmailId").val() == '' && !(newEmailId == oldEmailId) && oldEmailId != '')   {
+			createSmallAlert('Please Validate Email Id with otp.');
+			return false;
+		}
+	}
+  
+ if (isSession == 'true' && true && isAuth == 'AP') {
+	
+		if ($("#bunchMobileNo").val() == '' && isAuth) {
+		createSmallAlert('Mobile number is required');
+		return false;
+	}
+		if ($("#emailId").val() == '') {
+			createSmallAlert('Email is required');
+			return false;
+		}
+		var oldEmailId = $("#existingBunchEmail").val();
+		var newEmailId = $("#emailId").val();
+		
+		if(action == 'create'){
+			if ($("#otpBunchRegEmailId").val() == '' && !(newEmailId == oldEmailId) )   {
+				createSmallAlert('Please Validate Email Id with otp.');
+				return false;
+			}
+		}
+		if(action == 'update')
+		if ($("#otpBunchRegEmailId").val() == '' && !(newEmailId == oldEmailId) && oldEmailId != '')   {
+		createSmallAlert('Please Validate Email Id with otp.');
+		return false;
+	}
+}  
+ 
+ 
+   
+if ($("#passwordId").val() == '') {
+	createSmallAlert('Password is required');
+	return false;
+}
+if ($("#passwordId").val() != $("#confirmPasswordId").val()) {
+	createSmallAlert('Password and Confirm Password should be same');
+	$("#passwordId").val('');
+	$("#confirmPasswordId").val('');
+	return false;
+}
+
+convCitPwd();
+return true;
+}
+
+function convCitPwd() {
+	$("#passwordId").val(EncryptP($("#passwordId").val(), $("#loginCsrfId").val(), 128,	1000));
+	$("#confirmPasswordId").val(EncryptP($("#confirmPasswordId").val(),	$("#loginCsrfId").val(), 128, 1000));
+}
+/* function disableOtp(){
+	$('#otpCitRegId').prop('readonly', true);
+	  $('#otpBunchRegEmailId').prop('readonly', true);   
+}
+ */
+function doRefreshCAPTCHA(id){
+    var d = new Date();
+    if(id == 'captcha_ID_m')
+    {
+	    var captchaObj1 = document.getElementById('captcha_ID_m');
+		captchaObj1.src="Captcha\?"+d.getMilliseconds();
+    }
+}
+
+function create_UUID(){
+    var dt = new Date().getTime();
+    var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = (dt + Math.random()*16)%16 | 0;
+        dt = Math.floor(dt/16);
+        return (c=='x' ? r :(r&0x3|0x8)).toString(16);
+    });
+    return uuid;
+}
+
+function getOTPforBunchReg() {
+	
+	var mob = $("#bunchMobileNo").val();
+	var cc = $("#countryCodeID").val();
+	var isNodal = $("#registrationTypeNodal").val();
+	var isAuth = $("#registrationTypeAuthOf").val();
+	if(isNodal == 'N'){
+		var type = "N";
+	}
+	if(isAuth == 'AP'){
+		var type = "AP";
+	}
+	//var type = $(".loginTypeRadio:checked").val();
+	var cfmID = $("#cfmID").val();
+	$("#mobFrmID").val(mob);
+	$("#ccID").val(cc);
+	$("#loginTypeID").val(type);
+	$("#cMobFrmID").val(cfmID);
+	var mob_no = cc+"#"+mob;
+	var rndmNo = create_UUID();
+	$("#mpk").val(EncryptP(mob_no, rndmNo , 128, 1000));
+	$("#rnfm").val(rndmNo);
+	
+	var formData = new FormData();
+	var params = $("#generateOTPBunchFrmID").serializeArray();
+	$.each(params, function(i, val) {
+		formData.append(val.name, val.value);
+	});
+	if (cc == '91' && mob.length != 10) {
+		createSmallAlert("Please enter a valid Mobile number");
+		return false;
+	}
+	if (mob.length > 4 && mob.length < 17) {
+	
+		$.ajax({
+			type : "POST",
+			url : "web/citizen/generateOTPForBunchReg",
+			data : formData,
+			cache : false,
+			async : true,
+			contentType : false,
+			processData : false,
+			beforeSend : function() {
+
+			},
+			success : function(data, status, xhr) {
+				
+				if(xhr.getResponseHeader('OTP_ERROR_KEY') != null)
+				{
+					createSmallAlert(xhr.getResponseHeader('OTP_ERROR_KEY'));
+				}
+			
+				if(xhr.getResponseHeader('OTP_ERROR_KEY') == '' || xhr.getResponseHeader('OTP_ERROR_KEY') == null)
+				{
+					createSmallAlert(data.message);
+				}
+				
+				if (data.status == true || data.status == 'true') {
+					$('#getCitOtpBtnID').attr("disabled", true);
+					$('#verifyCitRegOtpBtnId').attr("disabled", false);
+					$("#bunchMobileNo").attr('readonly', true);
+
+					countDown(180,"timer");
+					$("#regenerateOtpDivID").show();
+				}
+				if (data.status == false || data.status == 'false') {
+				}
+			},
+			error : function(e) {
+				alert('error ' + e)
+			},
+			complete : function() {
+				
+			}
+		});
+
+	} else {
+		alert('Please enter a valid mobile number');
+	}
+
+}
+
+function getEmailOTPforBunch() {
+
+	var isSession = $("#usrSession").val();
+	var email = $("#emailId").val();
+	var isNodal = $("#registrationTypeNodal").val();
+	var isAuth = $("#registrationTypeAuthOf").val();
+	if(isNodal == 'N'){
+		var type = "N";
+	}
+	if(isAuth == 'AP'){
+		var type = "AP";
+	}
+	//var type = $(".loginTypeRadio:checked").val()
+	$("#emailFrmID").val(email);
+	$("#orgtypeID").val(type);
+	var rndmNo = create_UUID();
+	
+	$("#rnfe").val(rndmNo);
+	$("#epk").val(EncryptP(email, rndmNo , 128, 1000));
+	
+	var formData = new FormData();
+	var params = $("#generateEmailOTPBunchFrmID").serializeArray();
+	$.each(params, function(i, val) {
+		formData.append(val.name, val.value);
+	});
+	var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+	if (testEmail.test(email)) {
+		/* if (email == em && isSession =='false' ) {
+			alert('Existing email cannot be same as previous one');
+			return false;
+		} */
+		$.ajax({
+			type : "POST",
+			url : "web/citizen/genEmailOTPForBunch",
+			data : formData,
+			cache : false,
+			async : true,
+			contentType : false,
+			processData : false,
+			beforeSend : function() {
+	
+			},
+			success : function(data, status, xhr) {
+				createSmallAlert(data.message);
+				if (data.status == true || data.status == 'true') {
+					$('#getCitOtpEmailBtnID')
+							.attr("disabled", true);
+					$('#verifyCitRegEmailOtpBtnId').attr(
+							"disabled", false);
+					$("#emailId").attr('readonly', true);
+	
+					emailotpcountDown(180,"email_timer");
+					$("#regenerateEmailOtpDivID").show();
+				}
+				if (data.status == false || data.status == 'false') {
+				}
+			},
+			error : function(e) {
+				alert('error ' + e)
+			},
+			complete : function() {
+				//select2Refresh();
+				//activaTab('Citizen_Login');
+			}
+		});
+
+	} else {
+		alert('Please enter a valid email');
+	}
+
+}
+function countDown(duration, elem){   
+	 var timer = duration, minutes, seconds;
+	 var display = document.getElementById(elem);
+	 var countdownInterval = setInterval(function () {
+	        minutes = parseInt(timer / 60, 10);
+	        seconds = parseInt(timer % 60, 10);
+
+	        minutes = minutes < 10 ? "0" + minutes : minutes;
+	        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+	        display.textContent = minutes + ":" + seconds;
+
+	        if (--timer < 0) {
+	            $("#regenerateOtpDivID").hide();
+	        	$('#getCitOtpBtnID').attr("disabled", false);
+	        	clearInterval(countdownInterval); // Clear interval when timer reaches 0
+	        }
+	        else
+	        {
+	        	console.log(timer)
+	        }
+	    }, 1000);
+	}
+	
+function emailotpcountDown(duration, elem){   
+	
+	
+	
+	var timer = duration, minutes, seconds;
+	 var display = document.getElementById(elem);
+	 var countdownInterval = setInterval(function () {
+	        minutes = parseInt(timer / 60, 10);
+	        seconds = parseInt(timer % 60, 10);
+
+	        minutes = minutes < 10 ? "0" + minutes : minutes;
+	        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+	        display.textContent = minutes + ":" + seconds;
+
+	        if (--timer < 0) {
+	            $("#regenerateEmailOtpDivID").hide();
+	        	$('#getCitOtpEmailBtnID').attr("disabled", false);
+	        	clearInterval(countdownInterval); // Clear interval when timer reaches 0
+	        }
+	        else
+	        {
+	        	console.log(timer)
+	        }
+	    }, 1000);
+	}
+	
+function verifyBunchEmailOTP() {
+	var email = $("#emailId").val();
+	var otp = $("#otpBunchRegEmailId").val();
+	$.ajax({
+		type : "GET",
+		url : "web/citizen/validateEmailOTP?email=" + email
+				+ "&otp=" + otp + "&otpType=BUNCH_REG_OTP",
+		cache : false,
+		async : true,
+		beforeSend : function() {
+	
+		},
+		success : function(data, status, xhr) {
+			
+			if (data.status == true) {
+				if (decryptVal(data.mobileNumber, $("#emailId")
+						.val(), 128, 1000) == $("#emailId").val()
+						&& decryptVal(data.otp, $(
+								"#otpBunchRegEmailId").val(), 128,
+								1000) == $("#otpBunchRegEmailId")
+								.val()) {
+					$('#verifyCitRegEmailOtpBtnId').attr(
+							"disabled", true);
+					$('#otpBunchRegEmailId').prop('readonly', true);
+					$('#bunchRegistrationBtnID').attr("disabled",
+							false);
+					$("#authTypeCodeHiddenId").val(
+							$(".loginTypeRadio:checked").val());
+					$("#citizenTypeGuidHiddenId").val(
+							$("#citizenTypeID").val());
+					$("#citizenTypeID").prop("disabled", true);
+					alert(data.message);
+				} else {
+					alert('Invalid Parameters');
+				}
+	
+	
+			}
+			if (data.status == false || data.status == 'false') {
+				$("#otpCitRegId").val('');
+				alert(data.message);
+			}
+		},
+		error : function(e) {
+			alert('error ' + e)
+		},
+		complete : function() {
+		}
+	});
+
+}
+
+function getOrgDetails() {
+    
+    var orgPrimaryId = $('#orgPrimary').val();
+
+    if (orgPrimaryId.length === 15) {
+        var encorgPrimaryId = orgPrimaryId;
+        
+        if (encorgPrimaryId !== '') {
+            $.ajax({
+                url: "web/citizen/property/bunch/verifyPrimaryOrgDetail?orgId=" + encorgPrimaryId,
+                type: 'GET',
+                cache: false,
+                async: true,
+                beforeSend: function() {
+                    // $("#overlay").show();
+                },
+                success: function(response) {
+                    console.log('AJAX response:', response);
+                    
+                    if (response.status === 'blank' || !response.govCatList || !response.govDeptList) {
+                        alert('Invalid Org ID. Please try again.');
+                        $('#orgPrimary').val('');
+                    } else {
+                        var govCatSelect = $('#selectGovCateBunch');
+                        var governCat = $('#governCat');
+                        govCatSelect.empty();
+                        governCat.empty();
+              //          govCatSelect.append('<option value="0" selected="selected">Select Government Category</option>');  // Default option
+
+                        if (Array.isArray(response.govCatList)) {
+                            $.each(response.govCatList, function(index, item) {
+                                console.log('Gov Category:', item);
+                                govCatSelect.append('<option value="' + item.optionGuid + '">' + item.optionValue + '</option>');
+                                $('#governCat').val(item.optionGuid);
+                            });
+                        } else if (response.govCatList && typeof response.govCatList === 'object') {
+                            console.log('Gov Category (single object):', response.govCatList);
+                            govCatSelect.append('<option value="' + response.govCatList.optionGuid + '">' + response.govCatList.optionValue + '</option>');
+                            $('#governCat').val(response.govCatList.optionGuid);
+                        } else {
+                            console.error('govCatList is neither an array nor a valid object:', response.govCatList);
+                        }
+
+                        var govDeptSelect = $('#selectGovDepartBunch');
+                        var governDepart =$('#governDepart');
+                        governDepart.empty();
+                        govDeptSelect.empty();
+                //        govDeptSelect.append('<option value="0" selected="selected">Select Government Department</option>');  // Default option
+
+                        if (Array.isArray(response.govDeptList)) {
+                            $.each(response.govDeptList, function(index, item) {
+                                console.log('Gov Department:', item);
+                                govDeptSelect.append('<option value="' + item.optionGuid + '">' + item.optionValue + '</option>');
+                                $('#governDepart').val(item.optionGuid);
+                            });
+                        } else if (response.govDeptList && typeof response.govDeptList === 'object') {
+                            console.log('Gov Department (single object):', response.govDeptList);
+                            govDeptSelect.append('<option value="' + response.govDeptList.optionGuid + '">' + response.govDeptList.optionValue + '</option>');
+                            $('#governDepart').val(response.govDeptList.optionGuid);
+                        } else {
+                            console.error('govDeptList is neither an array nor a valid object:', response.govDeptList);
+                        }
+                    }
+                },
+                error: function(error) {
+                    console.error('Error fetching details:', error);
+                    alert('Error fetching data. Please try again.');
+                },
+                complete: function() {
+                    // $("#overlay").hide();
+                }
+            });
+        } else {
+            alert('Please enter a valid Org Primary Id.');
+        }
+    } else {
+        alert('The Org Primary Id must be 15 characters long.');
+        $('#orgPrimary').val('');
+        return false;
+    }
+}
+
+function handleGovCategoryChange(selectElement) {
+	
+    const selectedValue = selectElement.value;
+
+    if (selectedValue !== "0" && selectElement.options[selectElement.selectedIndex].text === 'Private Company') {
+    	$("#companyName").val(''); 
+    	$("#pvtDeptName").css('display', '');
+    	$("#govDepartBunch").css('display', 'none');
+     //   alert("You selected: " + selectedValue);
+    }else{
+    	$("#pvtDeptName").css('display', 'none');
+    	$("#govDepartBunch").css('display', '');
+    } 
+}
+
+$("#passwordEyeIconDivId").on("click", function(){
+	if($("#passwordEyeIconDivId i").hasClass("glyphicon-eye-open"))
+	{
+	 	$("#passwordEyeIconDivId i").addClass("glyphicon-eye-close").removeClass("glyphicon-eye-open");
+		$("#passwordId").prop("type", "text");
+  	} else {
+  		$("#passwordEyeIconDivId i").addClass("glyphicon-eye-open").removeClass("glyphicon-eye-close");
+		$("#passwordId").prop("type", "password");
+  	}
+});
+$("#cPasswordEyeIconDivId").on("click", function(){
+	if($("#cPasswordEyeIconDivId i").hasClass("glyphicon-eye-open"))
+	{
+	 	$("#cPasswordEyeIconDivId i").addClass("glyphicon-eye-close").removeClass("glyphicon-eye-open");
+		$("#confirmPasswordId").prop("type", "text");
+  	} else {
+  		$("#cPasswordEyeIconDivId i").addClass("glyphicon-eye-open").removeClass("glyphicon-eye-close");
+		$("#confirmPasswordId").prop("type", "password");
+  	}
+});
+
+</script>
+
+
+	</div>
+	
+	
+	<!-- </section> -->
+	</div>
+	
+	
+	<!-- FOOTER -->
+  <footer class="fixedfooter">  		
+		<div class="copyright">
+			<div class="container-fluid">
+				<div class="row py-2">
+				<!-- <section class="inner-page-contents" id="showFooterRibbonContent">	</section> -->
+		<!-- static start -->		
+           <!--  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer-Disclaimer">
+                <span> Disclaimer </span>
+          </div> -->
+					<div class=" col-lg-1 col-md-5 col-sm-12 col-xs-12 copyrighttext ">
+						<p class="disclamer1" style="margin: 0px 0px 5px 0px !important;">
+						
+             <!-- MUNICIPAL CORPORATION, DELHI -->
+							
+							<img src="static/images/mcd.png" alt="MCD Logo" width="35" height="35" class="bg-white" style="top: -492px;">
+							<a href="https://www.nic.in/" target="_blank">
+							<img src="static/images/footer-nic-logo.svg" alt="Nic Logo" width="35" height="35" class="" style="top: -492px;"></a>
+						</p>
+					</div>
+
+
+					<div class="col-lg-10 col-offset-lg-1 col-md-5 col-sm-12 col-xs-12 officaltext ">
+					<p class="disclamer1"> 		
+					Website Content Managed by 
+					
+					 Municipal Corporation of Delhi
+					, 
+					<a href="" onclick="showWebInfoDetailModal('')" data-bs-toggle="modal" data-bs-target="#webinfodetailModal">Web Information Manager</a> 
+					Designed, Developed and Hosted by&nbsp;<a href="https://www.nic.in/" target="_blank" onclick="return confirm('You are moving out of http://mcdonline.nic.in. Do you wish to continue?')">National Informatics Centre( NIC )</a>,
+					 <a href="https://meity.gov.in/" target="_blank" onclick="return confirm('You are moving out of http://mcdonline.nic.in. Do you wish to continue?')">Ministry of Electronics &amp; IT (MeitY) </a>  
+					 Copyright © 2022 
+							
+					</p>
+					
+					</div> 
+					
+					<div class="col-lg-1 col-offset-lg-1 col-md-3 col-sm-12 col-xs-12 officaltext">
+					<!-- <h6><strong>Follow Us</strong></h6> -->
+                 <div class="social" style="margin: 0px 0px 5px 0px !important;">
+               <!--    <a href="https://www.facebook.com/off.MCD/"  target="blank" id="share-fb" class="sharer button" title="Instagram"><i class="fa fa-2x fa-facebook-square"></i></a>
+                  <a href="https://www.instagram.com/mcd_delhi" target="blank" id="share-in" class="sharer button" title="Instagram"><i class="fa fa-2x fa-instagram"></i></a>
+                  <a href="https://twitter.com/MCD_Delhi" target="blank" id="share-tw" class="sharer button" title="Twitter"><i class="fa fa-2x fa-twitter-square"></i></a>                 
+              
+                  <a  href="mailto: support-mcd[at]mcd[dot]nic[dot]in"  target="blank" id="share-em" class="sharer button" title="Email"><i class="fa fa-2x fa-envelope-square"></i></a>
+                 -->
+                  </div>
+					
+					</div>
+                  
+                        <!-- static end -->
+			</div>
+				<div class="row footer2" >
+					<div class="col-lg-4">
+						<!-- Start of WebFreeCounter Code -->
+					<!-- 	 <div style="text-align: left; bottom: 0; /* position: absolute; */ color: #fff">
+						<span> Visitor No. <span> 44505794 </span>
+							 </span> 
+					</div> -->
+					
+					
+					</div>
+					<div class="col-lg-4 text-center">
+					<a class="compect footetextcolr" data-bs-toggle="modal" data-bs-target="#myModal" style="color:#fff;">Compatible Browsers</a>
+					</div>
+					<div class="col-lg-4 text-end">
+					<!-- <span>
+							<span class="span1" style="color:#fff">  Last Updated :  <span style="color:#fff;"> 03 June, 2024</span>
+							</span>
+						</span>
+					
+						 -->
+					</div>
+				</div>
+			</div>
+		</div>
+</footer> 
+		
+	<div class="backtotop-wrapper">
+
+        <a href="javascript:void(0);" class="back-to-top" title="Scroll to top"><span
+                class="fa fa-angle-up"></span><span class="hidden">Back to Top of the Page</span></a>
+    </div>
+    
+<!-- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+ -->	 
+  <script src="static/js/jquery.min.js"></script>
+	  
+	<div class="help-desk ">
+		<div class="toggle "></div>
+		<!-- <img src="static/images/helplineno.jpg"
+			class="helpimg" style="top: -54px; max-width: 100%;"> -->
+		<h3>
+			<i class="fa fa-phone" aria-hidden="true"></i> Help Desk
+		</h3>
+		<div class="scroll">
+			<ul class="helplinelink2">
+				<li><strong><i class="fa fa-phone" aria-hidden="true"></i>
+						Helpline Number (CCR) :</strong> 155305</li>
+						<li><strong><i class="fa fa-mobile"
+						aria-hidden="true"></i> Mobile(Only For PTR): </strong><br> <a
+					style="color: blue;"> 7065064988 (on WhatsApp Also)</a></li>
+				<li><strong><i class="fa fa-envelope"
+						aria-hidden="true"></i> e-Mail ID: </strong><br> <a
+					style="color: blue;"> mcd-ithelpdesk[at]mcd[dot]nic[dot]in</a></li>
+							<li> <a style="color: blue;" href="" target="_blank"> Click here for Complaint</a></li>				
+				<li><strong> Mobile App :</strong><br> <strong>UMA
+				</strong> (Unified Mobile App) <br> MCD311 App</li>
+				
+			</ul>
+		</div>
+	</div>
+
+<script>
+///////24052020/////////
+$(document).ready(function () {
+$('.toggle').click(function () {
+$('.help-desk').toggleClass('active');
+$('.toggle').toggleClass('active');
+});
+});
+//# sourceURL=pen.js
+
+
+</script>
+	<!-- Javascript files-->
+	<script src="static/js/jquery.min.js"></script> 
+<script src="static/js/jquery.ui.min.js"></script>    
+<script src="static/js/popper.min.js"></script> 
+<script src="static/js/bootstrap.min.js"></script>
+<!--  start js for  Text EDITOR -->
+<!-- <script src="static/js/summernote-bs4.min.js"></script> -->
+<!--  end js for  Text EDITOR -->
+<script src="static/js/bootbox.min.js"></script>
+<script  src="static/js/jquery.tcg-elevator.min.js"></script>
+<script  src="static/js/main.js"></script>
+<!-- <script src="static/js/bootstrap-datepicker.js"></script> -->
+<script src="static/js/moment.min.js"></script>
+<script src="static/js/bootstrap-datetimepicker.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script> -->
+<script src="static/js/jquery.scrollTo.min.js"></script>
+<!-- <script src="static/js/front.js"></script>
+ -->
+ 
+  <!--<script src="static/js/datatables.min.js"></script>-->
+ <script src="static/js/jquery.dataTables.min.js"></script> 
+<script src="static/js/select2.min.js"></script>
+<script src="static/app-js/common-validation.js"></script>
+	<script src="static/js/customized.js"></script>
+<!-- <script src="static/js/jspdf.min.js"></script>
+<script src="static/js/jspdf.plugin.autotable.min.js"></script> -->
+<!-- <script src="static/js/tableHTMLExport.js"></script> -->
+<!-- <script src="static/js/pdfmake.min.js"></script> -->
+
+<!-- <script src="static/js/html2canvas.min.js"></script> -->
+<!-- <script src="static/js/pdfmake.min.js"></script> -->
+
+    
+   <script src="static/js/cdn.tiny.cloud_1_invalid-origin_tinymce_4.9.11-104_tinymce.min.js" ></script>
+    
+<script type="text/javascript">
+//tinymce.init({selector:'#editor'});
+
+tinymce.init({
+	  selector: '#editor',
+	  height: 500,
+	  theme: 'modern',
+	  plugins: 'print preview fullpage powerpaste searchreplace autolink directionality advcode visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists textcolor wordcount tinymcespellchecker a11ychecker imagetools mediaembed  linkchecker contextmenu colorpicker textpattern help',
+	  toolbar1: 'formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent  | removeformat',
+	  image_advtab: true,
+	  templates: [
+	    { title: 'Test template 1', content: 'Test 1' },
+	    { title: 'Test template 2', content: 'Test 2' }
+	  ],
+	  content_css: [
+	    '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+	    '//www.tinymce.com/css/codepen.min.css'
+	  ]
+	 });
+
+</script>
+
+
+<link rel="shortcut icon" href="">
+<script type="text/javascript">
+
+	if(defaultTabIndex != '-1'){
+		$(document).ready(function(){
+			$('.nav-tabs li:eq('+defaultTabIndex+') a').tab('show');
+		});
+	}
+	function showTab(tabIndex){
+		$('.nav-tabs li:eq('+tabIndex+') a').tab('show');
+	}	
+</script>
+<script type="text/javascript">
+	function bootstrapTabControl() {
+		var i, items = $('.nav-lin'), pane = $('.tab-pane');
+		// next
+		$('.nexttab').on('click', function() {
+			for (i = 0; i < items.length; i++) {
+				if ($(items[i]).hasClass('active') == true) {
+					break;
+				}
+			}
+			if (i < items.length - 1) {
+				// for tab
+				$(items[i]).removeClass('active');
+				$(items[i + 1]).addClass('active');
+				// for pane
+				$(pane[i]).removeClass('show active');
+				$(pane[i + 1]).addClass('show active');
+			}
+		});
+
+		// Prev
+		$('.prevtab').on('click', function() {
+			for (i = 0; i < items.length; i++) {
+				if ($(items[i]).hasClass('active') == true) {
+					break;
+				}
+			}
+			if (i != 0) {
+				// for tab
+				$(items[i]).removeClass('active');
+				$(items[i - 1]).addClass('active');
+				// for pane
+				$(pane[i]).removeClass('show active');
+				$(pane[i - 1]).addClass('show active');
+			}
+		});
+	}
+	bootstrapTabControl();
+</script>
+<script type="text/javascript">
+	$(function() {
+		$("div[id$='DatePicker']").datetimepicker({
+			 "allowInputToggle": true,
+	            "showClose": true,
+	            locale : "ru", 	
+	            collapse:true,
+	            "showClear": true,
+	            "showTodayButton": true,	           				
+	           	"format": "DD/MM/YYYY", 
+	            "maxDate": 'now',
+
+		})
+	}); 
+	
+	$(function() {
+		var d = new Date();
+		d.setMonth(d.getMonth()-3);
+		$("#manualChequeDate").datetimepicker({
+			 "allowInputToggle": true,
+	            "showClose": true,
+	            "showClear": true,
+	            "showTodayButton": true,	           				
+	           	"format": "MM/DD/YYYY", 
+	            "maxDate": 'now',
+// 	            "minDate": d,
+	            
+	           
+		})
+	});  
+	$(function() {
+		$("#manualReceiptDate").datetimepicker({
+			 "allowInputToggle": true,
+	            "showClose": true,
+	            "showClear": true,
+	            "showTodayButton": true,	           				
+	           	"format": "MM/DD/YYYY", 
+	            "maxDate": 'now',
+		})
+	});  
+	 
+	 
+	
+////new code datetime pikcer 
+/* $(function() {
+		$("div[id$='DatePicker']").datepicker({
+	  alert("The paragraph was clicked.");
+	}) }); */
+	
+	
+/* 
+	 $(function() {   
+		$('#dob3DatePicker').datetimepicker({
+	            "allowInputToggle": true,
+	            "showClose": true,
+	            "showClear": true,
+	            "showTodayButton": true,	           				
+	           	"format": "MM/DD/YYYY", 
+	            "maxDate": 'now',
+	        });
+	
+	});
+	 */
+	
+	 
+	 /* $(function() {   
+			$('#propertyRegistrationDatePicker').datetimepicker({
+		            "allowInputToggle": true,
+		            "showClose": true,
+		            "showClear": true,
+		            "showTodayButton": true,	           				
+		           	"format": "DD/MM/YYYY", 
+		            "maxDate": 'now',
+		            
+		        });
+	}); */
+	
+	/* $(function() {
+		$("div[id$='DatePicker']").datepicker({
+			"allowInputToggle": true,
+            "showClose": true,
+            "showClear": true,
+            "showTodayButton": true,	           				
+           	"format": "MM/DD/YYYY", 
+            "maxDate": 'now',
+	}) }); */
+ 
+</script>
+<script type="text/javascript">
+$(".datePick").datetimepicker({
+	 "allowInputToggle": true,
+       "showClose": true,
+       locale : "ru", 	
+       collapse:true,
+       "showClear": true,
+       "showTodayButton": true,	           				
+      	"format": "DD/MM/YYYY", 
+       "maxDate": 'now',
+
+})
+function dateTableRefresh(){
+	$("table[id$='DataGridNew']").DataTable({
+		/* "pagingType" : "full_numbers", */
+		"pageLength" : 3,
+		"aLengthMenu": [[3,5,10, 25, 50, 100, 200, -1], [3,5,10, 25, 50, 100, 200, "All"]],
+		"iDisplayLength":5
+	});
+	$("table[id$='DataGrid']").DataTable({
+		"pagingType" : "full_numbers"
+	});
+	$("table[id$='CustomDatable']").DataTable({
+		"pageLength" : 3,
+		"aLengthMenu": [[3,5,10, 25, 50, 100, 200, -1], [3,5,10, 25, 50, 100, 200, "All"]],
+		"iDisplayLength":5
+	});
+	$("#propertyDataGridNew").DataTable({
+		/* "pagingType" : "full_numbers", */
+		"pageLength" : 3,
+		"aLengthMenu": [[3,5,10, 25, 50, 100, 200, -1], [3,5,10, 25, 50, 100, 200, "All"]],
+		"iDisplayLength":5
+	});
+	
+}
+dateTableRefresh();
+function rwaDateTableRefresh(){
+	$("table[id$='DataGrid']").DataTable({
+		"pagingType" : "full_numbers"
+	});
+	$("#rwaPropertyDataGridNew").DataTable({
+		/* "pagingType" : "full_numbers", */
+		destroy: true,
+		"pageLength" : 3,
+		"aLengthMenu": [[3,5,10, 25, 50, 100, 200, -1], [3,5,10, 25, 50, 100, 200, "All"]],
+		"iDisplayLength":5
+	});
+}
+rwaDateTableRefresh();
+function ajaxDateTableRefresh(){
+	$("table[id$='DataGridAjax']").DataTable({
+		"pagingType" : "full_numbers"
+	});
+}
+</script>
+<script type="text/javascript">
+function select2Refresh(){
+	$("select[id$='Select']").select2({
+       	placeholder: "",
+       	allowClear: false
+	});
+}
+select2Refresh();
+</script>
+<script>
+$(document).on('mouseenter', ".iffyTip", function () {
+     var $this = $(this);
+     if (this.offsetWidth < this.scrollWidth && !$this.attr('title')) {
+         $this.tooltip({
+             title: $this.text(),
+             placement: "bottom"
+         });
+         $this.tooltip('show');
+     }
+ });
+$('.hideText').css('width',$('.hideText').parent().width());
+
+/* -------------------added for table responsiveness 17/11/2023--------------------- */
+$('.table-responsive').on('show.bs.dropdown', function () {
+    $('.table-responsive').css( "overflow", "inherit" );
+}); 
+
+$('.table-responsive').on('hide.bs.dropdown', function () {
+    $('.table-responsive').css( "overflow", "auto" );
+})
+/* ---------------------------------------- */
+</script>
+<script>
+function doShowDownload(url) {
+	window.open(url,'','scrollbars=no,menubar=no,height=670,width=950,resizable=yes,toolbar=no,status=no');
+}
+</script>
+<!--  start js function for  Text EDITOR -->
+<!--    <script>
+      $('#summernote').summernote({
+        placeholder: 'Type Here',
+        tabsize: 2,
+        height: 400
+      });
+    </script> -->
+    
+<!--  end js function for   Text EDITOR -->
+	
+	<!-- ########### ADD APPLICATION JS ########### -->
+	
+	
+	<!-- ########### ADD FORM JS ########### -->
+	
+	<script src="static/app-js/trade-license.js"></script>
+	
+	
+	
+	 <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header compectheader">
+        
+          <h4 class="modal-title compecttitle">Compatible Browsers</h4>
+        </div>
+        <div class="modal-body">
+        
+		  <div class="browsers">
+		 <h5 style="color: green;">May Please Use Following Browser For The Best View</h5>
+		  <i style="color: #2c7bb7" class="fa fa-internet-explorer fa-1x" aria-hidden="true"></i> Internet Explorer v11.0 <br>
+		  <i style="color: #e0701a" class="fa fa-firefox fa-1x" aria-hidden="true"></i> Mozilla Firefox v7 to v77.0.1<br>
+		  <i style="color: #e93e30" class="fa fa-chrome fa-1x" aria-hidden="true"></i> Google Chrome  v44 to V66.0.3359.139<br>
+		  <i style="color: #18498e" class="fa fa-safari fa-1x" aria-hidden="true"></i> Safari v10.022 to v11.1 (12605.1.33.1.4)
+		  </div>
+		  
+        </div>
+        <div class="modal-footer text-center">
+          <button type="button" class="btn btn-default btnCom" data-bs-dismiss="modal">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+ <!--  end -->
+  <!--  web manager infromation  Modal -->
+  <div class="modal fade" id="webinfodetailModal" role="dialog">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header compectheader">
+        
+          <h4 class="modal-title compecttitle">Contact Details</h4>
+        </div>
+        <div class="modal-body">
+        
+		  <div class="browsers">
+		 <h5 style="color: green;">May Please Use Following Contact details</h5>
+		 </div>
+		  
+        </div>
+        <div class="modal-footer text-center">
+          <button type="button" class="btn btn-default btnCom" data-bs-dismiss="modal">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end -->
+  
+  <!-- disclaimer  Model Pop Up  -->
+	<!-- Modal -->
+	
+	
+<!-- 	  <div class="modal fade" id="disclamerpopup" role="dialog">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header compectheader">        
+          <h4 class="modal-title compecttitle">Web Information Manager</h4>
+        </div>
+        	<div class="modal-body">
+					<div class="intro">
+						<div class="midcontncls general">
+
+							<h2 style="text-align: center">
+								<span style="font-size: 20px"><strong>Officer Name</strong><strong>&nbsp;(</strong> Officer Designation</span> <span style="font-size: 16px"><span
+									style="font-size: 20px"><strong>)&nbsp;</strong></span></span><br> <span style="font-size: 16px"> Address <br> Tel : <span
+									style="font-size: 14px">011</span>&nbsp;
+								</span><span style="font-size: 14px">23384012</span>
+							</h2>
+						</div>
+					</div>
+				</div>
+        <div class="modal-footer text-center">
+          <button type="button" class="btn btn-default btnCom" data-bs-dismiss="modal">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  
+  
+  <div class="modal fade" id="changePasswordModal" role="dialog">
+    
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+
+
+
+<div class="modal-dialog modal-md">
+      <div class="modal-content">
+      <form id="changePasswordID"  enctype="multipart/form-data">
+        <div class="modal-header compectheader">
+          <h4 class="modal-title compecttitle">Change Password</h4>
+        </div>
+        <div class="modal-body">
+        
+		<input type="hidden" name="_csrf" value="4fc9697e-9451-467f-adbc-e63fdf7e0543"/>
+		<input type="hidden" id="checkParam" name="checkParam" value="">
+		<input type="hidden" id="userGuid" name="userGuid" value="">
+		
+		
+		
+                                                                                                                                                                                                                                                		<div class="input-group">
+				
+		 				<input id="loginID" name="loginId" class="form-control" maxlength="40"
+									value=""
+									type="hidden"/>
+									<input id="oldPasswordID" name="oldPassword" class="form-control"
+									value=""
+									type="hidden" />
+		
+		
+			
+				
+			
+		 				
+						
+									
+			
+
+			<label class="control-label required" >Enter New Password
+			</label>
+			<div class="input-group">
+				<span class="input-group-addon"><i class="fa fa-th"></i></span>
+		 				<input id="newPasswordID" name="password" class="form-control tooltilcls"
+									value="" minlength="8" maxlength="20"
+									type="password"
+									title="Password length must be in between 8 and 20, should consist of atleast one number, one upper case, one lower case and one special character. " />
+										<div class="input-group-addon input-group-append" id="passwordEyeIconDivId" style = "cursor: pointer" onclick="showHidePassword()">
+															<div class="input-group-text">
+																<i class="glyphicon glyphicon-eye-open"></i>
+															</div>
+														</div>
+						
+									
+			</div>
+			
+			<label class="control-label required" >Confirm New Password
+			</label>
+			<div class="input-group">
+				<span class="input-group-addon"><i class="fa fa-th"></i></span>
+		 				<input id="confirmNewPasswordID" name="confirmPassword" class="form-control tooltilcls"
+									value="" minlength="8" maxlength="20"
+									type="password" 
+									title="Confirm Password should be same as Password" />
+										<div class="input-group-addon input-group-append" id="cPasswordEyeIconDivId" style = "cursor: pointer" onclick="showHideCPassword()">
+															<div class="input-group-text">
+																<i class="glyphicon glyphicon-eye-open"></i>
+															</div>
+														</div>
+			</div>
+			
+				  
+        </div>
+        <div class="modal-footer text-center">
+        	<button type="button" id="changePasswordBtnID" onclick="submitUpdatePasswordForm(event)" class="btn btn-primary">Submit</button>
+        
+          <button type="button" class="btn btn-default btnCom" data-bs-dismiss="modal">Close</button>
+        </div>
+        </form>
+      </div>
+    </div>
+
+
+    <script>
+    $(document).ready(function() {
+    	$('.tooltilcls').tooltip({
+    		trigger : "focus",
+    		placement : "right"
+    	});
+    });
+    function showHidePassword()	{
+
+    	if($("#passwordEyeIconDivId i").hasClass("glyphicon-eye-open"))
+    	{
+    	 	$("#passwordEyeIconDivId i").addClass("glyphicon-eye-close").removeClass("glyphicon-eye-open");
+    		$("#newPasswordID").prop("type", "text");
+      	} else {
+      		$("#passwordEyeIconDivId i").addClass("glyphicon-eye-open").removeClass("glyphicon-eye-close");
+    		$("#newPasswordID").prop("type", "password");
+      	}
+    }
+    function showHideCPassword(){
+    	if($("#cPasswordEyeIconDivId i").hasClass("glyphicon-eye-open"))
+    	{
+    	 	$("#cPasswordEyeIconDivId i").addClass("glyphicon-eye-close").removeClass("glyphicon-eye-open");
+    		$("#confirmNewPasswordID").prop("type", "text");
+      	} else {
+      		$("#cPasswordEyeIconDivId i").addClass("glyphicon-eye-open").removeClass("glyphicon-eye-close");
+    		$("#confirmNewPasswordID").prop("type", "password");
+      	}
+    }
+    function showHideoldPassword(){
+    	if($("#oldpasswordEyeIconDivId i").hasClass("glyphicon-eye-open"))
+    	{
+    	 	$("#oldpasswordEyeIconDivId i").addClass("glyphicon-eye-close").removeClass("glyphicon-eye-open");
+    		$("#oldPasswordID").prop("type", "text");
+      	} else {
+      		$("#oldpasswordEyeIconDivId i").addClass("glyphicon-eye-open").removeClass("glyphicon-eye-close");
+    		$("#oldPasswordID").prop("type", "password");
+      	}
+    }
+    
+    function submitUpdatePasswordForm(event){
+    
+/*     $('#changePasswordBtnID').click(function (e)
+ */    		 
+    				if(validateUpdatePassword())
+    					{
+    						//event.preventDefault();
+    					var formData = new FormData();
+    			        var params = $("#changePasswordID").serializeArray();
+    			        
+    			        
+    			        
+    			        $.each(params, function(i, val) {
+    			        //	alert('parametere'+val.name+'scond'+ val.value);
+    			            formData.append(val.name, val.value);
+    			        });
+    		            $.ajax({
+    								 type : "POST",
+    								 url : "/ptrmcd/web/citizen/updatePassword",
+    								 data: formData,
+    					             cache: false,
+    					             async: true,
+    					             contentType: false,
+    					             processData: false,
+    								 beforeSend : function() {
+    									 $("#overlay").show();
+    					
+    								},
+    								success : function(data, status, xhr) {
+    									if(data.message == 'Password update successfully')
+    									{
+    										$("#changePasswordBtnID").prop('disabled', true);
+    									}
+    									createSmallAlert(data.message);
+    								},
+    								error : function(e) {
+    									createAlert('error '+e);
+    									//alert('error '+e)
+    								},
+    								complete : function() {
+    									$("#overlay").hide();
+    									setTimeout(function() {
+    			                        	window.location.href="web/citizen/info";
+    									  }, 5000);
+    								}
+    		            });
+    					}
+    			    	
+    		        }
+
+    		function validateUpdatePassword()
+    		{
+    			var password = $("#newPasswordID").val();
+    			var confirmPassword = $("#confirmNewPasswordID").val();
+    			var testPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%\^&\*])(?=.{8,})/;
+    			if (password != '' && !testPassword.test(password)) {
+    				createSmallAlert('Please enter a valid Password');
+    				$("#passwordId").val('');
+    				$("#confirmNewPasswordID").val('');
+    				return false;
+    			}
+    			if (password.length>20)
+    			{
+    				createSmallAlert('Password length should not more than 20');
+    				$("#passwordId").val('');
+    				$("#confirmNewPasswordID").val('');
+    				return false;
+    			}
+    			if (password != confirmPassword) {
+    				createSmallAlert('Password and Confirm Password should be same');
+    				$("#newPasswordID").val('');
+    				$("#confirmNewPasswordID").val('');
+    				return false;
+    			}
+    			return true;
+    		}
+
+    
+    </script>
+  </div>
+
+<div class="modal fade" id="changePasswordCitizenModalId" role="dialog">
+    
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+
+
+
+<div class="modal-dialog modal-md">
+      <div class="modal-content">
+      <form id="changePasswordID"  enctype="multipart/form-data">
+        <div class="modal-header compectheader">
+          <h4 class="modal-title compecttitle">Change Password</h4>
+        </div>
+        <div class="modal-body">
+        
+		<input type="hidden" name="_csrf" value="4fc9697e-9451-467f-adbc-e63fdf7e0543"/>
+		<input type="hidden" id="checkParam" name="checkParam" value="">
+		<input type="hidden" id="userGuid" name="userGuid" value="">
+		
+		
+		
+                                                                                                                                                                                                                                                		<div class="input-group">
+				
+		 				<input id="loginID" name="loginId" class="form-control" maxlength="40"
+									value=""
+									type="hidden"/>
+									<input id="oldPasswordID" name="oldPassword" class="form-control"
+									value=""
+									type="hidden" />
+		
+		
+			
+				
+			
+		 				
+						
+									
+			
+
+			<label class="control-label required" >Enter New Password
+			</label>
+			<div class="input-group">
+				<span class="input-group-addon"><i class="fa fa-th"></i></span>
+		 				<input id="newPasswordID" name="password" class="form-control tooltilcls"
+									value="" minlength="8" maxlength="20"
+									type="password"
+									title="Password length must be in between 8 and 20, should consist of atleast one number, one upper case, one lower case and one special character. " />
+										<div class="input-group-addon input-group-append" id="passwordEyeIconDivId" style = "cursor: pointer" onclick="showHidePassword()">
+															<div class="input-group-text">
+																<i class="glyphicon glyphicon-eye-open"></i>
+															</div>
+														</div>
+						
+									
+			</div>
+			
+			<label class="control-label required" >Confirm New Password
+			</label>
+			<div class="input-group">
+				<span class="input-group-addon"><i class="fa fa-th"></i></span>
+		 				<input id="confirmNewPasswordID" name="confirmPassword" class="form-control tooltilcls"
+									value="" minlength="8" maxlength="20"
+									type="password" 
+									title="Confirm Password should be same as Password" />
+										<div class="input-group-addon input-group-append" id="cPasswordEyeIconDivId" style = "cursor: pointer" onclick="showHideCPassword()">
+															<div class="input-group-text">
+																<i class="glyphicon glyphicon-eye-open"></i>
+															</div>
+														</div>
+			</div>
+			
+				  
+        </div>
+        <div class="modal-footer text-center">
+        	<button type="button" id="changePasswordBtnID" onclick="submitUpdatePasswordForm(event)" class="btn btn-primary">Submit</button>
+        
+          <button type="button" class="btn btn-default btnCom" data-bs-dismiss="modal">Close</button>
+        </div>
+        </form>
+      </div>
+    </div>
+
+
+    <script>
+    $(document).ready(function() {
+    	$('.tooltilcls').tooltip({
+    		trigger : "focus",
+    		placement : "right"
+    	});
+    });
+    function showHidePassword()	{
+
+    	if($("#passwordEyeIconDivId i").hasClass("glyphicon-eye-open"))
+    	{
+    	 	$("#passwordEyeIconDivId i").addClass("glyphicon-eye-close").removeClass("glyphicon-eye-open");
+    		$("#newPasswordID").prop("type", "text");
+      	} else {
+      		$("#passwordEyeIconDivId i").addClass("glyphicon-eye-open").removeClass("glyphicon-eye-close");
+    		$("#newPasswordID").prop("type", "password");
+      	}
+    }
+    function showHideCPassword(){
+    	if($("#cPasswordEyeIconDivId i").hasClass("glyphicon-eye-open"))
+    	{
+    	 	$("#cPasswordEyeIconDivId i").addClass("glyphicon-eye-close").removeClass("glyphicon-eye-open");
+    		$("#confirmNewPasswordID").prop("type", "text");
+      	} else {
+      		$("#cPasswordEyeIconDivId i").addClass("glyphicon-eye-open").removeClass("glyphicon-eye-close");
+    		$("#confirmNewPasswordID").prop("type", "password");
+      	}
+    }
+    function showHideoldPassword(){
+    	if($("#oldpasswordEyeIconDivId i").hasClass("glyphicon-eye-open"))
+    	{
+    	 	$("#oldpasswordEyeIconDivId i").addClass("glyphicon-eye-close").removeClass("glyphicon-eye-open");
+    		$("#oldPasswordID").prop("type", "text");
+      	} else {
+      		$("#oldpasswordEyeIconDivId i").addClass("glyphicon-eye-open").removeClass("glyphicon-eye-close");
+    		$("#oldPasswordID").prop("type", "password");
+      	}
+    }
+    
+    function submitUpdatePasswordForm(event){
+    
+/*     $('#changePasswordBtnID').click(function (e)
+ */    		 
+    				if(validateUpdatePassword())
+    					{
+    						//event.preventDefault();
+    					var formData = new FormData();
+    			        var params = $("#changePasswordID").serializeArray();
+    			        
+    			        
+    			        
+    			        $.each(params, function(i, val) {
+    			        //	alert('parametere'+val.name+'scond'+ val.value);
+    			            formData.append(val.name, val.value);
+    			        });
+    		            $.ajax({
+    								 type : "POST",
+    								 url : "/ptrmcd/web/citizen/updatePassword",
+    								 data: formData,
+    					             cache: false,
+    					             async: true,
+    					             contentType: false,
+    					             processData: false,
+    								 beforeSend : function() {
+    									 $("#overlay").show();
+    					
+    								},
+    								success : function(data, status, xhr) {
+    									if(data.message == 'Password update successfully')
+    									{
+    										$("#changePasswordBtnID").prop('disabled', true);
+    									}
+    									createSmallAlert(data.message);
+    								},
+    								error : function(e) {
+    									createAlert('error '+e);
+    									//alert('error '+e)
+    								},
+    								complete : function() {
+    									$("#overlay").hide();
+    									setTimeout(function() {
+    			                        	window.location.href="web/citizen/info";
+    									  }, 5000);
+    								}
+    		            });
+    					}
+    			    	
+    		        }
+
+    		function validateUpdatePassword()
+    		{
+    			var password = $("#newPasswordID").val();
+    			var confirmPassword = $("#confirmNewPasswordID").val();
+    			var testPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%\^&\*])(?=.{8,})/;
+    			if (password != '' && !testPassword.test(password)) {
+    				createSmallAlert('Please enter a valid Password');
+    				$("#passwordId").val('');
+    				$("#confirmNewPasswordID").val('');
+    				return false;
+    			}
+    			if (password.length>20)
+    			{
+    				createSmallAlert('Password length should not more than 20');
+    				$("#passwordId").val('');
+    				$("#confirmNewPasswordID").val('');
+    				return false;
+    			}
+    			if (password != confirmPassword) {
+    				createSmallAlert('Password and Confirm Password should be same');
+    				$("#newPasswordID").val('');
+    				$("#confirmNewPasswordID").val('');
+    				return false;
+    			}
+    			return true;
+    		}
+
+    
+    </script>
+</div>
+  
+<div class="modal fade" id="showFooter" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header modal-header1">
+					<button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+					<h4 class="modal-title modal-title1" id="footerHeading" style="text-align: center"></h4>
+				</div>
+				<div class="modal-body" id="footerBody"></div>
+
+			</div>
+
+		</div>
+	</div>
+  <!-- start language translattor-->
+  <script type="text/javascript">
+         function googleTranslateElementInit() {
+             new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,hi,pa,ur', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+     }
+     </script>
+     <!-- <script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
+   
+     <!---end  language translattor ----->
+
+
+ <script>
+/* 
+let timerOn = true;
+$( document ).ready(function() {
+	  $('.social').prepend('<i class="fa fa-plus social-toggle"></i>');
+	  $('.social-toggle').click(function(){
+	   $(this).toggleClass('fa-plus fa-minus');
+	    $(".social-drop").slideToggle("300");
+	  })
+
+	});
+	
+function callChangePasswordModal() {
+	timerOn = true;
+	$("#changePasswordModal").modal('show');
+	 timer(10);
+}
+
+$('#changePasswordModal').on('hidden.bs.modal', function () {
+	timerOn = false;
+	$("timer").innerHTML = '';
+})
+
+
+
+function timer(remaining) {
+    var m = Math.floor(remaining / 60);
+    var s = remaining % 60;
+    
+    m = m < 10 ? '0' + m : m;
+    s = s < 10 ? '0' + s : s;
+    document.getElementById('timer').innerHTML = m + ':' + s;
+    remaining -= 1;
+    
+    if(remaining >= 0 && timerOn) {
+      setTimeout(function() {
+          timer(remaining);
+      }, 1000);
+      return;
+    }
+
+    if(!timerOn) {
+      // Do validate stuff here
+      return;
+    }
+    
+    // Do timeout stuff here
+    
+    $("#changePasswordOtpID").attr("disabled", "disabled"); 
+    alert('Timeout for otp');
+  }
+ */
+// For login validation
+
+$( document ).ready(function() {
+	var loginTypeHidden = $("#loginTypeHiddenID").val();
+	
+	/* bootbox.alert({
+	    message: msg,
+	    size: 'small'
+	}); */
+	
+	if(loginTypeHidden== 'U')
+		{
+			activaTab('Admin_Login');
+		}
+	else if(loginTypeHidden== 'H')
+	{
+		activaTab('Hospital_Login');
+	}
+	else if(loginTypeHidden== 'C')
+	{
+		activaTab('Citizen_Login');
+	}
+	else
+	{
+		activaTab('Citizen_Login');
+	}
+		
+	});
+	
+function activaTab(tab){
+    $('.nav-tabs a[href="#' + tab + '"]').tab('show');
+};
+
+
+function onlyNumbers(evt)
+{
+	
+	 if(window.event){ // IE
+		var charCode = event.keyCode;
+	} else  { // Safari 4, Firefox 3.0.4
+		var charCode = evt.which;
+	}
+	
+    if (charCode > 31 && (charCode < 46 || charCode > 57 || charCode==47|| charCode==32 || charCode==46))
+	return false;
+	
+
+	return true;
+}
+
+function callCitizenRegistration()
+{
+	$.ajax({
+		type : "GET",
+		url : "web/citizen/citizenRegistration",
+		cache : false,
+		async : true,
+		beforeSend : function() {
+
+		},
+		success : function(data, status, xhr) {
+			
+			$("#lgModalBodyID").empty();
+			//$("#modalHeaderContentID").text("HEALTH TRADE LICENSE REGISTRATION STATUS");
+			$("#lgModalBodyID").html(data);
+			$("#largeModal").modal('show');
+		},
+		error : function(e) {
+
+		},
+		complete : function() {
+			select2Refresh();
+		}
+	});
+}
+
+function citizenPasswordModal()
+{
+	$.ajax({
+		type : "GET",
+		url : "web/citizen/updatePassword",
+		cache : false,
+		async : true,
+		beforeSend : function() {
+
+		},
+		success : function(data, status, xhr) {
+			$("#smModalBodyID").empty();
+			$("#smModalBodyID").html(data);
+			$("#smallModal").modal('show');
+		},
+		error : function(e) {
+
+		},
+		complete : function() {
+		}
+	});
+}
+
+
+function showFooterModal(event){
+	
+	
+	$("#showFooter").modal('show');
+}
+	
+</script>
+</body>
+</html>

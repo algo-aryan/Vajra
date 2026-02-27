@@ -1,0 +1,6806 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+
+
+
+
+		
+		
+	
+	
+
+<html>
+<head>
+<base href="https://mcdonline.nic.in/ptrmcd/" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Citizen - Portal</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="all,follow">
+<!-- Bootstrap CSS-->
+ <link rel="stylesheet" href="static/css/bootstrap.min.css"> 
+<!--  start css  for Text EDITOR -->  
+<!--  <link href="static/css/summernote-bs4.min.css" rel="stylesheet">   -->
+<!--  start css for Text EDITOR -->
+<!-- Font Awesome CSS-->
+<link rel="stylesheet" href="static/css/font-awesome.min.css">
+<!-- Bootstrap Select-->
+<link rel="stylesheet" href="static/css/style.default.css">
+<!-- Custom stylesheet - for your changes-->
+<link rel="stylesheet" href="static/css/Masterstyle.css">
+<link rel="stylesheet" href="static/css/custom.css">
+<link href="static/css/jquery.dataTables.min.css" rel="stylesheet"
+	id="bootstrap-css">
+<link href="static/css/select2.min.css" rel="stylesheet" />
+<link href="static/css/bootstrap-datetimepicker.css" rel="stylesheet" />
+<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+<style>
+.iffyTip {
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+.hideText2{
+  max-width:200px;
+}
+
+.red-tooltip + .tooltip > .tooltip-inner {background-color: #f00;}
+.red-tooltip + .tooltip > .tooltip-arrow { border-bottom-color:#f00; }
+
+/* text editor css */
+.mce-notification.mce-in ,.mce-flow-layout-item.mce-last,.mce-path-item mce-last{
+display:none;
+}
+
+
+.loader-rotating {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 100px;
+  height: 100px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+.center-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
+
+<script type="text/javascript">
+var defaultTabIndex = -1;
+</script>
+</head>
+<body oncopy="return false" oncut="return false" onpaste="return false" ondragstart="return false;" ondrop="return false;">
+
+  <header>
+        <div class="header-top">
+            <div class="container-fluid  pad-30">
+                <div class="row">
+                       <div class="col-lg-6 hidden-sm hidden-xs">
+                       
+                        <div class="btn-group font-sizing " role="group" aria-label="...">
+                            <button class="btn btn-default" id="fontdecrease"
+                                title="Decrease Website's font size">A-</button>
+                            <button class="btn btn-default selected" id="fontdefault"
+                                title="Normal  Website's font size">A</button>
+                            <button class="btn btn-default" id="fontincrease"
+                                title="Increase Website's font size">A+</button>
+                        </div>
+                        <div class="btn-group font-contrast " role="group" aria-label="...">
+                            <button class="btn btn-default standard" id="stdView" title="Standard View">A</button>
+                            <button class="btn btn-default high-contrast-view" id="highContrastView"
+                                title="High Contrast View">A</button>
+                          
+                        </div>
+                         
+                          
+
+                    </div>
+                    
+                  
+             <div class="col-lg-1 hidden-sm hidden-xs ">
+
+              </div> 
+            
+                  <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 ">
+            	
+            </div>
+                  <div class="col-lg-1 hidden-sm hidden-xs ">
+                  <!-- <div class="input-group languageinputdiv">
+						 <select id="" class="js-states form-control languagediv" name="" placeholder="Language">							  													
+									<option value=""  selected="selected">English</option>
+										<option value="" > Hindi </option>
+							
+							</select>
+						</div> -->
+                   <!--    <span class="languagediv pull-right">
+                                <div class="gt__select">
+                                    <div id="google_translate_element"></div>
+                                </div>
+                            </span> -->
+            </div>
+                   
+                </div>
+            </div>
+        </div>
+
+
+        <div class="header-middle">
+           <!--  <nav class="navbar yamm navbar-default main-menu"> -->
+                <div class="container-fluid ">
+                   <div class="row">
+                    <div class="col-lg-3 col-md-5 col-sm-12 col-xs-12 ">
+                        <div class="">
+                      <a href="#" >
+                               <img src='static/images/mcd_logo.png'  class="img-responsive"  alt='Municipal Corporation of Delhi' title='Municipal Corporation of Delhi'>
+								</a>
+                            
+                 
+                        </div>
+                    </div>
+             <div class="col-lg-8 col-md-6 col-sm-12 col-xs-12">
+                   <!--  <marquee class="mar" onmouseover="this.stop();" onmouseout="this.start();" direction="left">
+							
+						<a onclick="showTextFlashDetail('077b1388-a2b2-4e19-8209-994239669011')" data-bs-toggle="modal" data-bs-target="#showTextFlash">We are committed to serve you better by improving the website on day-to-day basis  from the experiences and feedback we receive  from you. For that,  maintenance time has been fixed up from 11 PM to 12 AM daily.  Inconvenience regretted. </a>
+								
+								<img src="static/images/new-star.gif">  							
+								
+							
+							</marquee> -->
+                  
+                    </div> 
+                    
+                    
+               <div class="col-lg-1 col-md-1 col-sm-12 col-xs-12">
+               	<h1 class="right-content pull-right">
+						<a class="sw-logo" target="_blank"
+							href="http://www.digitalindia.gov.in/"
+							title="Digital India, External link"> <img
+							src="static/images/digital-india.png" alt="Digital India">
+						</a>
+					</h1>
+               </div>
+
+                 
+                </div>
+            </div>
+           <!--  </nav> -->
+        </div>
+
+
+
+    </header>
+
+    <div class="hidden-header"></div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="maindivhight">
+  <!--   <section class="bar background-white "> -->
+
+	<div>	
+		<!-- Navbar Start-->
+		
+
+
+
+
+
+
+
+
+<!-- add Modal-->
+<div class="modal fade" id="largeModal" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        
+      		<!-- <div class="modal-header">
+	          <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+	          <h4 class="bootbox-body" >HEALTH</h4>
+	        </div> -->
+			<div id="lgModalBodyID" class="modal-body">
+			
+			</div>
+			<div class="modal-footer">
+	          <button type="button" id="largeModalClose" class="btn btn-danger " data-bs-dismiss="modal">Close</button>
+	        </div>
+    </div>
+  </div>
+</div>
+
+<!-- add Modal for DeRegister-->
+<div class="modal fade" id="largeModalDeRegister" role="dialog" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header compectheader">
+     <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+			<div id="lgModalDeRegisterBodyID" class="modal-body">
+			
+			</div>
+			<div class="modal-footer">
+			<!-- <button id="deRegisterSubmit" type="button" class=" btn btn-primary" onclick="deRegisterSubmit()">Submit</button>
+	        <button type="button" id="deRegisterSubmitClose" class="btn btn-danger " data-dismiss="modal">Close</button> -->
+	        </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="deRegisterDashboardModal" role="dialog" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header compectheader">
+     <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+			<div id="deRegisterDashboardBodyID" class="modal-body">
+			</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="reRegisterDashboardModal" role="dialog" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header compectheader">
+     <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+			<div id="reRegisterDashboardBodyID" class="modal-body">
+			</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="largeModalAppRejDeRegister" role="dialog" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header compectheader">
+     <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+			<div id="lgModalAppRejDeRegisterBodyID" class="modal-body">
+			
+			</div>
+			<div class="modal-footer">
+			<button id="appRejdeRegisterSubmit" type="button" class=" btn btn-primary" onclick="appRejdeRegisterSubmit()">Submit</button>
+	        <button type="button" id="appRejdeRegisterSubmitClose" class="btn btn-danger " data-dismiss="modal">Close</button>
+	        </div>
+    </div>
+  </div>
+</div>
+<!-- De-Register END -->
+
+
+<!-- add Modal for Re-Register-->
+<div class="modal fade" id="largeModalReRegister" role="dialog" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header compectheader">
+     <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+			<div id="lgModalReRegisterBodyID" class="modal-body">
+			
+			</div>
+			<!-- <div class="modal-footer">
+			<button id="reRegisterSubmit" type="button" class=" btn btn-primary" onclick="reRegisterSubmit()">Submit</button>
+	        <button type="button" id="reRegisterSubmitClose" class="btn btn-danger " data-dismiss="modal">Close</button>
+	        </div> -->
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="largeModalAppRejReRegister" role="dialog" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header compectheader">
+     <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+			<div id="lgModalAppRejReRegisterBodyID" class="modal-body">
+			
+			</div>
+			<div class="modal-footer">
+			<button id="appRejreRegisterSubmit" type="button" class=" btn btn-primary" onclick="appRejreRegisterSubmitad()">Submit</button>
+	        <button type="button" id="appRejreRegisterSubmitClose" class="btn btn-danger " data-dismiss="modal">Close</button>
+	        </div>
+    </div>
+  </div>
+</div>
+<!-- Re-Register END -->
+<!-- Modal -->
+<div class="modal fade" id="consentModal" tabindex="-1" role="dialog" aria-labelledby="consentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header compectheader">
+                <h5 class="modal-title" id="consentModalLabel">Consent Form</h5>
+                <button type="button" class="close text-white" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" >
+              <!--   <h1 id="title"></h1>
+                <p id="description"></p> -->
+                <div id="content1">
+                <div class="row">				
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+				<p id="consentDescription">
+				By accepting, you agree to the terms outlined above regarding the collection, processing, and sharing of your personal data. You may contact us anytime for assistance or to revoke your consent.
+				</p>
+				<div class="" id="textconsentform" style="display: none;">
+				more text 
+				<ul>
+				<li>First line </li>
+				<li>Second Line</li>
+				<li>Third line</li>
+				</ul>
+                </div>
+                <div class="btn-container">
+				<button id="readmoretoggle" class="btn btn-primary" title="Read More About Consent details">Read More</button>
+				</div>
+                </div>
+				</div>
+                </div>
+              <!--   <p class="summary" id="summary"></p>
+                <p id="additionalDetails"></p> -->
+            </div>
+            <div class="modal-footer">
+                <button  type="button" class="btn btn-success " data-dismiss="modal" onclick="submitConsent('ACCEPTED')" id="consentApprove">Approve</button>
+                <button type="button" class="btn btn-warning" data-dismiss="modal" onclick="submitConsent('REVOKED')" id="consentRevoke">Revoke</button>
+                <button type="button" class="btn btn-danger" onclick="$('#consentModal').modal('hide')" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- all detail model-->
+<div class="modal fade" id="largeModalAllDetail" role="dialog">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+			<div id="lgModalAllDetailBodyID" class="modal-body">
+			</div>
+			<div class="modal-footer">
+	          <button type="button" id="largeModalClose" class="btn btn-danger " data-bs-dismiss="modal">Close</button>
+	        </div>
+    </div>
+  </div>
+</div>
+
+<!-- AddressDetailsByApplyNewUpic MODEL -->
+
+<!-- AddressDetailsByApplyNewUpic MODEL -->
+
+<div class="modal fade" id="propertyAddressDetail" role="dialog">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+        
+			<div id="propertyAddressDetailUpicApply" class="modal-body">
+			
+			</div>
+			
+    </div>
+  </div>
+</div>
+
+
+
+	
+  <div class="modal-md modal fade model-Pointer-Disable" id="myModal_status" role="dialog" >
+    <div class="modal-dialog">
+      <div class="modal-content">
+      <div>
+        <div class="modal-header compectheader" id="elementToChange">          
+          <h4 class="modal-title compecttitle"><span id="modelheading_success"></span></h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+          <div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		     	<h5 class="modalmsg mb-4 text-center" id="message_header"><i class="fa fa-check-circle" id="status_circle"></i><span id="messagebody_status"> </span></h5>
+             </div>
+			</div>
+          </form>
+        </div>
+        </div>
+        <div class="modal-footer text-center">
+          <button type="button" class="btn btn-default btnCom" title="Close the Modal Popup" id="successbtnnew" style="display: none">Continue</button>
+          <button type="button" class="btn btn-danger " data-bs-dismiss="modal" title="Close the Modal Popup" id="closebtn">Close</button>
+        </div>
+      </div>      
+    </div>
+  </div>  
+
+
+<!-- small modal -->
+<div class="modal fade" id="smallModal" role="dialog">
+	<div class="modal-dialog modal-lg modalsm">
+		<div class="modal-content">
+			<!-- <div id="smModalHeaderID" class="modal-header">
+				
+			</div> -->
+			<div id="smModalBodyID" class="modal-body">
+				
+			</div>
+			<!-- <div  id="smModalFooterID" class="modal-footer">
+				
+			</div> -->
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="smallAssignPropModal" role="dialog">
+	<div class="modal-dialog modal-lg modalsm">
+		<div class="modal-content">
+		
+		            <div class="modal-header compectheader">
+		                <h4 class="modal-title compecttitle text-center font-weight-bold" >Common heading </h4>
+		                <button type="button" class="close modalclose" data-bs-dismiss="modal" title="Close the Modal Popup">&times;</button>
+		            </div>
+		            <div class="modal-body">
+		            
+		            <!-- Start section 1  -->
+		            <section class="mb-4 ">
+		            <div class="row">
+		            <div class="Col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		             <h5 class="text-bold bg-gray py-2 px-2 text-black" >Current Authorized Officer </h5>
+		            <div id="currentAuthorizedOfficerModel" >
+		            </div>
+		            </div>
+		            </div>
+		            
+		            </section>
+		            <!-- end section 1 -->
+		            <!-- Start section 2 -->
+		             <section class="mt-4 py-4" style="border-top: 1px dotted #0380d1;">
+		            <div class="row">
+		            <div class="Col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		             <h5  class="text-bold bg-gray py-2 px-2 text-black">Authorized Officer List </h5>
+		             <div id="smallAssignPropModalID">
+		             
+		             </div>
+		            </div>
+		            </div>
+		            
+		            </section>
+		            <!-- end section 2 -->
+		        	</div>
+		        
+		      <!--   <div class="modal-footer align-left">
+		           
+		        </div> -->
+		        
+		     <!--    <div>
+		            <div class="modal-header compectheader">
+		                <h4 class="modal-title compecttitle text-center font-weight-bold" >Authorized Officer List</h4>
+		                <button type="button" class="close modalclose" data-bs-dismiss="modal" title="Close the Modal Popup">&times;</button>
+		            </div>
+		            <div id="smallAssignPropModalID" class="modal-body">
+		        	</div>
+		        </div>
+		        <div class="modal-footer align-left">
+		           
+		        </div> -->
+			
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="smallAssignPropModalforAuth" role="dialog">
+	<div class="modal-dialog modal-lg modalsm">
+		<div class="modal-content">
+		
+		            <div class="modal-header compectheader">
+		                <h4 class="modal-title compecttitle text-center font-weight-bold" id="ModalTitle"></h4>
+		                <button type="button" class="close modalclose" data-bs-dismiss="modal" title="Close the Modal Popup">&times;</button>
+		            </div>
+		            <div class="modal-body">
+		            <div class="row">
+		            <div class="Col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		             <h5  class="text-bold bg-gray py-2 px-2 text-black" id="ModalIDAuthHeading"> </h5>
+		             <div id="smallAssignPropModalIDAuth">
+		             
+		             </div>
+		            </div>
+		            </div>
+		            
+		            <!-- end section 2 Property Assignment To Authorize Officer       Authorized Officer List-->
+		        	</div>
+		        
+		      
+			
+		</div>
+	</div>
+</div>
+
+
+<!-- small modal -->
+<div class="modal fade" id="mediumModal" role="dialog">
+    <div class="modal-dialog modal-lg modalmd" >
+      <div class="modal-content">
+       <!--  <div id="mdModalHeaderID" class="modal-header">
+				
+		</div> -->
+		<div id="mdModalBodyID" class="modal-body" >
+				
+		</div>
+		<!-- <div  id="mdModalFooterID" class="modal-footer">
+			
+		</div> -->
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="comparePtrModal" role="dialog">
+    <div class="modal-dialog modal-lg modalmd" >
+      <div class="modal-content">
+       <!--  <div id="mdModalHeaderID" class="modal-header">
+				
+		</div> -->
+		<div id="compareBodyID" class="modal-body" >
+				
+		</div>
+		<!-- <div  id="mdModalFooterID" class="modal-footer">
+			
+		</div> -->
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="viewTotalProp" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        
+      		<!-- <div class="modal-header">
+	          <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+	          <h4 class="bootbox-body" >HEALTH</h4>
+	        </div> -->
+			<div id="viewTotalBodyID" class="modal-body">
+			
+			</div>
+			<div class="modal-footer">
+	          <button type="button" id="largeModalClose" class="btn btn-danger " data-bs-dismiss="modal">Close</button>
+	        </div>
+    </div>
+  </div>
+</div>
+  
+<!-- small modal end-->
+			<!-- lode spinner -->
+			<div class="loader-spinner-overlay"  id="overlay" style="display:none;">
+				<div class="spanner show">
+					<div class="loader">
+						<b></b><b></b><b></b><b></b><b></b>
+					</div>
+					<p style="font-size: 20px;">Processing Your Request Please wait</p>
+				</div>
+			</div>
+			<!-- <div id="overlay" >
+				<div class="overlay show "></div>
+				<div class="spanner show">
+					<div class="loader">
+						<b></b><b></b><b></b><b></b><b></b>
+					</div>
+					<h5>Processing Your Request Please wait</h5>
+				</div>
+			</div> -->
+<!--lode spinner end  -->
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title" id="exampleModalLabel">Payment Detail(Offline Mode)</h1>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="saveManualPaymentDetail" >
+          
+          <input type="hidden" class="form-control"   name="detailGuid" id="detailGuidId">
+          
+          <div id="amountDivId">
+           <div class="form-group"  >
+            <label for="message-text" class="col-form-label">Due Amount  :</label>
+             <input id="amountId" name="amount"
+								type="number" maxlength="13" step=".01"
+								 min="1" max="9999999999999"
+								class="form-control" onkeypress="return num(event);"
+								oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+								 />
+          </div>
+          
+           
+          <div class="form-group"  id="">
+            <label for="message-text" class="col-form-label">Construction Year  :</label>
+            <input type="text" class="form-control"  placeholder="YYYY" value=""  name="constructionYear" id="constructionYearId">
+          </div>
+          
+          
+          </div>
+          
+         
+           
+            <div id="principalAmountId"  style="display: none">
+          <div  class="form-group">
+         
+            <label for="message-text" class="col-form-label">Principal Amount( <i class="fa fa-rupee"></i> ) :
+            	
+            	
+            
+             </label>
+             <input type="checkbox" id="amnestyPaymentId" name="amnestyPayment" value="on">
+            	<label for="amnestyPayment" style="color: red"> Amnesty Payment</label>
+            	
+            	
+            	
+            <input id="paidAmountId" name="paidAmount"
+								type="number" maxlength="13" step=".01" value="0.0"
+								 min="1" max="9999999999999"
+								class="form-control" onkeypress="return num(event);"
+								oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+								 />
+								 
+								 
+								 
+			
+							 
+							 
+           </div>
+           
+            <div class="form-group m-2 " style="display: none;" id="amnestyAssessmentYearId">
+            <label for="message-text" class=" col-form-label ">Amnesty Name :</label>
+           	<select name="amnestyName" id="amnestyNameId" class=" form-control">	
+           		<option value="''">
+           			-- Select Amnesty Availed --
+           		</option>
+           		
+           	</select>
+          </div>
+           
+           <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Receipt No:</label>
+            <input type="text" class="form-control" name="receiptNo" 
+            min="0" maxlength="30" autocomplete="off" pattern="[^0-9a-zA-Z]{1,30}" onkeypress="return alphanum(event);"
+                                oninput="javascript: if (this.value.length > this.maxLength) this.value =this.value.substring(0,30)"
+            onkeyup="this.value = this.value.toUpperCase()" autocomplete="off" id="receiptNoId">
+            
+         
+          
+             <input type="hidden" class="form-control" name="assessmentYearGuid" id="assessmentYearGuidId" 
+          value="">
+          
+            <input type="hidden" class="form-control" name="action" id="actionId" 
+          value="save">
+         
+         
+          
+          </div>
+         
+          
+           <div class="form-group datepickerClass" id="receiptDatePicker">
+            <label for="message-text" class="col-form-label">Receipt Date :</label>
+           <input type="text" class="form-control"  pattern="[a-zA-Z0-9,-/\s]{1,50}" placeholder="DD/MM/YYYY" autocomplete="off" name="paidDate" id="paidById">
+          </div>
+          </div>
+           
+           
+         
+          
+          <!-- -----------------------------------------sdmc---------------------------------------------------------- -->
+          	
+          	<div  class="sdmcShow" style="display: none">
+          	<div class="form-group datepickerClass" id="interestAmountId">
+            <label for="message-text" class="col-form-label">Interest Amount :</label>
+           <input type="text" class="form-control" 
+           	type="number" maxlength="13" step=".01" value="0.0"
+								 min="1" max="9999999999999"
+								class="form-control" onkeypress="return num(event);"
+								oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+           name="interestAmount" id="interestAmountPaid">
+          </div>
+          
+          <div class="form-group datepickerClass" id="penaltyAmountId" >
+            <label for="message-text" class="col-form-label">Penalty Amount :</label>
+           <input type="text" class="form-control"  
+           type="number" maxlength="13" step=".01" value="0.0"
+								 min="1" max="9999999999999" onkeypress="return num(event);"
+								class="form-control"
+								oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            name="penaltyAmount" id="penaltyAmountPaid">
+          </div>
+          
+          <div class="form-group datepickerClass" id="eduCessId">
+            <label for="message-text" class="col-form-label">Education Cess :</label>
+           <input type="text" class="form-control" 
+           	type="number" maxlength="13" step=".01" value="0.0" onkeypress="return num(event);"
+								 min="1" max="9999999999999"
+								class="form-control"
+								oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            name="eduCess" id="eduCessPaid">
+          </div>
+          </div>
+          
+          <!--  ------------------------------------------------For IsLumpSumAvailed Before (Ravinder) -------------------------------------------------------- -->
+          <div class="form-group">
+	          <label for="message-text" class="col-form-label">Availed Lumpsum Incentive :</label>
+	          	
+	            
+	                        
+	            
+	                    
+	                    
+	                     
+	            
+					Yes <span>
+							<input type="radio" value="YES" id="isLumpsumAvailedBeforeCheckBoxYes"
+								name="isLumpsumAvailed"   
+									
+                               >
+								&nbsp; &nbsp;
+							No <input type="radio" value="NO" name="isLumpsumAvailed" id="isLumpsumAvailedBeforeCheckBoxNo"
+								onclick="enableDisableCovidDeclaration()" checked
+								
+                               >
+                        </span>
+          </div>
+          
+         
+         <!--  ------------------------------------------------sdmc end -------------------------------------------------------- -->
+            <div class="form-group">
+            <label for="message-text" class="col-form-label">Financial Year:</label>
+          <input type="text" class="form-control" name="assessmentYearDesc" id="assessmentYearDescId"  readonly="readonly"
+          value="">
+          </div>
+          
+          
+          
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">UPIC</label>
+           <input type="text" class="form-control" name="upic" id="upicId" readonly="readonly" value=""> 
+            </div>
+			
+				<div class="form-group sdmcShow " style="display: none">
+					<label for="message-text" class="col-form-label requiredDoc required">Upload
+						Receipt <span class="text-red">(In Pdf format and file
+							size should be less than 2MB )</span>:
+					</label> <input type="file" required="required" class="form-control"
+						id="receiptImageId"
+						value=""
+						onchange="uploadFilePropertiesFtlimages(this);"
+						name="receiptImage" accept="application/pdf">
+						<input type="hidden" id="uploadedDocUrl" >
+						<a id="manPymntRcpt" target="_blank" href="javascript:void(0);">View</a>
+				</div>
+			
+		
+
+					<input type="hidden" id="paramId">						
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="return saveManualPaymentDetails();">Save Details</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="emutationPreviewModal" role="dialog">
+  <div class="modal-dialog modal-lg"  style="width:1250px; top: 0; height: 90vh;">
+    <div class="modal-content">
+        
+      		<!-- <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	          <h4 class="bootbox-body" >HEALTH</h4>
+	        </div> -->
+			<div id="emutationPreviewModalBodyID" class="modal-body">
+			
+			</div>
+			<div class="modal-footer">
+	          <button type="button" id="emutationPreviewModalClose" class="btn btn-danger " data-bs-dismiss="modal">Close</button>
+	        </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="comparePropertyModal" role="dialog">
+  <div class="modal-dialog modal-lg"  style="width:800px; top: 0; height: 80vh;">
+    <div class="modal-content">
+        
+      		<!-- <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	          <h4 class="bootbox-body" >HEALTH</h4>
+	        </div> -->
+			<div id="comparePropertyModalBodyID" class="modal-body">
+			
+			</div>
+			<div class="modal-footer">
+	          <button type="button" id="comparePropertyModalClose" class="btn btn-danger " data-bs-dismiss="modal">Close</button>
+	        </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- add Modal fro mark as HQ-->
+<div class="modal fade" id="markhqModal" role="dialog" data-backdrop="static">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header compectheader">
+         
+     <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+			<div id="markhqBodyID" class="modal-body">
+			
+			</div>
+			<div class="modal-footer">
+			<button id="markhqSubmit" type="button" class=" btn btn-primary" onclick="submitMarkAs()">Submit</button>
+	        <button type="button" id="markhqClose" class="btn btn-danger " data-dismiss="modal">Close</button>
+	        </div>
+    </div>
+  </div>
+</div>
+
+<!-- add Modal fro addNRemoveUpicMerge-->
+<div class="modal fade" id="addNRemoveUpicMergeModal" role="dialog" data-backdrop="static">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header compectheader">
+         <h4 class="modal-title compecttitle">UPIC Merging Details</h4>
+     <button type="button" class="close" id="addNRemoveUpicMergeClose" data-dismiss="modal">×</button>
+        </div>
+			<div id="addNRemoveUpicMergeID" class="modal-body" style="height: 500px;overflow-y: auto;">
+			
+			</div>
+			<!-- <div class="modal-footer">
+			<button id="addNRemoveUpicMergeSubmit" type="button" class=" btn btn-primary" onclick="addNRemoveUpicMergeSubmit()">Submit</button>
+	        <button type="button" id="addNRemoveUpicMergeClose" class="btn btn-danger " data-bs-dismiss="modal">Close</button>
+	        </div> -->
+    </div>
+  </div>
+</div>
+
+<!-- add Modal fro RemoveUpicMerge-->
+<div class="modal fade" id="removeUpicMergeModal" role="dialog" data-backdrop="static">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header compectheader">
+         <h4 class="modal-title compecttitle">UPIC MERGING DETAILS FOR REMOVE UPIC</h4>
+     <button type="button" class="close" id="removeUpicMergeClose" data-dismiss="modal">×</button>
+        </div>
+			<div id="removeUpicMergeID" class="modal-body" style="height: 500px;overflow-y: auto;">
+			
+			</div>
+			<!-- <div class="modal-footer">
+			<button id="addNRemoveUpicMergeSubmit" type="button" class=" btn btn-primary" onclick="addNRemoveUpicMergeSubmit()">Submit</button>
+	        <button type="button" id="addNRemoveUpicMergeClose" class="btn btn-danger " data-bs-dismiss="modal">Close</button>
+	        </div> -->
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="small2Modal" role="dialog">
+	<div class="modal-dialog modal-lg modalsm">
+		<div class="modal-content">
+			<!-- <div id="smModalHeaderID" class="modal-header">
+				
+			</div> -->
+			<div id="sm2ModalBodyID" class="modal-body">
+				
+			</div>
+			<!-- <div  id="smModalFooterID" class="modal-footer">
+				
+			</div> -->
+		</div>
+	</div>
+</div>
+
+
+<!-- add Modal for Show Tax Calulated Data-->
+<div class="modal fade" id="TaxCalculationModal" role="dialog" data-backdrop="static">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header compectheader">
+         <h4 class="modal-title compecttitle">Tax Calculation</h4>
+     <button type="button" class="close text-white" id="addNRemoveUpicMergeClose" data-dismiss="modal">×</button>
+        </div>
+			<div id="TaxCalculationModalBodyID" class="modal-body" >
+			
+			</div>
+			 <div class="modal-footer">
+			<!-- <button id="addNRemoveUpicMergeSubmit" type="button" class=" btn btn-primary" onclick="addNRemoveUpicMergeSubmit()">Submit</button> -->
+	        <button type="button" id="addNRemoveUpicMergeClose" class="btn btn-danger " data-bs-dismiss="modal">Close</button>
+	        </div> 
+    </div>
+  </div>
+</div>
+
+<!-- add Modal For Download Tax Calculated PDF-->
+<div class="modal fade" id="TaxCalculationPDFModal" role="dialog" data-backdrop="static">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header compectheader">
+         <h4 class="modal-title compecttitle">Download Tax Calculation PDF</h4>
+     <button type="button" class="close" id="addNRemoveUpicMergeClose" data-dismiss="modal">×</button>
+        </div>
+			<div class="modal-body" style="height: 300px; overflow-y: auto;">
+  <form action="#" method="post">
+  
+    <!-- Mobile Number Field -->
+    <div class="form-group row mb-3">
+      <label for="mobile" class="col-sm-3 col-form-label">Mobile Number:</label>
+      <div class="col-sm-9">
+        <input type="tel" id="mobile" name="mobile" class="form-control"
+               pattern="[0-9]{10}" maxlength="10" placeholder="Enter 10-digit mobile number" required>
+      </div>
+    </div>
+
+    <!-- Captcha Section -->
+    <div class="form-group row mb-3 align-items-center">
+      <label class="col-sm-3 col-form-label">Captcha:</label>
+
+      <!-- Captcha Image + Refresh -->
+      <div class="col-sm-3">
+        <img id="captcha_ID_e2" src="Captcha" class="img-fluid" alt="Captcha" border="0">
+        <a id="captcha_ID_refresh2" href="javascript:void(0);" onclick="doRefreshCAPTCHA2('captcha_ID_e2');">
+          <i class="fa fa-refresh" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <!-- Captcha Input -->
+      <div class="col-sm-6">
+        <input type="text" class="form-control" name="captcha" id="crIDEmail2" maxlength="6" placeholder="Enter captcha">
+      </div>
+    </div>
+
+  </form>
+</div>
+
+			 <div class="modal-footer">
+			 <input type="hidden" id="jsonValue" value="">
+			 <button id="addNRemoveUpicMergeSubmit" type="button" class=" btn btn-primary" onclick="saveMobileNumberAndDownloadPDF()">Submit</button>
+	       </form>
+	        <button type="button" id="closeMobileNumberAndDownloadPDF" class="btn btn-danger " onclick="reloadPage();" data-bs-dismiss="modal">Close</button>
+	        </div> 
+    </div>
+  </div>
+</div>
+
+<script>
+function doRefreshCAPTCHA2(id){
+
+    var d = new Date();
+	
+	var captchaObj2 = document.getElementById(id);
+	captchaObj2.src="Captcha\?"+d.getMilliseconds();
+	$("#crIDEmail2").val('');
+	
+	
+}
+</script>
+		
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<div class="custommargn">
+<header class="nav-holder make-sticky">
+
+	<!--<div id="navbar" role="navigation" class="navbar navbar-expand-lg">
+		<div class="container">
+			<!--<a href="index.html" class="navbar-brand home"><images src="static/images/logo.png" alt="MCD logo" class="d-none d-md-inline-block"><images src="" alt="MCD logo" class="d-inline-block d-md-none"><span class="sr-only">MCD - go to homepage</span></a>-->
+			<!-- button type="button" data-bs-toggle="collapse"
+				data-bs-target="#navigation"
+				class="navbar-toggler btn-template-outlined">
+				<span class="sr-only">Toggle navigation</span><i
+					class="fa fa-align-justify"></i>
+			</button-->
+			<div id="navigation" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="nav-item dropdown active">
+						
+						
+						
+						<a href="web/citizen/info"><i class="fa fa-home"></i> Home <b
+							class="caret"></b></a>
+						
+						
+					
+						<!-- <ul class="dropdown-menu">
+							<li class="dropdown-item"><a href="#" class="nav-link">Page
+									1</a></li>
+							<li class="dropdown-item"><a href="#" class="nav-link">Page
+									1</a></li>
+							<li class="dropdown-item"><a href="#" class="nav-link">Page
+									1</a></li>
+							<li class="dropdown-item"><a href="#" class="nav-link">Page
+									1</a></li>
+							<li class="dropdown-item dropdown-submenu"><a
+								id="navbarDropdownMenuLink2" href="#" data-bs-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false"
+								class="nav-link dropdown-toggle">Dropdown link</a>
+								<ul aria-labelledby="navbarDropdownMenuLink2"
+									class="dropdown-menu">
+									<li class="dropdown-item"><a href="#" class="nav-link">Action</a></li>
+									<li class="dropdown-item"><a href="#" class="nav-link">Action</a></li>
+									<li class="dropdown-item"><a href="#" class="nav-link">Action</a></li>
+								</ul></li>
+						</ul> --></li>
+					<li class="nav-item dropdown menu-large"><a href="javascript:void(0);"><i
+							class="fa fa-info-circle" aria-hidden="true"></i> About us</a></li>
+					<li class="nav-item dropdown menu-large"><a href="javascript:void(0);"><i
+							class="fa fa-eye" aria-hidden="true"></i> View Status </a></li>
+					<li class="nav-item dropdown menu-large"><a href="javascript:void(0);"><i
+							class="fa fa-gear" aria-hidden="true"></i> Services </a></li>
+					<li class="nav-item dropdown menu-large"><a href="javascript:void(0);"><i
+							class="fa fa-book" aria-hidden="true"></i> Guidelines </a></li>
+					<li class="nav-item dropdown"><a href="javascript:void(0);"><i
+							class="fa fa-question-circle" aria-hidden="true"></i> FAQ </a></li>
+				</ul>
+			</div>
+		</div>
+	</div-->
+</header>
+</div>
+
+		
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="static/css/datepicker.css">
+<!DOCTYPE html>
+
+<head>
+<script src="static/js/jquery.min.js"></script>
+<script src="static/app-js/aes.js"></script>
+<script src="static/app-js/AesUtil.js"></script>
+<script src="static/app-js/pbkdf2.js"></script>
+<script src="static/app-js/decrypt.js"></script>
+<script src="static/app-js/encr.js"></script>
+<style type="text/css">
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+#overlay{	
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height:100%;
+  display: none;
+  background: rgba(0,0,0,0.6);
+}
+.cv-spinner {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px #ddd solid;
+  border-top: 4px #2e93e6 solid;
+  border-radius: 50%;
+  animation: sp-anime 0.8s infinite linear;
+}
+@keyframes sp-anime {
+  100% { 
+    transform: rotate(360deg); 
+  }
+}
+.is-hide{
+  display:none;
+}
+
+
+</style>
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <section class="bar background-white">
+<div class="container">
+<div id="overlay">
+  <div class="cv-spinner">
+    <span class="spinner"></span>
+  </div>
+</div>
+ <div class="row">
+                  
+                    <div class="col-lg-offset-1 col-lg-12 col-md-12 col-sm-12 col-xs-12 register-div">
+                    <h1 class="forgethead"> 
+                     NRI Registered with International Mobile Numbers are need to change Sign-Up Credentials
+                    </h1>
+                       
+                       <div class="card forgetcard"> 
+  						<div class="card-body">
+    
+					<div class="col-lg-3 col-md-2 col-sm-12 col-xs-12 password-left">
+                    <img class="text-center" src="static/images/add-user.png" alt="" style="width: 100%;">                
+                        <br>
+  </div>
+ 
+                     <div class="col-lg-9 col-md-10 col-sm-12 col-xs-12 pr-0">
+                    
+  	<div class="box">
+  	
+  	<h5 class="impheading"><b>**NRI Registered With International Mobile Number May Shift Their Login Credential From an International Mobile Number to their Email ID</b></h5>
+  	
+<!-- <h5 class="impheading"><b>**Please fill the information as per your Aadhar Information.</b></h5> -->
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-4">
+<!-- <h3 class="notes">Note :-</h3> -->
+<h6 class="mandataryfield fieldss"><strong>Fields marked with <b class="text-danger">*</b> are mandatory</strong></h6>
+<!-- <h6 class="navlinkBox mt-4">Special Characters  Allowed (@,_,)</h6> -->
+</div>
+</div>
+						
+						
+						
+						<div class="row">
+                           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-4 pr-0">
+							<input type="hidden" name="_csrf"
+								value="4fc9697e-9451-467f-adbc-e63fdf7e0543" id="loginCsrfId" />
+							
+							<fieldset>
+							<div>
+							
+							
+							
+							<div class="cleafix"></div>
+							
+							<div id="mobileContainerDivId">
+							<div class="cleafix"></div>
+							
+							<div class="form-group padng">
+								<label class="control-label col-xs-12 col-sm-12 col-md-3 col-lg-3 required"
+									for="Name" id="labelMobileId">Registered Mobile Number</label>
+								<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+									<div class="input-group">
+									<!-- 	<span class="input-group-addon"><i class="fa fa-phone"></i></span> -->
+											<select
+								id="countryCodeID"
+								class="js-states form-control"
+								name="countryCode"
+								 required style="width: 25%;  padding: 6px 5px;"> 
+								
+									
+										
+										
+										
+										
+											<option value="1"
+												selected="selected">
+												USA and Canada(1)
+											</option>
+										
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="1684">
+												American Samoa(1684)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="1268">
+												Antigua and Barbuda(1268)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="93">
+												AFGHANISTAN(93)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="387">
+												Bosnia and Herzegovina(387)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="246">
+												British Indian Ocean Territory(246)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="1284">
+												British Virgin Islands(1284)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="673">
+												Brunei(673)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="226">
+												Burkina Faso(226)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="238">
+												Cape Verde(238)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="1345">
+												Cayman Islands(1345)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="236">
+												Central African Republic(236)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="682">
+												Cook Islands(682)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="420">
+												Czech Republic(420)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="243">
+												Democratic Republic of the Congo(243)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="1809, 1829,1849">
+												Dominican Republic(1809, 1829,1849)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="670">
+												East Timor(670)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="503">
+												El Salvador(503)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="240">
+												Equatorial Guinea(240)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="500">
+												Falkland Islands(500)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="298">
+												Faroe Islands(298)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="689">
+												French Polynesia(689)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="245">
+												GuineaBissau(245)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="852">
+												Hong Kong(852)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="98">
+												Iran(98)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="441624">
+												Isle of Man(441624)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="225">
+												Ivory Coast(225)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="383">
+												Kosovo(383)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="856">
+												Laos(856)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="218">
+												Libya(218)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="853">
+												Macau(853)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="389">
+												Macedonia(389)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="692">
+												Marshall Islands(692)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="691">
+												Micronesia(691)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="373">
+												Moldova(373)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="687">
+												New Caledonia(687)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="64">
+												New Zealand(64)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="850">
+												North Korea(850)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="1670">
+												Northern Mariana Islands(1670)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="970">
+												Palestine(970)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="675">
+												Papua New Guinea(675)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="1787, 1939">
+												Puerto Rico(1787, 1939)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="242">
+												Republic of the Congo(242)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="7">
+												Russia(7)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="290">
+												Saint Helena(290)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="1869">
+												Saint Kitts and Nevis(1869)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="508">
+												Saint Pierre and Miquelon(508)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="1784">
+												Saint Vincent and the Grenadines(1784)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="378">
+												San Marino(378)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="239">
+												Sao Tome and Principe(239)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="966">
+												Saudi Arabia(966)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="232">
+												Sierra Leone(232)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="1721">
+												Sint Maarten(1721)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="677">
+												Solomon Islands(677)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="27">
+												South Africa(27)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="82">
+												South Korea(82)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="211">
+												South Sudan(211)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="94">
+												Sri Lanka(94)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="963">
+												Syria(963)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="886">
+												Taiwan(886)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="255">
+												Tanzania(255)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="1868">
+												Trinidad and Tobago(1868)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="1649">
+												Turks and Caicos Islands(1649)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="1340">
+												U.S. Virgin Islands(1340)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="971">
+												United Arab Emirates(971)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="44">
+												United Kingdom(44)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="379">
+												Vatican(379)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="84">
+												Vietnam(84)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="681">
+												Wallis and Futuna(681)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="91">
+												India(91)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="355">
+												Albania(355)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="376">
+												Andorra(376)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="244">
+												Angola(244)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="1264">
+												Anguilla(1264)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="672">
+												Antarctica(672)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="54">
+												Argentina(54)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="374">
+												Armenia(374)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="297">
+												Aruba(297)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="61">
+												Australia(61)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="43">
+												Austria(43)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="994">
+												Azerbaijan(994)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="1242">
+												Bahamas(1242)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="973">
+												Bahrain(973)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="1246">
+												Barbados(1246)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="375">
+												Belarus(375)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="32">
+												Belgium(32)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="501">
+												Belize(501)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="229">
+												Benin(229)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="1441">
+												Bermuda(1441)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="975">
+												Bhutan(975)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="591">
+												Bolivia(591)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="267">
+												Botswana(267)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="55">
+												Brazil(55)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="359">
+												Bulgaria(359)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="257">
+												Burundi(257)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="855">
+												Cambodia(855)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="237">
+												Cameroon(237)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="235">
+												Chad(235)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="56">
+												Chile(56)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="57">
+												Colombia(57)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="269">
+												Comoros(269)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="506">
+												Costa Rica(506)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="385">
+												Croatia(385)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="53">
+												Cuba(53)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="357">
+												Cyprus(357)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="45">
+												Denmark(45)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="253">
+												Djibouti(253)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="1767">
+												Dominica(1767)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="593">
+												Ecuador(593)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="20">
+												Egypt(20)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="291">
+												Eritrea(291)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="372">
+												Estonia(372)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="251">
+												Ethiopia(251)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="679">
+												Fiji(679)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="358">
+												Finland(358)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="33">
+												France(33)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="241">
+												Gabon(241)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="220">
+												Gambia(220)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="995">
+												Georgia(995)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="49">
+												Germany(49)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="233">
+												Ghana(233)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="350">
+												Gibraltar(350)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="30">
+												Greece(30)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="299">
+												Greenland(299)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="1473">
+												Grenada(1473)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="1671">
+												Guam(1671)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="502">
+												Guatemala(502)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="441481">
+												Guernsey(441481)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="224">
+												Guinea(224)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="592">
+												Guyana(592)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="509">
+												Haiti(509)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="504">
+												Honduras(504)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="36">
+												Hungary(36)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="354">
+												Iceland(354)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="62">
+												Indonesia(62)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="964">
+												Iraq(964)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="353">
+												Ireland(353)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="39">
+												Italy(39)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="1876">
+												Jamaica(1876)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="81">
+												Japan(81)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="441534">
+												Jersey(441534)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="962">
+												Jordan(962)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="254">
+												Kenya(254)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="686">
+												Kiribati(686)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="965">
+												Kuwait(965)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="996">
+												Kyrgyzstan(996)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="371">
+												Latvia(371)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="961">
+												Lebanon(961)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="266">
+												Lesotho(266)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="231">
+												Liberia(231)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="423">
+												Liechtenstein(423)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="370">
+												Lithuania(370)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="352">
+												Luxembourg(352)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="261">
+												Madagascar(261)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="265">
+												Malawi(265)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="60">
+												Malaysia(60)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="960">
+												Maldives(960)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="223">
+												Mali(223)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="356">
+												Malta(356)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="222">
+												Mauritania(222)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="230">
+												Mauritius(230)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="52">
+												Mexico(52)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="377">
+												Monaco(377)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="976">
+												Mongolia(976)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="382">
+												Montenegro(382)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="1664">
+												Montserrat(1664)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="258">
+												Mozambique(258)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="95">
+												Myanmar(95)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="264">
+												Namibia(264)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="674">
+												Nauru(674)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="977">
+												Nepal(977)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="31">
+												Netherlands(31)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="505">
+												Nicaragua(505)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="227">
+												Niger(227)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="234">
+												Nigeria(234)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="683">
+												Niue(683)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="968">
+												Oman(968)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="680">
+												Palau(680)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="507">
+												Panama(507)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="595">
+												Paraguay(595)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="51">
+												Peru(51)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="63">
+												Philippines(63)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="48">
+												Poland(48)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="351">
+												Portugal(351)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="974">
+												Qatar(974)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="40">
+												Romania(40)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="250">
+												Rwanda(250)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="1758">
+												Saint Lucia(1758)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="685">
+												Samoa(685)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="221">
+												Senegal(221)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="381">
+												Serbia(381)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="248">
+												Seychelles(248)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="65">
+												Singapore(65)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="421">
+												Slovakia(421)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="386">
+												Slovenia(386)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="252">
+												Somalia(252)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="34">
+												Spain(34)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="249">
+												Sudan(249)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="597">
+												Suriname(597)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="268">
+												Swaziland(268)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="46">
+												Sweden(46)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="41">
+												Switzerland(41)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="992">
+												Tajikistan(992)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="66">
+												Thailand(66)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="228">
+												Togo(228)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="690">
+												Tokelau(690)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="676">
+												Tonga(676)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="216">
+												Tunisia(216)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="90">
+												Turkey(90)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="993">
+												Turkmenistan(993)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="688">
+												Tuvalu(688)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="256">
+												Uganda(256)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="380">
+												Ukraine(380)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="598">
+												Uruguay(598)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="998">
+												Uzbekistan(998)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="678">
+												Vanuatu(678)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="58">
+												Venezuela(58)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="967">
+												Yemen(967)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="260">
+												Zambia(260)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="263">
+												Zimbabwe(263)
+											</option>
+										
+										
+										
+									
+								
+									
+										
+										
+										
+										
+										
+											<option value="213">
+												Algeria(213)
+											</option>
+										
+										
+										
+									
+								
+							</select>
+										<input id="mobileNoID" type="text" autocomplete="off" 
+										name="mobileNo" maxlength="16" class="form-control tooltilcls"
+										value=""
+										onkeypress="return onlyNumber(event);"
+										placeholder="Registered Mobile Number" style="width: 75%;" 
+										title="Please enter the registered mobile number" />
+										<span class="input-group-addon"><i class="fa fa-mobile"></i></span>
+					<input type="hidden" value="" id="existingMobileID">					
+									</div>
+									<input type="hidden" name="citizenGuid" id="citizenGuidId" value="">
+									<input type="hidden" name="failureCount" id="failureCountId" value="0">
+								</div>
+							</div>
+							</div>
+							
+							<div id="smsOtpContainerDivId">
+							<div class="cleafix"></div>
+							<div class="form-group padng">
+						
+						
+						 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding" id="mobCaptchaDivId">
+						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 mb-2">
+										<label>Captcha</label> 
+										<!-- <input id="security" type="text" class="form-control" placeholder="type here" disabled> -->
+									</div>
+						
+						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-10 mb-2">
+						<input type="text" class="form-control col-lg-10 col-md-7 textformat" name="j_captcha_response" id="j_captcha_response" 
+						maxlength="6"> 
+						</div>	
+						
+						<div class="col-lg-6 col-md-3 col-sm-12 col-xs-12 mb-2">
+						<img id="captcha_ID" src="Captcha" class="captcha" border="0">
+							        <a href="javascript:void(0);" onclick="doRefreshCAPTCHA('captcha_ID');">
+							        	<i class="fa fa-refresh" aria-hidden="true"></i>
+							        </a>
+						</div>
+						</div> 
+						
+						
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+												        
+						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 mb-2">
+							<label class="control-label" for="colonyIDSelect"> </label> 
+							<button type="button" name="verify"	class="btn btn-block btn-primary text-white" 
+							 		 onclick="intlCitInfo();" id="submitmobBtnId"
+									>Submit</button>
+									
+						</div>
+					
+				
+					</div>
+					</div>
+							
+							</div>
+							</fieldset>
+							
+							
+							<div class="cleafix"></div>
+							<div class="cleafix"></div>
+							<!-- EMAIL ID CONTAINER -->
+							<div id="emailContainerDivId" style="display: none;">
+							
+							<fieldset>
+							<div>
+							<legend>Registered Email-Id</legend>
+							
+							<div class="form-group padng" id="toggleNewEmailDivId">
+								<b>If you don't remember your registered email-id.</b>
+								<a href="javascript:void(0);" onclick="toggleNewEmail();">
+								<b style="color: blue;">Click Here</b>
+								</a>
+							</div>
+							
+							<div class="form-group padng">
+								<label class="control-label col-xs-12 col-sm-12 col-md-3 col-lg-3 required"
+									for="Name">Email id Registered with the provided number</label>
+								<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+										<input type="text" id="emailId" name="emailId" autocomplete="off" maxlength="50" 
+										class="form-control tooltilcls" placeholder="Email ID"
+									pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$"
+									onblur="validateEmail();"
+										required="required" />
+										
+									</div>
+								</div>
+							</div>
+						
+						<div id="emailIdOtpContainerDivId">	
+						<div class="cleafix"></div>
+						
+						
+						<div class="form-group padng">
+						
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding" id="emailcaptchaDiId">
+						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 mb-2">
+										<label>Captcha</label> 
+									</div>
+						
+						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-10 mb-2">
+						<input type="text" class="form-control col-lg-10 col-md-7 textformat" name="j_captcha" id="j_captcha_response_email" 
+						maxlength="6"> 
+						</div>	
+						
+						<div class="col-lg-6 col-md-3 col-sm-12 col-xs-12 mb-2">
+						<img id="captcha_email_ID" src="Captcha" class="captcha" border="0">
+							        <a href="javascript:void(0);" onclick="doRefreshCAPTCHA('captcha_email_ID');">
+							        	<i class="fa fa-refresh" aria-hidden="true"></i>
+							        </a>
+						</div>
+						
+						</div>
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+												        
+						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 mb-2">
+							<label class="control-label" for="colonyIDSelect"> </label> 
+							<button type="button" name="verify"	disabled="disabled"  class="btn btn-block btn-primary text-white" 
+							 		 onclick="getEmailOTPforIntRegUpdate();"
+									id="getCitOtpBtnID">GET OTP</button>
+									
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" id="">
+							<label class="control-label" for="colonyIDSelect">ENTER OTP FROM EMAIL</label>
+							<div class="input-group mb-4">
+								<span class="input-group-addon"><i class="fa fa-th"></i></span> 
+								<input id="otpCitRegEmailId" type="text" onkeypress="return onlyNumbers(event);" name="otpValueEmail"
+								class="form-control tooltilcls" maxlength="6" title="Valid OTP is 6 digit numeric" placeholder="ENTER OTP FROM EMAIL"/>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12  mb-2" id="">
+							<label class="control-label" for="colonyIDSelect" > </label> 
+							<!-- <a class="btn btn-block btn-success text-white" 
+							 id="verifyCitRegOtpBtnId" onclick="verifyOTP();">VERIFY</a> -->
+							 
+							 <button type="button" name="verify"	class="btn btn-block btn-success text-white" 
+							 		disabled="disabled" onclick="verifyEmailOTP('INT_LOGIN_MERGE_OTP');"
+									id="verifyCitRegEmailOtpBtnId">VERIFY</button>
+									
+						</div>
+						</div>
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+						<span style="color: blue;">Please check your email-id for OTP, it may take 5-10 minutes.</span>
+						</div>	
+						
+						
+						</div>
+				
+						</div>	
+						</div>
+						</fieldset>
+						
+						</div>
+						<!-- EMAIL ID CONTAINER ENDS -->
+						
+						<!-- NEW EMAIL ID CONTAINER -->
+						<div id="newemailContainerDivId" style="display: none;">
+						<fieldset>
+							<div>
+							<legend class="blink_me" style="color: red;">New Email-Id to be Updated</legend>
+							
+							<div class="form-group padng">
+								<label class="control-label col-xs-12 col-sm-12 col-md-3 col-lg-3 required"
+									for="Name">New Email id</label>
+								<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+										<input type="text" id="newemailId" name="emailId" autocomplete="off" maxlength="50" 
+										class="form-control tooltilcls" placeholder="Email ID"
+									pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$"
+									onblur="validateNewEmail();"
+										required="required" />
+										
+									</div>
+								</div>
+							</div>
+						
+						<div id="newemailIdOtpContainerDivId">	
+						<div class="cleafix"></div>
+						
+						
+						<div class="form-group padng">
+						
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding" id="newemailcaptchaDiId">
+						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 mb-2">
+										<label>Captcha</label> 
+									</div>
+						
+						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-10 mb-2">
+						<input type="text" class="form-control col-lg-10 col-md-7 textformat" name="j_captcha_response" id="j_captcha_response_newemail" maxlength="6"> 
+						</div>	
+						
+						<div class="col-lg-6 col-md-3 col-sm-12 col-xs-12 mb-2">
+						<img id="captcha_newemail_ID" src="Captcha" class="captcha" border="0">
+							        <a href="javascript:void(0);" onclick="doRefreshCAPTCHA('captcha_newemail_ID');">
+							        	<i class="fa fa-refresh" aria-hidden="true"></i>
+							        </a>
+						</div>
+						
+						</div> 
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+												        
+						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 mb-2">
+							<label class="control-label" for="colonyIDSelect"> </label> 
+							<button type="button" name="verify"	disabled="disabled"  class="btn btn-block btn-primary text-white" 
+							 		 onclick="newgetEmailOTPforIntRegUpdate();"
+									id="newgetCitOtpBtnID">GET OTP</button>
+									
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" id="">
+							<label class="control-label" for="colonyIDSelect">ENTER OTP FROM EMAIL</label>
+							<div class="input-group mb-4">
+								<span class="input-group-addon"><i class="fa fa-th"></i></span> 
+								<input id="newotpCitRegEmailId" type="text" onkeypress="return onlyNumbers(event);" name="otpValueEmail"
+								class="form-control tooltilcls" maxlength="6" title="Valid OTP is 6 digit numeric" placeholder="ENTER OTP FROM EMAIL"/>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12  mb-2" id="">
+							<label class="control-label" for="colonyIDSelect" > </label> 
+							<!-- <a class="btn btn-block btn-success text-white" 
+							 id="verifyCitRegOtpBtnId" onclick="verifyOTP();">VERIFY</a> -->
+							 
+							 <button type="button" name="verify"	class="btn btn-block btn-success text-white" 
+							 		disabled="disabled" onclick="verifyEmailOTP('INT_LOGIN_MERGE_NEW_EMAIL_OTP');"
+									id="newverifyCitRegEmailOtpBtnId">VERIFY</button>
+									
+						</div>
+						</div>
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+						<span style="color: blue;">Please check your email-id for OTP, it may take 5-10 minutes.</span>
+						</div>
+							
+						
+						
+						</div>
+				
+						</div>	
+						</div>
+						</fieldset>
+						</div>
+						<!-- NEW EMAIL ID CONTAINER ENDS-->
+						
+						
+						<div class="cleafix"></div>
+						<div class="cleafix"></div>
+						
+						
+						<!-- LOGIN DETAILS CONTAINER -->
+						<div id="loginIdContainerDivId" style="display: none;">
+							<fieldset>
+							<div>
+							<legend>Set Login-Id/Password Details</legend>
+							<div class="cleafix"></div>
+							<div class="form-group padng">
+								<label class="control-label col-xs-12 col-sm-12 col-md-3 col-lg-3 required"
+									for="Name">Login-Id
+								</label>
+								<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-th"></i></span>
+										<input type="text" id="loginId" name="loginId" autocomplete="off" maxlength="40" 
+										class="form-control tooltilcls" placeholder="Eg: abc@gmail.com or 123456 or acd123 or UPIC S" onblur="validateLoginIdCitizen();"
+									value=""	
+										required="required" title="Login Id should not have any spaces and capital letters and length should be between 6 and 40"/>
+									</div>
+								</div>
+							</div>
+							
+							<div class="cleafix"></div>
+							<div class="form-group padng">
+								<label class="control-label col-xs-12 col-sm-12 col-md-3 col-lg-3 required"
+									for="Name">Password
+								</label>
+								<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-key"></i></span>
+										<span class="input-group-addon"><i id="togglePasswordVisiblityIcon" class="fa fa-eye-slash" onclick="togglePasswordVisiblity()"></i></span>
+										<input type="password" id="passwordId" name="password" autocomplete="off" maxlength="20" class="form-control tooltilcls"  
+										placeholder="password" 
+									value=""	
+										required="required" title="Password length is between 6 and 20, should consist of atleast one number, one upper case and one lower case. "/>
+										
+									</div>
+								</div>
+							</div>
+							<div class="cleafix"></div>
+							<div class="form-group padng">
+								<label class="control-label col-xs-12 col-sm-12 col-md-3 col-lg-3 required"
+									for="Name">Confirm Password</label>
+								<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-key"></i></span>
+										<input type="password" id="confirmPasswordId" name="confirmPassword" autocomplete="off" maxlength="50" onfocus="validatePassword()" 
+										class="form-control tooltilcls" placeholder="Confirm Password"
+									value=""	
+										required="required" title="Confirm Password should be same as Password"/>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 mb-2">
+							<label class="control-label" for="colonyIDSelect"> </label> 
+							<button type="button" name="verify"	class="btn btn-block btn-primary text-white" 
+							 		 onclick="finalSubmit();" id="finalSubmitBtnId"
+									>Submit</button>
+									
+							</div>
+							</div>
+							</fieldset>
+							</div>
+							<!-- LOGIN DETAILS CONTAINER ENDS -->
+										
+                    		<!-- NEW EMAIL DOC DETAILS CONTAINER -->
+						<div id="docIdContainerDivId" style="display: none;">
+							<fieldset>
+							<div>
+							<legend>Document</legend>
+							<div class="cleafix"></div>
+							<div class="form-group padng">
+								<label class="control-label col-xs-12 col-sm-12 col-md-3 col-lg-3"
+									for="Name">Upload Id-Proof <span style="color: red">*</span> </br>
+									<span style="font-size: x-small; color: red">(Supported format - pdf with max size upto 5 MB)<br/>
+									For security reasons, owner ID proof will be verified from the existing property detail, if matched you'll get an email within next 2 working days. Then you can pay your tax.
+									</span>
+								</label>
+								<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-th"></i></span>
+										<form id="newfinalFrmID"
+											action="web/citizen/submitNewEmailIntRegUpdate" method="POST"
+											enctype="multipart/form-data">
+										<input type="file" id="docUploadId" name = "doc" accept="application/pdf">
+										<input type="hidden" id="newmobfinalFrmID" name="mob"> 
+										<input type="hidden" id="newccfinalFrmID" name="cc"> 
+										<input type="hidden" id="newcitizenGuidfinalFrmID" name="citizenGuid"> 
+										<input type="hidden" id="newemailfinalFrmID" name="email"> 
+										<input type="hidden" id="newloginIdFrmID" name="login"> 
+										<input type="hidden" id="newpwdfinalFrmID" name="pwd"> 
+										<input type="hidden" id="newcpwdfinalFrmID" name="cpwd"> 
+										<input type="hidden" name="_csrf" value="4fc9697e-9451-467f-adbc-e63fdf7e0543"/>
+										</form>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 mb-2">
+							<label class="control-label" for="colonyIDSelect"> </label> 
+							<button type="button" name="verify"	class="btn btn-block btn-primary text-white" 
+							 		 onclick="submitNewEmailIntRegUpdate();" id="newfinalSubmitBtnId"
+									>Submit</button>
+									
+							</div>
+							</div>
+							</fieldset>
+							</div>
+							<!-- LOGIN DETAILS CONTAINER ENDS -->
+							
+							
+							<div class="clearfix"></div>
+							
+							
+							</div>
+							</div>
+							<div class="clearfix"></div>
+						
+						
+					</div>
+  
+  </div>
+  </div>
+                    </div>                                                           	                                     
+                   
+                    </div>
+                    </div>
+		
+	</div>
+
+
+<form id="intlCitInfoFrmID" action="web/citizen/intlCitInfo" method="post">
+<input type="hidden" id="mobIntlCitInfoFrmID" name="mob"> 
+<input type="hidden" id="ccIntlCitInfoFrmID" name="cc"> 
+<input type="hidden" name="_csrf" value="4fc9697e-9451-467f-adbc-e63fdf7e0543"/>
+<input type="hidden" id ="j_captcha_responseFrmId" name="j_captcha_response">
+</form>
+
+<form id="valIntRegUpdateFrmID" action="web/citizen/validateIntRegUpdate" method="post">
+<input type="hidden" id="mobIntRegUpdateFrmID" name="mob"> 
+<input type="hidden" id="ccIntRegUpdateFrmID" name="cc"> 
+<input type="hidden" id="citizenGuidIntRegUpdateFrmID" name="citizenGuid"> 
+<input type="hidden" id="emailIntRegUpdateFrmID" name="email"> 
+<input type="hidden" name="_csrf" value="4fc9697e-9451-467f-adbc-e63fdf7e0543"/>
+</form>
+
+<form id="newvalIntRegUpdateFrmID" action="web/citizen/validateNewIntRegUpdate" method="post">
+<input type="hidden" id="newmobIntRegUpdateFrmID" name="mob"> 
+<input type="hidden" id="newccIntRegUpdateFrmID" name="cc"> 
+<input type="hidden" id="newcitizenGuidIntRegUpdateFrmID" name="citizenGuid"> 
+<input type="hidden" id="newemailIntRegUpdateFrmID" name="email"> 
+<input type="hidden" name="_csrf" value="4fc9697e-9451-467f-adbc-e63fdf7e0543"/>
+</form>
+
+<form id="validateLoginIdFrmID" action="web/citizen/validateLoginIdCitizen" method="post">
+<input type="hidden" id="loginIdValidateLoginIdFrmID" name="loginId"> 
+<input type="hidden" name="_csrf" value="4fc9697e-9451-467f-adbc-e63fdf7e0543"/>
+</form>
+
+<form id="emailOTPIntFrmID" action="web/citizen/genEmailOTPforIntRegUpdate" method="post">
+<input type="hidden" id="mobEmailOTPIntFrmID" name="mob"> 
+<input type="hidden" id="ccemailOTPIntFrmID" name="cc"> 
+<input type="hidden" id="citizenGuidemailOTPIntFrmID" name="citizenGuid"> 
+<input type="hidden" id="emailEmailOTPIntFrmID" name="email"> 
+<input type="hidden" name="_csrf" value="4fc9697e-9451-467f-adbc-e63fdf7e0543"/>
+<input type="hidden" id ="email_j_captcha_responseFrmId" name="j_captcha_response">
+</form>
+
+
+<form id="newemailOTPIntFrmID" action="web/citizen/newgenEmailOTPforIntRegUpdate" method="post">
+<input type="hidden" id="newmobEmailOTPIntFrmID" name="mob"> 
+<input type="hidden" id="newccemailOTPIntFrmID" name="cc"> 
+<input type="hidden" id="newcitizenGuidemailOTPIntFrmID" name="citizenGuid"> 
+<input type="hidden" id="newemailEmailOTPIntFrmID" name="email"> 
+<input type="hidden" name="_csrf" value="4fc9697e-9451-467f-adbc-e63fdf7e0543"/>
+<input type="hidden" id ="newemail_j_captcha_responseFrmId" name="j_captcha_response"> 
+</form>
+
+<form id="finalFrmID" action="web/citizen/submitIntRegUpdate" method="post">
+<input type="hidden" id="mobfinalFrmID" name="mob"> 
+<input type="hidden" id="ccfinalFrmID" name="cc"> 
+<input type="hidden" id="citizenGuidfinalFrmID" name="citizenGuid"> 
+<input type="hidden" id="emailfinalFrmID" name="email"> 
+<input type="hidden" id="loginIdFrmID" name="login"> 
+<input type="hidden" id="pwdfinalFrmID" name="pwd"> 
+<input type="hidden" id="cpwdfinalFrmID" name="cpwd"> 
+<input type="hidden" name="_csrf" value="4fc9697e-9451-467f-adbc-e63fdf7e0543"/>
+</form>
+
+<form id="toggleFrmID" action="web/citizen/toggleForNewEmailIntUpdate" method="post">
+<input type="hidden" id="tgmobIntRegUpdateFrmID" name="mob"> 
+<input type="hidden" id="tgccIntRegUpdateFrmID" name="cc"> 
+<input type="hidden" id="tgcitizenGuidIntRegUpdateFrmID" name="citizenGuid"> 
+<input type="hidden" name="_csrf" value="4fc9697e-9451-467f-adbc-e63fdf7e0543"/>
+</form>
+
+</section> 
+
+
+<script>
+
+function intlCitInfo()
+{
+	
+	if(cc != null && cc != '91' && mob != ''  && !isNaN(mob) ){
+		
+		validateIntlMob(mob);
+	}
+	var cText = $("#j_captcha_response").val();
+	if(cText == '')
+		{
+			createSmallAlert('Captch is required');
+			return false;
+		}
+	if(cText.length != 6)
+	{
+		createSmallAlert('Captch is invalid');
+		return false;
+	}
+	
+	var mob = $("#mobileNoID").val();	
+	var cc = $("#countryCodeID").val();
+	$("#mobIntlCitInfoFrmID").val(mob);
+	$("#ccIntlCitInfoFrmID").val(cc);
+	$("#j_captcha_responseFrmId").val(cText);
+	var formData = new FormData();
+	var params = $("#intlCitInfoFrmID").serializeArray();
+	$.each(params, function(i, val) {
+	    formData.append(val.name, val.value);
+	});
+	$.ajax({
+		type : "POST",
+		url : "web/citizen/intlCitInfo",
+		 data : formData,  
+	     cache: false,
+	     async: true,
+	     contentType: false,
+	     processData: false,
+		beforeSend : function() {
+			 $("#overlay").fadeIn(300);
+
+		},
+		success : function(data, status, xhr) {
+			if(xhr.getResponseHeader('OTP_ERROR_KEY') != null)
+				{
+					doRefreshCAPTCHA('captcha_ID');
+					createSmallAlert(xhr.getResponseHeader('OTP_ERROR_KEY'));
+				}
+			/* if(data.status == true  && validateResponse(data.mobileNumber, data.otp)) */
+			if(data.status == false || data.status == 'false')
+			{
+				doRefreshCAPTCHA('captcha_ID');
+				
+				status = false;
+				createAlert(data.message);
+				$("#mobileNoID").val('');
+				$("#emailId").val('');
+				$("#emailContainerDivId").hide();
+				return false;
+			}
+			
+			if(data.status == true || data.status == 'true')
+			{
+				doRefreshCAPTCHA('captcha_email_ID');
+				$("#mobCaptchaDivId").hide();
+				createAlert(data.message);
+				$("#emailContainerDivId").show();
+				$("#citizenGuidId").val(data.citizenGuid);
+				$("#countryCodeID").attr('readonly', true);
+				$("#mobileNoID").attr('readonly', true);
+				$("#submitmobBtnId").attr("disabled", true);
+			}
+			
+			
+		},
+		error : function(e) {
+			alert('error '+e);
+			doRefreshCAPTCHA('captcha_ID');
+		},
+		complete : function() {
+			setTimeout(function(){
+		        $("#overlay").fadeOut(300);
+		      },300);
+		}
+	});
+	
+	
+}
+
+function validateIntlMob(phone) {
+	
+	
+    var regex =   /^\(?([1-9]{1})\)?([0-9]{9,15})$/;
+
+    if (regex.test(phone)) {
+       
+    	//alert ('valid intl mobile no');
+        return true;
+    	
+    } else {
+    	createSmallAlert("Please enter a valid Mobile number");
+		return false;
+    }
+    
+    
+}
+
+function validateEmail()
+{
+	var email = $("#emailId").val();
+	if(email.length<4)
+		{
+			createSmallAlert('Please enter a correct email-id');
+			return false;
+		}
+	var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,6}$/i;
+	if(email!='' && !testEmail.test(email))
+		{
+			createSmallAlert('Please enter a valid email-id');
+			$("#emailId").val('');
+			return false;
+		}
+	else
+		{
+			var mob = $("#mobileNoID").val();	
+	    	var cc = $("#countryCodeID").val();
+	    	$("#mobIntRegUpdateFrmID").val($("#mobileNoID").val());
+	    	$("#ccIntRegUpdateFrmID").val($("#countryCodeID").val());
+	    	$("#citizenGuidIntRegUpdateFrmID").val($("#citizenGuidId").val());
+	    	$("#emailIntRegUpdateFrmID").val($("#emailId").val());
+	    	var fCount = parseInt($("#failureCountId").val());
+	    	var formData = new FormData();
+	    	var params = $("#valIntRegUpdateFrmID").serializeArray();
+	    	$.each(params, function(i, val) {
+	    	    formData.append(val.name, val.value);
+	    	});
+	    	
+	    	$.ajax({
+	    		type : "POST",
+	    		url : "web/citizen/validateIntRegUpdate",
+	    		 data : formData,  
+	    	     cache: false,
+	    	     async: true,
+	    	     contentType: false,
+	    	     processData: false,
+	    		beforeSend : function() {
+	    			 $("#overlay").fadeIn(300);
+	    		},
+	    		success : function(data, status, xhr) {
+	    			if( (data.status == false || data.status == 'false'))
+	    			{
+	    				status = false;
+	    				if(fCount < 2)
+	    					{
+	    						createAlert(data.message+ "You'll be provided with 3 attempts to enter your registered email-id.  Attempt "+ (parseInt(fCount)+parseInt(1)) +" of 3.");
+	    						
+	    						/* bootbox.confirm({
+		    	                    size: 'small',
+		    	                    message: data.message + ' If you dont have the email-id with which you registered, you can provide a new email-id. Note that you will have to upload your ID proof in this case which will be manually validated by our team. Click Ok to enter new email or else click on cancel',
+		    	                    callback: function(result) { 
+		    	                    	
+		    	                    	if(result == true)
+		    	                    		{
+			    	                    		$("#emailContainerDivId").hide();
+				    	                    	$("#newemailContainerDivId").show();
+		    	                    		}
+		    	                    }
+		    	                    }); */
+	    					}
+	    				
+
+	    				
+	    				$("#emailId").val('');
+	    				$("#failureCountId").val(fCount+1);
+	    				if(fCount == 2)
+	    					{
+	    					bootbox.confirm({
+	    	                    size: 'large',
+	    	                    message: 'Incorrect Email. If you dont remember the registered Email Id, please provide a New Email Id. Pls. note that, in this case, you will have to upload your ID proof which will be validated by department. Please click CANCEL to enter your registered Email Id in case you remember it correctly else click on OK to enter your NEW Email Id. Attempt 3 of 3',
+	    	                    callback: function(result) { 
+	    	                    	if(result == true)
+    	                    		{
+	    	                    		$("#emailContainerDivId").hide();
+		    	                    	$("#newemailContainerDivId").show();
+    	                    		}
+	    	                    }
+	    	                    });
+	    					}
+	    				if(fCount > 3)
+    					{
+	    					createSmallAlert('Number of attempts exceeded');
+	    					return false;
+    					}
+	    				return false;
+	    			}
+	    			
+	    			if(data.status == true || data.status == 'true')
+	    			{
+						$("#emailId").attr('readonly', true);
+	    				$("#citizenGuidId").val(data.citizenGuid);
+	    				$("#getCitOtpBtnID").attr("disabled", false);
+	    				$("#toggleNewEmailDivId").hide();
+	    				$("#failureCountId").val('0');
+	    				
+	    			}
+	    		},
+	    		error : function(e) {
+	    			alert('error '+e)
+	    		},
+	    		complete : function() {
+	    			setTimeout(function(){
+	    		        $("#overlay").fadeOut(300);
+	    		      },300);
+	    		}
+	    	});
+		}
+}
+
+function toggleNewEmail()
+{
+	bootbox.confirm({
+        size: 'large',
+        message: 'NOTE- In this case, you will have to upload your ID proof which will be validated by the department. Please click CANCEL to enter your registered Email Id in case you remember it correctly else click on OK to enter your NEW Email Id.',
+        callback: function(result) { 
+        	if(result == true)
+    		{
+        		
+        		var mob = $("#mobileNoID").val();	
+    	    	var cc = $("#countryCodeID").val();
+    	    	$("#tgmobIntRegUpdateFrmID").val($("#mobileNoID").val());
+    	    	$("#tgccIntRegUpdateFrmID").val($("#countryCodeID").val());
+    	    	$("#tgcitizenGuidIntRegUpdateFrmID").val($("#citizenGuidId").val());
+    	    	var formData = new FormData();
+    	    	var params = $("#toggleFrmID").serializeArray();
+    	    	$.each(params, function(i, val) {
+    	    	    formData.append(val.name, val.value);
+    	    	});
+    	    	
+    	    	
+    	    	$.ajax({
+    	    		type : "POST",
+    	    		url : "web/citizen/toggleForNewEmailIntUpdate",
+    	    		 data : formData,  
+    	    	     cache: false,
+    	    	     async: true,
+    	    	     contentType: false,
+    	    	     processData: false,
+    	    		beforeSend : function() {
+    	    			$("#overlay").fadeIn(300);
+    	    		},
+    	    		success : function(data, status, xhr) {
+    	    			
+    	    			if(data.status == false || data.status == 'false')
+    	    			{
+    	    				status = false;
+    	    				createSmallAlert(data.message);
+    	    				return false;
+    	    			}
+    	    			
+    	    			if(data.status == true || data.status == 'true')
+    	    			{
+    	    				status = true;
+    	    				$("#emailContainerDivId").hide();
+        	            	$("#newemailContainerDivId").show();
+    	    				return false;
+    	    			}
+    	    			
+    	    		},
+    	    		error : function(e) {
+    	    			alert('error '+e);
+    	    		},
+    	    		complete : function() {
+    	    			setTimeout(function(){
+    	    		        $("#overlay").fadeOut(300);
+    	    		      },300);
+    	    		}
+    	    	});
+    	    	
+            	doRefreshCAPTCHA('captcha_newemail_ID');
+    		}
+        }
+        });
+	
+	}
+
+function validateNewEmail()
+{
+	var email = $("#newemailId").val();
+	var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,6}$/i;
+	if(email!='' && !testEmail.test(email))
+		{
+			createSmallAlert('Please enter a valid email-id');
+			$("#newemailId").val('');
+			return false;
+		}
+	
+	$("#newmobIntRegUpdateFrmID").val($("#mobileNoID").val());
+	$("#newccIntRegUpdateFrmID").val($("#countryCodeID").val());
+	$("#newcitizenGuidIntRegUpdateFrmID").val($("#citizenGuidId").val());
+	$("#newemailIntRegUpdateFrmID").val($("#newemailId").val());
+	
+	var formData = new FormData();
+    var params = $("#newvalIntRegUpdateFrmID").serializeArray();
+    $.each(params, function(i, val) {
+        formData.append(val.name, val.value);
+    });
+    $.ajax({
+		type : "POST",
+		url : "web/citizen/validateNewIntRegUpdate",
+		 data : formData,  
+	     cache: false,
+	     async: true,
+	     contentType: false,
+	     processData: false,
+		beforeSend : function() {
+			 $("#overlay").fadeIn(300);
+		},
+		success : function(data, status, xhr) {
+			if( (data.status == false || data.status == 'false'))
+			{
+				status = false;
+				createSmallAlert(data.message);
+				$("#newemailId").val('');
+				$("#failureCountId").val(fCount+1);
+				return false;
+			}
+			
+			if(data.status == true || data.status == 'true')
+			{
+				//$("#newemailId").attr('readonly', true);
+				$("#citizenGuidId").val(data.citizenGuid);
+				$("#newgetCitOtpBtnID").attr("disabled", false);
+				
+			}
+		},
+		error : function(e) {
+			alert('error '+e)
+		},
+		complete : function() {
+			setTimeout(function(){
+		        $("#overlay").fadeOut(300);
+		      },300);
+		}
+	});
+    
+	
+	}
+
+function getEmailOTPforIntRegUpdate()
+{
+	
+	var email = $("#emailId").val();
+	var cText = $("#j_captcha_response_email").val();
+	if(cText == '')
+		{
+			createSmallAlert('Captch is required');
+			return false;
+		}
+	if(cText.length != 6)
+	{
+		createSmallAlert('Captch is invalid');
+		return false;
+	}
+	
+	
+	$("#mobEmailOTPIntFrmID").val($("#mobileNoID").val());
+	$("#ccemailOTPIntFrmID").val($("#countryCodeID").val());
+	$("#citizenGuidemailOTPIntFrmID").val($("#citizenGuidId").val());
+	$("#emailEmailOTPIntFrmID").val($("#emailId").val());
+	$("#email_j_captcha_responseFrmId").val(cText);
+	var formData = new FormData();
+    var params = $("#emailOTPIntFrmID").serializeArray();
+    $.each(params, function(i, val) {
+        formData.append(val.name, val.value);
+    });
+    var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,6}$/i;
+    if (testEmail.test(email))
+    {
+		$.ajax({
+			type : "POST",
+			url : "web/citizen/genEmailOTPforIntRegUpdate",
+			 data : formData,  
+             cache: false,
+             async: true,
+             contentType: false,
+             processData: false,
+			beforeSend : function() {
+				$("#overlay").fadeIn(300);
+			},
+			success : function(data, status, xhr) {
+				if(xhr.getResponseHeader('OTP_ERROR_KEY') != null)
+				{
+					doRefreshCAPTCHA('captcha_email_ID');
+					createSmallAlert(xhr.getResponseHeader('OTP_ERROR_KEY'));
+				}
+				
+				if(data.status == true || data.status == 'true')
+				{
+					alert(data.message);
+					doRefreshCAPTCHA('captcha_email_ID');
+					//document.getElementById("citizenRegistrationBtnID").removeAttribute("disabled");
+					//$("#getCitOtpBtnID").attr("disabled", true);
+					$("#verifyCitRegEmailOtpBtnId").attr("disabled", false);
+					//$("#emailId").attr('readonly', true);
+					
+				}
+				if(data.status == false || data.status =='false')
+				{
+					alert(data.message);
+				}
+			},
+			error : function(e) {
+				alert('error '+e)
+			},
+			complete : function() {
+				setTimeout(function(){
+			        $("#overlay").fadeOut(300);
+			      },300);
+			}
+		});
+		
+		}
+	else
+		{
+			alert('Please enter a valid email');
+		}
+	
+	
+	}
+	
+function newgetEmailOTPforIntRegUpdate()
+{
+	
+	var cText = $("#j_captcha_response_newemail").val();
+	if(cText == '')
+		{
+			createSmallAlert('Captch is required');
+			return false;
+		}
+	if(cText.length != 6)
+	{
+		createSmallAlert('Captch is invalid');
+		return false;
+	}
+	
+	
+	var email = $("#newemailId").val();
+	$("#newmobEmailOTPIntFrmID").val($("#mobileNoID").val());
+	$("#newccemailOTPIntFrmID").val($("#countryCodeID").val());
+	$("#newcitizenGuidemailOTPIntFrmID").val($("#citizenGuidId").val());
+	$("#newemailEmailOTPIntFrmID").val($("#newemailId").val());
+	$("#newemail_j_captcha_responseFrmId").val(cText);
+	
+	
+	var formData = new FormData();
+    var params = $("#newemailOTPIntFrmID").serializeArray();
+    $.each(params, function(i, val) {
+        formData.append(val.name, val.value);
+    });
+    var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,6}$/i;
+    if (testEmail.test(email))
+    {
+		$.ajax({
+			type : "POST",
+			url : "web/citizen/newgenEmailOTPforIntRegUpdate",
+			 data : formData,  
+             cache: false,
+             async: true,
+             contentType: false,
+             processData: false,
+			beforeSend : function() {
+				$("#overlay").fadeIn(300);
+			},
+			success : function(data, status, xhr) {
+				
+				if(xhr.getResponseHeader('OTP_ERROR_KEY') != null)
+				{
+					doRefreshCAPTCHA('captcha_newemail_ID');
+					createSmallAlert(xhr.getResponseHeader('OTP_ERROR_KEY'));
+				}
+				
+				if(data.status == true || data.status == 'true')
+				{
+					alert(data.message);
+					doRefreshCAPTCHA('captcha_newemail_ID');
+					$("#newemailId").attr('readonly', true);
+					$("#newverifyCitRegEmailOtpBtnId").attr("disabled", false);
+					
+				}
+				if(data.status == false || data.status =='false')
+				{
+					alert(data.message);
+				}
+			},
+			error : function(e) {
+				alert('error '+e)
+			},
+			complete : function() {
+				setTimeout(function(){
+			        $("#overlay").fadeOut(300);
+			      },300);
+			}
+		});
+		
+		}
+	else
+		{
+			alert('Please enter a valid email');
+		}
+	
+	
+	}
+
+	
+function verifyEmailOTP(otpT)
+{
+	var email = $("#emailId").val();
+	var otp = $("#otpCitRegEmailId").val();
+	if(otpT == 'INT_LOGIN_MERGE_NEW_EMAIL_OTP')
+	{
+		email = $("#newemailId").val();
+		otp = $("#newotpCitRegEmailId").val();
+	}
+	
+	$.ajax({
+		type : "GET",
+		url : "web/citizen/validateEmailOTP?email=" + email+"&otp="+otp+"&otpType="+otpT,
+		cache : false,
+		async : true,
+		beforeSend : function() {
+			$("#overlay").fadeIn(300);
+		},
+		success : function(data, status, xhr) {
+			//alert(data.status);
+			/* if(data.status == true  && validateResponse(data.mobileNumber, data.otp)) */
+			if(data.status == true)
+			{
+				if(decryptVal(data.mobileNumber, $("#emailId").val(), 128, 1000)
+						== $("#emailId").val() && 
+						decryptVal(data.otp, $("#otpCitRegEmailId").val(), 128, 1000)
+						== $("#otpCitRegEmailId").val())
+				{
+					
+					if(otpT == 'INT_LOGIN_MERGE_OTP')
+						{
+							$('#verifyCitRegEmailOtpBtnId').attr("disabled", true);
+							$('#otpCitRegEmailId').prop('readonly', true);
+							$("#loginIdContainerDivId").show();
+							$("#loginId").val($("#emailId").val());
+							$("#emailcaptchaDiId").hide();
+						}
+					
+					if(otpT == 'INT_LOGIN_MERGE_NEW_EMAIL_OTP')
+					{
+						$('#newverifyCitRegEmailOtpBtnId').attr("disabled", true);
+						$('#newotpCitRegEmailId').prop('readonly', true);
+						$("#docIdContainerDivId").show();
+						$("#newemailcaptchaDiId").hide();
+					}
+					
+					
+					alert(data.message);
+					
+				}
+				else
+				{
+					alert('Invalid Parameters');
+				}
+					
+				//document.getElementById("citizenRegistrationBtnID").removeAttribute("disabled");
+				
+			}
+			if(data.status == false|| data.status == 'false')
+			{
+				$("#otpCitRegEmailId").val('');
+				alert(data.message);
+			}
+		},
+		error : function(e) {
+			alert('error '+e)
+		},
+		complete : function() {
+			setTimeout(function(){
+		        $("#overlay").fadeOut(300);
+		      },300);
+		}
+	});
+	
+}
+
+
+function validatePassword() {
+	var pass = $("#passwordId").val();
+	/* if(!pass.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,20}$/)){
+		alert("Enter a Valid Password");
+		$("#passwordId").focus();
+	} */
+	
+	// Regex explanation:
+    // (?=.*[a-z])      --> at least one lowercase letter
+    // (?=.*[A-Z])      --> at least one uppercase letter
+    // (?=.*\d)         --> at least one digit
+    // (?=.*[!@#$%^&*]) --> at least one special character (customize as needed)
+    // .{6,20}          --> length between 6 and 20 characters
+    var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{6,20}$/;
+
+    if (!passwordRegex.test(pass)) {
+        alert("Password must be 6-20 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character.");
+        $("#passwordId").focus();
+        return false;
+    }
+
+    // Password is valid
+    return true
+}
+
+function togglePasswordVisiblity() {
+	if($("#passwordId").attr('type') === 'password'){
+		$("#passwordId").attr('type','text');
+		$("#togglePasswordVisiblityIcon").attr('class','fa fa-eye');
+	}else{
+		$("#passwordId").attr('type','password');
+		$("#togglePasswordVisiblityIcon").attr('class','fa fa-eye-slash');
+	}
+	
+}
+
+function finalSubmit()
+{
+	
+	$("#mobfinalFrmID").val($("#mobileNoID").val());
+	$("#ccfinalFrmID").val($("#countryCodeID").val());
+	$("#citizenGuidfinalFrmID").val($("#citizenGuidId").val());
+	$("#emailfinalFrmID").val($("#emailId").val());
+	$("#loginIdFrmID").val($("#loginId").val());
+	$("#pwdfinalFrmID").val($("#passwordId").val());
+	$("#cpwdfinalFrmID").val($("#confirmPasswordId").val());
+	
+	var formData = new FormData();
+    var params = $("#finalFrmID").serializeArray();
+    $.each(params, function(i, val) {
+        formData.append(val.name, val.value);
+    });
+    
+    
+    var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,6}$/i;
+    if (testEmail.test($("#emailId").val()))
+    {
+		$.ajax({
+			type : "POST",
+			url : "web/citizen/submitIntRegUpdate",
+			 data : formData,  
+             cache: false,
+             async: true,
+             contentType: false,
+             processData: false,
+			beforeSend : function() {
+				$("#overlay").fadeIn(300);
+			},
+			success : function(data, status, xhr) {
+				//alert(data);
+				//alert(data.status);
+				
+				if(data.status == true || data.status == 'true')
+				{
+					$("#finalSubmitBtnId").attr("disabled", true);
+					bootbox.confirm({
+	                    size: 'small',
+	                    message: data.message,
+	                    callback: function(result) { 
+	                        setTimeout(function() {
+	                        	window.location.href="web/citizen/info";
+							  }, 2000);
+	                    }
+	                    });
+				}
+				if(data.status == false || data.status =='false')
+				{
+					alert(data.message);
+				}
+			},
+			error : function(e) {
+				alert('error '+e)
+			},
+			complete : function() {
+				setTimeout(function(){
+			        $("#overlay").fadeOut(300);
+			      },300);
+			}
+		});
+		
+		}
+	else
+		{
+			alert('Please enter a valid email');
+		}
+	
+	
+	}
+
+	$(document).ready(function() {
+	 $('.tooltilcls').tooltip({trigger: "focus", placement: "right"});
+	});
+
+	 
+	function submitNewEmailIntRegUpdate()
+	{ 
+		
+		$("#newmobfinalFrmID").val($("#mobileNoID").val());
+		$("#newccfinalFrmID").val($("#countryCodeID").val());
+		$("#newcitizenGuidfinalFrmID").val($("#citizenGuidId").val());
+		$("#newemailfinalFrmID").val($("#newemailId").val());
+		$("#newdocfinalFrmID").val($("#docUploadId").val());
+		
+		var form = $('#newfinalFrmID')[0];
+		var formData = new FormData(form);
+	   /*  var params = $("#newfinalFrmID").serializeArray();
+	    $.each(params, function(i, val) {
+	        formData.append(val.name, val.value);
+	    }); */
+	    
+	    
+	    var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,6}$/i;
+	    if (testEmail.test($("#newemailId").val()))
+	    {
+			$.ajax({
+				type : "POST",
+				url : "web/citizen/submitNewEmailIntRegUpdate",
+				 data : formData,  
+	             cache: false,
+	             async: true,
+	             contentType: false,
+	             enctype: 'multipart/form-data',
+	             processData: false,
+				beforeSend : function() {
+					$("#overlay").fadeIn(300);
+				},
+				success : function(data, status, xhr) {
+					//alert(data);
+					//alert(data.status);
+					
+					if(data.status == true || data.status == 'true')
+					{
+						$("#finalSubmitBtnId").attr("disabled", true);
+						bootbox.confirm({
+		                    size: 'small',
+		                    message: data.message,
+		                    callback: function(result) { 
+		                        setTimeout(function() {
+		                        	window.location.href="web/citizen/info";
+								  }, 2000);
+		                    }
+		                    });
+					}
+					if(data.status == false || data.status =='false')
+					{
+						alert(data.message);
+					}
+				},
+				error : function(e) {
+					alert('error '+e)
+				},
+				complete : function() {
+					setTimeout(function(){
+				        $("#overlay").fadeOut(300);
+				      },300);
+				}
+			});
+			
+			}
+		else
+			{
+				alert('Please enter a valid email');
+			}
+		
+		
+		} 
+	
+
+		
+		
+		$(document).ready(function() {
+		 $('.tooltilcls').tooltip({trigger: "focus", placement: "right"});
+		});
+		
+		
+
+	var countFor5MB = 0;
+	function uploadFilePropertiesFor5MB(element) {
+		// console.log("File Length : " + element.files.length);
+		// var count = 0;
+		//var Contnr = document.getElementById("fileUploadContnrID");
+
+		// alert("Contnr is "+Contnr);
+
+		// for (count; count < element.files.length; count++) {
+
+		var fileNameHidden = document.createElement("input");
+		fileNameHidden.setAttribute("type", "text");
+		// fileNameHidden.setAttribute("name", "property.propertyDoc[" + count
+		// + "].docName");
+
+		fileNameHidden.setAttribute("name", "property.propertyDoc[" + count
+				+ "].docName");
+		// fileNameHidden.setAttribute("value", element.files[0].name);
+
+		// var firstNameTxt = document.createTextNode(firstName);
+		// firstNameCell.appendChild(firstNameTxt);
+
+		// document.getElementById(element) = ""
+
+		// file content checking
+
+		// alert('sssssss') ;
+		// var result = $('div#result');
+
+		if (window.FileReader && window.Blob) {
+
+			var file = element.files[0];
+			if (file.size > 0) {
+
+				if (file.size > 5242880) {
+					alert('file size should be less than 5 MB');
+
+					var docUpload = $("#" + element.id);
+
+					docUpload.replaceWith(docUpload.val('').clone(true));
+
+					return false;
+				}
+
+				var fileReader = new FileReader();
+				fileReader.onloadend = function(e) {
+
+					var arr = (new Uint8Array(e.target.result)).subarray(0, 4);
+					var header = '';
+
+					for (var i = 0; i < arr.length; i++) {
+						header += arr[i].toString(16);
+					}
+
+					// Check the file signature against known types
+					var type = 'unknown';
+					switch (header) {
+
+					case '89504e47':
+						type = 'unknown';
+						break;
+					case '47494638':
+						type = 'unknown';
+						break;
+					case 'ffd8ffe0':
+					case 'ffd8ffe1':
+					case 'ffd8ffe2':
+						type = 'unknown';
+						break;
+					case '25504446':
+						type = 'application/pdf';
+						break;
+					}
+
+					if (file.type !== type) {
+						// result.html('<span style="color: red; ">Mime type
+						// detected: ' + type + '. Does not match file
+						// extension.</span>');
+
+						alert('Not a pdf file upload correct file');
+
+						var docUploadpdf = $("#" + element.id);
+
+						docUploadpdf.replaceWith(docUploadpdf.val('').clone(true));
+
+						return false;
+
+					} else {
+						fileNameHidden.setAttribute("value", element.files[0].name);
+						return true;
+					}
+				};
+				fileReader.readAsArrayBuffer(file);
+			}
+
+		} else {
+			console.error('FileReader or Blob is not supported by browser.');
+		}
+
+		// }
+
+		//Contnr.appendChild(fileNameHidden);
+		countFor5MB++;
+
+	}
+	
+	function doRefreshCAPTCHA(id){
+
+	    var d = new Date();
+	    
+	    var captchaObj1 = document.getElementById(id);
+		captchaObj1.src="Captcha\?"+d.getMilliseconds();
+		
+	}
+	
+</script>
+
+	</div>
+	
+	
+	<!-- </section> -->
+	</div>
+	
+	
+	<!-- FOOTER -->
+  <footer class="fixedfooter">  		
+		<div class="copyright">
+			<div class="container-fluid">
+				<div class="row py-2">
+				<!-- <section class="inner-page-contents" id="showFooterRibbonContent">	</section> -->
+		<!-- static start -->		
+           <!--  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer-Disclaimer">
+                <span> Disclaimer </span>
+          </div> -->
+					<div class=" col-lg-1 col-md-5 col-sm-12 col-xs-12 copyrighttext ">
+						<p class="disclamer1" style="margin: 0px 0px 5px 0px !important;">
+						
+             <!-- MUNICIPAL CORPORATION, DELHI -->
+							
+							<img src="static/images/mcd.png" alt="MCD Logo" width="35" height="35" class="bg-white" style="top: -492px;">
+							<a href="https://www.nic.in/" target="_blank">
+							<img src="static/images/footer-nic-logo.svg" alt="Nic Logo" width="35" height="35" class="" style="top: -492px;"></a>
+						</p>
+					</div>
+
+
+					<div class="col-lg-10 col-offset-lg-1 col-md-5 col-sm-12 col-xs-12 officaltext ">
+					<p class="disclamer1"> 		
+					Website Content Managed by 
+					
+					 Municipal Corporation of Delhi
+					, 
+					<a href="" onclick="showWebInfoDetailModal('')" data-bs-toggle="modal" data-bs-target="#webinfodetailModal">Web Information Manager</a> 
+					Designed, Developed and Hosted by&nbsp;<a href="https://www.nic.in/" target="_blank" onclick="return confirm('You are moving out of http://mcdonline.nic.in. Do you wish to continue?')">National Informatics Centre( NIC )</a>,
+					 <a href="https://meity.gov.in/" target="_blank" onclick="return confirm('You are moving out of http://mcdonline.nic.in. Do you wish to continue?')">Ministry of Electronics &amp; IT (MeitY) </a>  
+					 Copyright © 2022 
+							
+					</p>
+					
+					</div> 
+					
+					<div class="col-lg-1 col-offset-lg-1 col-md-3 col-sm-12 col-xs-12 officaltext">
+					<!-- <h6><strong>Follow Us</strong></h6> -->
+                 <div class="social" style="margin: 0px 0px 5px 0px !important;">
+               <!--    <a href="https://www.facebook.com/off.MCD/"  target="blank" id="share-fb" class="sharer button" title="Instagram"><i class="fa fa-2x fa-facebook-square"></i></a>
+                  <a href="https://www.instagram.com/mcd_delhi" target="blank" id="share-in" class="sharer button" title="Instagram"><i class="fa fa-2x fa-instagram"></i></a>
+                  <a href="https://twitter.com/MCD_Delhi" target="blank" id="share-tw" class="sharer button" title="Twitter"><i class="fa fa-2x fa-twitter-square"></i></a>                 
+              
+                  <a  href="mailto: support-mcd[at]mcd[dot]nic[dot]in"  target="blank" id="share-em" class="sharer button" title="Email"><i class="fa fa-2x fa-envelope-square"></i></a>
+                 -->
+                  </div>
+					
+					</div>
+                  
+                        <!-- static end -->
+			</div>
+				<div class="row footer2" >
+					<div class="col-lg-4">
+						<!-- Start of WebFreeCounter Code -->
+					<!-- 	 <div style="text-align: left; bottom: 0; /* position: absolute; */ color: #fff">
+						<span> Visitor No. <span> 44505794 </span>
+							 </span> 
+					</div> -->
+					
+					
+					</div>
+					<div class="col-lg-4 text-center">
+					<a class="compect footetextcolr" data-bs-toggle="modal" data-bs-target="#myModal" style="color:#fff;">Compatible Browsers</a>
+					</div>
+					<div class="col-lg-4 text-end">
+					<!-- <span>
+							<span class="span1" style="color:#fff">  Last Updated :  <span style="color:#fff;"> 03 June, 2024</span>
+							</span>
+						</span>
+					
+						 -->
+					</div>
+				</div>
+			</div>
+		</div>
+</footer> 
+		
+	<div class="backtotop-wrapper">
+
+        <a href="javascript:void(0);" class="back-to-top" title="Scroll to top"><span
+                class="fa fa-angle-up"></span><span class="hidden">Back to Top of the Page</span></a>
+    </div>
+    
+<!-- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+ -->	 
+  <script src="static/js/jquery.min.js"></script>
+	  
+	<div class="help-desk ">
+		<div class="toggle "></div>
+		<!-- <img src="static/images/helplineno.jpg"
+			class="helpimg" style="top: -54px; max-width: 100%;"> -->
+		<h3>
+			<i class="fa fa-phone" aria-hidden="true"></i> Help Desk
+		</h3>
+		<div class="scroll">
+			<ul class="helplinelink2">
+				<li><strong><i class="fa fa-phone" aria-hidden="true"></i>
+						Helpline Number (CCR) :</strong> 155305</li>
+						<li><strong><i class="fa fa-mobile"
+						aria-hidden="true"></i> Mobile(Only For PTR): </strong><br> <a
+					style="color: blue;"> 7065064988 (on WhatsApp Also)</a></li>
+				<li><strong><i class="fa fa-envelope"
+						aria-hidden="true"></i> e-Mail ID: </strong><br> <a
+					style="color: blue;"> mcd-ithelpdesk[at]mcd[dot]nic[dot]in</a></li>
+							<li> <a style="color: blue;" href="" target="_blank"> Click here for Complaint</a></li>				
+				<li><strong> Mobile App :</strong><br> <strong>UMA
+				</strong> (Unified Mobile App) <br> MCD311 App</li>
+				
+			</ul>
+		</div>
+	</div>
+
+<script>
+///////24052020/////////
+$(document).ready(function () {
+$('.toggle').click(function () {
+$('.help-desk').toggleClass('active');
+$('.toggle').toggleClass('active');
+});
+});
+//# sourceURL=pen.js
+
+
+</script>
+	<!-- Javascript files-->
+	<script src="static/js/jquery.min.js"></script> 
+<script src="static/js/jquery.ui.min.js"></script>    
+<script src="static/js/popper.min.js"></script> 
+<script src="static/js/bootstrap.min.js"></script>
+<!--  start js for  Text EDITOR -->
+<!-- <script src="static/js/summernote-bs4.min.js"></script> -->
+<!--  end js for  Text EDITOR -->
+<script src="static/js/bootbox.min.js"></script>
+<script  src="static/js/jquery.tcg-elevator.min.js"></script>
+<script  src="static/js/main.js"></script>
+<!-- <script src="static/js/bootstrap-datepicker.js"></script> -->
+<script src="static/js/moment.min.js"></script>
+<script src="static/js/bootstrap-datetimepicker.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script> -->
+<script src="static/js/jquery.scrollTo.min.js"></script>
+<!-- <script src="static/js/front.js"></script>
+ -->
+ 
+  <!--<script src="static/js/datatables.min.js"></script>-->
+ <script src="static/js/jquery.dataTables.min.js"></script> 
+<script src="static/js/select2.min.js"></script>
+<script src="static/app-js/common-validation.js"></script>
+	<script src="static/js/customized.js"></script>
+<!-- <script src="static/js/jspdf.min.js"></script>
+<script src="static/js/jspdf.plugin.autotable.min.js"></script> -->
+<!-- <script src="static/js/tableHTMLExport.js"></script> -->
+<!-- <script src="static/js/pdfmake.min.js"></script> -->
+
+<!-- <script src="static/js/html2canvas.min.js"></script> -->
+<!-- <script src="static/js/pdfmake.min.js"></script> -->
+
+    
+   <script src="static/js/cdn.tiny.cloud_1_invalid-origin_tinymce_4.9.11-104_tinymce.min.js" ></script>
+    
+<script type="text/javascript">
+//tinymce.init({selector:'#editor'});
+
+tinymce.init({
+	  selector: '#editor',
+	  height: 500,
+	  theme: 'modern',
+	  plugins: 'print preview fullpage powerpaste searchreplace autolink directionality advcode visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists textcolor wordcount tinymcespellchecker a11ychecker imagetools mediaembed  linkchecker contextmenu colorpicker textpattern help',
+	  toolbar1: 'formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent  | removeformat',
+	  image_advtab: true,
+	  templates: [
+	    { title: 'Test template 1', content: 'Test 1' },
+	    { title: 'Test template 2', content: 'Test 2' }
+	  ],
+	  content_css: [
+	    '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+	    '//www.tinymce.com/css/codepen.min.css'
+	  ]
+	 });
+
+</script>
+
+
+<link rel="shortcut icon" href="">
+<script type="text/javascript">
+
+	if(defaultTabIndex != '-1'){
+		$(document).ready(function(){
+			$('.nav-tabs li:eq('+defaultTabIndex+') a').tab('show');
+		});
+	}
+	function showTab(tabIndex){
+		$('.nav-tabs li:eq('+tabIndex+') a').tab('show');
+	}	
+</script>
+<script type="text/javascript">
+	function bootstrapTabControl() {
+		var i, items = $('.nav-lin'), pane = $('.tab-pane');
+		// next
+		$('.nexttab').on('click', function() {
+			for (i = 0; i < items.length; i++) {
+				if ($(items[i]).hasClass('active') == true) {
+					break;
+				}
+			}
+			if (i < items.length - 1) {
+				// for tab
+				$(items[i]).removeClass('active');
+				$(items[i + 1]).addClass('active');
+				// for pane
+				$(pane[i]).removeClass('show active');
+				$(pane[i + 1]).addClass('show active');
+			}
+		});
+
+		// Prev
+		$('.prevtab').on('click', function() {
+			for (i = 0; i < items.length; i++) {
+				if ($(items[i]).hasClass('active') == true) {
+					break;
+				}
+			}
+			if (i != 0) {
+				// for tab
+				$(items[i]).removeClass('active');
+				$(items[i - 1]).addClass('active');
+				// for pane
+				$(pane[i]).removeClass('show active');
+				$(pane[i - 1]).addClass('show active');
+			}
+		});
+	}
+	bootstrapTabControl();
+</script>
+<script type="text/javascript">
+	$(function() {
+		$("div[id$='DatePicker']").datetimepicker({
+			 "allowInputToggle": true,
+	            "showClose": true,
+	            locale : "ru", 	
+	            collapse:true,
+	            "showClear": true,
+	            "showTodayButton": true,	           				
+	           	"format": "DD/MM/YYYY", 
+	            "maxDate": 'now',
+
+		})
+	}); 
+	
+	$(function() {
+		var d = new Date();
+		d.setMonth(d.getMonth()-3);
+		$("#manualChequeDate").datetimepicker({
+			 "allowInputToggle": true,
+	            "showClose": true,
+	            "showClear": true,
+	            "showTodayButton": true,	           				
+	           	"format": "MM/DD/YYYY", 
+	            "maxDate": 'now',
+// 	            "minDate": d,
+	            
+	           
+		})
+	});  
+	$(function() {
+		$("#manualReceiptDate").datetimepicker({
+			 "allowInputToggle": true,
+	            "showClose": true,
+	            "showClear": true,
+	            "showTodayButton": true,	           				
+	           	"format": "MM/DD/YYYY", 
+	            "maxDate": 'now',
+		})
+	});  
+	 
+	 
+	
+////new code datetime pikcer 
+/* $(function() {
+		$("div[id$='DatePicker']").datepicker({
+	  alert("The paragraph was clicked.");
+	}) }); */
+	
+	
+/* 
+	 $(function() {   
+		$('#dob3DatePicker').datetimepicker({
+	            "allowInputToggle": true,
+	            "showClose": true,
+	            "showClear": true,
+	            "showTodayButton": true,	           				
+	           	"format": "MM/DD/YYYY", 
+	            "maxDate": 'now',
+	        });
+	
+	});
+	 */
+	
+	 
+	 /* $(function() {   
+			$('#propertyRegistrationDatePicker').datetimepicker({
+		            "allowInputToggle": true,
+		            "showClose": true,
+		            "showClear": true,
+		            "showTodayButton": true,	           				
+		           	"format": "DD/MM/YYYY", 
+		            "maxDate": 'now',
+		            
+		        });
+	}); */
+	
+	/* $(function() {
+		$("div[id$='DatePicker']").datepicker({
+			"allowInputToggle": true,
+            "showClose": true,
+            "showClear": true,
+            "showTodayButton": true,	           				
+           	"format": "MM/DD/YYYY", 
+            "maxDate": 'now',
+	}) }); */
+ 
+</script>
+<script type="text/javascript">
+$(".datePick").datetimepicker({
+	 "allowInputToggle": true,
+       "showClose": true,
+       locale : "ru", 	
+       collapse:true,
+       "showClear": true,
+       "showTodayButton": true,	           				
+      	"format": "DD/MM/YYYY", 
+       "maxDate": 'now',
+
+})
+function dateTableRefresh(){
+	$("table[id$='DataGridNew']").DataTable({
+		/* "pagingType" : "full_numbers", */
+		"pageLength" : 3,
+		"aLengthMenu": [[3,5,10, 25, 50, 100, 200, -1], [3,5,10, 25, 50, 100, 200, "All"]],
+		"iDisplayLength":5
+	});
+	$("table[id$='DataGrid']").DataTable({
+		"pagingType" : "full_numbers"
+	});
+	$("table[id$='CustomDatable']").DataTable({
+		"pageLength" : 3,
+		"aLengthMenu": [[3,5,10, 25, 50, 100, 200, -1], [3,5,10, 25, 50, 100, 200, "All"]],
+		"iDisplayLength":5
+	});
+	$("#propertyDataGridNew").DataTable({
+		/* "pagingType" : "full_numbers", */
+		"pageLength" : 3,
+		"aLengthMenu": [[3,5,10, 25, 50, 100, 200, -1], [3,5,10, 25, 50, 100, 200, "All"]],
+		"iDisplayLength":5
+	});
+	
+}
+dateTableRefresh();
+function rwaDateTableRefresh(){
+	$("table[id$='DataGrid']").DataTable({
+		"pagingType" : "full_numbers"
+	});
+	$("#rwaPropertyDataGridNew").DataTable({
+		/* "pagingType" : "full_numbers", */
+		destroy: true,
+		"pageLength" : 3,
+		"aLengthMenu": [[3,5,10, 25, 50, 100, 200, -1], [3,5,10, 25, 50, 100, 200, "All"]],
+		"iDisplayLength":5
+	});
+}
+rwaDateTableRefresh();
+function ajaxDateTableRefresh(){
+	$("table[id$='DataGridAjax']").DataTable({
+		"pagingType" : "full_numbers"
+	});
+}
+</script>
+<script type="text/javascript">
+function select2Refresh(){
+	$("select[id$='Select']").select2({
+       	placeholder: "",
+       	allowClear: false
+	});
+}
+select2Refresh();
+</script>
+<script>
+$(document).on('mouseenter', ".iffyTip", function () {
+     var $this = $(this);
+     if (this.offsetWidth < this.scrollWidth && !$this.attr('title')) {
+         $this.tooltip({
+             title: $this.text(),
+             placement: "bottom"
+         });
+         $this.tooltip('show');
+     }
+ });
+$('.hideText').css('width',$('.hideText').parent().width());
+
+/* -------------------added for table responsiveness 17/11/2023--------------------- */
+$('.table-responsive').on('show.bs.dropdown', function () {
+    $('.table-responsive').css( "overflow", "inherit" );
+}); 
+
+$('.table-responsive').on('hide.bs.dropdown', function () {
+    $('.table-responsive').css( "overflow", "auto" );
+})
+/* ---------------------------------------- */
+</script>
+<script>
+function doShowDownload(url) {
+	window.open(url,'','scrollbars=no,menubar=no,height=670,width=950,resizable=yes,toolbar=no,status=no');
+}
+</script>
+<!--  start js function for  Text EDITOR -->
+<!--    <script>
+      $('#summernote').summernote({
+        placeholder: 'Type Here',
+        tabsize: 2,
+        height: 400
+      });
+    </script> -->
+    
+<!--  end js function for   Text EDITOR -->
+	
+	<!-- ########### ADD APPLICATION JS ########### -->
+	
+	
+	<!-- ########### ADD FORM JS ########### -->
+	
+	<script src="static/app-js/trade-license.js"></script>
+	
+	
+	
+	 <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header compectheader">
+        
+          <h4 class="modal-title compecttitle">Compatible Browsers</h4>
+        </div>
+        <div class="modal-body">
+        
+		  <div class="browsers">
+		 <h5 style="color: green;">May Please Use Following Browser For The Best View</h5>
+		  <i style="color: #2c7bb7" class="fa fa-internet-explorer fa-1x" aria-hidden="true"></i> Internet Explorer v11.0 <br>
+		  <i style="color: #e0701a" class="fa fa-firefox fa-1x" aria-hidden="true"></i> Mozilla Firefox v7 to v77.0.1<br>
+		  <i style="color: #e93e30" class="fa fa-chrome fa-1x" aria-hidden="true"></i> Google Chrome  v44 to V66.0.3359.139<br>
+		  <i style="color: #18498e" class="fa fa-safari fa-1x" aria-hidden="true"></i> Safari v10.022 to v11.1 (12605.1.33.1.4)
+		  </div>
+		  
+        </div>
+        <div class="modal-footer text-center">
+          <button type="button" class="btn btn-default btnCom" data-bs-dismiss="modal">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+ <!--  end -->
+  <!--  web manager infromation  Modal -->
+  <div class="modal fade" id="webinfodetailModal" role="dialog">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header compectheader">
+        
+          <h4 class="modal-title compecttitle">Contact Details</h4>
+        </div>
+        <div class="modal-body">
+        
+		  <div class="browsers">
+		 <h5 style="color: green;">May Please Use Following Contact details</h5>
+		 </div>
+		  
+        </div>
+        <div class="modal-footer text-center">
+          <button type="button" class="btn btn-default btnCom" data-bs-dismiss="modal">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end -->
+  
+  <!-- disclaimer  Model Pop Up  -->
+	<!-- Modal -->
+	
+	
+<!-- 	  <div class="modal fade" id="disclamerpopup" role="dialog">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header compectheader">        
+          <h4 class="modal-title compecttitle">Web Information Manager</h4>
+        </div>
+        	<div class="modal-body">
+					<div class="intro">
+						<div class="midcontncls general">
+
+							<h2 style="text-align: center">
+								<span style="font-size: 20px"><strong>Officer Name</strong><strong>&nbsp;(</strong> Officer Designation</span> <span style="font-size: 16px"><span
+									style="font-size: 20px"><strong>)&nbsp;</strong></span></span><br> <span style="font-size: 16px"> Address <br> Tel : <span
+									style="font-size: 14px">011</span>&nbsp;
+								</span><span style="font-size: 14px">23384012</span>
+							</h2>
+						</div>
+					</div>
+				</div>
+        <div class="modal-footer text-center">
+          <button type="button" class="btn btn-default btnCom" data-bs-dismiss="modal">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  
+  
+  <div class="modal fade" id="changePasswordModal" role="dialog">
+    
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+
+
+
+<div class="modal-dialog modal-md">
+      <div class="modal-content">
+      <form id="changePasswordID"  enctype="multipart/form-data">
+        <div class="modal-header compectheader">
+          <h4 class="modal-title compecttitle">Change Password</h4>
+        </div>
+        <div class="modal-body">
+        
+		<input type="hidden" name="_csrf" value="4fc9697e-9451-467f-adbc-e63fdf7e0543"/>
+		<input type="hidden" id="checkParam" name="checkParam" value="">
+		<input type="hidden" id="userGuid" name="userGuid" value="">
+		
+		
+		
+                                                                                                                                                                                                                                                		<div class="input-group">
+				
+		 				<input id="loginID" name="loginId" class="form-control" maxlength="40"
+									value=""
+									type="hidden"/>
+									<input id="oldPasswordID" name="oldPassword" class="form-control"
+									value=""
+									type="hidden" />
+		
+		
+			
+				
+			
+		 				
+						
+									
+			
+
+			<label class="control-label required" >Enter New Password
+			</label>
+			<div class="input-group">
+				<span class="input-group-addon"><i class="fa fa-th"></i></span>
+		 				<input id="newPasswordID" name="password" class="form-control tooltilcls"
+									value="" minlength="8" maxlength="20"
+									type="password"
+									title="Password length must be in between 8 and 20, should consist of atleast one number, one upper case, one lower case and one special character. " />
+										<div class="input-group-addon input-group-append" id="passwordEyeIconDivId" style = "cursor: pointer" onclick="showHidePassword()">
+															<div class="input-group-text">
+																<i class="glyphicon glyphicon-eye-open"></i>
+															</div>
+														</div>
+						
+									
+			</div>
+			
+			<label class="control-label required" >Confirm New Password
+			</label>
+			<div class="input-group">
+				<span class="input-group-addon"><i class="fa fa-th"></i></span>
+		 				<input id="confirmNewPasswordID" name="confirmPassword" class="form-control tooltilcls"
+									value="" minlength="8" maxlength="20"
+									type="password" 
+									title="Confirm Password should be same as Password" />
+										<div class="input-group-addon input-group-append" id="cPasswordEyeIconDivId" style = "cursor: pointer" onclick="showHideCPassword()">
+															<div class="input-group-text">
+																<i class="glyphicon glyphicon-eye-open"></i>
+															</div>
+														</div>
+			</div>
+			
+				  
+        </div>
+        <div class="modal-footer text-center">
+        	<button type="button" id="changePasswordBtnID" onclick="submitUpdatePasswordForm(event)" class="btn btn-primary">Submit</button>
+        
+          <button type="button" class="btn btn-default btnCom" data-bs-dismiss="modal">Close</button>
+        </div>
+        </form>
+      </div>
+    </div>
+
+
+    <script>
+    $(document).ready(function() {
+    	$('.tooltilcls').tooltip({
+    		trigger : "focus",
+    		placement : "right"
+    	});
+    });
+    function showHidePassword()	{
+
+    	if($("#passwordEyeIconDivId i").hasClass("glyphicon-eye-open"))
+    	{
+    	 	$("#passwordEyeIconDivId i").addClass("glyphicon-eye-close").removeClass("glyphicon-eye-open");
+    		$("#newPasswordID").prop("type", "text");
+      	} else {
+      		$("#passwordEyeIconDivId i").addClass("glyphicon-eye-open").removeClass("glyphicon-eye-close");
+    		$("#newPasswordID").prop("type", "password");
+      	}
+    }
+    function showHideCPassword(){
+    	if($("#cPasswordEyeIconDivId i").hasClass("glyphicon-eye-open"))
+    	{
+    	 	$("#cPasswordEyeIconDivId i").addClass("glyphicon-eye-close").removeClass("glyphicon-eye-open");
+    		$("#confirmNewPasswordID").prop("type", "text");
+      	} else {
+      		$("#cPasswordEyeIconDivId i").addClass("glyphicon-eye-open").removeClass("glyphicon-eye-close");
+    		$("#confirmNewPasswordID").prop("type", "password");
+      	}
+    }
+    function showHideoldPassword(){
+    	if($("#oldpasswordEyeIconDivId i").hasClass("glyphicon-eye-open"))
+    	{
+    	 	$("#oldpasswordEyeIconDivId i").addClass("glyphicon-eye-close").removeClass("glyphicon-eye-open");
+    		$("#oldPasswordID").prop("type", "text");
+      	} else {
+      		$("#oldpasswordEyeIconDivId i").addClass("glyphicon-eye-open").removeClass("glyphicon-eye-close");
+    		$("#oldPasswordID").prop("type", "password");
+      	}
+    }
+    
+    function submitUpdatePasswordForm(event){
+    
+/*     $('#changePasswordBtnID').click(function (e)
+ */    		 
+    				if(validateUpdatePassword())
+    					{
+    						//event.preventDefault();
+    					var formData = new FormData();
+    			        var params = $("#changePasswordID").serializeArray();
+    			        
+    			        
+    			        
+    			        $.each(params, function(i, val) {
+    			        //	alert('parametere'+val.name+'scond'+ val.value);
+    			            formData.append(val.name, val.value);
+    			        });
+    		            $.ajax({
+    								 type : "POST",
+    								 url : "/ptrmcd/web/citizen/updatePassword",
+    								 data: formData,
+    					             cache: false,
+    					             async: true,
+    					             contentType: false,
+    					             processData: false,
+    								 beforeSend : function() {
+    									 $("#overlay").show();
+    					
+    								},
+    								success : function(data, status, xhr) {
+    									if(data.message == 'Password update successfully')
+    									{
+    										$("#changePasswordBtnID").prop('disabled', true);
+    									}
+    									createSmallAlert(data.message);
+    								},
+    								error : function(e) {
+    									createAlert('error '+e);
+    									//alert('error '+e)
+    								},
+    								complete : function() {
+    									$("#overlay").hide();
+    									setTimeout(function() {
+    			                        	window.location.href="web/citizen/info";
+    									  }, 5000);
+    								}
+    		            });
+    					}
+    			    	
+    		        }
+
+    		function validateUpdatePassword()
+    		{
+    			var password = $("#newPasswordID").val();
+    			var confirmPassword = $("#confirmNewPasswordID").val();
+    			var testPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%\^&\*])(?=.{8,})/;
+    			if (password != '' && !testPassword.test(password)) {
+    				createSmallAlert('Please enter a valid Password');
+    				$("#passwordId").val('');
+    				$("#confirmNewPasswordID").val('');
+    				return false;
+    			}
+    			if (password.length>20)
+    			{
+    				createSmallAlert('Password length should not more than 20');
+    				$("#passwordId").val('');
+    				$("#confirmNewPasswordID").val('');
+    				return false;
+    			}
+    			if (password != confirmPassword) {
+    				createSmallAlert('Password and Confirm Password should be same');
+    				$("#newPasswordID").val('');
+    				$("#confirmNewPasswordID").val('');
+    				return false;
+    			}
+    			return true;
+    		}
+
+    
+    </script>
+  </div>
+
+<div class="modal fade" id="changePasswordCitizenModalId" role="dialog">
+    
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+
+
+
+<div class="modal-dialog modal-md">
+      <div class="modal-content">
+      <form id="changePasswordID"  enctype="multipart/form-data">
+        <div class="modal-header compectheader">
+          <h4 class="modal-title compecttitle">Change Password</h4>
+        </div>
+        <div class="modal-body">
+        
+		<input type="hidden" name="_csrf" value="4fc9697e-9451-467f-adbc-e63fdf7e0543"/>
+		<input type="hidden" id="checkParam" name="checkParam" value="">
+		<input type="hidden" id="userGuid" name="userGuid" value="">
+		
+		
+		
+                                                                                                                                                                                                                                                		<div class="input-group">
+				
+		 				<input id="loginID" name="loginId" class="form-control" maxlength="40"
+									value=""
+									type="hidden"/>
+									<input id="oldPasswordID" name="oldPassword" class="form-control"
+									value=""
+									type="hidden" />
+		
+		
+			
+				
+			
+		 				
+						
+									
+			
+
+			<label class="control-label required" >Enter New Password
+			</label>
+			<div class="input-group">
+				<span class="input-group-addon"><i class="fa fa-th"></i></span>
+		 				<input id="newPasswordID" name="password" class="form-control tooltilcls"
+									value="" minlength="8" maxlength="20"
+									type="password"
+									title="Password length must be in between 8 and 20, should consist of atleast one number, one upper case, one lower case and one special character. " />
+										<div class="input-group-addon input-group-append" id="passwordEyeIconDivId" style = "cursor: pointer" onclick="showHidePassword()">
+															<div class="input-group-text">
+																<i class="glyphicon glyphicon-eye-open"></i>
+															</div>
+														</div>
+						
+									
+			</div>
+			
+			<label class="control-label required" >Confirm New Password
+			</label>
+			<div class="input-group">
+				<span class="input-group-addon"><i class="fa fa-th"></i></span>
+		 				<input id="confirmNewPasswordID" name="confirmPassword" class="form-control tooltilcls"
+									value="" minlength="8" maxlength="20"
+									type="password" 
+									title="Confirm Password should be same as Password" />
+										<div class="input-group-addon input-group-append" id="cPasswordEyeIconDivId" style = "cursor: pointer" onclick="showHideCPassword()">
+															<div class="input-group-text">
+																<i class="glyphicon glyphicon-eye-open"></i>
+															</div>
+														</div>
+			</div>
+			
+				  
+        </div>
+        <div class="modal-footer text-center">
+        	<button type="button" id="changePasswordBtnID" onclick="submitUpdatePasswordForm(event)" class="btn btn-primary">Submit</button>
+        
+          <button type="button" class="btn btn-default btnCom" data-bs-dismiss="modal">Close</button>
+        </div>
+        </form>
+      </div>
+    </div>
+
+
+    <script>
+    $(document).ready(function() {
+    	$('.tooltilcls').tooltip({
+    		trigger : "focus",
+    		placement : "right"
+    	});
+    });
+    function showHidePassword()	{
+
+    	if($("#passwordEyeIconDivId i").hasClass("glyphicon-eye-open"))
+    	{
+    	 	$("#passwordEyeIconDivId i").addClass("glyphicon-eye-close").removeClass("glyphicon-eye-open");
+    		$("#newPasswordID").prop("type", "text");
+      	} else {
+      		$("#passwordEyeIconDivId i").addClass("glyphicon-eye-open").removeClass("glyphicon-eye-close");
+    		$("#newPasswordID").prop("type", "password");
+      	}
+    }
+    function showHideCPassword(){
+    	if($("#cPasswordEyeIconDivId i").hasClass("glyphicon-eye-open"))
+    	{
+    	 	$("#cPasswordEyeIconDivId i").addClass("glyphicon-eye-close").removeClass("glyphicon-eye-open");
+    		$("#confirmNewPasswordID").prop("type", "text");
+      	} else {
+      		$("#cPasswordEyeIconDivId i").addClass("glyphicon-eye-open").removeClass("glyphicon-eye-close");
+    		$("#confirmNewPasswordID").prop("type", "password");
+      	}
+    }
+    function showHideoldPassword(){
+    	if($("#oldpasswordEyeIconDivId i").hasClass("glyphicon-eye-open"))
+    	{
+    	 	$("#oldpasswordEyeIconDivId i").addClass("glyphicon-eye-close").removeClass("glyphicon-eye-open");
+    		$("#oldPasswordID").prop("type", "text");
+      	} else {
+      		$("#oldpasswordEyeIconDivId i").addClass("glyphicon-eye-open").removeClass("glyphicon-eye-close");
+    		$("#oldPasswordID").prop("type", "password");
+      	}
+    }
+    
+    function submitUpdatePasswordForm(event){
+    
+/*     $('#changePasswordBtnID').click(function (e)
+ */    		 
+    				if(validateUpdatePassword())
+    					{
+    						//event.preventDefault();
+    					var formData = new FormData();
+    			        var params = $("#changePasswordID").serializeArray();
+    			        
+    			        
+    			        
+    			        $.each(params, function(i, val) {
+    			        //	alert('parametere'+val.name+'scond'+ val.value);
+    			            formData.append(val.name, val.value);
+    			        });
+    		            $.ajax({
+    								 type : "POST",
+    								 url : "/ptrmcd/web/citizen/updatePassword",
+    								 data: formData,
+    					             cache: false,
+    					             async: true,
+    					             contentType: false,
+    					             processData: false,
+    								 beforeSend : function() {
+    									 $("#overlay").show();
+    					
+    								},
+    								success : function(data, status, xhr) {
+    									if(data.message == 'Password update successfully')
+    									{
+    										$("#changePasswordBtnID").prop('disabled', true);
+    									}
+    									createSmallAlert(data.message);
+    								},
+    								error : function(e) {
+    									createAlert('error '+e);
+    									//alert('error '+e)
+    								},
+    								complete : function() {
+    									$("#overlay").hide();
+    									setTimeout(function() {
+    			                        	window.location.href="web/citizen/info";
+    									  }, 5000);
+    								}
+    		            });
+    					}
+    			    	
+    		        }
+
+    		function validateUpdatePassword()
+    		{
+    			var password = $("#newPasswordID").val();
+    			var confirmPassword = $("#confirmNewPasswordID").val();
+    			var testPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%\^&\*])(?=.{8,})/;
+    			if (password != '' && !testPassword.test(password)) {
+    				createSmallAlert('Please enter a valid Password');
+    				$("#passwordId").val('');
+    				$("#confirmNewPasswordID").val('');
+    				return false;
+    			}
+    			if (password.length>20)
+    			{
+    				createSmallAlert('Password length should not more than 20');
+    				$("#passwordId").val('');
+    				$("#confirmNewPasswordID").val('');
+    				return false;
+    			}
+    			if (password != confirmPassword) {
+    				createSmallAlert('Password and Confirm Password should be same');
+    				$("#newPasswordID").val('');
+    				$("#confirmNewPasswordID").val('');
+    				return false;
+    			}
+    			return true;
+    		}
+
+    
+    </script>
+</div>
+  
+<div class="modal fade" id="showFooter" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header modal-header1">
+					<button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+					<h4 class="modal-title modal-title1" id="footerHeading" style="text-align: center"></h4>
+				</div>
+				<div class="modal-body" id="footerBody"></div>
+
+			</div>
+
+		</div>
+	</div>
+  <!-- start language translattor-->
+  <script type="text/javascript">
+         function googleTranslateElementInit() {
+             new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,hi,pa,ur', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+     }
+     </script>
+     <!-- <script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
+   
+     <!---end  language translattor ----->
+
+
+ <script>
+/* 
+let timerOn = true;
+$( document ).ready(function() {
+	  $('.social').prepend('<i class="fa fa-plus social-toggle"></i>');
+	  $('.social-toggle').click(function(){
+	   $(this).toggleClass('fa-plus fa-minus');
+	    $(".social-drop").slideToggle("300");
+	  })
+
+	});
+	
+function callChangePasswordModal() {
+	timerOn = true;
+	$("#changePasswordModal").modal('show');
+	 timer(10);
+}
+
+$('#changePasswordModal').on('hidden.bs.modal', function () {
+	timerOn = false;
+	$("timer").innerHTML = '';
+})
+
+
+
+function timer(remaining) {
+    var m = Math.floor(remaining / 60);
+    var s = remaining % 60;
+    
+    m = m < 10 ? '0' + m : m;
+    s = s < 10 ? '0' + s : s;
+    document.getElementById('timer').innerHTML = m + ':' + s;
+    remaining -= 1;
+    
+    if(remaining >= 0 && timerOn) {
+      setTimeout(function() {
+          timer(remaining);
+      }, 1000);
+      return;
+    }
+
+    if(!timerOn) {
+      // Do validate stuff here
+      return;
+    }
+    
+    // Do timeout stuff here
+    
+    $("#changePasswordOtpID").attr("disabled", "disabled"); 
+    alert('Timeout for otp');
+  }
+ */
+// For login validation
+
+$( document ).ready(function() {
+	var loginTypeHidden = $("#loginTypeHiddenID").val();
+	
+	/* bootbox.alert({
+	    message: msg,
+	    size: 'small'
+	}); */
+	
+	if(loginTypeHidden== 'U')
+		{
+			activaTab('Admin_Login');
+		}
+	else if(loginTypeHidden== 'H')
+	{
+		activaTab('Hospital_Login');
+	}
+	else if(loginTypeHidden== 'C')
+	{
+		activaTab('Citizen_Login');
+	}
+	else
+	{
+		activaTab('Citizen_Login');
+	}
+		
+	});
+	
+function activaTab(tab){
+    $('.nav-tabs a[href="#' + tab + '"]').tab('show');
+};
+
+
+function onlyNumbers(evt)
+{
+	
+	 if(window.event){ // IE
+		var charCode = event.keyCode;
+	} else  { // Safari 4, Firefox 3.0.4
+		var charCode = evt.which;
+	}
+	
+    if (charCode > 31 && (charCode < 46 || charCode > 57 || charCode==47|| charCode==32 || charCode==46))
+	return false;
+	
+
+	return true;
+}
+
+function callCitizenRegistration()
+{
+	$.ajax({
+		type : "GET",
+		url : "web/citizen/citizenRegistration",
+		cache : false,
+		async : true,
+		beforeSend : function() {
+
+		},
+		success : function(data, status, xhr) {
+			
+			$("#lgModalBodyID").empty();
+			//$("#modalHeaderContentID").text("HEALTH TRADE LICENSE REGISTRATION STATUS");
+			$("#lgModalBodyID").html(data);
+			$("#largeModal").modal('show');
+		},
+		error : function(e) {
+
+		},
+		complete : function() {
+			select2Refresh();
+		}
+	});
+}
+
+function citizenPasswordModal()
+{
+	$.ajax({
+		type : "GET",
+		url : "web/citizen/updatePassword",
+		cache : false,
+		async : true,
+		beforeSend : function() {
+
+		},
+		success : function(data, status, xhr) {
+			$("#smModalBodyID").empty();
+			$("#smModalBodyID").html(data);
+			$("#smallModal").modal('show');
+		},
+		error : function(e) {
+
+		},
+		complete : function() {
+		}
+	});
+}
+
+
+function showFooterModal(event){
+	
+	
+	$("#showFooter").modal('show');
+}
+	
+</script>
+</body>
+</html>

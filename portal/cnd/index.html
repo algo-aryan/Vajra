@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>MCD :: C&D</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Leaflet -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css"
+/>
+
+<style>
+/* ===== Layout ===== */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;   /* left & right */
+    align-items: center;
+    padding: 14px 24px;
+    background-color: #0b3c5d;
+}
+
+/* MENU 1 – static text */
+.menu-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffd700;   /* custom color */
+}
+
+/* MENU 2 – button link */
+.menu-btn {
+    padding: 8px 16px;
+    background-color: #28a745;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.menu-btn:hover {
+    background-color: #218838;
+}
+
+footer {
+  background: #f5f5f5;
+  text-align: center;
+  padding: 8px;
+  font-size: 13px;
+  border-top: 1px solid #ccc;
+}
+
+/* ===== Content ===== */
+#content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+#sidebar {
+  width: 35%;
+  overflow-y: auto;
+  border-right: 1px solid #ccc;
+  padding: 10px;
+}
+
+#map {
+  flex: 1;
+}
+
+/* ===== Table ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+}
+
+th {
+  background: #eeeeee;
+  position: sticky;
+  top: 0;
+}
+
+button {
+  background: #1e88e5;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+button:hover {
+  background: #1565c0;
+}
+</style>
+</head>
+
+<body>
+
+
+<header>
+    <div class="menu-title">MCD - C & D Waste Sites</div>
+
+    <a href="map.html" target="_blank" class="menu-btn">
+        Full Map View
+    </a>
+</header>
+
+<div id="content">
+  <div id="sidebar">
+    <table id="siteTable">
+    
+<thead>
+  <tr id="tableHeader"></tr>
+</thead>
+    
+<tbody></tbody>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <div id="map"></div>
+</div>
+
+<footer>
+  © 2026 | Static GIS Viewer
+</footer>
+
+<!-- Leaflet -->
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script src="list.js" defer></script>
+
+</body>
+</html>

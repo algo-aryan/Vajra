@@ -1,0 +1,3984 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="robots" content="all,follow">
+<link rel="icon" type="image/ico" th:href="@{../static/favicon.ico}">
+<title>eSBM</title>
+ <script src="static/js/jquery-3.7.1.js"></script>  
+<link rel="stylesheet" href="/esbm-mcd/static/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/esbm-mcd/static/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/esbm-mcd/static/css/style.default.css" rel="stylesheet">
+<link rel="stylesheet" href="/esbm-mcd/static/css/Masterstyle.css" rel="stylesheet">
+<link rel="stylesheet" href="/esbm-mcd/static/css/custom.css" rel="stylesheet">
+<link rel="stylesheet" href="/esbm-mcd/static/css/buildingCss.css" rel="stylesheet">
+   
+<link rel="stylesheet" href="/esbm-mcd/static/style.css" rel="stylesheet">
+<link rel="stylesheet" href="/esbm-mcd/static/css/logn-page.css" rel="stylesheet">
+
+ <link rel="stylesheet" href="static/css/menu-style.css"> 
+ <script src="static/js/bootstrap-datepicker.js"></script>
+
+ <!--   map css files  -->
+ <link rel="stylesheet" href="static/ol-map/css/ol.css" type="text/css"/>
+	<link rel="stylesheet" href="static/css/mapcustomstyle.css" type="text/css"/>
+<!--   map js files  -->
+<script src="static/ol-map/js/ol.js"></script>
+<script type="text/javascript" src="static/js/ol-ext.js" ></script>
+	<link rel="stylesheet" href="static/css/ol-ext.css" rel="stylesheet">
+     
+ <script src="/esbm-mcd/static/main.js"></script>
+<script src="/esbm-mcd/static/js/aes.js"></script>
+<script src="/esbm-mcd/static/js/crypto-js.min.js"></script>
+<script src="/esbm-mcd/static/js/jsencrypt.min.js"></script>
+   <script>
+function passwordForgot(userType){
+/* 	 $('.loaderDivII').show();  */
+
+	$.ajax({
+		url : "forgOtPassword?userType ="+ userType,
+		 type: "get",
+			success:function(data) {
+				
+				if(data){
+				
+				    $('#changed').html("");	
+					$('#changed').html(data);	
+					$("#forgotloginTypeRAL").val(userType);
+					//$('.loaderDivII').hide();
+					
+					  // Open the modal after content is loaded
+	                $("#forgotPasswordModal").modal("show");
+					}				
+			 
+		}
+	/* 	error: function () {
+            alert("Error loading forgot password form. Please try again.");
+        } */
+
+	}); 
+	
+} 
+
+</script>
+
+
+
+<style type="text/css">
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    background: #183150;
+    opacity: .5;
+}
+.w-100 {
+    width: 100% !important;
+    max-height: 510px !important;
+}
+circle {
+  transition: all 1s linear;
+}
+#c1{
+  transition: all 1s linear;
+  stroke: #DDDEDF;
+  stroke-width: 1;
+  stroke-linecap: round;
+  fill: transparent;
+}
+
+#c2 {
+  transition: all 1s linear;
+  stroke: #545557;
+  stroke-width: 1;
+  stroke-linecap: round;
+  fill: transparent;
+}
+
+#counterText {
+  -webkit-animation: heartBeat 1s infinite;
+  animation: heartBeat 1s infinite;
+}
+
+@-webkit-keyframes heartBeat {
+  0%   {
+    opacity: 0;
+  }
+  5%   {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes heartBeat {
+  0%   {
+    opacity: 0;
+  }
+  5%   {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+</style>
+<style>
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+
+.bouncing-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient( #170303, #ffb64a, #4aff92 );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; 
+    animation: bounce 2s infinite;
+}
+.dropdown-menu.show{
+    margin-top: -2px;
+    border-radius: 0px;
+    background: #394d66;
+    padding: 0px;
+}
+.dropdown-menu.show ul {
+padding-left: 0px;
+list-style-type: none;
+    margin: 0px;
+}
+.dropdown-menu.show ul li {
+ border-bottom: 1px solid #657fa0;
+}
+
+.dropdown-menu.show ul li a{
+color:#fff;
+padding: 5px;
+    text-decoration: none;
+    border-bottom: 1px solid #657fa0;
+}
+.dropdown-menu.show ul li a:last-child{
+    border-bottom: none;
+}
+
+
+.dropdown-menu.show ul li a:hover{
+color: #394d66;
+  background: #fff;
+}
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    0% {
+        text-shadow: 0 0 5px #ff4a4a, 0 0 10px #ffb64a, 0 0 15px #4aff92,  0 0 25px #b64aff;
+    }
+    100% {
+        text-shadow: 0 0 20px #ff4a4a, 0 0 30px #ffb64a, 0 0 40px #4aff92, 0 0 60px #b64aff;
+    }
+}
+
+.card-height {
+    width: 100%;
+    height: 100% !important;
+ margin: 0px 0;
+       
+}
+@media (max-width: 867px) {
+    .card-height {
+       height: auto !important;
+        margin: 7px 0;
+    }
+            .login-container {
+            display: block;
+           
+             /*  min-height: 550px; */
+            }
+} 
+
+@media (max-width: 867px) {
+       .login-container {
+            display: block;
+              min-height: 680px;
+              padding: 0px;
+            }
+} 
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.page-content {
+    flex: 1;
+    padding: 0px 0px;
+    background: #e0e9ff;
+}
+</style>
+<style>
+input[type=text] {
+  border-radius: 20px;
+  border: 1px solid #2d9fd9;
+  color: #a0d18c;
+  width: 250px;
+  height: 50px;
+  padding-left: 10px;
+}
+
+input[type=text]:focus {
+  outline: none;
+  border: 1px solid #a0d18c;
+  color: #2d9fd9;
+}
+input[type=password] {
+  border-radius: 20px;
+  border: 1px solid #2d9fd9;
+  color: #a0d18c;
+  width: 250px;
+  height: 50px;
+  padding-left: 10px;
+}
+
+input[type=password]:focus {
+  outline: none;
+  border: 1px solid #a0d18c;
+  color: #2d9fd9;
+}
+
+.outer-line-box {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #657fa0;
+    border-radius: 8px;
+    padding: 8px 2px 2px;
+    margin-top: 15px;
+}
+
+.border-text {
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    padding: 2px 12px;        /* thoda vertical space */
+    background: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    color: #657fa0;
+    border: 1px solid #657fa0;
+    border-radius: 12px;     /* 👈 CURVE */
+}
+
+</style>
+</head>
+
+<body>
+	<div class="page-container">
+	<header>
+		<div class="header-top">
+			<div class="container-fluid  pad-30">
+				<div class="row">
+					<div class="col-lg-4 col-md-4 hidden-sm hidden-xs">
+
+						<div class="btn-group font-sizing " role="group" aria-label="...">
+							<button class="btn btn-default" id="fontdecrease"
+								title="Decrease Website's font size">A-</button>
+							<button class="btn btn-default selected" id="fontdefault"
+								title="Normal  Website's font size">A</button>
+							<button class="btn btn-default" id="fontincrease"
+								title="Increase Website's font size">A+</button>
+						</div>
+						<div class="btn-group font-contrast " role="group" 	aria-label="...">
+							<button class="btn btn-default standard" id="stdView"
+								title="Standard View">A</button>
+							<button class="btn btn-default high-contrast-view"
+								id="highContrastView" title="High Contrast View">A</button>
+						</div>
+						
+					</div>
+
+					<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 ">
+										
+					<!-- Live -->
+                    <a class="pull-right" href="itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/vcoui5et1wveuug/eSbm.plist" title="Mobile App (iOS)" > <i class="fa fa-android myicon fs-1 my-2 text-white mx-2" title="Mobile App for iOS - Recommended Browser is Safari"> </i> </a>
+					<a class="pull-right" href="https://mcdonline.nic.in/eSBM/eSBM.apk"><i class="fa fa-apple fs-1 my-2 text-white mx-2" title="Mobile App for Android"> </i></a>
+                  	 
+                  	<!-- Beta -->
+                  	<!-- 
+					<a class="pull-right" href="itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/34wab69c4z40ufd/eSbmbeta.plist" title="Mobile App (iOS)"><img src="static/images/mobileicon/ios.gif" style="width:35px;"/></a>
+					<a class="pull-right" href="https://mcdonline.nic.in/eSBMbeta/eSBM.apk" title="Mobile App (Android)"><img src="static/images/mobileicon/android.gif" style="width:35px;"/></a>
+                  	-->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="header-middle">
+			<div class="container-fluid ">
+				<div class="row">
+					<div class="  col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-8 ">
+						<div class="navbar-header">
+						
+				  <a href="/portal/" class="">
+                               <img src='static/images/mcd_logo.png' class="img-responsive" style="width:100%; height:65px;"  alt='' title=''>
+								</a>
+
+						</div>
+					</div>
+					<div class="col-xl-7 col-lg-7 col-md-7 col-sm-6 col-xs-12">						
+						<h1 class="headwrap">eSBM - EASE OF TRACKING VEHICLES and BIO-MINING</h1>
+						<input type="hidden" id="loginTitle" value="MCD">
+<!--     	<nav class="navbar navbar-expand-sm   navbar-light ">
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0 navcolor">
+            <li class="nav-item "> 
+            <a class="nav-link" href="#">About Us <span class="sr-only">(current)</span></a>  
+             </li>
+            <li class="nav-item">
+             <a class="nav-link" href="#">FAQ</a> 
+             </li>
+            <li class="nav-item"> 
+            <a class="nav-link" href="javascript:void;">Circulars</a>
+             </li>
+          <li class="nav-item">
+                <a class="nav-link" href="javascript:void;">Users Manual</a>
+             </li>
+             <li class="nav-item dropdown dmenu">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbardrop" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Downloads
+                  </a>
+                  <div class="dropdown-menu sm-menu" aria-labelledby="navbarDropdown">
+					  <a class="dropdown-item" href="itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/8ckru4729qkg0y0/mcdsdmc.plist">Mobile App (iOS)</a>
+					  <a class="dropdown-item" href="https://mcdonline.nic.in/eSBM.apk">Mobile App (Android)</a>
+                  </div>
+                </li>
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0);" data-toggle="modal" data-target="#popupContactUs">Contact Us</a>
+                </li>
+        
+          </ul>
+        
+        </div>
+      </nav> -->
+    
+			<!-- 	<b class="right-content pull-left bouncing-text ">Know  Your <br> Waste  Collection <br>Vehicle Route</b>
+  <div class="col-lg-1 col-md-1 col-sm-3 col-xs-3">
+						<h1 class="right-content pull-right">
+							<a class="sw-logo" href="citizenMap/doShowRootMonitoringPublicConsole" title="Citizen Corner"><img src="static/images/mobileicon/logo.png" style="width:80px;"  alt="Citizen Vorner" /></a>
+						</h1>
+					</div>
+					<b class="right-content pull-left bouncing-text "> MRS Route <br> Tracking</b>
+  <div class="col-lg-1 col-md-1 col-sm-3 col-xs-3">
+						<h1 class="right-content pull-right">
+							<a class="sw-logo" href="citizenMap/doShowMSRRouteTrackingConsole" title="Citizen Corner"><img src="static/images/mobileicon/population.png" style="width:80px;"  alt="Citizen Vorner" /></a>
+							
+						</h1>
+					</div> -->
+					
+						
+					</div>
+	         
+	
+					<div class="col-xl-1 col-lg-1 col-md-1 col-sm-2 col-xs-12">
+						<h1 class="right-content pull-right digitalindia">
+							<a class="sw-logo" target="_blank"
+								href="http://www.digitalindia.gov.in/" onclick="return confirm('You are moving out of https://mcdonline.nic.in/esbm-mcd. Do you wish to continue?')"
+								title="Digital India, External link"> <img	src="static/images/digital-india.png" alt="Digital India" style="height: 61px;">
+							</a>
+						</h1>
+					</div>
+				</div>
+			</div>
+			<!--  </nav> -->
+		</div>
+	</header>
+	
+
+	<div class="hidden-header"></div>
+	<div class="page-content">
+		<!--  Start Slider  -->
+		<div  class="container-fluid" style="width: 100%; height: 100%">
+		
+		
+		 <section>
+		 <div class="row my-5">
+		  <div class="col-lg-7"> 
+		   <div class="col-lg-12"> 
+			<div id="demo" class="carousel slide" data-bs-ride="carousel">
+				<!-- Indicators -->
+				<ul class="carousel-indicators">
+					<li data-bs-target="#demo" data-bs-slide-to="0" class="active"></li>
+					<li data-bs-target="#demo" data-bs-slide-to="1"></li>
+					<li data-bs-target="#demo" data-bs-slide-to="2"></li>
+					<li data-bs-target="#demo" data-bs-slide-to="3"></li>
+					<!-- <li data-target="#demo" data-slide-to="4"></li>  -->
+				</ul>
+				<!-- The slideshow -->
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img style="" src="static/images/slider/banner1.png" class="d-block"
+							alt="swatch-bharat">
+					</div>
+					<div class="carousel-item">
+						<img style="" src="static/images/slider/banner2.png" class="d-block"
+							alt="swatchh-bharat">
+					</div>
+					<div class="carousel-item">
+						<img style="" src="static/images/slider/banner3.png" class="d-block"
+							alt="swachh-banner">
+					</div>
+					<div class="carousel-item">
+						<img style="" src="static/images/slider/banner4.png" class="d-block"
+							alt="swachh-banner">
+					</div>
+					<!-- <div class="carousel-item">
+						<img style="height: 375px;" src="static/images/slider/banner5.png"
+							alt="swachh-banner">
+					</div> -->
+				</div>
+
+				<!-- Left and right controls -->
+				<!-- <a class="carousel-control-prev" href="#carouselExample" role="button" data-bs-slide="prev">
+				    <i class="fas fa-chevron-left"></i> Replace with your preferred icon
+				    <span class="visually-hidden">Previous</span>
+				</a> -->
+				<a class="carousel-control-prev" data-bs-target="#demo" data-bs-slide="prev">
+					 <i class="fa fa-chevron-left fs-1"></i> <!-- Replace with your preferred icon -->
+				    <span class="visually-hidden">Previous</span>
+				</a> <a class="carousel-control-next" data-bs-target="#demo" data-bs-slide="next">
+				 <i class="fa fa-chevron-right fs-1"></i> 
+					<span class="visually-hidden">Next</span>
+				</a>
+
+			</div>
+		 </div> 
+		 <br> <br>
+		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-flex"> 
+		<a href="citizenMap/doShowRootMonitoringPublicConsole" class="servicetag" title="Know Your Waste Collection Vehicle Route">
+		<div class="testi-card">
+                  <div class="avatar-block">
+                    <div class="waste-wrapper"><img class="img" src="static/images/waste.png" alt="Know Your Waste Collection Vehicle Route"></div>
+                    <div class="info"><p class="text-wrapper-4">Know Your Waste Collection Vehicle Route</p></div>
+                  </div>
+                </div>
+                </a>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-flex"> 
+                
+                 <a href="citizenMap/doShowMrsLanding" class="servicetag" title="MSR Route Tracking">
+		<div class="testi-card">
+                  <div class="avatar-block">
+                    <div class="waste-wrapper"><img class="img" src="static/images/esbm_tipper.png" alt="MSR Route Tracking"></div>
+                    <div class="info"><p class="text-wrapper-4">MRS Route Tracking</p></div>
+                  </div>
+                </div>
+                </a>
+                
+		</div>
+		
+	<div class="outer-line-box">
+<span class="border-text">Biomining Section</span>
+
+		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-flex"> 
+                
+                 <a href="citizenMap/doShowbiominingReportsPublicConsole" class="servicetag" title="MSR Route Tracking">
+		<div class="testi-card">
+                  <div class="avatar-block">
+                    <div class="waste-wrapper"><img class="img" src="static/images/esbm_tipper.png" alt="MSR Route Tracking"></div>
+                    <div class="info"><p class="text-wrapper-4">Biomining DashBoard</p></div>
+                  </div>
+                </div>
+                </a>
+                
+		</div>
+		
+		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-flex"> 
+                
+                 <a href="citizenMap/doShowbiominingReportsDataPublicConsole" class="servicetag" title="MSR Route Tracking">
+		<div class="testi-card">
+                  <div class="avatar-block">
+                    <div class="waste-wrapper"><img class="img" src="static/images/esbm_tipper.png" alt="MSR Route Tracking"></div>
+                    <div class="info"><p class="text-wrapper-4">Biomining Report</p></div>
+                  </div>
+                </div>
+                </a>
+                
+		</div>
+	</div>	
+
+		
+		 </div>
+		
+		  <div class="col-lg-5">
+		  <div class="login-container">
+		  <div class="card-body w-100 h-100">
+				
+
+<!-- Tab Links (Will be Hidden on Click) -->
+<div id="changed" >
+<div id="tab-links">
+    <div class="tab-link" style="width: 300px;height: 300px;padding-left: 10px;padding-right: 10px;">
+        <a href="#" class="discuss-icon" onclick="showTab('esbm')" style="width: 280px;height: 280px;padding-left: 10px;padding-right: 10px;">
+             <i class="fa fa-users esbmuser" title="eSBM"  style="width: 260px;height: 260px;padding-left: 10px;padding-right: 10px;"></i> 
+          <!--   <img src="static/images/login1.png"/> -->
+             eSBM
+        </a>
+    </div>
+
+
+    <div class="tab-link" style="width: 300px;height: 300px;padding-left: 10px;padding-right: 10px;">
+        <a href="#" class="discuss-icon" onclick="showTab('bio-mining')" title="BIO-MINING" style="width: 280px;height: 280px;padding-left: 10px;padding-right: 10px;">
+             <i class="fa fa-user-plus mininguser" style="width: 260px;height: 260px;padding-left: 10px;padding-right: 10px;"></i> 
+          <!--   <img src="static/images/login2.png"/> --> BIO-MINING
+        </a>
+    </div>
+</div>
+
+<!-- eSBM Content -->
+
+  <div id="common-header" class="common-header hidden">
+    <button class="btn btn-primary esbmuserbtn" rel="eSBM-tab" onclick="showTab('esbm')"><i class="fa fa-user"></i> eSBM </button>
+    <button class="btn btn-primary mininguserbtn" rel="BIO-MINING-tab" onclick="showTab('bio-mining')"> <i class="fa fa-user"></i>BIO-MINING </button>
+    </div>
+    
+<div id="esbm-tab" class="tab-content hidden" style="height: 600px;">
+    
+    <label><input type="radio" name="esbm-option" value="eSBMoption1" checked onclick="showRadioTab('eSBM-tab11')"> Concessionaire Login</label>
+    <label><input type="radio" name="esbm-option" value="eSBMoption2" onclick="showRadioTab('eSBM-tab12')"> Officer Login</label>
+    
+    <br>
+    <br>
+    
+   <form id="eSBM-tab11" form id="loginForm" method="post" class="radio-tab-content hidden">
+     <!--   Concessionaire Login -->
+             <div class="login_top_div">
+                         <div id="Citizen_Login" class="tab-pane active ">
+											
+											
+											
+												<input type="hidden" name="_csrf" value="4117014a-c98c-4e4f-86e2-5d1c6bfffe78" /> 
+												<input id="loginTypeC" type="hidden" name="loginType" class="form-control" value="VEN" required>
+												<input id="venTypeID" type="hidden" name="type" class="form-control" value="C" required>
+														
+									<div class="row  mb-2">									
+									 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-3">										
+									<div class="form-group mb-1 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+										<label for="name-login-hos">User Id</label>
+									</div>
+									<div class="input-group col-lg-8 col-md-12 col-sm-12 col-xs-12 float-left">
+										<span class="input-group-addon"><i class="fa fa-user"></i></span> 
+										<input type="text" id="username" name="username" placeholder="Enter the Username" maxlength="50" class="form-control" autocomplete="off"/>
+									</div>
+								
+                                      </div>
+                                      
+                                      
+									</div>
+									
+									<br>
+											
+									<div class="row mb-2">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">										
+									<div class="form-group mb-1 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+										<label for="password">Password</label>
+									</div>
+									<div class="input-group col-lg-8 col-md-12 col-sm-12 col-xs-12 float-left">
+										<span class="input-group-addon"><i class="fa fa-lock"></i></span> 
+										<input type="password" id="password" name="password" placeholder="Password" maxlength="50" class="form-control" autocomplete="off"/>
+									</div>
+								
+                                      </div>
+                                        </div>
+					<!-- 						<div class="row mt-4">
+													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+													<div
+														class="col-lg-4 col-md-4 col-sm-12 col-xs-12  pl-0 pr-0 float-left">
+														<button id="gntateOTP" class="btn btn-default otpbtn"
+															type="button" onclick="isOtpGenerated('login')">GENERATE
+															OTP</button> 
+													</div>
+													<p id="venderbtnpid" style="color: black;"></p>
+													<div
+														class=" col-lg-8 col-md-8 col-sm-12 col-xs-12 mb-4 pl-0 pr-0  float-right ">
+														<input id="password-login" name="otp" type="password"
+															maxlength="6" class="form-control"
+															placeholder="Enter OTP"  >
+
+													</div>
+												</div>
+												</div> -->	
+												
+									<br>	
+										<div class="row  mb-1">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-1">
+									<div class="form-group mb-1 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+										<label for="name-login-hos">CAPTCHA</label>
+									</div>
+									<div class="input-group col-lg-8 col-md-12 col-sm-12 col-xs-12 float-left">
+									 <img id="reCaptcha"  alt="CAPTCHA Image" class="img-responsive " src="data:image/jpeg;base64,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"  style="float: left;width: 60%;"/>
+		                           <a href="javascript:showCapcha();" class="addon float-left fs-3"	style="float: left;margin-left: 10px;margin-top: 0px;"> <i class="fa fa-refresh "  aria-hidden="true"></i></a>
+			                       	</div>
+									</div>
+									</div>
+										<br>	<div class="row  mb-1">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-1">
+									<div class="form-group mb-1 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+										<label for="name-login-hos">Enter CAPTCHA</label>
+									</div>
+									<div class="input-group col-lg-8 col-md-12 col-sm-12 col-xs-12 float-left">
+												<span class="input-group-addon"><i class="fa fa-align-justify" aria-hidden="true"></i></span> 
+	 		                                          <input type="hidden" id="hiddenCaptcha" value="6g5gy"/>
+			                                    <input type="text" id="captcha"  name="captcha" class="form-control" maxlength="5"/>	</div>
+									</div>
+									</div>  
+									<br>
+												<div class="row">
+													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-end  mt-1">														
+												 <a type="button" id="forgotPassword" onclick="passwordForgot('C');" class="text-template-outlined fw-bold" >															
+                                                                 Forgot Password ?
+												</a>
+														<!-- <a type="button" id="forgotPassword" class="text-template-outlined fw-bold" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal">
+														    Forgot Password ? 
+														</a> -->
+													</div> </div>
+												
+												<div class="row">
+													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  text-center mt-1">
+														<button type="button" id="gntateOTP" onclick="isOtpGenerated('login')" class="btn btn-template-outlined btn-sm w-100">
+															<i class="fa fa-sign-in"></i> Login  
+														</button>
+														
+														</div> </div>
+												
+											
+												
+												
+												<span style="color: red"></span>
+											</form>
+								</div>
+								
+                        </div>
+                         
+       
+    </form>
+
+    <form id="eSBM-tab12" class="radio-tab-content hidden">
+     <!--   officer-login -->
+       
+        <div class="" id="officer-login" role="tabpanel" aria-labelledby="nav-contact-tab">
+                       <h3 style="display: none;">redirecting for authentication..<i class="fa fa-spinner fa-spin" aria-hidden="true"></i></h3>
+                       <div class="tab-pane fade show active" id="officer-login" role="tabpanel" aria-labelledby="nav-contact-tab">
+                       <div class="fontSize">					
+                		<div class="slider_overlay_Box_C">
+                    	<div class="recent-updated">
+                     <!--    <h3 class="style_h2">Officer Login </h3> -->
+                        
+                        <div class="login_top_div">
+                         <div id="Officer_Login" class="tab-pane active ">
+                        					<input type="hidden" id="alertID" value="">
+					 						
+											
+											<form id="loginForm1" method="post" action="loginForm" class="frm-container">
+												<input type="hidden" name="_csrf" value="4117014a-c98c-4e4f-86e2-5d1c6bfffe78" /> 
+												<input id="loginTypeO" type="hidden" name="loginType" class="form-control" value="EMP">
+												<input id="offTypeID" type="hidden" name="type" class="form-control" value="O" required>
+													
+									<div class="row  mb-2">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-3">
+									<div class="form-group mb-1 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+										<label for="name-login-hos">Officer Id</label>
+									</div>
+									<div class="input-group col-lg-8 col-md-12 col-sm-12 col-xs-12 float-left">
+									<span class="input-group-addon"><i class="fa fa-user"></i></span> 
+										<input type="text" id="officerName" name="username" placeholder="Username" maxlength="50" class="form-control" autocomplete="off"/>
+									</div>
+									</div>
+									</div>
+									
+									<br>
+											
+									<div class="row mb-2">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+										
+									<div class="form-group mb-1 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+										<label for="password">Password</label>
+									</div>
+									<div class="input-group col-lg-8 col-md-12 col-sm-12 col-xs-12 float-left">
+										<span class="input-group-addon"><i class="fa fa-lock"></i></span> 
+										<input type="password" id="officerPassword2" name="password" placeholder="Password"  maxlength="50"  class="form-control" autocomplete="off"/>
+									</div>
+								
+                                      </div>
+                                        </div>	
+<!--                                       <br>  
+                                        <div class="row mt-4">
+													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+													<div
+														class="col-lg-4 col-md-4 col-sm-12 col-xs-12  pl-0 pr-0 float-left">
+														<button id="gntateOTP2" class="btn btn-default otpbtn"
+															type="button" onclick="isOtpGenerated('officerLogin')">GENERATE
+															OTP</button> 
+													</div>
+													<p id="officerbtnpid" style="color: black;" ></p>
+													<div
+														class=" col-lg-8 col-md-8 col-sm-12 col-xs-12 mb-4 pl-0 pr-0  float-right ">
+														<input id="password-login" name="otp" type="password"
+															maxlength="6" class="form-control"
+															placeholder="Enter OTP"  >
+
+													</div>
+												</div>
+												</div> -->	<br>	
+																						<div class="row  mb-1">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-1">
+									<div class="form-group mb-1 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+										<label for="name-login-hos">CAPTCHA</label>
+									</div>
+									<div class="input-group col-lg-8 col-md-8 col-sm-8 col-xs-8 float-left">
+									 <img id="reCaptcha1"  alt="CAPTCHA Image" class="img-responsive " src="data:image/jpeg;base64,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"  style="float: left;width: 60%;"/>
+		                           <a href="javascript:showCapcha1();" class="addon float-left fs-3" style="float: left;margin-left: 10px;margin-top: 0px;"> <i class="fa fa-refresh "  aria-hidden="true"></i></a>
+			                       	</div>
+									</div>
+									</div>
+									<br>
+									<div class="row  mb-1">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-1">
+									<div class="form-group mb-1 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+										<label for="name-login-hos">Enter CAPTCHA</label>
+									</div>
+									<div class="input-group col-lg-8 col-md-12 col-sm-12 col-xs-12 float-left">
+												<span class="input-group-addon"><i class="fa fa-align-justify" aria-hidden="true"></i></span> 
+			                                          <input type="hidden" id="hiddenCaptcha1" value="6g5gy"/>
+			                                    <input type="text" id="captcha1"  name="captcha" class="form-control" maxlength="5"/>	</div>
+									</div>
+									</div>
+									<br>
+									<div class="row">
+													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  text-end mt-1">
+													<a type="button" id="forgotPassword" onclick="passwordForgot('O');" class="text-template-outlined fw-bold" >
+															   Forgot Password ?
+														</a>
+														<!-- <a type="button" id="forgotPassword" class="text-template-outlined fw-bold" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal">
+														    Forgot Password ? 
+														</a> -->
+												
+												</div> 
+												</div>
+												
+												<div class="row">
+													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  text-center mt-1">
+													<button type="button" id="gntateOTP2" onclick="isOtpGenerated('officerLogin')" class="btn btn-template-outlined btn-sm w-100">
+															<i class="fa fa-sign-in"></i> Login 
+														</button>
+														</div> 
+												</div>
+										<!-- 		<div class="row">
+													<div
+														class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+														<button type="button" id="gntateOTP2" onclick="isOtpGenerated('officerLogin')" class="btn btn-template-outlined ">
+															<i class="fa fa-user-md"></i> Login
+														</button>
+														
+
+													</div>
+												</div> -->
+												
+												
+												<span style="color: red"></span>
+											</form>
+								</div>
+							
+                        </div>
+                    </div>
+                </div>
+              </div>
+                    </div> 
+                    </div>
+                    
+                  
+    </form>
+    <br>
+    <div class="row">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  text-center mt-2">    
+    <button type="button" onclick="goBack()" class="btn btn-template-outlined btn-sm mb-2">
+		<i class="fa fa-chevron-left"></i> Back  
+	</button>
+	</div>
+	</div>
+</div>
+
+<!-- BIO-MINING Content -->
+<div id="bio-mining-tab" class="tab-content hidden" style="height: 600px;" >
+  <!--   <h3>BIO-MINING Form</h3> -->
+    
+    <label><input type="radio" name="bio-option" id="esbmOption3" value="Option3" checked onclick="showRadioTab('bio-mining-tab11')"> RFID Admin Login </label>
+    <label><input type="radio" name="bio-option" id="esbmOption4" value="Option4" onclick="showRadioTab('bio-mining-tab12')">  RFID Agency Login</label>
+    <label><input type="radio" name="bio-option" id="esbmOption5" value="Option5" onclick="showRadioTab('bio-mining-tab13')">  RFID Site Login</label>
+    <br><br>
+    <form id="bio-mining-tab11" class="radio-tab-content hidden" >
+      <!--  RFID ADMIN Login  -->
+          <div class="" id="rfid_admin-login" role="tabpanel" aria-labelledby="nav-rfid_admin-login">
+                       <h3 style="display: none;">redirecting for authentication..<i class="fa fa-spinner fa-spin" aria-hidden="true"></i></h3>
+                       <div class="tab-pane fade show active" id="rfid_admin-login" role="tabpanel" aria-labelledby="nav-rfid_admin-login">
+                    					
+                		<div class="slider_overlay_Box_C">
+                    	<div class="recent-updated">
+                       <!--  <h3 class="style_h2">RFID ADMIN Login </h3> -->
+                        
+                        <div class="login_top_div">
+                        <div id="Rfid_admin-login" class="tab-pane active ">
+                        					<input type="hidden" id="alertID" value="">
+											
+											
+											<form id="loginForm1" method="post" action="loginForm" class="frm-container">
+												<input type="hidden" name="_csrf" value="4117014a-c98c-4e4f-86e2-5d1c6bfffe78" /> 
+												<input id="loginTypeROL" type="hidden" name="loginType" class="form-control" value="ROL">
+												<input id="rfidAdminoffTypeID" type="hidden" name="type" class="form-control" value="ROL" required>
+										<br>			
+									<div class="row  mb-2">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-3">
+									<div class="form-group mb-1 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+										<label for="name-login-hos">RFID Officer Id</label>
+									</div>
+									<div class="input-group col-lg-8 col-md-12 col-sm-12 col-xs-12 float-left">
+									<span class="input-group-addon"><i class="fa fa-user"></i></span> 
+										<input type="text" id="rfidAdminofficerName" name="username" placeholder="Username" maxlength="50" class="form-control" autocomplete="off"/>
+									</div>
+									</div>
+									</div>
+									<br>
+											
+									<div class="row mb-2">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+										
+									<div class="form-group mb-1 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+										<label for="password">Password</label>
+									</div>
+									<div class="input-group col-lg-8 col-md-12 col-sm-12 col-xs-12 float-left">
+										<span class="input-group-addon"><i class="fa fa-lock"></i></span> 
+										<input type="password" id="rfidAdminofficerPassword2" name="password" placeholder="Password"  maxlength="50"  class="form-control" autocomplete="off"/>
+									</div>
+								
+                                      </div>
+                                        </div>	
+<!--                                      <br>   
+                                        <div class="row mt-4">
+													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+													<div
+														class="col-lg-4 col-md-4 col-sm-12 col-xs-12  pl-0 pr-0 float-left">
+														<button id="gntateOTP2" class="btn btn-default otpbtn"
+															type="button" onclick="isOtpGenerated('officerLogin')">GENERATE
+															OTP</button> 
+													</div>
+													<p id="officerbtnpid" style="color: black;" ></p>
+													<div
+														class=" col-lg-8 col-md-8 col-sm-12 col-xs-12 mb-4 pl-0 pr-0  float-right ">
+														<input id="password-login" name="otp" type="password"
+															maxlength="6" class="form-control"
+															placeholder="Enter OTP"  >
+
+													</div>
+												</div>
+												</div> -->		<br> 
+																						<div class="row  mb-1">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-1">
+									<div class="form-group mb-1 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+										<label for="name-login-hos">CAPTCHA</label>
+									</div>
+									<div class="input-group col-lg-8 col-md-12 col-sm-12 col-xs-12 float-left">
+									 <img id="reCaptcha2"  alt="CAPTCHA Image" class="img-responsive " src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCABGAPADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoopqurruRgw5GQc0AOooooAKKKpaxqlvomi3uq3ZIt7SB5nx1IUZwPc9B70ARa14g0jw5Z/a9Y1G3soeitM+Cx9FHVj7DNconxp+HryBB4iXJOMm0nA/Mpivm5pfEHxb+IEcbyh729ciNWYiK2iGWwPRVGfcn1J59ij/Zs0Iafsl13UWvcf65URY8/7mCf/HqAPYtP1Kx1azW7068t7u2fhZYJA6n2yKtVxHw28GSfDrw1qGnXmoQXEJvXuluAPLAj8tBlgeFI2HuRjvWFc/tBeCrfUmtFGpTxq+37VFbr5X15YNj/AIDQB6pWPfeLPDemXklnf+INKtLqPG+Ge9jjdcgEZUnIyCD+Nc/efGHwFYXHkXHiBBJsST5LaZxtdQynKoR0YfToea8I+J+mf23+0BdaT53k/bruytvN27tm+KJd2MjOM5xkUAfR/wDwnfg//oa9D/8ABjD/APFVsWN/Z6nZx3lhdwXdrJnZNBIJEbBIOGHBwQR+FeD/APDMv/U3f+U3/wC216FaXWjfBr4d2FhrOqG4S3MixMkO2S4ZnZ8Km49N2Mk49SM0Ad9RXm2hfHPwZrk08TS3mnmGF5s3sIAdVUs23YzZIAJx1PbJqz/wu34ef9DD/wCSVx/8boA9AorK8P8AiTSPFWmf2lot4t3abzHvCMmGHUEMAR1HbvUHiXxjoHg+3gn17UFtI7hikX7t3LEDJ4QE/j70AblFYPhnxpoHjFLl9BvzdpbFRK3kSRhS2cffUZ6Hp/Wt6gAooooAKKpajq+maREJdT1G0so26PczrGD+LEVw+r/HDwLpQYJqUt/KpwY7OBm/Jmwp/A0Aei0V4k/xx1zXDJH4Q8D3t5g4WeUM6j/eVBgf990NZfHLxOXE13YeH7dwDsRkU49iodwfqRQB7VNNFbQvNPKkUSDLO7BVUepJ6Vx+rfFfwPoxK3HiG1lfGQlpmcn2ygIB+pFcTD8An1OdbnxX4w1PU5dvITgg+geQvkfgK6/SPg74F0fYyaHFdSqMGS9Zpt31Vjt/SgDk7n9oOyurhbXw34Y1TVbhuArYQk9sBA5P6VANe+NviYKbDRLTQoC2PNmjVXA/2llLH8kr2a0srXT7dbeytobaBfuxwxhFH0A4qegDxE/Brxh4hU/8Jb48uJULZNvbl5Iz9NxUL/3zXqvhTw1aeEPDltoljPcTW1uWKNcMpf5mLHoAOpPatmigAooooAK4H41OyfCLXSpwcQD8DPGDXfVznj7QZPE3gTWNIhBM89uTCv8AekUh0H4soH40AfG2gDV5tVjsdDknW+vv9FUQvsZwxGV3cYB78gYznjNdR4r+Gfiv4f2ltrF5JD5bSBftFlOxaGQ8gNwCDweRke/Sud8Na3c+FvEUepw7o7u2jmSMlATHI0TopIYEcMwOCO1en+IPihDr3wLXS9UvVu/EV5cbJRtAZUWXzA5CgADAVQOM/nQBjXHxe1bU/hXf+HdSuGm1B5YoUuiTvktzkuGPcjaqknqHOeRk6fwV+GWk+MrPU9U12GWa0hcW0EaSlAX27mYkc5AKY7cnOa8ysvD2oX/h7U9bhhJstOaJZ39DI2Bj19/TI9a9g+AfjvRtC0vVdF1m/t7FTN9rgknbar5UK4yeMjYuB1OTigDyfxl4ebwr4w1TRCzOtrMVjZsZaMgMhOO5UivQ/iL4W8Ua78atYuPDmm3k0sEtsyXMI2LG4giI/eHCqRwetcJ8QPEEXinx5q+sW/NvPNiE4I3RooRTg9MqoP419ZL8RvBx1G6sJPEVjb3VpK8MyXMnk7XU7WGXwDz6ZoA+bNV1b4q+BL+GXVtT1y2Yn921zdG4hc46clkY+1Y3jvx5qHj3UbK8v40hNtbCERRE7N2SWcA9M8fkB2r2L42/ELwtqXg6bQdOvbbU76aaNla3O9IArZLbx8pJAK4B/iNfOZBABIOD0PrQB774l+CWlaT8KH1CBJxr9lbC6uZTKSr4AMibegCjdjAzwMk14to2hXGt2+ryW2WfTrFr1kAyWRZEVvyDlvopr6C8WfF/QNQ+Es4t7+KTWNSsfs7Wag7o3cBZM8cAAsQT1wMZrxv4aeKT4U8QXdwNEk1k3lk9n9jRsbwzITn5WyMKRjHegDu/2dPE/wBk12+8NzyYivk+0W6knHmoPmAHqU5P/XMVlftBeIf7U8eR6VG5MGlQCMjOR5r4ZiPw2D6rXnwk1jwj4kjuY4LrSdRtZBLFHPGRJHnkZDDng9xgjtWl4X0S/wDiP4+js7i6b7RfyvPd3RTO0cs7YGB7AcDJAoA9/wDhve+Gvh38ObKHWNasLS9uR9tuYnnHmAuBtGz72QgQEY6g0at+0F4OsSyWC3+pyY+Uww7EJ9CXII/75NS6T8AfBOnnddxXupNj/l5uCqg+oEe39Sa7vSfC+gaFtOlaNY2bhdvmQwKrke7YyfxNAHlA+KHxJ8SFB4Y8BtbwyKds94HZT7h28tP50L4L+MHiXy21vxhHpMJyGitH2yKPpEFDfi9e20UAePab+zx4ejkE+s6tqWp3G7LncIkf6jlv/Hq7nSfhx4N0QD7D4csAwOQ80fnOD7M+SPzrqKKAAAAAAYAooooAKKKKACiiigAooooAKKKKACiiigDzHxx8EtB8X38up208mlajMd0skSB45T3ZkyPmPqCM9TknNeLeLPg9rvguYX1zbvq+iRkNNPYtsdUHJ3AhtnAPzYZR39K+t6OowaAPnuw+MPw/0rwo3h2x8K6j/Z0kTJPA+z94WGGLNuySfXrwMYwMeNX/APwj76g8lgdSjsy2VhmVGcD03ggfjtr7a1PSLfU9AvdHbMFtd20ls3kgAorqVJXtnmvEZf2ZozITF4sdEzwH08MR+PmD+VAHh2qy2V/q5Oj6fLa2zLHHDbtJ5rkhFUkkAZZmBbgDlsCuh8QaFr3iTxFe6nZeENdge/uJLhonheXDO25sERrwC34V734I+B2ieEtUi1W7vJdVv4G3QGSMRxxt2YJk5YdiTx1xkA16lQB8laR8CvHOqFTNY2+nRsMh7ycD/wAdTcwP1AroNT+EGjeHYNPtvGHj37JJOki2cS2zNEhUgthicAZcEjC5zX0rXC/Ej4aW3xEg08S6lLYzWJk8tkjEikPtzkZH9wY59aAPD9U8EeAvCui399P41tfEF41tJHY2dkFH75lIV32u/Ck7udv3e/Q3/wBm+CVvHOp3AQmKPTWRmxwGaWMgfiFb8q3U/ZmQODJ4tZkzyF07BP4+aa7qX4VWGl/DXVvDHhzal1foN91eOcyMCCN5UcADOABgZ9STQB5x+0lb6Z/aujXUU8Z1QxPFPCrAt5QIKFh25ZsZ659q1v2cfDPkadqXiadMPcN9ktyQQdi4Zz7gttH1Q1z2n/s3eIXvYxqWsaXDa5/eNbNJI+PYMij9a+h9F0ey8P6LaaTp0Xl2lrGI417+5PqScknuSaAL9FFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQB//9k="  style="float: left;width: 60%;"/>
+		                           <a href="javascript:showCapcha1();" class="addon float-left fs-3" style="float: left;margin-left: 10px;margin-top: 0px;"> <i class="fa fa-refresh "  aria-hidden="true"></i></a>
+			                       	</div>
+									</div>
+									</div><br>
+											<div class="row  mb-1">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-1">
+									<div class="form-group mb-1 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+										<label for="name-login-hos">Enter CAPTCHA</label>
+									</div>
+									<div class="input-group col-lg-8 col-md-12 col-sm-12 col-xs-12 float-left">
+												<span class="input-group-addon"><i class="fa fa-align-justify" aria-hidden="true"></i></span> 
+			                                          <input type="hidden" id="hiddenCaptcha2" value="6g5gy"/>
+			                                    <input type="text" id="captcha2"  name="captcha" class="form-control" maxlength="5"/>	</div>
+									</div>
+									</div>
+											<!-- 	<div class="row">
+													<div
+														class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+														<button type="button" id="gntateOTP2" onclick="isOtpGenerated('RFIDAdminLogin')" class="btn btn-template-outlined btn-sm ">
+															<i class="fa fa-user-md"></i> Login
+														</button>
+														
+
+													</div>
+												</div> -->												 
+												<br>
+													<div class="row">
+													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  text-end mt-1">
+														<a type="button" id="forgotPassword" onclick="passwordForgot('A');" class="text-template-outlined fw-bold" >
+															  Forgot Password ?
+														</a>
+														
+														<!-- <a type="button" id="forgotPassword" class="text-template-outlined fw-bold" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal">
+														    Forgot Password ? 
+														</a> -->
+
+												
+												</div> </div>
+												
+												<div class="row">
+													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  text-center mt-1">
+														<button type="button" id="gntateOTP2" onclick="isOtpGenerated('RFIDAdminLogin')" class="btn btn-template-outlined btn-sm w-100">
+															<i class="fa fa-sign-in"></i> Login 
+														</button>
+														</div> </div>
+												
+												
+												<span style="color: red"></span>
+											</form>
+								</div>
+							
+                        </div>
+                    </div>
+                </div>
+              
+                    </div> 
+                    </div><!--  end first tab pannel-->
+                    
+        <!-- <button type="submit">Submit</button> -->
+    </form>
+  
+  
+    <form id="bio-mining-tab12" class="radio-tab-content hidden">
+    <!-- RFID Agency Login -->
+         <div class="" id="rfid_Agency-login" role="tabpanel" aria-labelledby="nav-rfid-Agency-login">
+                       <h3 style="display: none;">redirecting for authentication..<i class="fa fa-spinner fa-spin" aria-hidden="true"></i></h3>
+                       <div class="tab-pane fade show active" id="rfid-agency-login" role="tabpanel" aria-labelledby="nav-rfid-Agency-login">
+                       <div class=" fontSize">					
+                		<div class="slider_overlay_Box_C">
+                    	<div class="recent-updated">
+                       <!--  <h3 class="style_h2">RFID Agency Login </h3> -->
+                        
+                        <div class="login_top_div">
+                        <div id="Rfid-agency-login" class="tab-pane active ">
+                        					<input type="hidden" id="alertID" value="">
+											
+											
+											<form id="loginForm1" method="post" action="loginForm" class="frm-container">
+												<input type="hidden" name="_csrf" value="4117014a-c98c-4e4f-86e2-5d1c6bfffe78" /> 
+												<input id="loginTypeRAL" type="hidden" name="loginType" class="form-control" value="RAL">
+												<input id="rfisAgencyoffTypeID" type="hidden" name="type" class="form-control" value="RAL" required>
+											<br>		
+									<div class="row  mb-2">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-3">
+									<div class="form-group mb-1 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+										<label for="name-login-hos">Agency User Id</label>
+									</div>
+									<div class="input-group col-lg-8 col-md-12 col-sm-12 col-xs-12 float-left">
+									<span class="input-group-addon"><i class="fa fa-user"></i></span> 
+										<input type="text" id="rfisAgencyofficerName" name="username" placeholder="Username" maxlength="50" class="form-control" autocomplete="off"/>
+									</div>
+									</div>
+									</div>
+										<br>	
+									<div class="row mb-2">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+										
+									<div class="form-group mb-1 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+										<label for="password">Password</label>
+									</div>
+									<div class="input-group col-lg-8 col-md-12 col-sm-12 col-xs-12 float-left">
+										<span class="input-group-addon"><i class="fa fa-lock"></i></span> 
+										<input type="password" id="rfisAgencyofficerPassword2" name="password" placeholder="Password"  maxlength="50"  class="form-control" autocomplete="off"/>
+									</div>
+								
+                                      </div>
+                                        </div>	<br>
+<!--                                         <br>
+                                        <div class="row mt-4">
+													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+													<div
+														class="col-lg-4 col-md-4 col-sm-12 col-xs-12  pl-0 pr-0 float-left">
+														<button id="gntateOTP2" class="btn btn-default otpbtn"
+															type="button" onclick="isOtpGenerated('officerLogin')">GENERATE
+															OTP</button> 
+													</div>
+													<p id="officerbtnpid" style="color: black;" ></p>
+													<div
+														class=" col-lg-8 col-md-8 col-sm-12 col-xs-12 mb-4 pl-0 pr-0  float-right ">
+														<input id="password-login" name="otp" type="password"
+															maxlength="6" class="form-control"
+															placeholder="Enter OTP"  >
+
+													</div>
+												</div>
+												</div> -->		
+																						<div class="row  mb-1">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-1">
+									<div class="form-group mb-1 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+										<label for="name-login-hos">CAPTCHA</label>
+									</div>
+									<div class="input-group col-lg-8 col-md-12 col-sm-12 col-xs-12 float-left">
+									 <img id="reCaptcha4"  alt="CAPTCHA Image" class="img-responsive " src="data:image/jpeg;base64,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"  style="float: left;width: 60%;"/>
+		                           <a href="javascript:showCapcha1();" class="addon float-left fs-3" style="float: left;margin-left: 10px;margin-top: 0px;"> <i class="fa fa-refresh "  aria-hidden="true"></i></a>
+			                       	</div>
+									</div>
+									</div>
+									<br>
+											<div class="row  mb-1">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-1">
+									<div class="form-group mb-1 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+										<label for="name-login-hos">Enter CAPTCHA</label>
+									</div>
+									<div class="input-group col-lg-8 col-md-12 col-sm-12 col-xs-12 float-left">
+												<span class="input-group-addon"><i class="fa fa-align-justify" aria-hidden="true"></i></span> 
+			                                          <input type="hidden" id="hiddenCaptcha4" value="6g5gy"/>
+			                                    <input type="text" id="captcha4"  name="captcha" class="form-control" maxlength="5"/>	</div>
+									</div>
+									</div>
+									<br>
+									
+										<div class="row">
+										<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  text-end mt-1">
+														<a type="button" id="forgotPassword" onclick="passwordForgot('AS');" class="text-template-outlined fw-bold" >
+															  Forgot Password ?
+														</a>
+														
+														<!-- <a type="button" id="forgotPassword" class="text-template-outlined fw-bold" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal">
+														    Forgot Password ? 
+														</a> -->
+														
+														</div>
+													</div>
+													 
+													 <div class="row">
+														<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  text-center mt-1">
+														<button type="button" id="gntateOTP4" onclick="isOtpGenerated('RFIDAgencyLogin')" class="btn btn-template-outlined btn-sm w-100">
+															<i class="fa fa-sign-in"></i> Login
+														</button>
+														</div>
+													 </div>
+													 
+											<!-- 	<div class="row">
+													<div
+														class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+														<button type="button" id="gntateOTP4" onclick="isOtpGenerated('RFIDAgencyLogin')" class="btn btn-template-outlined btn-sm ">
+															<i class="fa fa-user-md"></i> Login
+														</button>
+														
+
+													</div>
+												</div> -->
+												
+												
+												<span style="color: red"></span>
+											</form>
+								</div>
+							
+                        </div>
+                    </div>
+                </div>
+              </div>
+                    </div> 
+                    </div>
+                   <!--   <button type="submit">Submit</button> -->
+    </form>
+    
+    <form id="bio-mining-tab13" class="radio-tab-content hidden">
+    <!-- RFID Site Login -->
+       <div class="" id="rfid_site-login" role="tabpanel" aria-labelledby="nav-rfid-Site-login">
+                       <h3 style="display: none;">redirecting for authentication..<i class="fa fa-spinner fa-spin" aria-hidden="true"></i></h3>
+                       <div class="tab-pane fade show active" id="rfid_site-login" role="tabpanel" aria-labelledby="nav-rfid-Site-login">
+                       <div class=" fontSize">					
+                		<div class="slider_overlay_Box_C">
+                    	<div class="recent-updated">
+                       <!--  <h3 class="style_h2">RFID Site Login </h3> -->
+                        
+                        <div class="login_top_div">
+                        <div id="Rfid_site-login" class="tab-pane active ">
+                        					<input type="hidden" id="alertID" value="">
+											
+											
+											<form id="loginForm1" method="post" action="loginForm" class="frm-container">
+												<input type="hidden" name="_csrf" value="4117014a-c98c-4e4f-86e2-5d1c6bfffe78" /> 
+												<input id="loginTypeRSL" type="hidden" name="loginType" class="form-control" value="RSL">
+												<input id="rfisSiteoffTypeID" type="hidden" name="type" class="form-control" value="RSL" required>
+										<br>			
+									<div class="row  mb-2">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-3">
+									<div class="form-group mb-1 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+										<label for="name-login-hos">Site User Id</label>
+									</div>
+									<div class="input-group col-lg-8 col-md-12 col-sm-12 col-xs-12 float-left">
+									<span class="input-group-addon"><i class="fa fa-user"></i></span> 
+										<input type="text" id="rfisSiteofficerName" name="username" placeholder="Username" maxlength="50" class="form-control" autocomplete="off"/>
+									</div>
+									</div>
+									</div>
+											<br>
+									<div class="row mb-2">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+										
+									<div class="form-group mb-1 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+										<label for="password">Password</label>
+									</div>
+									<div class="input-group col-lg-8 col-md-12 col-sm-12 col-xs-12 float-left">
+										<span class="input-group-addon"><i class="fa fa-lock"></i></span> 
+										<input type="password" id="rfisSiteofficerPassword2" name="password" placeholder="Password"  maxlength="50"  class="form-control" autocomplete="off"/>
+									</div>
+								
+                                      </div>
+                                        </div>	
+<!--                                         <br>
+                                        <div class="row mt-4">
+													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+													<div
+														class="col-lg-4 col-md-4 col-sm-12 col-xs-12  pl-0 pr-0 float-left">
+														<button id="gntateOTP2" class="btn btn-default otpbtn"
+															type="button" onclick="isOtpGenerated('officerLogin')">GENERATE
+															OTP</button> 
+													</div>
+													<p id="officerbtnpid" style="color: black;" ></p>
+													<div
+														class=" col-lg-8 col-md-8 col-sm-12 col-xs-12 mb-4 pl-0 pr-0  float-right ">
+														<input id="password-login" name="otp" type="password"
+															maxlength="6" class="form-control"
+															placeholder="Enter OTP"  >
+
+													</div>
+												</div>
+												</div> -->	<br>	
+																						<div class="row  mb-1">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-1">
+									<div class="form-group mb-1 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+										<label for="name-login-hos">CAPTCHA</label>
+									</div>
+									<div class="input-group col-lg-8 col-md-12 col-sm-12 col-xs-12 float-left">
+									 <img id="reCaptcha3"  alt="CAPTCHA Image" class="img-responsive " src="data:image/jpeg;base64,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"  style="float: left;width: 60%;"/>
+		                           <a href="javascript:showCapcha1();" class="addon float-left fs-3" style="float: left;margin-left: 10px;margin-top: 0px;"> <i class="fa fa-refresh "  aria-hidden="true"></i></a>
+			                       	</div>
+									</div>
+									</div><br>
+											<div class="row  mb-1">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-1">
+									<div class="form-group mb-1 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+										<label for="name-login-hos">Enter CAPTCHA</label>
+									</div>
+									<div class="input-group col-lg-8 col-md-12 col-sm-12 col-xs-12 float-left">
+												<span class="input-group-addon"><i class="fa fa-align-justify" aria-hidden="true"></i></span> 
+			                                          <input type="hidden" id="hiddenCaptcha3" value="6g5gy"/>
+			                                    <input type="text" id="captcha3"  name="captcha" class="form-control" maxlength="5"/>	</div>
+									</div>
+									</div>
+									<br>
+												<div class="row">
+													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  text-end mt-1">
+														<a type="button" id="forgotPassword" onclick="passwordForgot('AS');" class="text-template-outlined fw-bold" >
+															<!--  <i class="fa fa-undo "></i> -->  Forgot Password ? 
+														</a>
+														
+												<!-- 		<a type="button" id="forgotPassword" class="text-template-outlined fw-bold" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal">
+														    Forgot Password ? 
+														</a>
+ -->
+												
+												</div> </div>
+												
+												<div class="row">
+													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  text-center mt-1">
+														<button type="button" id="gntateOTP2" onclick="isOtpGenerated('RFIDSiteLogin')" class="btn btn-template-outlined btn-sm w-100">
+															<i class="fa fa-sign-in"></i> Login
+														</button>
+														</div> </div>
+												
+										<!-- 		<div class="row">
+													<div
+														class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+														<button type="button" id="gntateOTP2" onclick="isOtpGenerated('RFIDSiteLogin')" class="btn btn-template-outlined btn-sm ">
+															<i class="fa fa-user-md"></i> Login
+														</button>
+														
+
+													</div>
+												</div> -->
+												
+												
+												<span style="color: red"></span>
+											</form>
+								</div>
+							
+                        </div>
+                    </div>
+                </div>
+              </div>
+                    </div> 
+                    </div>
+                   <!--   <button type="submit">Submit</button> -->
+    </form>
+   
+     <br><div class="row">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  text-center mt-2">    
+    <button type="button" onclick="goBack()" class="btn btn-template-outlined btn-sm mb-2">
+		<i class="fa fa-chevron-left"></i> Back  
+	</button>
+	</div>
+	</div>
+</div>
+
+
+		
+		
+		</div>
+			</div>
+	
+		
+           </div>
+  
+    </div>
+		  </div>
+		 </div>
+		 
+	
+		
+		 
+		
+          
+		
+
+		
+		<!--  End Slider  -->
+
+		<!--  start LOGIN SECTION  -->
+		<section class="official-services d-none">
+        <div class="container  px-5">
+            <div class="row">
+           
+             <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+              <div class="card h-100 card-height" style="background: #edc04a;"> 
+             <div class="card-body px-0 py-0">
+            <form autocomplete="off" id="generateOtpForm" method="post">
+					<input type="hidden" name="_csrf"
+						value="4117014a-c98c-4e4f-86e2-5d1c6bfffe78" />
+					<input type="hidden" name="loginId" id="usernameOtp"
+						value="" />
+					<input type="hidden" name="password" id="passwordOtp"
+						value="" />
+					<input type="hidden" name="type" id="typeOtp"
+						value="" />
+				 <input type="hidden" id="captchaotp"  name="captcha"  maxlength="5" />	
+						
+						
+				</form>
+					<form autocomplete="off" id="validateOtpForm" method="post">
+					<input type="hidden" name="_csrf"
+						value="4117014a-c98c-4e4f-86e2-5d1c6bfffe78" />
+				
+					<input type="hidden" name="otp" id="otpid"	value="" />
+				
+						
+						
+				</form>
+				<div id="changed">
+                  <nav class="nav1">
+                    <ul class="nav nav-tabs nav-fill " id="nav-tab" role="tablist">
+                                           	
+                       <li role="presentation"><a class="nav-item nav-link active" id="nav-profile-tab" 
+                       	data-toggle="tab" href="#vendor-login"   aria-controls="vendor-login" aria-selected="false">Concessionaire  Login</a> </li>
+                       	
+                       <li role="presentation" class=""><a class="nav-item nav-link" id="nav-contact-tab" 
+                       	data-toggle="tab" href="#officer-login"   aria-controls="officer-login" >Officer  Login</a></li>
+                       	
+             <li>
+  
+				  <a class="nav-item nav-link "   role="tab" id="dropdownMenuLink" data-toggle="dropdown"> <!-- <i class="fa fa-bars"></i> -->
+					Others Login  <i class="fa fa-caret-down right"></i>
+				  </a> 
+
+			  <div class="dropdown-menu"> 
+			   <ul>
+			     <li role="presentation" class="">
+			    <a class=" dropdown-item nav-item nav-link" href="#rfid_admin-login"  data-toggle="tab"  id="nav-rfid_admin-login">RFID Admin Login</a></li>
+			      <li role="presentation" class="">  
+			      <a class="dropdown-item  " href="#rfid_Agency-login"   data-toggle="tab"   id="nav-rfid-Agency-login"> RFID Agency Login</a></li>
+			      <li role="presentation" class="">  
+			      <a class="dropdown-item nav-item nav-link" href="#rfid_site-login"   data-toggle="tab"   id="nav-rfid-Site-login"> RFID Site Login</a></li>
+			   </ul>
+			  </div>  
+			</li> 
+               </ul>
+                 </nav>
+                  
+                  <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                  
+                    <div class="tab-pane fade show active" id="vendor-login" role="tabpanel" aria-labelledby="nav-profile-tab">
+                       <div class="whats-new-2 fontSize">					
+                		<div class="slider_overlay_Box_C">
+                    	<div class="recent-updated">
+                     <!--    <h3 class="style_h2">Concessionaire Login  </h3> -->
+                        
+                        <div class="login_top_div">
+                        <div id="Citizen_Login" class="tab-pane active ">
+											
+											
+											<form id="loginForm" method="post" action="loginForm" class="frm-container">
+												<input type="hidden" name="_csrf" value="4117014a-c98c-4e4f-86e2-5d1c6bfffe78" /> 
+												<input id="loginTypeC" type="hidden" name="loginType" class="form-control" value="VEN" required>
+												<input id="venTypeID" type="hidden" name="type" class="form-control" value="C" required>
+														
+									<div class="row  mb-2">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-3 ">
+									<div class="form-group mb-1 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+										<label for="name-login-hos">User Id</label>
+									</div>
+									<div class="input-group col-lg-8 col-md-12 col-sm-12 col-xs-12 float-left">
+									<span class="input-group-addon"><i class="fa fa-user"></i></span> 
+										<input type="text" id="username" name="username" placeholder="Username" maxlength="50" class="form-control"  autocomplete="off"/>
+									</div>
+									</div>
+									</div>
+											
+									<div class="row mb-2">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+										
+									<div class="form-group mb-1 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+										<label for="password">Password</label>
+									</div>
+									<div class="input-group col-lg-8 col-md-12 col-sm-12 col-xs-12 float-left">
+										<span class="input-group-addon"><i class="fa fa-lock"></i></span> 
+										<input type="password" id="password" name="password" placeholder="Password" maxlength="50" class="form-control" autocomplete="off"/>
+									</div>
+								
+                                      </div>
+                                        </div>
+					<!-- 						<div class="row mt-4">
+													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+													<div
+														class="col-lg-4 col-md-4 col-sm-12 col-xs-12  pl-0 pr-0 float-left">
+														<button id="gntateOTP" class="btn btn-default otpbtn"
+															type="button" onclick="isOtpGenerated('login')">GENERATE
+															OTP</button> 
+													</div>
+													<p id="venderbtnpid" style="color: black;"></p>
+													<div
+														class=" col-lg-8 col-md-8 col-sm-12 col-xs-12 mb-4 pl-0 pr-0  float-right ">
+														<input id="password-login" name="otp" type="password"
+															maxlength="6" class="form-control"
+															placeholder="Enter OTP"  >
+
+													</div>
+												</div>
+												</div> -->	
+										
+										<div class="row  mb-1">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-1">
+									<div class="form-group mb-1 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+										<label for="name-login-hos">CAPTCHA</label>
+									</div>
+									<div class="input-group col-lg-8 col-md-12 col-sm-12 col-xs-12 float-left">
+									 <img id="reCaptcha"  alt="CAPTCHA Image" class="img-responsive " src="data:image/jpeg;base64,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"  style="float: left;width: 60%;"/>
+		                           <a href="javascript:showCapcha();" class="addon float-left fs-3"	style="float: left;margin-left: 10px;margin-top: 0px;"> <i class="fa fa-refresh "  aria-hidden="true"></i></a>
+			                       	</div>
+									</div>
+									</div>
+											<div class="row  mb-1">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-3">
+									<div class="form-group mb-1 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+										<label for="name-login-hos">Enter CAPTCHA</label>
+									</div>
+									<div class="input-group col-lg-8 col-md-12 col-sm-12 col-xs-12 float-left">
+												<span class="input-group-addon"><i class="fa fa-align-justify" aria-hidden="true"></i></span> 
+			                                          <input type="hidden" id="hiddenCaptcha" value="6g5gy"/>
+			                                    <input type="text" id="captcha"  name="captcha" class="form-control" maxlength="5"/>	</div>
+									</div>
+									</div>  
+												<div class="row">
+													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  text-center mt-2">
+														<button type="button" id="gntateOTP" onclick="isOtpGenerated('login')" class="btn btn-template-outlined btn-sm">
+															<i class="fa fa-user-md"></i> Login 
+														</button>
+														
+														<button type="button" id="forgotPassword" onclick="passwordForgot('C');" class="btn btn-template-outlined btn-sm" >
+															 <i class="fa fa-undo "></i>
+                                                                 Forgot Password
+														</button>
+														
+											<!-- 			<a type="button" id="forgotPassword" class="text-template-outlined fw-bold" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal">
+														    Forgot Password ? 
+														</a> -->
+
+												
+												</div> </div>
+												<div class="row mt-2">
+														<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+											
+													</div>
+													</div>
+											
+												
+												
+												<span style="color: red"></span>
+											</form>
+								</div>
+								
+                        </div>
+                         
+                    </div>
+                    	
+                   
+                </div>
+              </div>
+                    </div>
+                                     
+                    <div class="tab-pane fade" id="officer-login" role="tabpanel" aria-labelledby="nav-contact-tab">
+                       <h3 style="display: none;">redirecting for authentication..<i class="fa fa-spinner fa-spin" aria-hidden="true"></i></h3>
+                       <div class="tab-pane fade show active" id="officer-login" role="tabpanel" aria-labelledby="nav-contact-tab">
+                       <div class="whats-new-2 fontSize">					
+                		<div class="slider_overlay_Box_C">
+                    	<div class="recent-updated">
+                     <!--    <h3 class="style_h2">Officer Login </h3> -->
+                        
+                        <div class="login_top_div">
+                        <div id="Officer_Login" class="tab-pane active ">
+                        					<input type="hidden" id="alertID" value="">
+											
+											
+											<form id="loginForm1" method="post" action="loginForm" class="frm-container">
+												<input type="hidden" name="_csrf" value="4117014a-c98c-4e4f-86e2-5d1c6bfffe78" /> 
+												<input id="loginTypeO" type="hidden" name="loginType" class="form-control" value="EMP">
+												<input id="offTypeID" type="hidden" name="type" class="form-control" value="O" required>
+													
+									<div class="row  mb-2">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-3">
+									<div class="form-group mb-1 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+										<label for="name-login-hos">Officer Id</label>
+									</div>
+									<div class="input-group col-lg-8 col-md-12 col-sm-12 col-xs-12 float-left">
+									<span class="input-group-addon"><i class="fa fa-user"></i></span> 
+										<input type="text" id="officerName" name="username" placeholder="Username" maxlength="50" class="form-control" autocomplete="off"/>
+									</div>
+									</div>
+									</div>
+											
+									<div class="row mb-2">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+										
+									<div class="form-group mb-1 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+										<label for="password">Password</label>
+									</div>
+									<div class="input-group col-lg-8 col-md-12 col-sm-12 col-xs-12 float-left">
+										<span class="input-group-addon"><i class="fa fa-lock"></i></span> 
+										<input type="password" id="officerPassword2" name="password" placeholder="Password"  maxlength="50"  class="form-control" autocomplete="off"/>
+									</div>
+								
+                                      </div>
+                                        </div>	
+<!--                                         
+                                        <div class="row mt-4">
+													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+													<div
+														class="col-lg-4 col-md-4 col-sm-12 col-xs-12  pl-0 pr-0 float-left">
+														<button id="gntateOTP2" class="btn btn-default otpbtn"
+															type="button" onclick="isOtpGenerated('officerLogin')">GENERATE
+															OTP</button> 
+													</div>
+													<p id="officerbtnpid" style="color: black;" ></p>
+													<div
+														class=" col-lg-8 col-md-8 col-sm-12 col-xs-12 mb-4 pl-0 pr-0  float-right ">
+														<input id="password-login" name="otp" type="password"
+															maxlength="6" class="form-control"
+															placeholder="Enter OTP"  >
+
+													</div>
+												</div>
+												</div> -->		
+																						<div class="row  mb-1">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-1">
+									<div class="form-group mb-1 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+										<label for="name-login-hos">CAPTCHA</label>
+									</div>
+									<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 float-left">
+									 <img id="reCaptcha1"  alt="CAPTCHA Image" class="img-responsive " src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCABGAPADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoopqurruRgw5GQc0AOooooAKKKpaxqlvomi3uq3ZIt7SB5nx1IUZwPc9B70ARa14g0jw5Z/a9Y1G3soeitM+Cx9FHVj7DNconxp+HryBB4iXJOMm0nA/Mpivm5pfEHxb+IEcbyh729ciNWYiK2iGWwPRVGfcn1J59ij/Zs0Iafsl13UWvcf65URY8/7mCf/HqAPYtP1Kx1azW7068t7u2fhZYJA6n2yKtVxHw28GSfDrw1qGnXmoQXEJvXuluAPLAj8tBlgeFI2HuRjvWFc/tBeCrfUmtFGpTxq+37VFbr5X15YNj/AIDQB6pWPfeLPDemXklnf+INKtLqPG+Ge9jjdcgEZUnIyCD+Nc/efGHwFYXHkXHiBBJsST5LaZxtdQynKoR0YfToea8I+J+mf23+0BdaT53k/bruytvN27tm+KJd2MjOM5xkUAfR/wDwnfg//oa9D/8ABjD/APFVsWN/Z6nZx3lhdwXdrJnZNBIJEbBIOGHBwQR+FeD/APDMv/U3f+U3/wC216FaXWjfBr4d2FhrOqG4S3MixMkO2S4ZnZ8Km49N2Mk49SM0Ad9RXm2hfHPwZrk08TS3mnmGF5s3sIAdVUs23YzZIAJx1PbJqz/wu34ef9DD/wCSVx/8boA9AorK8P8AiTSPFWmf2lot4t3abzHvCMmGHUEMAR1HbvUHiXxjoHg+3gn17UFtI7hikX7t3LEDJ4QE/j70AblFYPhnxpoHjFLl9BvzdpbFRK3kSRhS2cffUZ6Hp/Wt6gAooooAKKpajq+maREJdT1G0so26PczrGD+LEVw+r/HDwLpQYJqUt/KpwY7OBm/Jmwp/A0Aei0V4k/xx1zXDJH4Q8D3t5g4WeUM6j/eVBgf990NZfHLxOXE13YeH7dwDsRkU49iodwfqRQB7VNNFbQvNPKkUSDLO7BVUepJ6Vx+rfFfwPoxK3HiG1lfGQlpmcn2ygIB+pFcTD8An1OdbnxX4w1PU5dvITgg+geQvkfgK6/SPg74F0fYyaHFdSqMGS9Zpt31Vjt/SgDk7n9oOyurhbXw34Y1TVbhuArYQk9sBA5P6VANe+NviYKbDRLTQoC2PNmjVXA/2llLH8kr2a0srXT7dbeytobaBfuxwxhFH0A4qegDxE/Brxh4hU/8Jb48uJULZNvbl5Iz9NxUL/3zXqvhTw1aeEPDltoljPcTW1uWKNcMpf5mLHoAOpPatmigAooooAK4H41OyfCLXSpwcQD8DPGDXfVznj7QZPE3gTWNIhBM89uTCv8AekUh0H4soH40AfG2gDV5tVjsdDknW+vv9FUQvsZwxGV3cYB78gYznjNdR4r+Gfiv4f2ltrF5JD5bSBftFlOxaGQ8gNwCDweRke/Sud8Na3c+FvEUepw7o7u2jmSMlATHI0TopIYEcMwOCO1en+IPihDr3wLXS9UvVu/EV5cbJRtAZUWXzA5CgADAVQOM/nQBjXHxe1bU/hXf+HdSuGm1B5YoUuiTvktzkuGPcjaqknqHOeRk6fwV+GWk+MrPU9U12GWa0hcW0EaSlAX27mYkc5AKY7cnOa8ysvD2oX/h7U9bhhJstOaJZ39DI2Bj19/TI9a9g+AfjvRtC0vVdF1m/t7FTN9rgknbar5UK4yeMjYuB1OTigDyfxl4ebwr4w1TRCzOtrMVjZsZaMgMhOO5UivQ/iL4W8Ua78atYuPDmm3k0sEtsyXMI2LG4giI/eHCqRwetcJ8QPEEXinx5q+sW/NvPNiE4I3RooRTg9MqoP419ZL8RvBx1G6sJPEVjb3VpK8MyXMnk7XU7WGXwDz6ZoA+bNV1b4q+BL+GXVtT1y2Yn921zdG4hc46clkY+1Y3jvx5qHj3UbK8v40hNtbCERRE7N2SWcA9M8fkB2r2L42/ELwtqXg6bQdOvbbU76aaNla3O9IArZLbx8pJAK4B/iNfOZBABIOD0PrQB774l+CWlaT8KH1CBJxr9lbC6uZTKSr4AMibegCjdjAzwMk14to2hXGt2+ryW2WfTrFr1kAyWRZEVvyDlvopr6C8WfF/QNQ+Es4t7+KTWNSsfs7Wag7o3cBZM8cAAsQT1wMZrxv4aeKT4U8QXdwNEk1k3lk9n9jRsbwzITn5WyMKRjHegDu/2dPE/wBk12+8NzyYivk+0W6knHmoPmAHqU5P/XMVlftBeIf7U8eR6VG5MGlQCMjOR5r4ZiPw2D6rXnwk1jwj4kjuY4LrSdRtZBLFHPGRJHnkZDDng9xgjtWl4X0S/wDiP4+js7i6b7RfyvPd3RTO0cs7YGB7AcDJAoA9/wDhve+Gvh38ObKHWNasLS9uR9tuYnnHmAuBtGz72QgQEY6g0at+0F4OsSyWC3+pyY+Uww7EJ9CXII/75NS6T8AfBOnnddxXupNj/l5uCqg+oEe39Sa7vSfC+gaFtOlaNY2bhdvmQwKrke7YyfxNAHlA+KHxJ8SFB4Y8BtbwyKds94HZT7h28tP50L4L+MHiXy21vxhHpMJyGitH2yKPpEFDfi9e20UAePab+zx4ejkE+s6tqWp3G7LncIkf6jlv/Hq7nSfhx4N0QD7D4csAwOQ80fnOD7M+SPzrqKKAAAAAAYAooooAKKKKACiiigAooooAKKKKACiiigDzHxx8EtB8X38up208mlajMd0skSB45T3ZkyPmPqCM9TknNeLeLPg9rvguYX1zbvq+iRkNNPYtsdUHJ3AhtnAPzYZR39K+t6OowaAPnuw+MPw/0rwo3h2x8K6j/Z0kTJPA+z94WGGLNuySfXrwMYwMeNX/APwj76g8lgdSjsy2VhmVGcD03ggfjtr7a1PSLfU9AvdHbMFtd20ls3kgAorqVJXtnmvEZf2ZozITF4sdEzwH08MR+PmD+VAHh2qy2V/q5Oj6fLa2zLHHDbtJ5rkhFUkkAZZmBbgDlsCuh8QaFr3iTxFe6nZeENdge/uJLhonheXDO25sERrwC34V734I+B2ieEtUi1W7vJdVv4G3QGSMRxxt2YJk5YdiTx1xkA16lQB8laR8CvHOqFTNY2+nRsMh7ycD/wAdTcwP1AroNT+EGjeHYNPtvGHj37JJOki2cS2zNEhUgthicAZcEjC5zX0rXC/Ej4aW3xEg08S6lLYzWJk8tkjEikPtzkZH9wY59aAPD9U8EeAvCui399P41tfEF41tJHY2dkFH75lIV32u/Ck7udv3e/Q3/wBm+CVvHOp3AQmKPTWRmxwGaWMgfiFb8q3U/ZmQODJ4tZkzyF07BP4+aa7qX4VWGl/DXVvDHhzal1foN91eOcyMCCN5UcADOABgZ9STQB5x+0lb6Z/aujXUU8Z1QxPFPCrAt5QIKFh25ZsZ659q1v2cfDPkadqXiadMPcN9ktyQQdi4Zz7gttH1Q1z2n/s3eIXvYxqWsaXDa5/eNbNJI+PYMij9a+h9F0ey8P6LaaTp0Xl2lrGI417+5PqScknuSaAL9FFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQB//9k="  style="float: left;width: 60%;"/>
+		                           <a href="javascript:showCapcha1();" class="addon float-left fs-3" style="float: left;margin-left: 10px;margin-top: 0px;"> <i class="fa fa-refresh "  aria-hidden="true"></i></a>
+			                       	</div>
+									</div>
+									</div>
+									<div class="row  mb-1">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-3">
+									<div class="form-group mb-1 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+										<label for="name-login-hos">Enter CAPTCHA</label>
+									</div>
+									<div class="input-group col-lg-8 col-md-12 col-sm-12 col-xs-12 float-left">
+												<span class="input-group-addon"><i class="fa fa-align-justify" aria-hidden="true"></i></span> 
+			                                          <input type="hidden" id="hiddenCaptcha1" value="6g5gy"/>
+			                                    <input type="text" id="captcha1"  name="captcha" class="form-control" maxlength="5"/>	</div>
+									</div>
+									</div>
+									<div class="row">
+													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  text-center mt-2">
+													<button type="button" id="gntateOTP2" onclick="isOtpGenerated('officerLogin')" class="btn btn-template-outlined btn-sm">
+															<i class="fa fa-user-md"></i> Login 
+														</button>
+														
+														<button type="button" id="forgotPassword" onclick="passwordForgot('O');" class="btn btn-template-outlined btn-sm" >
+															 <i class="fa fa-undo "></i>
+                                                                 Forgot Password
+														</button>
+
+												
+												</div> 
+												</div>
+										<!-- 		<div class="row">
+													<div
+														class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+														<button type="button" id="gntateOTP2" onclick="isOtpGenerated('officerLogin')" class="btn btn-template-outlined ">
+															<i class="fa fa-user-md"></i> Login
+														</button>
+														
+
+													</div>
+												</div> -->
+												
+												
+												<span style="color: red"></span>
+											</form>
+								</div>
+							
+                        </div>
+                    </div>
+                </div>
+              </div>
+                    </div> 
+                    </div>
+                    
+                    <!--  Frid Work  -->
+                    
+                     <div class="tab-pane fade" id="rfid_admin-login" role="tabpanel" aria-labelledby="nav-rfid_admin-login">
+                       <h3 style="display: none;">redirecting for authentication..<i class="fa fa-spinner fa-spin" aria-hidden="true"></i></h3>
+                       <div class="tab-pane fade show active" id="rfid_admin-login" role="tabpanel" aria-labelledby="nav-rfid_admin-login">
+                       <div class="whats-new-2 fontSize">					
+                		<div class="slider_overlay_Box_C">
+                    	<div class="recent-updated">
+                       <!--  <h3 class="style_h2">RFID ADMIN Login </h3> -->
+                        
+                        <div class="login_top_div">
+                        <div id="Rfid_admin-login" class="tab-pane active ">
+                        					<input type="hidden" id="alertID" value="">
+											
+											
+											<form id="loginForm1" method="post" action="loginForm" class="frm-container">
+												<input type="hidden" name="_csrf" value="4117014a-c98c-4e4f-86e2-5d1c6bfffe78" /> 
+												<input id="loginTypeROL" type="hidden" name="loginType" class="form-control" value="ROL">
+												<input id="rfidAdminoffTypeID" type="hidden" name="type" class="form-control" value="ROL" required>
+													
+									<div class="row  mb-2">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-3">
+									<div class="form-group mb-1 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+										<label for="name-login-hos">RFID Officer Id</label>
+									</div>
+									<div class="input-group col-lg-8 col-md-12 col-sm-12 col-xs-12 float-left">
+									<span class="input-group-addon"><i class="fa fa-user"></i></span> 
+										<input type="text" id="rfidAdminofficerName" name="username" placeholder="Username" maxlength="50" class="form-control" autocomplete="off"/>
+									</div>
+									</div>
+									</div>
+											
+									<div class="row mb-2">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+										
+									<div class="form-group mb-1 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+										<label for="password">Password</label>
+									</div>
+									<div class="input-group col-lg-8 col-md-12 col-sm-12 col-xs-12 float-left">
+										<span class="input-group-addon"><i class="fa fa-lock"></i></span> 
+										<input type="password" id="rfidAdminofficerPassword2" name="password" placeholder="Password"  maxlength="50"  class="form-control" autocomplete="off"/>
+									</div>
+								
+                                      </div>
+                                        </div>	
+<!--                                         
+                                        <div class="row mt-4">
+													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+													<div
+														class="col-lg-4 col-md-4 col-sm-12 col-xs-12  pl-0 pr-0 float-left">
+														<button id="gntateOTP2" class="btn btn-default otpbtn"
+															type="button" onclick="isOtpGenerated('officerLogin')">GENERATE
+															OTP</button> 
+													</div>
+													<p id="officerbtnpid" style="color: black;" ></p>
+													<div
+														class=" col-lg-8 col-md-8 col-sm-12 col-xs-12 mb-4 pl-0 pr-0  float-right ">
+														<input id="password-login" name="otp" type="password"
+															maxlength="6" class="form-control"
+															placeholder="Enter OTP"  >
+
+													</div>
+												</div>
+												</div> -->		
+																						<div class="row  mb-1">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-1">
+									<div class="form-group mb-1 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+										<label for="name-login-hos">CAPTCHA</label>
+									</div>
+									<div class="input-group col-lg-8 col-md-12 col-sm-12 col-xs-12 float-left">
+									 <img id="reCaptcha2"  alt="CAPTCHA Image" class="img-responsive " src="data:image/jpeg;base64,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"  style="float: left;width: 60%;"/>
+		                           <a href="javascript:showCapcha1();" class="addon float-left fs-3" style="float: left;margin-left: 10px;margin-top: 0px;"> <i class="fa fa-refresh "  aria-hidden="true"></i></a>
+			                       	</div>
+									</div>
+									</div>
+											<div class="row  mb-1">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-1">
+									<div class="form-group mb-1 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+										<label for="name-login-hos">Enter CAPTCHA</label>
+									</div>
+									<div class="input-group col-lg-8 col-md-12 col-sm-12 col-xs-12 float-left">
+												<span class="input-group-addon"><i class="fa fa-align-justify" aria-hidden="true"></i></span> 
+			                                          <input type="hidden" id="hiddenCaptcha2" value="6g5gy"/>
+			                                    <input type="text" id="captcha2"  name="captcha" class="form-control" maxlength="5"/>	</div>
+									</div>
+									</div>
+											<!-- 	<div class="row">
+													<div
+														class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+														<button type="button" id="gntateOTP2" onclick="isOtpGenerated('RFIDAdminLogin')" class="btn btn-template-outlined btn-sm ">
+															<i class="fa fa-user-md"></i> Login
+														</button>
+														
+
+													</div>
+												</div> -->
+												
+													<div class="row">
+													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  text-center mt-2">
+														<button type="button" id="gntateOTP2" onclick="isOtpGenerated('RFIDAdminLogin')" class="btn btn-template-outlined btn-sm ">
+															<i class="fa fa-user-md"></i> Login
+														</button>
+														
+														<button type="button" id="forgotPassword" onclick="passwordForgot('A');" class="btn btn-template-outlined btn-sm" >
+															 <i class="fa fa-undo "></i>
+                                                                 Forgot Password
+														</button>
+
+												
+												</div> </div>
+												
+												
+												<span style="color: red"></span>
+											</form>
+								</div>
+							
+                        </div>
+                    </div>
+                </div>
+              </div>
+                    </div> 
+                    </div><!--  end first tab pannel-->
+                     <div class="tab-pane fade" id="rfid_site-login" role="tabpanel" aria-labelledby="nav-rfid-Site-login">
+                       <h3 style="display: none;">redirecting for authentication..<i class="fa fa-spinner fa-spin" aria-hidden="true"></i></h3>
+                       <div class="tab-pane fade show active" id="rfid_site-login" role="tabpanel" aria-labelledby="nav-rfid-Site-login">
+                       <div class="whats-new-2 fontSize">					
+                		<div class="slider_overlay_Box_C">
+                    	<div class="recent-updated">
+                       <!--  <h3 class="style_h2">RFID Site Login </h3> -->
+                        
+                        <div class="login_top_div">
+                        <div id="Rfid_site-login" class="tab-pane active ">
+                        					<input type="hidden" id="alertID" value="">
+											
+											
+											<form id="loginForm1" method="post" action="loginForm" class="frm-container">
+												<input type="hidden" name="_csrf" value="4117014a-c98c-4e4f-86e2-5d1c6bfffe78" /> 
+												<input id="loginTypeRSL" type="hidden" name="loginType" class="form-control" value="RSL">
+												<input id="rfisSiteoffTypeID" type="hidden" name="type" class="form-control" value="RSL" required>
+													
+									<div class="row  mb-2">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-3">
+									<div class="form-group mb-1 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+										<label for="name-login-hos">Site User Id</label>
+									</div>
+									<div class="input-group col-lg-8 col-md-12 col-sm-12 col-xs-12 float-left">
+									<span class="input-group-addon"><i class="fa fa-user"></i></span> 
+										<input type="text" id="rfisSiteofficerName" name="username" placeholder="Username" maxlength="50" class="form-control" autocomplete="off"/>
+									</div>
+									</div>
+									</div>
+											
+									<div class="row mb-2">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+										
+									<div class="form-group mb-1 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+										<label for="password">Password</label>
+									</div>
+									<div class="input-group col-lg-8 col-md-12 col-sm-12 col-xs-12 float-left">
+										<span class="input-group-addon"><i class="fa fa-lock"></i></span> 
+										<input type="password" id="rfisSiteofficerPassword2" name="password" placeholder="Password"  maxlength="50"  class="form-control" autocomplete="off"/>
+									</div>
+								
+                                      </div>
+                                        </div>	
+<!--                                         
+                                        <div class="row mt-4">
+													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+													<div
+														class="col-lg-4 col-md-4 col-sm-12 col-xs-12  pl-0 pr-0 float-left">
+														<button id="gntateOTP2" class="btn btn-default otpbtn"
+															type="button" onclick="isOtpGenerated('officerLogin')">GENERATE
+															OTP</button> 
+													</div>
+													<p id="officerbtnpid" style="color: black;" ></p>
+													<div
+														class=" col-lg-8 col-md-8 col-sm-12 col-xs-12 mb-4 pl-0 pr-0  float-right ">
+														<input id="password-login" name="otp" type="password"
+															maxlength="6" class="form-control"
+															placeholder="Enter OTP"  >
+
+													</div>
+												</div>
+												</div> -->		
+																						<div class="row  mb-1">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-1">
+									<div class="form-group mb-1 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+										<label for="name-login-hos">CAPTCHA</label>
+									</div>
+									<div class="input-group col-lg-8 col-md-12 col-sm-12 col-xs-12 float-left">
+									 <img id="reCaptcha3"  alt="CAPTCHA Image" class="img-responsive " src="data:image/jpeg;base64,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"  style="float: left;width: 60%;"/>
+		                           <a href="javascript:showCapcha1();" class="addon float-left fs-3" style="float: left;margin-left: 10px;margin-top: 0px;"> <i class="fa fa-refresh "  aria-hidden="true"></i></a>
+			                       	</div>
+									</div>
+									</div>
+											<div class="row  mb-1">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-1">
+									<div class="form-group mb-1 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+										<label for="name-login-hos">Enter CAPTCHA</label>
+									</div>
+									<div class="input-group col-lg-8 col-md-12 col-sm-12 col-xs-12 float-left">
+												<span class="input-group-addon"><i class="fa fa-align-justify" aria-hidden="true"></i></span> 
+			                                          <input type="hidden" id="hiddenCaptcha3" value="6g5gy"/>
+			                                    <input type="text" id="captcha3"  name="captcha" class="form-control" maxlength="5"/>	</div>
+									</div>
+									</div>
+												<div class="row">
+													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  text-center mt-2">
+														<button type="button" id="gntateOTP2" onclick="isOtpGenerated('RFIDSiteLogin')" class="btn btn-template-outlined btn-sm ">
+															<i class="fa fa-user-md"></i> Login
+														</button>
+														
+														<button type="button" id="forgotPassword" onclick="passwordForgot('AS');" class="btn btn-template-outlined btn-sm" >
+															 <i class="fa fa-undo "></i> Forgot Password
+														</button>
+
+												
+												</div> </div>
+												
+										<!-- 		<div class="row">
+													<div
+														class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+														<button type="button" id="gntateOTP2" onclick="isOtpGenerated('RFIDSiteLogin')" class="btn btn-template-outlined btn-sm ">
+															<i class="fa fa-user-md"></i> Login
+														</button>
+														
+
+													</div>
+												</div> -->
+												
+												
+												<span style="color: red"></span>
+											</form>
+								</div>
+							
+                        </div>
+                    </div>
+                </div>
+              </div>
+                    </div> 
+                    </div>
+                    
+                    <div class="tab-pane fade" id="rfid_Agency-login" role="tabpanel" aria-labelledby="nav-rfid-Agency-login">
+                       <h3 style="display: none;">redirecting for authentication..<i class="fa fa-spinner fa-spin" aria-hidden="true"></i></h3>
+                       <div class="tab-pane fade show active" id="rfid-agency-login" role="tabpanel" aria-labelledby="nav-rfid-Agency-login">
+                       <div class="whats-new-2 fontSize">					
+                		<div class="slider_overlay_Box_C">
+                    	<div class="recent-updated">
+                       <!--  <h3 class="style_h2">RFID Agency Login </h3> -->
+                        
+                        <div class="login_top_div">
+                        <div id="Rfid-agency-login" class="tab-pane active ">
+                        					<input type="hidden" id="alertID" value="">
+											
+											
+											<form id="loginForm1" method="post" action="loginForm" class="frm-container">
+												<input type="hidden" name="_csrf" value="4117014a-c98c-4e4f-86e2-5d1c6bfffe78" /> 
+												<input id="loginTypeRAL" type="hidden" name="loginType" class="form-control" value="RAL">
+												<input id="rfisAgencyoffTypeID" type="hidden" name="type" class="form-control" value="RAL" required>
+													
+									<div class="row  mb-2">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-3">
+									<div class="form-group mb-1 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+										<label for="name-login-hos">Agency User Id</label>
+									</div>
+									<div class="input-group col-lg-8 col-md-12 col-sm-12 col-xs-12 float-left">
+									<span class="input-group-addon"><i class="fa fa-user"></i></span> 
+										<input type="text" id="rfisAgencyofficerName" name="username" placeholder="Username" maxlength="50" class="form-control" autocomplete="off"/>
+									</div>
+									</div>
+									</div>
+											
+									<div class="row mb-2">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+										
+									<div class="form-group mb-1 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+										<label for="password">Password</label>
+									</div>
+									<div class="input-group col-lg-8 col-md-12 col-sm-12 col-xs-12 float-left">
+										<span class="input-group-addon"><i class="fa fa-lock"></i></span> 
+										<input type="password" id="rfisAgencyofficerPassword2" name="password" placeholder="Password"  maxlength="50"  class="form-control" autocomplete="off"/>
+									</div>
+								
+                                      </div>
+                                        </div>	
+<!--                                         
+                                        <div class="row mt-4">
+													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+													<div
+														class="col-lg-4 col-md-4 col-sm-12 col-xs-12  pl-0 pr-0 float-left">
+														<button id="gntateOTP2" class="btn btn-default otpbtn"
+															type="button" onclick="isOtpGenerated('officerLogin')">GENERATE
+															OTP</button> 
+													</div>
+													<p id="officerbtnpid" style="color: black;" ></p>
+													<div
+														class=" col-lg-8 col-md-8 col-sm-12 col-xs-12 mb-4 pl-0 pr-0  float-right ">
+														<input id="password-login" name="otp" type="password"
+															maxlength="6" class="form-control"
+															placeholder="Enter OTP"  >
+
+													</div>
+												</div>
+												</div> -->		
+																						<div class="row  mb-1">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-1">
+									<div class="form-group mb-1 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+										<label for="name-login-hos">CAPTCHA</label>
+									</div>
+									<div class="input-group col-lg-8 col-md-12 col-sm-12 col-xs-12 float-left">
+									 <img id="reCaptcha4"  alt="CAPTCHA Image" class="img-responsive " src="data:image/jpeg;base64,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"  style="float: left;width: 60%;"/>
+		                           <a href="javascript:showCapcha1();" class="addon float-left fs-3" style="float: left;margin-left: 10px;margin-top: 0px;"> <i class="fa fa-refresh "  aria-hidden="true"></i></a>
+			                       	</div>
+									</div>
+									</div>
+											<div class="row  mb-1">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-1">
+									<div class="form-group mb-1 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+										<label for="name-login-hos">Enter CAPTCHA</label>
+									</div>
+									<div class="input-group col-lg-8 col-md-12 col-sm-12 col-xs-12 float-left">
+												<span class="input-group-addon"><i class="fa fa-align-justify" aria-hidden="true"></i></span> 
+			                                          <input type="hidden" id="hiddenCaptcha4" value="6g5gy"/>
+			                                    <input type="text" id="captcha4"  name="captcha" class="form-control" maxlength="5"/>	</div>
+									</div>
+									</div>
+									
+										<div class="row">
+														<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  text-center mt-2">
+														<button type="button" id="gntateOTP4" onclick="isOtpGenerated('RFIDAgencyLogin')" class="btn btn-template-outlined btn-sm ">
+															<i class="fa fa-user-md"></i> Login
+														</button>
+														
+															<button type="button" id="forgotPassword" onclick="passwordForgot('AS');" class="btn btn-template-outlined btn-sm" >
+															 <i class="fa fa-undo "></i>
+                                                                 Forgot Password
+														</button>
+														
+														</div>
+													
+													
+													
+
+												
+												 </div>
+											<!-- 	<div class="row">
+													<div
+														class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+														<button type="button" id="gntateOTP4" onclick="isOtpGenerated('RFIDAgencyLogin')" class="btn btn-template-outlined btn-sm ">
+															<i class="fa fa-user-md"></i> Login
+														</button>
+														
+
+													</div>
+												</div> -->
+												
+												
+												<span style="color: red"></span>
+											</form>
+								</div>
+							
+                        </div>
+                    </div>
+                </div>
+              </div>
+                    </div> 
+                    </div>
+                    <!-- second Work Pannel -->
+                    
+                     <!--  End Work  -->
+                    
+                  </div>
+                  </div>
+              	</div>
+              	</div>
+            </div>
+             
+                
+</div>
+        </div>
+    </section>
+		
+		
+
+		<section class="bar background-white" style="display: none;">
+			<div class="container ">
+				<div class="row ">
+					<section
+						class=" col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-lg-8 col-md-8 col-sm-12 col-xs-12  register">
+						<!-- Nav tabs -->
+						<div
+							class="col-lg-12 col-md-12 col-sm-12 col-xs-12 viewinstrguide text-center">
+							Veterinary License Service</div>
+						<!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 viewinstrguide text-center">
+				 <a class="" data-toggle="modal" data-target="#instructguidemodal" >
+				<img src="static/images/eye_120.gif" style="width: 31px;">
+				  View Instruction and Guidelines </a>
+			</div> -->
+						<div
+							class="col-lg-12 col-md-12 col-sm-12 col-xs-12 register-right">
+							<ul class="nav nav-tabs cutomtabview" role="tablist">
+								<li class="nav-item"><a class="nav-link active"
+									data-toggle="tab" href="#Citizen_Login">Citizen Login</a></li>
+								<li class="nav-item"><a class="nav-link" data-toggle="tab"
+									href="#Admin_Login">Officer Login</a></li>
+								<li class="nav-item"><a class="nav-link" data-toggle="tab"
+									href="#Bank_Login">Bank Login</a></li>
+
+							</ul>
+
+							<!-- Tab panes -->
+							<div class="tab-content tab-content1">
+								<div id="Citizen_Login" class="tab-pane active">
+									<br>
+									<div class="card card1">
+										<div class="card-body">
+											
+											
+											
+											
+											<form action="web/citizen/doAuth" method="post"
+												autocomplete="off">
+												<input type="hidden" name="_csrf"
+													value="4117014a-c98c-4e4f-86e2-5d1c6bfffe78" /> <input id="loginTypeC"
+													type="hidden" name="loginType" class="form-control"
+													value="C" required>
+												
+												<div class="row">
+													<div class="form-group">
+														<label for="name-login">Registered Mobile No.</label>
+													</div>
+
+
+													<div
+														class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-4 float-left">
+														<select id="countryCodeID" class="js-states form-control"
+															name="countryCode" required
+															style="width: 20%; padding: 6px 5px;">
+
+															
+														</select>
+
+														
+														<input id="name-login" type="text" pattern="^[0-9]*$"
+															maxlength="16" name="mobileEmail" class="form-control"
+															placeholder="Mobile No" required style="width: 80%;"
+															data-toggle="tooltip" data-html="true"
+															data-placement="bottom" /> <span
+															class="input-group-addon"><i class="fa fa-mobile"></i></span>
+													</div>
+
+												</div>
+												<!-- <span class="col-lg-4 col-md-4 col-sm-12 col-xs-12  mb-4 pl-0 pr-0 float-right">
+											<button id="gntateOTP" class="btn btn-default otpbtn" type="button" onclick="isOtpGenerated()" >GENERATE OTP</button>
+										</span> -->
+
+												<div class="row">
+													<div
+														class="col-lg-4 col-md-4 col-sm-12 col-xs-12  mb-4 pl-0 pr-0 float-left">
+														<button id="gntateOTP" class="btn btn-default otpbtn"
+															type="button" onclick="isOtpGenerated()">GENERATE
+															  OTP</button>
+													</div>
+													<div
+														class=" col-lg-8 col-md-8 col-sm-12 col-xs-12 mb-4 pl-0 pr-0  float-right ">
+														<input id="password-login" name="otp" type="password"
+															maxlength="6" class="form-control numeric" placeholder="Enter OTP" disabled>
+
+													</div>
+												</div>
+												<!-- <div class="form-group">
+										<input id="password-login" name="otp" type="password" maxlength="6" class="form-control" placeholder="Enter OTP" disabled>
+									</div> -->
+												<div class="row">
+													<div
+														class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+														<button type="submit" class="btn btn-template-outlined ">
+															<i class="fa fa-user-md"></i> Login
+														</button>
+														<a
+															href="/ndmcportal/service"
+															class="btn btn-template-outlined ">Back</a>
+
+													</div>
+												</div>
+												<hr>
+												<div class="row">
+													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+														<a class="special" role="link"
+															href="web/citizen/registrationotp"> <i
+															class="fa fa-user" style="color: #e96220;"></i> New User
+															Click Here For SignUp / Registration
+														</a>
+
+														<h5 class="text-green text-green1"> Authorized persons may signup
+															on the behalf of Govt/ State/ Organisation/ Public
+															Institutions. </h5>
+													</div>
+													<!-- <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+											<a class="special" role="link" href="web/citizen/forgotPassword"><i class="fa fa-key" style="color: #e96220;"></i> Forgot your Username?</a>
+										</div> -->
+													<!-- <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+											<a class="special" role="link" href="web/citizen/property/cscLogin"><i class="fa fa-lock" style="color: #e96220;"></i> Click here to login with CSC</a>
+										</div> -->
+
+												</div>
+											</form>
+
+										</div>
+									</div>
+								</div>
+
+
+								<div id="Admin_Login" class=" tab-pane fade">
+									<br>
+									<div class="card card1">
+										<div class="card-body">
+											
+											
+											<form action="web/citizen/doAuth" method="post"
+												autocomplete="off">
+												<input type="hidden" name="_csrf"
+													value="4117014a-c98c-4e4f-86e2-5d1c6bfffe78" /> <input id="loginTypeU"
+													type="hidden" name="loginType" class="form-control"
+													value="U" required>
+												<div class="row">
+													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+														<div class="form-group form-group-login">
+															<label for="username">User Name</label>
+														</div>
+														<div class="input-group">
+															<span class="input-group-addon"><i
+																class="fa fa-user"></i></span> <input id="usernameOfficer"
+																type="text" maxlength="40" name="username"
+																class="form-control textformat"
+																placeholder="Enter Your User Name" required>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+														<div class="form-group form-group-login">
+															<label for="password">Password</label>
+														</div>
+														<div class="input-group">
+															<span class="input-group-addon"><i
+																class="fa fa-lock"></i></span> <input id="passwordOfficerId"
+																type="password" maxlength="50" name="password"
+																class="form-control" placeholder="Enter Your Password"
+																required>
+														</div>
+
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-4">
+
+														<!-- <div class="form-group ">
+															<label>Captcha</label>
+															<input id="security" type="text" class="form-control" placeholder="type here" disabled>
+														</div>
+														<div class="form-group text-center">
+															<input type="text"
+																class="form-control col-lg-7 col-md-7 textformat"
+																name="j_captcha_response" maxlength="6"> <img
+																id="captcha_ID_U" src="Captcha" class="captcha"
+																border="0"> <a href="javascript:void(0);"
+																onclick="doRefreshCAPTCHA('captcha_ID_U');"> <i
+																class="fa fa-refresh" aria-hidden="true"></i>
+															</a>
+														</div> 
+													</div>
+												</div>
+												<div class="row">
+													<div
+														class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+														<button type="submit" class="btn btn-template-outlined">
+															<i class="fa fa-user-md"></i> Login
+														</button>
+														<a
+															href="/ndmcportal/service"
+															class="btn btn-template-outlined">Back</a>
+														<!-- <button type="button" class="btn btn-template-outlined"><i class="fa fa-user-md"></i> Back</button> -->
+													</div>
+												</div>
+												<!-- <hr>
+									<div class="row">
+										<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+											<a class="special"> <i class="fa fa-user" style="color: #e96220;"></i> Click here to sign up
+											</a>
+										</div> 
+										 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+											<a class="special"><i class="fa fa-key" style="color: #e96220;"></i> Forgot your Username?</a>
+										</div> 
+										<!-- <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+											<a class="special" role="link" href="web/citizen/property/cscLogin"><i class="fa fa-lock" style="color: #e96220;"></i> Click here to login with CSC</a>
+										</div> 
+									</div>-->
+
+											</form>
+										</div>
+									</div>
+								</div>
+
+
+
+								<div id="Bank_Login" class=" tab-pane fade">
+									<br>
+									<div class="card card1">
+										<div class="card-body">
+											
+											
+											<form action="web/citizen/doAuth" method="post"
+												autocomplete="off">
+												<input type="hidden" name="_csrf"
+													value="4117014a-c98c-4e4f-86e2-5d1c6bfffe78" /> <input id="loginTypeU"
+													type="hidden" name="loginType" class="form-control"
+													value="B" required>
+												<div class="row">
+													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+														<div class="form-group form-group-login">
+															<label for="username">User Name</label>
+														</div>
+														<div class="input-group">
+															<span class="input-group-addon"><i
+																class="fa fa-user"></i></span> <input id="usernameOfficer"
+																type="text" maxlength="40" name="username"
+																class="form-control textformat"
+																placeholder="Enter Your User Name" required>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+														<div class="form-group form-group-login">
+															<label for="password">Password</label>
+														</div>
+														<div class="input-group">
+															<span class="input-group-addon"><i
+																class="fa fa-lock"></i></span> <input id="passwordOfficerId"
+																type="password" maxlength="50" name="password"
+																class="form-control" placeholder="Enter Your Password"
+																required>
+														</div>
+
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-4">
+
+														<!-- <div class="form-group ">
+															<label>Captcha</label>
+															<input id="security" type="text" class="form-control" placeholder="type here" disabled>
+														</div>
+														<div class="form-group text-center">
+															<input type="text"
+																class="form-control col-lg-7 col-md-7 textformat"
+																name="j_captcha_response" maxlength="6"> <img
+																id="captcha_ID_B" src="Captcha" class="captcha"
+																border="0"> <a href="javascript:void(0);"
+																onclick="doRefreshCAPTCHA('captcha_ID_B');"> <i
+																class="fa fa-refresh" aria-hidden="true"></i>
+															</a>
+														</div> -->
+													</div>
+												</div>
+												<div class="row">
+													<div
+														class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+														<button type="submit" class="btn btn-template-outlined">
+															<i class="fa fa-user-md"></i> Login
+														</button>
+														<a
+															href="/ndmcportal/service"
+															class="btn btn-template-outlined">Back</a>
+														<!-- <button type="button" class="btn btn-template-outlined"><i class="fa fa-user-md"></i> Back</button> -->
+													</div>
+												</div>
+												<!-- <hr>
+									<div class="row">
+										<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+											<a class="special"> <i class="fa fa-user" style="color: #e96220;"></i> Click here to sign up
+											</a>
+										</div> 
+										 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+											<a class="special"><i class="fa fa-key" style="color: #e96220;"></i> Forgot your Username?</a>
+										</div> 
+										<!-- <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+											<a class="special" role="link" href="web/citizen/property/cscLogin"><i class="fa fa-lock" style="color: #e96220;"></i> Click here to login with CSC</a>
+										</div> 
+									</div>-->
+
+											</form>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<!-- </div> -->
+					</section>
+				</div>
+
+			</div>
+
+		</section>
+
+	</div>
+
+
+	<!-- FOOTER -->
+<footer>  
+		
+		<div class="copyright">
+			<div class="container-fluid">
+			<div class="row">
+			 <div class=" col-lg-1 col-md-1 col-sm-12 col-xs-12 copyrighttext text-center">
+						<p class="disclamer1" style="margin: 2px 0px !important;">
+						<img src="static/images/logo_footerWith_nic.png" alt="MCD NIC Logo" style="height:3rem;">
+							<!-- <a href="https://www.nic.in/" target="_blank">
+							<img src="https://mcdonline.nic.in/portal/static/images/footer-nic-logo.svg" alt="Nic Logo" width="35" height="35" class="" ></a> -->
+						</p>
+					</div>
+					<div class="col-lg-9  col-md-9 col-sm-12 col-xs-12 officaltext text-center">
+					<p class="disclamer1"> 		
+					Website Content Managed by Municipal Corporation of Delhi, 
+					
+					<a href="" data-bs-toggle="modal" data-bs-target="#webinfodetailModal">Web Information Manager</a> 
+					 Designed, Developed and Hosted by <a href="https://www.nic.in/" target="_blank" onclick="return confirm('You are moving out of http://mcdonline.nic.in. Do you wish to continue?')">National Informatics Centre( NIC )</a>
+					 <a href="https://meity.gov.in/" target="_blank" onclick="return confirm('You are moving out of http://mcdonline.nic.in. Do you wish to continue?')">Ministry of Electronics &amp; IT (MeitY). </a>   Copyright © 2022 
+					</p>
+					</div>
+					<div class=" col-lg-2 col-md-2 col-sm-12 col-xs-12 copyrighttext text-center">
+					<a href="#" class="text-white">
+              Terms & Conditions
+            </a>
+            <span>|</span>
+            <a href="#" class="text-white">
+              Privacy Policy
+            </a>
+					</div>
+				
+			</div>
+			<div class="row">
+			 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center" style="background: #43497e">
+			 <a class="compect footetextcolr" data-bs-toggle="modal" data-bs-target="#myModal">Compatible Browsers</a>
+			 </div>
+			</div>
+				
+			</div>
+		</div>
+		 <!--   <div class="footer-Disclaimer">
+			<div class="container-fluid py-1">
+				<div class="row clearfix">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <span class="Disclaimertext" style="color: #0020ff"> <b> Disclaimer : </b> </span>
+          <span>The departmental website while displaying the write-ups will clearly indicate that the contents and suggestions are as provided by the  employees and the department is not responsible for factual inaccuracies and the veracity of the claims.</span>
+        </div>
+				</div>
+			</div>
+		</div> -->
+		</footer>
+
+
+
+	<div class="backtotop-wrapper">
+
+		<a href="javascript:void(0);" class="back-to-top"
+			title="Scroll to top"><span class="fa fa-angle-up"></span><span
+			class="hidden">Back to Top of the Page</span></a>
+	</div>
+
+	<!-- <div class="help-desk ">
+		<div class="toggle "></div>
+		<h3>
+			<i class="fa fa-phone" aria-hidden="true"></i> Help Desk
+		</h3>
+		<div class="scroll">
+			<ul class="helplinelink2">
+
+				<li>Telephone No. : 9999999999</li>
+				<li><i class="fa fa-envelope" aria-hidden="true"></i> e-Mail ID
+					:</li>
+				<li>SDMC:
+						support-sdmc[at]mcd[dot]nic[dot]in</a></li>				
+			</ul>
+		</div>
+	</div> -->
+
+		 <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="webinfodetailModalLabel" aria-hidden="true" role="dialog">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header compectheader">
+        
+          <h4 class="modal-title compecttitle">Compatible Browsers</h4>
+        </div>
+        <div class="modal-body">
+        
+		  <div class="browsers">
+		 <h5 style="color: green;">May Please Use Following Browser For The Best View</h5>
+		  <i style="color: #2c7bb7" class="fa fa-internet-explorer fa-1x" aria-hidden="true"></i> Internet Explorer v11.0 <br>
+		  <i style="color: #e0701a" class="fa fa-firefox fa-1x" aria-hidden="true"></i> Mozilla Firefox v7 to v77.0.1<br>
+		  <i style="color: #e93e30" class="fa fa-chrome fa-1x" aria-hidden="true"></i> Google Chrome  v44 to V66.0.3359.139<br>
+		  <i style="color: #18498e" class="fa fa-safari fa-1x" aria-hidden="true"></i> Safari v10.022 to v11.1 (12605.1.33.1.4)
+		  </div>
+		  
+        </div>
+        <div class="modal-footer text-center">
+          <button type="button" class="btn btn-default btnCom" data-bs-dismiss="modal">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+ <!--  end -->
+  <!--  web manager infromation  Modal -->
+  <div class="modal fade" id="webinfodetailModal" tabindex="-1" aria-labelledby="webinfodetailModalLabel" aria-hidden="true" role="dialog">
+<!--   <div class="modal fade in" id="webinfodetailModal" role="dialog"> -->
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header compectheader">
+        
+          <h4 class="modal-title compecttitle">Contact Details</h4>
+        </div>
+        <div class="modal-body">
+        
+		  <div class="browsers">
+		 <h5 style="color: green;">May Please Use Following Contact details</h5>
+		 </div>
+		  
+        </div>
+        <div class="modal-footer text-center">
+          <button type="button" class="btn btn-default btnCom" data-bs-dismiss="modal">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end -->
+
+
+<form id="acrformsubmit" action="/esbm-mcd/web/citizen/registrationotp" method="post">
+	<input type="hidden" name="userTypeEodb" id="userTypeEodb">
+	<input type="hidden" name="_csrf" value="4117014a-c98c-4e4f-86e2-5d1c6bfffe78"/>
+</form>
+	<!-- The Modal instruction and guidelines -->
+
+	<div class="modal fade" id="instructguidemodal" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header compectheader">
+
+					<h4 class="modal-title compecttitle">Instruction And
+						Guidelines</h4>
+					<button type="button" class="close modalclose" data-dismiss="modal"
+						title="Close the Modal Popup">&times;</button>
+				</div>
+				<div class="modal-body">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+							<label class="control-label required">Select Service </label>
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-th"></i></span>
+								<select id="gtcateorySelect" class="js-states form-control"
+									required>
+									<option value="0" selected="selected">Select Service</option>
+									<option value="ptr">PTR</option>
+									<option value="hos">HOSPITAL</option>
+									<option value="rbd">RBD</option>
+									<option value="ftl">FTL</option>
+									<option value="gtl">GTL</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+							<label class="control-label required">Select Type </label>
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-th"></i></span>
+								<select id="insTypeSelect" class="js-states form-control"
+									required>
+									<option selected="selected" value="All">All</option>
+									<option value="Instruction">Instruction</option>
+									<option value="Guideline">Guidelines</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 mt-4">
+							<button type="button" onclick="showInstructonGuidlines();"
+								class="btn btn-default btnCom mt-4">
+								<i class="fa fa-eye"></i>View
+							</button>
+						</div>
+					</div>
+
+					<!-- 	display instruction and guideline  -->
+
+					<div id="instructionGuidlinesId"
+						class="col-lg-12 col-md-12 col-sm-12 col-xs-12"
+						style="display: none"></div>
+				</div>
+
+				<!-- Modal footer -->
+				<div class="modal-footer text-center">
+					<button type="button" class="btn btn-danger" data-dismiss="modal"
+						title="Close the Pop up Modal">Close</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	
+	
+
+
+                  
+ 
+	<script src="/esbm-mcd/static/js/jquery.min.js"></script>
+	
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> 
+	<script src="/esbm-mcd/static/js/bootbox.min.js"></script>
+	<script src="/esbm-mcd/static/js/select2.min.js"></script>
+	<script src="/esbm-mcd/static/js/custom.js"></script>
+	<script src="/esbm-mcd/static/js/ol-ext.js"></script>
+
+	<script>
+		$(document).ready(function() {
+			$('[data-toggle="tooltip"]').tooltip();
+		});
+		
+		$(".numeric").keydown(function (e) {
+	        // Allow: backspace, delete, tab, escape, enter and .
+	        if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
+	             // Allow: Ctrl/cmd+A
+	            (e.keyCode == 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+	             // Allow: Ctrl/cmd+C
+	            (e.keyCode == 67 && (e.ctrlKey === true || e.metaKey === true)) ||
+	             // Allow: Ctrl/cmd+X
+	            (e.keyCode == 88 && (e.ctrlKey === true || e.metaKey === true)) ||
+	             // Allow: home, end, left, right
+	            (e.keyCode >= 35 && e.keyCode <= 39)) {
+	                 // let it happen, don't do anything
+	                 return;
+	        }
+	        // Ensure that it is a number and stop the keypress
+	        if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+	            e.preventDefault();
+	        }
+	    });
+	</script>
+	<script>
+		$(document).ready(function() {
+			$('.toggle').click(function() {
+				$('.help-desk').toggleClass('active');
+				$('.toggle').toggleClass('active');
+			});
+		});
+		$(document).ready(function() {
+			if ($("#alertID").length > 0) {
+				createSmallAlert($("#alertID").val());
+			}
+
+		})
+
+		//$( "#tabs" ).tabs({ active: # });
+		function isOtpGenerated(formType) {
+			/* $("#gntateOTP").attr("disabled", true); */
+		   //alert(formType);
+			var form;
+			if(formType=='reg'){
+				
+			}else if(formType=='login'){
+				
+				var userId=$('#username').val();
+				var password=$('#password').val();
+				var type=$('#venTypeID').val();
+				var capcha=$('#hiddenCaptcha').val();
+				var capcha1=$('#captcha').val();
+				//alert(type);
+				if(userId.trim()=='' || password.trim()==''){
+					createSmallAlert("Username or Password is Blank.");
+					return false;
+				}
+				if(capcha1==''){
+					createSmallAlert("Enter the Capcha");
+					return false;
+				}else if(capcha.trim()!=capcha1.trim()){
+					createSmallAlert("Capcha is not Correct");
+					return false;
+				}
+				var data = password+"|";
+        	    var key  = CryptoJS.enc.Latin1.parse('1234567812345678');
+        	    var iv   = CryptoJS.enc.Latin1.parse('1234567812345678');  
+        	   
+        	    var encryptText = CryptoJS.AES.encrypt(
+        	      data,
+        	      key,
+        	      {iv:iv,mode:CryptoJS.mode.CBC,padding:CryptoJS.pad.ZeroPadding
+        	    });
+        	   
+				$('#usernameOtp').val(userId);
+				$('#passwordOtp').val(encryptText);
+				$('#typeOtp').val(type);
+				$('#captchaotp').val(capcha);
+				
+				form=$('#generateOtpForm').serialize();
+				$('#gntateOTP').attr("disabled", true);
+				$('.loaderDivII').show();
+				$.ajax({
+					type : "POST",
+					url : "loginFormValidation",
+					data : form,
+				//	cache : false,
+					async : true,
+					//contentType : false,
+					//processData : false,
+					beforeSend : function() {
+						$('.loaderDivII').show();
+					},
+					success : function(data, status, xhr) {
+					     	$('#changed').html("");	
+							$('#changed').html(data);	
+							$('.changed').show();
+							  showTab('esbm');
+							  $("#eSBMoption1").attr('checked', true);
+							  showRadioTab('eSBM-tab11');
+						//		document.getElementById("password-login").removeAttribute("disabled");
+					/* 		$('#gntateOTP').attr("disabled", true);
+							  $("alertID").val(""); */
+				
+					},
+					error : function(e) {
+						//createAlert('error ' + "Sesstion is holding very long time , kindaly refresh the Page");
+						location.reload();
+						$('.loaderDivII').hide();
+						$('#gntateOTP').attr("disabled", false);
+						
+					},
+					complete : function() {
+						//select2Refresh();
+						$('.loaderDivII').hide();
+						activaTab('Citizen_Login');
+					$('#gntateOTP').attr("disabled", false);
+					}
+				});
+				//$('#gntateOTP').attr("disabled", true);
+			}else if(formType=='officerLogin'){
+					var userId=$('#officerName').val();
+				var password=$('#officerPassword2').val();
+				var offType=$('#offTypeID').val();
+				var capcha=$('#hiddenCaptcha1').val();
+				var capcha1=$('#captcha1').val();
+				//alert(offType);
+				if(userId.trim()=='' || password.trim()==''){
+					createSmallAlert("Username or Password is Blank.");
+					return false;
+				}
+				if(capcha1==''){
+					createSmallAlert("Enter the Capcha");
+					return false;
+				}else if(capcha.trim()!=capcha1.trim()){
+					createSmallAlert("Capcha is not Correct");
+					return false;
+				}
+				var data = password+"|";
+        	    var key  = CryptoJS.enc.Latin1.parse('1234567812345678');
+        	    var iv   = CryptoJS.enc.Latin1.parse('1234567812345678');  
+        	   
+        	    var encryptText = CryptoJS.AES.encrypt(
+        	      data,
+        	      key,
+        	      {iv:iv,mode:CryptoJS.mode.CBC,padding:CryptoJS.pad.ZeroPadding
+        	    });
+        	    
+				$('#usernameOtp').val($('#officerName').val());
+				$('#passwordOtp').val(encryptText);
+				$('#typeOtp').val(offType);
+				$('#captchaotp').val(capcha);
+				form=$('#generateOtpForm').serialize();
+				$('#gntateOTP2').attr("disabled", true);
+				$('.loaderDivII').show();
+				$.ajax({
+					type : "POST",
+					url : "loginFormValidation",
+					data : form,
+					//cache : false,
+					async : true,
+					//contentType : false,
+					//processData : false,
+					beforeSend : function() {
+						$('.loaderDivII').show();
+					},
+					success : function(data, status, xhr) {
+						 
+						    $('#changed').html("");	
+							$('#changed').html(data);	
+							// $('#nav-contact-tab').trigger('click');
+							$('.changed').show();
+							    showTab('esbm');
+							  $("#eSBMoption2").attr('checked', true);
+							  showRadioTab('eSBM-tab12');
+							// $('#nav-contact-tab').trigger('click');
+							// $('.loaderDivII').hide();
+							 
+							 
+							
+							//document.getElementById("password-login2").removeAttribute("disabled");
+						/* 	$('#gntateOTP2').attr("disabled", true);
+							$("alertID").val(""); */
+						
+					
+					},
+					error : function(e) {
+						//createAlert('error ' + "Sesstion is holding very logtime , kindaly refresh page");
+						location.reload();
+						$('.loaderDivII').hide();
+						//alert('error '+e)
+					},
+					complete : function() {
+						//select2Refresh();
+						$('.loaderDivII').hide();
+						 $('#nav-contact-tab').trigger('click');
+						activaTab('Citizen_Login');
+					}
+				});
+				//$('#gntateOTP2').attr("disabled", true);
+			} else if(formType=='RFIDAdminLogin'){
+				
+				var userId=$('#rfidAdminofficerName').val();
+				var password=$('#rfidAdminofficerPassword2').val();
+				var offType=$('#rfidAdminoffTypeID').val();
+				var capcha=$('#hiddenCaptcha2').val();
+				var capcha1=$('#captcha2').val();
+				
+				if(userId.trim()=='' || password.trim()==''){
+					createSmallAlert("Username or Password is Blank.");
+					return false;
+				}
+				if(capcha1==''){
+					createSmallAlert("Enter the Capcha");
+					return false;
+				}else if(capcha.trim()!=capcha1.trim()){
+					createSmallAlert("Capcha is not Correct");
+					return false;
+				}
+				var data = password+"|";
+        	    var key  = CryptoJS.enc.Latin1.parse('1234567812345678');
+        	    var iv   = CryptoJS.enc.Latin1.parse('1234567812345678');  
+        	   
+        	    var encryptText = CryptoJS.AES.encrypt(
+        	      data,
+        	      key,
+        	      {iv:iv,mode:CryptoJS.mode.CBC,padding:CryptoJS.pad.ZeroPadding
+        	    });
+        	    
+				$('#usernameOtp').val($('#rfidAdminofficerName').val());
+				$('#passwordOtp').val(encryptText);
+				$('#typeOtp').val(offType);
+				$('#captchaotp').val(capcha);
+				form=$('#generateOtpForm').serialize();
+				$('#gntateOTP2').attr("disabled", true);
+				$('.loaderDivII').show();
+				$.ajax({
+					type : "POST",
+					url : "loginFormValidation",
+					data : form,
+					//cache : false,
+					async : true,
+					//contentType : false,
+					//processData : false,
+					beforeSend : function() {
+						$('.loaderDivII').show();
+					},
+					success : function(data, status, xhr) {
+						  
+						    $('#changed').html("");	
+							$('#changed').html(data);	
+							// $('#rfid_admin-login').trigger('click');
+							$('.changed').show();
+							 showTab('bio-mining');
+							 showRadioTab('bio-mining-tab11');
+							 $("#esbmOption3").attr('checked', true);
+							 $('.loaderDivII').hide();
+							 
+							 
+							
+							//document.getElementById("password-login2").removeAttribute("disabled");
+						/* 	$('#gntateOTP2').attr("disabled", true);
+							$("alertID").val(""); */
+						
+					
+					},
+					error : function(e) {
+						//createAlert('error ' + "Sesstion is holding very logtime , kindaly refresh page");
+						location.reload();
+						$('.loaderDivII').hide();
+						//alert('error '+e)
+					},
+					complete : function() {
+						//select2Refresh();
+						$('.loaderDivII').hide();
+						// $('#rfid_admin-login').trigger('click');
+						//activaTab('Citizen_Login');
+					}
+				});
+				//$('#gntateOTP2').attr("disabled", true);
+			}else if(formType=='RFIDSiteLogin'){
+				
+				var userId=$('#rfisSiteofficerName').val();
+				var password=$('#rfisSiteofficerPassword2').val();
+				var offType=$('#rfisSiteoffTypeID').val();
+				var capcha=$('#hiddenCaptcha3').val();
+				var capcha1=$('#captcha3').val();
+				//alert(offType);
+				if(userId.trim()=='' || password.trim()==''){
+					createSmallAlert("Username or Password is Blank.");
+					return false;
+				}
+				if(capcha1==''){
+					createSmallAlert("Enter the Capcha");
+					return false;
+				}else if(capcha.trim()!=capcha1.trim()){
+					createSmallAlert("Capcha is not Correct");
+					return false;
+				}
+				var data = password+"|";
+        	    var key  = CryptoJS.enc.Latin1.parse('1234567812345678');
+        	    var iv   = CryptoJS.enc.Latin1.parse('1234567812345678');  
+        	   
+        	    var encryptText = CryptoJS.AES.encrypt(
+        	      data,
+        	      key,
+        	      {iv:iv,mode:CryptoJS.mode.CBC,padding:CryptoJS.pad.ZeroPadding
+        	    });
+        	    
+				$('#usernameOtp').val($('#rfisSiteofficerName').val());
+				$('#passwordOtp').val(encryptText);
+				$('#typeOtp').val(offType);
+				$('#captchaotp').val(capcha);
+				form=$('#generateOtpForm').serialize();
+				$('#gntateOTP2').attr("disabled", true);
+				$('.loaderDivII').show();
+				$.ajax({
+					type : "POST",
+					url : "loginFormValidation",
+					data : form,
+					//cache : false,
+					async : true,
+					//contentType : false,
+					//processData : false,
+					beforeSend : function() {
+						$('.loaderDivII').show();
+					},
+					success : function(data, status, xhr) {
+						  
+						    $('#changed').html("");	
+							$('#changed').html(data);	
+							// $('#rfid_site-login').trigger('click');
+							$('.changed').show();
+							  showTab('bio-mining');
+							  showRadioTab('bio-mining-tab13');
+							  $("#esbmOption5").attr('checked', true);
+							// $('#rfid_site-login').trigger('click');
+							 $('.loaderDivII').hide();
+							 
+							 
+							
+							//document.getElementById("password-login2").removeAttribute("disabled");
+						/* 	$('#gntateOTP2').attr("disabled", true);
+							$("alertID").val(""); */
+						
+					
+					},
+					error : function(e) {
+						//createAlert('error ' + "Sesstion is holding very logtime , kindaly refresh page");
+						location.reload();
+						$('.loaderDivII').hide();
+						//alert('error '+e)
+					},
+					complete : function() {
+						//select2Refresh();
+						$('.loaderDivII').hide();
+						// $('#rfid_site-login').trigger('click');
+						//activaTab('Citizen_Login');
+					}
+				});
+				//$('#gntateOTP2').attr("disabled", true);
+			}
+				
+			
+else if(formType=='RFIDAgencyLogin'){
+				
+				var userId=$('#rfisAgencyofficerName').val();
+				var password=$('#rfisAgencyofficerPassword2').val();
+				var offType=$('#rfisAgencyoffTypeID').val();
+				var capcha=$('#hiddenCaptcha4').val();
+				var capcha1=$('#captcha4').val();
+				//alert(offType);
+				if(userId.trim()=='' || password.trim()==''){
+					createSmallAlert("Username or Password is Blank.");
+					return false;
+				}
+				if(capcha1==''){
+					createSmallAlert("Enter the Capcha");
+					return false;
+				}else if(capcha.trim()!=capcha1.trim()){
+					createSmallAlert("Capcha is not Correct");
+					return false;
+				}
+				var data = password+"|";
+        	    var key  = CryptoJS.enc.Latin1.parse('1234567812345678');
+        	    var iv   = CryptoJS.enc.Latin1.parse('1234567812345678');  
+        	   
+        	    var encryptText = CryptoJS.AES.encrypt(
+        	      data,
+        	      key,
+        	      {iv:iv,mode:CryptoJS.mode.CBC,padding:CryptoJS.pad.ZeroPadding
+        	    });
+        	    
+				$('#usernameOtp').val($('#rfisAgencyofficerName').val());
+				$('#passwordOtp').val(encryptText);
+				$('#typeOtp').val(offType);
+				$('#captchaotp').val(capcha);
+				form=$('#generateOtpForm').serialize();
+				$('#gntateOTP2').attr("disabled", true);
+				$('.loaderDivII').show();
+				$.ajax({
+					type : "POST",
+					url : "loginFormValidation",
+					data : form,
+					//cache : false,
+					async : true,
+					//contentType : false,
+					//processData : false,
+					beforeSend : function() {
+						$('.loaderDivII').show();
+					},
+					success : function(data, status, xhr) {
+						  
+						    $('#changed').html("");	
+							$('#changed').html(data);	
+							// $('#rfid_Agency-login').trigger('click');
+							$('.changed').show();
+							showTab('bio-mining');
+							 showRadioTab('bio-mining-tab12');
+							 $("#esbmOption4").attr('checked', true);
+							// $('#rfid_Agency-login').trigger('click');
+							 $('.loaderDivII').hide();
+							 
+							 
+							
+							//document.getElementById("password-login2").removeAttribute("disabled");
+						/* 	$('#gntateOTP2').attr("disabled", true);
+							$("alertID").val(""); */
+						
+					
+					},
+					error : function(e) {
+						//createAlert('error ' + "Sesstion is holding very logtime , kindaly refresh page");
+						location.reload();
+						$('.loaderDivII').hide();
+						//alert('error '+e)
+					},
+					complete : function() {
+						//select2Refresh();
+						$('.loaderDivII').hide();
+						// $('#rfid_site-login').trigger('click');
+						//activaTab('Citizen_Login');
+					}
+				});
+				//$('#gntateOTP2').attr("disabled", true);
+			}
+				
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		}
+
+		/* function doRefreshCAPTCHA(){
+		    var d = new Date();
+			var captchaObj = document.getElementById("captcha_ID");
+			captchaObj.src="Captcha\?"+d.getMilliseconds();
+		} */
+
+		function doRefreshCAPTCHA(id) {
+
+			var d = new Date();
+
+			var captchaObj2 = document.getElementById('captcha_ID_U');
+			captchaObj2.src = "Captcha\?" + d.getMilliseconds();
+
+			var captchaObj3 = document.getElementById('captcha_ID_B');
+			captchaObj3.src = "Captcha\?" + d.getMilliseconds();
+
+		}
+
+		function createSmallAlert(msg) {
+			bootbox.alert({
+				message : msg,
+				size : 'small'
+			});
+		}
+
+		function createAlert(msg) {
+			bootbox.alert({
+				message : msg,
+				size : 'large'
+			});
+		}
+
+		$(document).ready(function() {
+			var loginTypeHidden = $("#loginTypeHiddenID").val();
+
+			/* bootbox.alert({
+			    message: msg,
+			    size: 'small'
+			}); */
+
+			if (loginTypeHidden == 'U') {
+				activaTab('Admin_Login');
+			} else if (loginTypeHidden == 'H') {
+				activaTab('Hospital_Login');
+			} else if (loginTypeHidden == 'C') {
+				activaTab('Citizen_Login');
+			} else if (loginTypeHidden == 'B') {
+				activaTab('Bank_Login');
+			}  else if (loginTypeHidden == 'M') {
+				activaTab('Bank_Login');
+			}
+			else {
+				activaTab('Citizen_Login');
+			}
+
+		});
+		function activaTab(tab) {
+			$('.nav-tabs a[href="#' + tab + '"]').tab('show');
+		};
+
+		$(function() {
+			$("input[name=mobileEmail]")[0].oninvalid = function() {
+				this.setCustomValidity("Please enter valid Mobile Number.");
+			};
+		});
+
+		function edithosregform(requesttype) {
+			$("#requesttypehos").val(requesttype);
+			$("#edithosregformsubmit").submit();
+		}
+		
+		function genRegOtp(requesttype){
+			$("#userTypeEodb").val(requesttype);
+			$("#acrformsubmit").submit();
+		}		
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#gtcateorySelect").select2({
+				placeholder : "",
+				allowClear : true
+			});
+			$("#insTypeSelect").select2({
+				placeholder : "",
+				allowClear : true
+			});
+		});
+		function showInstructonGuidlines() {
+			var serviceSelected = $("#gtcateorySelect").val();
+			var type = $("#insTypeSelect").val();
+			if (serviceSelected == '' || serviceSelected == '0') {
+				createSmallAlert("Please Select a Service");
+				return false;
+			}
+			if (type == '' || type == '0') {
+				type = 'All';
+			}
+
+			$("#instructionGuidlinesId").html(
+					$("#" + serviceSelected + "InstructionGuidelines" + type)
+							.html());
+			$("#instructionGuidlinesId").show();
+		}
+	</script>
+	
+	<!--  start navigation -->
+<script type="text/javascript">
+$(document).ready(function () {
+$('.navbar-light .dmenu').hover(function () {
+        $(this).find('.sm-menu').first().stop(true, true).slideDown(150);
+    }, function () {
+        $(this).find('.sm-menu').first().stop(true, true).slideUp(105)
+    });
+});
+</script>
+<!--  end navigation 
+
+<script type="text/javascript">
+$(document).ready(function () {
+ var emp= "";
+
+if(emp =="EMP"){
+ 	 $("#nav-rfid_admin-login").removeClass('active');
+	 $("#nav-rfid-Site-login").removeClass('active');
+	 $("#nav-contact-tab").removeClass('active'); 
+$('#nav-contact-tab').trigger('click');
+}if(emp =="ROL"){
+/*     $("#nav-rfid-Site-login").removeClass('active');
+    $("#nav-profile-tab").removeClass('active');
+	$("#nav-contact-tab").removeClass('active'); */
+      $('#nav-rfid_admin-login').trigger('click');
+}
+if(emp =="RSL"){
+/* 	$("#nav-rfid_admin-login").removeClass('active');
+    $("#nav-profile-tab").removeClass('active');
+	 $("#nav-contact-tab").removeClass('active'); */
+	$('#nav-rfid-Site-login').trigger('click');
+	}
+if(emp =="RAL"){
+	/* 	$("#nav-rfid_admin-login").removeClass('active');
+	    $("#nav-profile-tab").removeClass('active');
+		 $("#nav-contact-tab").removeClass('active'); */
+		$('#nav-rfid-Agency-login').trigger('click');
+		 
+		}
+}); 
+</script> -->
+
+
+  <script type="text/javascript">
+/*     function validatefieldOtpEnabledofficer() {
+    	var userId=$('#officerName').val();
+		//var type=$('#venTypeID').val();
+			$('#usernameOtp').val(userId);
+		$('#typeOtp').val("emp");
+		if(userId==''){
+			return;
+		}
+    	var form=$('#generateOtpForm').serialize();
+			$.ajax({
+			url : "otp/generatedandValidateTimeOTP",
+			 type: "GET",
+			   data : form,
+				
+				success:function(data) {
+               
+					if(data){
+						
+						//$('#gntateOTP2').attr("disabled", true);
+						$("#officerbtnpid").text(" Otp Has been already generated , Valid time At 3 minutes.");
+						}else{ //$('#gntateOTP2').attr("disabled", false);
+						}
+				 
+			}
+	
+		}); 
+	
+
+}; */
+
+
+/* $("#username").blur(function(){
+	
+	validatefieldOtpEnabledVendor(); 
+});
+$("#officerName").blur(function(){
+
+	validatefieldOtpEnabledofficer(); 
+}); */
+    </script>
+    
+    
+ <script type="text/javascript">
+function showCapcha(){
+		
+		$.ajax({
+			url : "admin/doGanretMobileCapcha",
+			 type: "get",
+				success:function(data) {
+					
+					if(data){
+					
+						obj = data;
+					
+						$("#reCaptcha").attr("src",obj.realCaptcha);
+						$("#hiddenCaptcha").val(obj.hiddenCaptcha);
+						
+						}
+				 
+			}
+
+		});
+	}
+function showCapcha1(){
+	
+	$.ajax({
+		url : "admin/doGanretMobileCapcha",
+		 type: "get",
+			success:function(data) {
+				
+				if(data){
+				
+					obj = data;
+				
+					$("#reCaptcha1").attr("src",obj.realCaptcha);
+					$("#hiddenCaptcha1").val(obj.hiddenCaptcha);
+					$("#reCaptcha3").attr("src",obj.realCaptcha);
+					$("#hiddenCaptcha3").val(obj.hiddenCaptcha);
+					$("#reCaptcha4").attr("src",obj.realCaptcha);
+					$("#hiddenCaptcha4").val(obj.hiddenCaptcha);
+					$("#reCaptcha2").attr("src",obj.realCaptcha);
+					$("#hiddenCaptcha2").val(obj.hiddenCaptcha);
+								
+					}
+			 
+		}
+
+	});
+}
+    </script>
+  
+    
+<!--  <script>
+$(document).ready(function(){
+
+  $("#nav-rfid_admin-login").click(function(){
+    $("#nav-rfid-Site-login").removeClass('active');
+    $("#nav-profile-tab").removeClass('active');
+	 $("#nav-contact-tab").removeClass('active');
+	 $("#nav-rfid-Agency-login").removeClass('active');
+  });
+  
+  $("#nav-rfid-Site-login").click(function(){
+	 $("#nav-rfid_admin-login").removeClass('active');
+	    $("#nav-profile-tab").removeClass('active');
+		 $("#nav-contact-tab").removeClass('active');
+		 $("#nav-rfid-Agency-login").removeClass('active');
+	  });
+  
+  $("#nav-profile-tab").click(function(){
+		 $("#nav-rfid_admin-login").removeClass('active');
+		 $("#nav-rfid-Site-login").removeClass('active');
+			 $("#nav-contact-tab").removeClass('active');
+			 $("#nav-rfid-Agency-login").removeClass('active');
+		  });
+  
+    $("#nav-contact-tab").click(function(){
+		  $("#nav-rfid_admin-login").removeClass('active');
+		  $("#nav-rfid-Site-login").removeClass('active');
+		  $("#nav-profile-tab").removeClass('active');
+		  $("#nav-rfid-Agency-login").removeClass('active');
+		  });
+    
+    $("#nav-rfid-Agency-login").click(function(){
+   	 $("#nav-rfid_admin-login").removeClass('active');
+   	    $("#nav-profile-tab").removeClass('active');
+   		 $("#nav-contact-tab").removeClass('active');
+   		$("#nav-rfid-Site-login").removeClass('active');
+   	  });
+  
+});
+</script> -->
+ <script>
+function passwordForgotValidate(){
+
+var userType = $("#forgotloginTypeRAL").val();
+var loginId = $("#forgotloginId").val();
+var mobileNo = $("#forgotmobileNo").val();
+var capcha=$('#hiddenCaptcha4').val();
+var capcha1=$('#captcha4').val();
+
+if(capcha1==''){
+	createSmallAlert("Enter the Capcha");
+	return false;
+}else if(capcha.trim()!=capcha1.trim()){
+	createSmallAlert("Capcha is not Correct");
+	return false;
+}
+
+if(loginId =="" && mobileNo == ""){
+  alert("Login Id And Mobile No Both are not Empty");
+}
+$.ajax({
+	url : "forgOtPasswordValidation?userType ="+ userType,
+	 type: "get",
+		 data:{
+			 'userType1': userType,
+			 'loginId': loginId,
+			 'mobileNo': mobileNo,
+			 'captcha': capcha1
+		    },
+		    async: true,
+		  
+			success:function(data) {
+				
+				if(data){
+					
+				    $('#changed').html("");	
+					$('#changed').html(data);	
+					//$('.loaderDivII').hide();
+					}
+			 
+		}
+
+	}) ;
+	
+} 
+
+</script>
+
+
+
+	<script src="/esbm-mcd/static/js/tabscroll.js"></script>
+	
+<!--  start news scroll js --->
+	 <script>
+    $(document).ready(function () {
+      let $ticker = $("#ticker01");
+      let itemHeight = $ticker.find("li").outerHeight(true);
+      let totalItems = $ticker.find("li").length;
+      let currentIndex = 0;
+      let autoplayInterval;
+
+      // Duplicate the items for seamless looping
+      $ticker.append($ticker.html());
+
+      // Function to update the ticker position
+      function updateTicker() {
+        $ticker.stop().animate({ top: -currentIndex * itemHeight }, 300, function () {
+          if (currentIndex >= totalItems) {
+            currentIndex = 0;
+            $ticker.css("top", "0px");
+          } else if (currentIndex < 0) {
+            currentIndex = totalItems - 1;
+            $ticker.css("top", -currentIndex * itemHeight + "px");
+          }
+        });
+      }
+
+      // Autoplay function
+      function startAutoplay() {
+        autoplayInterval = setInterval(function () {
+          currentIndex++;
+          updateTicker();
+        }, 2000); // Change 2000 to adjust autoplay speed (milliseconds)
+      }
+
+      // Stop autoplay
+      function stopAutoplay() {
+        clearInterval(autoplayInterval);
+      }
+
+      // Next button click event for infinite scrolling
+      $(".next").on("click", function (ev) {
+        ev.preventDefault();
+        stopAutoplay();
+        currentIndex++;
+        updateTicker();
+        startAutoplay();
+      });
+
+      // Previous button click event for infinite scrolling
+      $(".prev").on("click", function (ev) {
+        ev.preventDefault();
+        stopAutoplay();
+        currentIndex--;
+        updateTicker();
+        startAutoplay();
+      });
+
+      // Start autoplay on page load
+      startAutoplay();
+
+      // Pause autoplay on hover and resume on mouse leave
+      $(".holder").hover(stopAutoplay, startAutoplay);
+    });
+  </script>
+<!--  End news scroll js --->
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    let tabElms = document.querySelectorAll('button[data-bs-toggle="tab"]');
+    tabElms.forEach(tab => {
+        tab.addEventListener('click', function (event) {
+            event.preventDefault();
+            let bsTab = new bootstrap.Tab(this);
+            bsTab.show();
+        });
+    });
+});
+</script>
+
+<script>
+function showTab(tabName) {
+    // Hide all tab contents
+    document.querySelectorAll('.tab-content').forEach(tab => tab.classList.add('hidden'));
+
+    // Show the selected tab content
+    document.getElementById(tabName + '-tab').classList.remove('hidden');
+
+    // Hide tab links
+    document.getElementById('tab-links').classList.add('hidden');
+
+    // Show the common header
+    document.getElementById('common-header').classList.remove('hidden');
+    
+    if (tabName === 'esbm') {
+        document.querySelector('input[name="esbm-option"]:checked').click();
+    }
+    
+    if (tabName === 'bio-mining') {
+        document.querySelector('input[name="bio-option"]:checked').click();
+    }
+}
+
+function showRadioTab(tabId) {
+   
+    document.querySelectorAll('.radio-tab-content').forEach(tab => tab.classList.add('hidden'));
+       // Show the selected tab content
+    document.getElementById(tabId).classList.remove('hidden');
+   
+}
+
+function showRadioTab(tabId) {
+	   
+    document.querySelectorAll('.radio-tab-content').forEach(tab => tab.classList.add('hidden'));
+       // Show the selected tab content
+    document.getElementById(tabId).classList.remove('hidden');
+   
+}
+
+function goBack() {
+    document.getElementById('tab-links').classList.remove('hidden');
+
+    // Hide all tab contents
+    document.querySelectorAll('.tab-content').forEach(tab => tab.classList.add('hidden'));
+    
+ // Hide all radio-tab-content sections
+    document.querySelectorAll('.radio-tab-content').forEach(tab => tab.classList.add('hidden'));
+
+    // Hide the common header
+    document.getElementById('common-header').classList.add('hidden');
+}
+function goBack1() {
+location.reload();
+}
+       /*  function showTab(tabName) {
+            // Hide all tabs
+            document.getElementById('esbm-tab').classList.add('hidden');
+            document.getElementById('bio-mining-tab').classList.add('hidden');
+
+            // Show the selected tab
+            document.getElementById(tabName + '-tab').classList.remove('hidden');
+            
+            document.getElementById('common-header').classList.remove('hidden');
+        } */
+    </script>
+    
+   <!--  <script>
+		$(document).ready(function() {
+			$('.toggle').click(function() {
+				$('.help-desk').toggleClass('active');
+				$('.toggle').toggleClass('active');
+			});
+		});
+		$(document).ready(function() {
+			if ($("#alertID").length > 0) {
+				createSmallAlert($("#alertID").val());
+			}
+
+		})
+
+		//$( "#tabs" ).tabs({ active: # });
+		function isOtpGenerated(formType) {
+			/* $("#gntateOTP").attr("disabled", true); */
+		   //alert(formType);
+			var form;
+			if(formType=='reg'){
+				
+			}else if(formType=='login'){
+				
+				var userId=$('#username').val();
+				var password=$('#password').val();
+				var type=$('#venTypeID').val();
+				var capcha=$('#hiddenCaptcha').val();
+				var capcha1=$('#captcha').val();
+				//alert(type);
+				if(userId.trim()=='' || password.trim()==''){
+					createSmallAlert("Username or Password is Blank.");
+					return false;
+				}
+				if(capcha1==''){
+					createSmallAlert("Enter the Capcha");
+					return false;
+				}else if(capcha.trim()!=capcha1.trim()){
+					createSmallAlert("Capcha is not Correct");
+					return false;
+				}
+				var data = password+"|";
+        	    var key  = CryptoJS.enc.Latin1.parse('1234567812345678');
+        	    var iv   = CryptoJS.enc.Latin1.parse('1234567812345678');  
+        	   
+        	    var encryptText = CryptoJS.AES.encrypt(
+        	      data,
+        	      key,
+        	      {iv:iv,mode:CryptoJS.mode.CBC,padding:CryptoJS.pad.ZeroPadding
+        	    });
+        	   
+				$('#usernameOtp').val(userId);
+				$('#passwordOtp').val(encryptText);
+				$('#typeOtp').val(type);
+				$('#captchaotp').val(capcha);
+				
+				form=$('#generateOtpForm').serialize();
+				$('#gntateOTP').attr("disabled", true);
+				$('.loaderDivII').show();
+				$.ajax({
+					type : "POST",
+					url : "loginFormValidation",
+					data : form,
+				//	cache : false,
+					async : true,
+					//contentType : false,
+					//processData : false,
+					beforeSend : function() {
+						$('.loaderDivII').show();
+					},
+					success : function(data, status, xhr) {
+					     	$('#changed').html("");	
+							$('.changed').show();
+							$('#changed').html(data);	
+							$('.changed').show();
+							 showTab('esbm');
+							$("#eSBMoption1").attr('checked', true);
+							showRadioTab('eSBM-tab11');
+													
+						//		document.getElementById("password-login").removeAttribute("disabled");
+					/* 		$('#gntateOTP').attr("disabled", true);
+							  $("alertID").val(""); */
+				
+					},
+					error : function(e) {
+						//createAlert('error ' + "Sesstion is holding very long time , kindaly refresh the Page");
+						location.reload();
+						$('.loaderDivII').hide();
+						$('#gntateOTP').attr("disabled", false);
+						
+					},
+					complete : function() {
+						//select2Refresh();
+						$('.loaderDivII').hide();
+						activaTab('Citizen_Login');
+					$('#gntateOTP').attr("disabled", false);
+					}
+				});
+				//$('#gntateOTP').attr("disabled", true);
+			}else if(formType=='officerLogin'){
+				
+				var userId=$('#officerName').val();
+				var password=$('#officerPassword2').val();
+				var offType=$('#offTypeID').val();
+				var capcha=$('#hiddenCaptcha1').val();
+				var capcha1=$('#captcha1').val();
+				//alert(offType);
+				if(userId.trim()=='' || password.trim()==''){
+					createSmallAlert("Username or Password is Blank.");
+					return false;
+				}
+				if(capcha1==''){
+					createSmallAlert("Enter the Capcha");
+					return false;
+				}else if(capcha.trim()!=capcha1.trim()){
+					createSmallAlert("Capcha is not Correct");
+					return false;
+				}
+				var data = password+"|";
+        	    var key  = CryptoJS.enc.Latin1.parse('1234567812345678');
+        	    var iv   = CryptoJS.enc.Latin1.parse('1234567812345678');  
+        	   
+        	    var encryptText = CryptoJS.AES.encrypt(
+        	      data,
+        	      key,
+        	      {iv:iv,mode:CryptoJS.mode.CBC,padding:CryptoJS.pad.ZeroPadding
+        	    });
+        	    
+				$('#usernameOtp').val($('#officerName').val());
+				$('#passwordOtp').val(encryptText);
+				$('#typeOtp').val(offType);
+				$('#captchaotp').val(capcha);
+				form=$('#generateOtpForm').serialize();
+				$('#gntateOTP2').attr("disabled", true);
+				$('.loaderDivII').show();
+				$.ajax({
+					type : "POST",
+					url : "loginFormValidation",
+					data : form,
+					//cache : false,
+					async : true,
+					//contentType : false,
+					//processData : false,
+					beforeSend : function() {
+						$('.loaderDivII').show();
+					},
+					success : function(data, status, xhr) {
+						  
+						    $('#changed').html("");	
+							$('#changed').html(data);	
+							 $('#nav-contact-tab').trigger('click');
+							$('.changed').show();
+							 $('#nav-contact-tab').trigger('click');
+							 $('.loaderDivII').hide();
+							 
+							 
+							
+							//document.getElementById("password-login2").removeAttribute("disabled");
+						/* 	$('#gntateOTP2').attr("disabled", true);
+							$("alertID").val(""); */
+						
+					
+					},
+					error : function(e) {
+						//createAlert('error ' + "Sesstion is holding very logtime , kindaly refresh page");
+						location.reload();
+						$('.loaderDivII').hide();
+						//alert('error '+e)
+					},
+					complete : function() {
+						//select2Refresh();
+						$('.loaderDivII').hide();
+						 $('#nav-contact-tab').trigger('click');
+						activaTab('Citizen_Login');
+					}
+				});
+				//$('#gntateOTP2').attr("disabled", true);
+			} else if(formType=='RFIDAdminLogin'){
+				
+				var userId=$('#rfidAdminofficerName').val();
+				var password=$('#rfidAdminofficerPassword2').val();
+				var offType=$('#rfidAdminoffTypeID').val();
+				var capcha=$('#hiddenCaptcha2').val();
+				var capcha1=$('#captcha2').val();
+				
+				if(userId.trim()=='' || password.trim()==''){
+					createSmallAlert("Username or Password is Blank.");
+					return false;
+				}
+				if(capcha1==''){
+					createSmallAlert("Enter the Capcha");
+					return false;
+				}else if(capcha.trim()!=capcha1.trim()){
+					createSmallAlert("Capcha is not Correct");
+					return false;
+				}
+				var data = password+"|";
+        	    var key  = CryptoJS.enc.Latin1.parse('1234567812345678');
+        	    var iv   = CryptoJS.enc.Latin1.parse('1234567812345678');  
+        	   
+        	    var encryptText = CryptoJS.AES.encrypt(
+        	      data,
+        	      key,
+        	      {iv:iv,mode:CryptoJS.mode.CBC,padding:CryptoJS.pad.ZeroPadding
+        	    });
+        	    
+				$('#usernameOtp').val($('#rfidAdminofficerName').val());
+				$('#passwordOtp').val(encryptText);
+				$('#typeOtp').val(offType);
+				$('#captchaotp').val(capcha);
+				form=$('#generateOtpForm').serialize();
+				$('#gntateOTP2').attr("disabled", true);
+				$('.loaderDivII').show();
+				$.ajax({
+					type : "POST",
+					url : "loginFormValidation",
+					data : form,
+					//cache : false,
+					async : true,
+					//contentType : false,
+					//processData : false,
+					beforeSend : function() {
+						$('.loaderDivII').show();
+					},
+					success : function(data, status, xhr) {
+						  
+						    $('#changed').html("");	
+							$('#changed').html(data);	
+							 $('#rfid_admin-login').trigger('click');
+							$('.changed').show();
+							 $('#rfid_admin-login').trigger('click');
+							 $('.loaderDivII').hide();
+							 
+							 
+							
+							//document.getElementById("password-login2").removeAttribute("disabled");
+						/* 	$('#gntateOTP2').attr("disabled", true);
+							$("alertID").val(""); */
+						
+					
+					},
+					error : function(e) {
+						//createAlert('error ' + "Sesstion is holding very logtime , kindaly refresh page");
+						location.reload();
+						$('.loaderDivII').hide();
+						//alert('error '+e)
+					},
+					complete : function() {
+						//select2Refresh();
+						$('.loaderDivII').hide();
+						 $('#rfid_admin-login').trigger('click');
+						//activaTab('Citizen_Login');
+					}
+				});
+				//$('#gntateOTP2').attr("disabled", true);
+			}else if(formType=='RFIDSiteLogin'){
+				
+				var userId=$('#rfisSiteofficerName').val();
+				var password=$('#rfisSiteofficerPassword2').val();
+				var offType=$('#rfisSiteoffTypeID').val();
+				var capcha=$('#hiddenCaptcha3').val();
+				var capcha1=$('#captcha3').val();
+				//alert(offType);
+				if(userId.trim()=='' || password.trim()==''){
+					createSmallAlert("Username or Password is Blank.");
+					return false;
+				}
+				if(capcha1==''){
+					createSmallAlert("Enter the Capcha");
+					return false;
+				}else if(capcha.trim()!=capcha1.trim()){
+					createSmallAlert("Capcha is not Correct");
+					return false;
+				}
+				var data = password+"|";
+        	    var key  = CryptoJS.enc.Latin1.parse('1234567812345678');
+        	    var iv   = CryptoJS.enc.Latin1.parse('1234567812345678');  
+        	   
+        	    var encryptText = CryptoJS.AES.encrypt(
+        	      data,
+        	      key,
+        	      {iv:iv,mode:CryptoJS.mode.CBC,padding:CryptoJS.pad.ZeroPadding
+        	    });
+        	    
+				$('#usernameOtp').val($('#rfisSiteofficerName').val());
+				$('#passwordOtp').val(encryptText);
+				$('#typeOtp').val(offType);
+				$('#captchaotp').val(capcha);
+				form=$('#generateOtpForm').serialize();
+				$('#gntateOTP2').attr("disabled", true);
+				$('.loaderDivII').show();
+				$.ajax({
+					type : "POST",
+					url : "loginFormValidation",
+					data : form,
+					//cache : false,
+					async : true,
+					//contentType : false,
+					//processData : false,
+					beforeSend : function() {
+						$('.loaderDivII').show();
+					},
+					success : function(data, status, xhr) {
+						  
+						    $('#changed').html("");	
+							$('#changed').html(data);	
+							 $('#rfid_site-login').trigger('click');
+							$('.changed').show();
+							 $('#rfid_site-login').trigger('click');
+							 $('.loaderDivII').hide();
+							 
+							 
+							
+							//document.getElementById("password-login2").removeAttribute("disabled");
+						/* 	$('#gntateOTP2').attr("disabled", true);
+							$("alertID").val(""); */
+						
+					
+					},
+					error : function(e) {
+						//createAlert('error ' + "Sesstion is holding very logtime , kindaly refresh page");
+						location.reload();
+						$('.loaderDivII').hide();
+						//alert('error '+e)
+					},
+					complete : function() {
+						//select2Refresh();
+						$('.loaderDivII').hide();
+						 $('#rfid_site-login').trigger('click');
+						//activaTab('Citizen_Login');
+					}
+				});
+				//$('#gntateOTP2').attr("disabled", true);
+			}
+				
+			
+else if(formType=='RFIDAgencyLogin'){
+				
+				var userId=$('#rfisAgencyofficerName').val();
+				var password=$('#rfisAgencyofficerPassword2').val();
+				var offType=$('#rfisAgencyoffTypeID').val();
+				var capcha=$('#hiddenCaptcha4').val();
+				var capcha1=$('#captcha4').val();
+				//alert(offType);
+				if(userId.trim()=='' || password.trim()==''){
+					createSmallAlert("Username or Password is Blank.");
+					return false;
+				}
+				if(capcha1==''){
+					createSmallAlert("Enter the Capcha");
+					return false;
+				}else if(capcha.trim()!=capcha1.trim()){
+					createSmallAlert("Capcha is not Correct");
+					return false;
+				}
+				var data = password+"|";
+        	    var key  = CryptoJS.enc.Latin1.parse('1234567812345678');
+        	    var iv   = CryptoJS.enc.Latin1.parse('1234567812345678');  
+        	   
+        	    var encryptText = CryptoJS.AES.encrypt(
+        	      data,
+        	      key,
+        	      {iv:iv,mode:CryptoJS.mode.CBC,padding:CryptoJS.pad.ZeroPadding
+        	    });
+        	    
+				$('#usernameOtp').val($('#rfisAgencyofficerName').val());
+				$('#passwordOtp').val(encryptText);
+				$('#typeOtp').val(offType);
+				$('#captchaotp').val(capcha);
+				form=$('#generateOtpForm').serialize();
+				$('#gntateOTP2').attr("disabled", true);
+				$('.loaderDivII').show();
+				$.ajax({
+					type : "POST",
+					url : "loginFormValidation",
+					data : form,
+					//cache : false,
+					async : true,
+					//contentType : false,
+					//processData : false,
+					beforeSend : function() {
+						$('.loaderDivII').show();
+					},
+					success : function(data, status, xhr) {
+						  
+						    $('#changed').html("");	
+							$('#changed').html(data);	
+							 $('#rfid_Agency-login').trigger('click');
+							$('.changed').show();
+							 $('#rfid_Agency-login').trigger('click');
+							 $('.loaderDivII').hide();
+							 
+							 
+							
+							//document.getElementById("password-login2").removeAttribute("disabled");
+						/* 	$('#gntateOTP2').attr("disabled", true);
+							$("alertID").val(""); */
+						
+					
+					},
+					error : function(e) {
+						//createAlert('error ' + "Sesstion is holding very logtime , kindaly refresh page");
+						location.reload();
+						$('.loaderDivII').hide();
+						//alert('error '+e)
+					},
+					complete : function() {
+						//select2Refresh();
+						$('.loaderDivII').hide();
+						 $('#rfid_site-login').trigger('click');
+						//activaTab('Citizen_Login');
+					}
+				});
+				//$('#gntateOTP2').attr("disabled", true);
+			}
+				
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		}
+
+		/* function doRefreshCAPTCHA(){
+		    var d = new Date();
+			var captchaObj = document.getElementById("captcha_ID");
+			captchaObj.src="Captcha\?"+d.getMilliseconds();
+		} */
+
+		function doRefreshCAPTCHA(id) {
+
+			var d = new Date();
+
+			var captchaObj2 = document.getElementById('captcha_ID_U');
+			captchaObj2.src = "Captcha\?" + d.getMilliseconds();
+
+			var captchaObj3 = document.getElementById('captcha_ID_B');
+			captchaObj3.src = "Captcha\?" + d.getMilliseconds();
+
+		}
+
+		function createSmallAlert(msg) {
+			bootbox.alert({
+				message : msg,
+				size : 'small'
+			});
+		}
+
+		function createAlert(msg) {
+			bootbox.alert({
+				message : msg,
+				size : 'large'
+			});
+		}
+
+		$(document).ready(function() {
+			var loginTypeHidden = $("#loginTypeHiddenID").val();
+
+			/* bootbox.alert({
+			    message: msg,
+			    size: 'small'
+			}); */
+
+			if (loginTypeHidden == 'U') {
+				activaTab('Admin_Login');
+			} else if (loginTypeHidden == 'H') {
+				activaTab('Hospital_Login');
+			} else if (loginTypeHidden == 'C') {
+				activaTab('Citizen_Login');
+			} else if (loginTypeHidden == 'B') {
+				activaTab('Bank_Login');
+			}  else if (loginTypeHidden == 'M') {
+				activaTab('Bank_Login');
+			}
+			else {
+				activaTab('Citizen_Login');
+			}
+
+		});
+		function activaTab(tab) {
+			$('.nav-tabs a[href="#' + tab + '"]').tab('show');
+		};
+
+		$(function() {
+			$("input[name=mobileEmail]")[0].oninvalid = function() {
+				this.setCustomValidity("Please enter valid Mobile Number.");
+			};
+		});
+
+		function edithosregform(requesttype) {
+			$("#requesttypehos").val(requesttype);
+			$("#edithosregformsubmit").submit();
+		}
+		
+		function genRegOtp(requesttype){
+			$("#userTypeEodb").val(requesttype);
+			$("#acrformsubmit").submit();
+		}		
+	</script>
+ -->
+
+</body>
+</html>
