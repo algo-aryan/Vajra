@@ -1,0 +1,19 @@
+# OS
+.DS_Store
+
+# Runtime folders
+logs/
+database/
+localhost:8080/
+localhost:8081/
+
+# Node / Python
+node_modules/
+__pycache__/
+.env
+
+scgi_temp/
+uwsgi_temp/
+proxy_temp/
+fastcgi_temp/
+client_body_temp/
