@@ -1,1 +1,0 @@
-﻿﻿function loadnicci(t, c) { $.ajax({ type: "POST", url: "https://niccicms.raj.nic.in/nicci/chatbotService.asmx/chatbot_nicci", data: "{authtoken: '" + c + "'}", contentType: "application/json; charset=utf-8", dataType: "json", success: function (c) { $("#" + t).append(c.d) } }) }

@@ -1,7 +1,0 @@
-[2026-02-21 04:29:41] POISON_DATA_SENT | IP: ::1 | File: ../../../../etc/
-[2026-02-21 04:30:09] POISON_DATA_SENT | IP: ::1 | File: ../../../../etc/
-[2026-02-21 04:37:42] TRAVERSAL_BAN | IP: ::1 | PATH: /view.php?file=../../../../etc/../etc/../bin/../var/../root/../home/
-[2026-02-21 04:37:58] TRAVERSAL_BAN | IP: ::1 | PATH: /view.php?file=../../../../etc/../etc/../bin/../var/../root/../home/
-[2026-02-21 04:38:51] TRAVERSAL_BAN | IP: ::1 | PATH: ../../../../etc/../etc/../bin/../var/../root/../home/../usr/../dev/
-[2026-02-21 04:38:54] TRAVERSAL_BAN | IP: ::1 | PATH: ../../../../etc/../etc/../bin/../var/../root/../home/../usr/../dev/
-[2026-02-21 04:40:01] TRAVERSAL_BAN | IP: ::1 | PATH: ../../../../etc/../home/../boot/../bin/../lib/../usr/../home/../lib/
