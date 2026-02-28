@@ -1,0 +1,7 @@
+__pycache__/
+*.db
+captured_documents/
+captured_images/
+*.wav
+*.pdf
+*.png
